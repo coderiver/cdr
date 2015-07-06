@@ -47,32 +47,400 @@
 // p
 // 	+jpg(bla)
 
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700)
+=f
+	font-family: 'Noto Sans', Arial, sans-serif
+=fi
+	font-family: 'icomoon'
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+$cl: #404040
+$orange: #ff6633
+$blue: #55bbcc
+$gray: #ccc
 
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
-	line-height: 1.4
-
-
+	+f
+	font-size: 14px 
+	line-height: 1.3
+	color: $cl
+button,
+input,
+textarea
+	+f
+	font-size: 14px
+	color: $cl
+	&:disabled
+		cursor: not-allowed
+		 
 // common blocks      
+.center
+	max-width: 1024px
+	margin: 0 auto
+	padding: 0 10px
+	+clr
 
+.btn
+	width: 200px
+	height: 46px
+	background: $orange
+	border-radius: 4px
+	font-size: 15px
+	font-weight: 700
+	color: #FFF
+	text-transform: uppercase
+	&:hover
+		background: #fe7d53
+	&:active
+		background: #fd5923
+	&[disabled]
+		background: #ffdccf
+	&.btn_gray
+		width: 150px
+		height: 46px
+		background: #F0F0F0
+		border: 1px solid #A4A4A4
+		opacity: .8
+		color: $cl
+		&:hover
+			background: #FAFAFA
+		&:active
+			background: #DFDFDF
+		&[disabled]
+			background: #F0F0F0
+			opacity: .3
+	&.btn_transparent
+		width: auto
+		height: 30px
+		padding: 0 12px
+		background: transparent
+		border: 1px solid #8b8b8b 
+		border-radius: 2px
+		font-weight: 400
+		&:hover
+			background: #8B8B8B
+		&:active
+			background: #B2B2B2
+		&[disabled]
+			border-color: #fff
+			color: #FFF
+			opacity: .1
 
+.link
+	font-size: 15px
+	color: $orange
+	font-weight: 700
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+	&:active
+		opacity: .8
+	&.is-disabled
+		opacity: .35
+		&:hover
+			text-decoration: none
+			cursor: default
 
+.link-icon
+	display: inline-block
+	font-size: 0
+	&:hover
+		span
+			text-decoration: underline
+		.icon
+			color: $blue
+	&:active
+		opacity: .8
+	&.is-disabled
+		opacity: .8
+		span,
+		.icon
+			color: $gray
+		&:hover
+			cursor: default
+			span
+				text-decoration: none
+	span,
+	.icon
+		display: inline-block
+		vertical-align: middle
+	span
+		font-size: 14px
+		font-weight: 700 
+		color: $blue 
+	.icon
+		margin-right: 10px
+		color: $gray
+	.icon-code
+		font-size: 8px
 
+.item
+	display: inline-block
+	width: 236px
+	height: 260px
+	background: #FFF
+	box-shadow: 0 2px 4px rgba(0,0,0,.1)
+	vertical-align: top
+	color: $cl 
+	&:hover
+		box-shadow: 0 4px 8px rgba(0,0,0,.1)
+	.item__in
+		min-height: 190px
+		padding: 10px 15px 20px 20px 
+	.item__type
+		font-size: 9px
+		text-align: right
+		text-transform: uppercase
+		color: $orange
+		font-weight: 700 
+	.item__title
+		font-size: 18px
+		font-weight: 700 
+		color: #000
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	.item__title-sub
+		margin-bottom: 10px
+		color: #a4a4a4
+	.item__foot
+		display: table
+		width: 100%
+		border-top: 1px solid #dadada
+	.item__col
+		display: table-cell
+		width: 50%
+		height: 70px
+		padding: 12px 12px 12px 0
+		vertical-align: top
+		&:first-child
+			padding-left: 20px
+	.item__label
+		color: #A4A4A4
+	.item__value
+		font-size: 20px
+		color: #444 
 
+.tags
+	font-size: 0
+	.tags__item
+		display: inline-block
+		margin: 0 4px 4px 0
+		padding: 4px 10px
+		border: 1px solid #e6e6e6
+		border-radius: 2px
+		font-size: 12px
+		color: #747474 
+		vertical-align: top
+		text-decoration: none
 
+.tabs
+	font-size: 0
+	&.tabs_simple
+		.tabs__item
+			height: 26px
+			margin-right: 5px
+			padding: 0 12px
+			background: transparent
+			border-radius: 13px
+			font-size: 16px
+			&:hover
+				background: #ECECEC 
+			&.is-active
+				background: #9F9F9F
+				color: #fff  
+	&.tabs_blue
+		.tabs__item
+			min-width: 94px
+			height: 30px
+			padding: 0 12px
+			background: transparent
+			border: 1px solid $blue
+			border-width: 1px 1px 1px 0
+			font-size: 16px
+			color: $blue 
+			&:first-child
+				border-radius: 15px 0 0 15px
+				border-width: 1px
+			&:last-child
+				border-radius: 0 15px 15px 0
+			&:hover
+				background: #eef8fa 
+			&.is-active
+				background: $blue
+				color: #fff
+	&.tabs_rounded
+		display: inline-block
+		border: 2px solid #cfcfcf
+		background: #cfcfcf 
+		border-radius: 17px 
+		vertical-align: top
+		.tabs__item
+			height: 30px
+			padding: 0 18px
+			background: transparent
+			border-radius: 15px
+			font-size: 16px
+			color: #fff 
+			&:hover
+				color: $cl 
+			&.is-active
+				background: #fff
+				color: $cl
+	.tabs__item
+		vertical-align: top
+		&.is-active
+			cursor: default
 
+.input
+	width: 100%
+	height: 40px
+	padding: 0 12px 1px
+	border: 1px solid #DADADA
+	border-radius: 4px
+	&:focus
+		border-color: #b6b6b6
+	&[disabled]
+		color: rgba($cl,.3) 
+		opacity: .8 
+	&.is-error
+		border-color: #ff8c8c
 
+.field
+	&.field_search
+		.field__in
+			position: relative
+			display: block
+		.input
+			position: relative
+			height: 34px
+			padding-left: 35px
+			border-radius: 17px
+			background: transparent 
+			font-size: 16px
+			z-index: 2
+			&:focus + .icon
+				color: $orange 
+		.icon
+			position: absolute
+			top: 9px
+			left: 12px
+			font-size: 16px 
+			color: #8c8c8c 
+	.field__error
+		padding: 6px 12px 0
+		font-size: 13px
+		font-weight: 700 
+		color: #ff4040
 
+.list
+	.list__item
+		display: block
+		position: relative
+		padding: 16px 20px 16px 40px
+		border-bottom: 1px solid #ececec
+		text-decoration: none
+		color: #000 
+		&:first-child
+			border-top: 1px solid #ececec
+		&:hover,
+		&:active,
+		&.is-active
+			background: #EEF8FA 
+			&:before
+				content: "\e612"
+				position: absolute
+				top: 21px
+				left: 15px
+				+fi
+				font-size: 8px
+				color: $blue  
+		&:hover
+			text-decoration: underline
+		&:active
+			color: rgba($cl,.8)
+		&.is-active
+			cursor: default
+			&:hover
+				text-decoration: none
 
+.msg
+	display: inline-block
+	background: #707070
+	border-radius: 2px
+	vertical-align: top
+	.msg__icon,
+	.msg__text,
+	.msg__btn
+		display: table-cell
+		vertical-align: top
+	.msg__icon
+		height: 60px
+		padding: 0 10px 0 30px
+		vertical-align: middle
+		.icon-tick
+			font-size: 10px
+			color: $blue
+		.icon-importing
+			font-size: 15px
+			color: $gray 
+	.msg__text
+		padding: 20px 30px 20px 0
+		font-size: 16px
+		color: #FFF
+	.msg__btn
+		padding: 15px 15px 15px 0
 
-
-
-
-
-
-
-
+.select
+	position: relative
+	cursor: pointer
+	&.is-active
+		.select__head
+			border-radius: 4px 4px 0 0
+		.select__list
+			display: block
+	.select__head
+		position: relative
+		height: 40px
+		padding: 0 30px 0 12px
+		background: #F0F0F0
+		border: 1px solid #A4A4A4
+		border-radius: 4px
+		opacity: 0.8
+		line-height: 38px
+		&:after
+			content: "\e600"
+			position: absolute
+			top: 16px
+			right: 12px
+			+fi
+			font-size: 7px
+			color: #b4b4b4
+	.select__list
+		display: none
+		position: absolute
+		top: 39px
+		left: 0
+		width: 100%
+		background: #FFF 
+		border: 1px solid #A4A4A4
+		border-top: none
+		border-radius: 0 0 4px 4px
+		z-index: 2 
+		li
+			padding: 11px 12px
+			&:last-child
+				border-radius: 0 0 4px 4px
+			&:hover,
+			&.is-active
+				background: #F0F0F0 
 
 
 
