@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper wrapper_login">
+	<!-- login -->
+	<div class="login">
+		<div class="login__logo"></div>
+		<div class="login__fieldset">
+			<!-- field-icon -->
+			<label class="field-icon">
+				<input class="field-icon__input" type="text">
+				<span class="field-icon__label">Email</span>
+				<span class="field-icon__icon">
+					<svg class="icon icon-mail">
+						<use xlink:href="#icon-mail"/>
+					</svg>
+				</span>
+			</label>
+			<!-- field-icon -->
+			<label class="field-icon">
+				<input class="field-icon__input" type="text">
+				<span class="field-icon__label">Password</span>
+				<span class="field-icon__icon">
+					<svg class="icon icon-hide">
+						<use xlink:href="#icon-hide"/>
+					</svg>
+				</span>
+			</label>
+		</div>
+		<button class="btn btn_wide">LOG IN</button>
+	</div>
+</div>
+</body>
+</html>
