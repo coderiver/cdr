@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- header -->
+	<header class="header">
+		<!-- center -->
+		<div class="center">
+			<!-- btn-menu -->
+			<button class="btn-menu">
+				<svg class="icon icon-menu">
+					<use xlink:href="#icon-menu"/>
+				</svg>
+			</button>
+			<!-- chapter -->
+			<div class="chapter">
+				<div class="chapter__title">Campaigns</div>
+				<!-- btn-round -->
+				<button class="btn-round">
+					<svg class="icon icon-plus">
+						<use xlink:href="#icon-plus"/>
+					</svg>
+				</button>
+			</div>
+			<!-- nav -->
+			<nav class="nav">
+				<a href="#">Digital</a>
+				<a href="#">TV</a>
+			</nav>
+			<!-- user -->
+			<div class="user">
+				<div class="user__head">
+					<div class="user__name">John</div>
+					<svg class="icon icon-arrow-down">
+						<use xlink:href="#icon-arrow-down"/>
+					</svg>
+				</div>
+				<!-- dropdown -->
+				<ul class="dropdown dropdown_right">
+					<li><a href="#">Profile Settings</a></li>
+					<li><a href="#">Support</a></li>
+					<li><a href="#">Terms & Conditions</a></li>
+					<li><a href="#">Log Out</a></li>
+				</ul>
+			</div>
+			<!-- notification -->
+			<a class="notification" href="#">
+				<div class="notification__in">
+					<div class="notification__counter">2</div>
+					<svg class="icon icon-upload">
+						<use xlink:href="#icon-upload"/>
+					</svg>
+				</div>
+			</a>
+			<!-- field -->
+			<div class="field field_search field_search_header">
+				<label class="field__in">
+					<input class="input" type="text" placeholder="Search">
+					<svg class="icon icon-search">
+						<use xlink:href="#icon-search"/>
+					</svg>
+				</label>
+				<!-- dropdown -->
+				<ul class="dropdown dropdown_search">
+					<li><a href="#"><span>Adv</span>antages</a></li>
+					<li><a href="#"><span>Adv</span>ertisers</a></li>
+					<li><a href="#"><span>Adv</span>ertisement</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- el -->
+			<div class="el">
+				<div class="el__head">
+					<!-- title -->
+					<div class="title">Xbox GTA5 inbox dv 34-567</div>
+					<!-- info -->
+					<ul class="info">
+						<li class="info__item">UM</li>
+						<li class="info__item">Microsoft</li>
+						<li class="info__item">John Doe</li>
+					</ul>
+				</div>
+				<div class="el__in">
+					<!-- btn-back -->
+					<button class="btn-back">
+						<svg class="icon icon-arrow-left">
+							<use xlink:href="#icon-arrow-left"/>
+						</svg>
+					</button>
+					<div class="el__container">
+						<!-- 1 -->
+						<div class="el__accord">
+							<div class="el__accord-title" style="display: none;">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+								<!-- title -->
+								<a class="title title_3 title_thin" href="#">CPOV Q2</a>
+							</div>
+							<div class="el__accord-container" style="display: block;">
+								<div class="el__accord-head">
+									<div class="el__accord-cell">
+										<!-- title -->
+										<div class="title title_2 title_thin">CPOV Q2</div>
+										<div class="title title_4 title_thin title_gray">SC-0024</div>
+									</div>
+									<div class="el__accord-cell">
+										<!-- status -->
+										<div class="status status_pending status_bold">Pending</div>
+										<!-- updated -->
+										<div class="updated updated_pl-16">Last updated: Sep 12, 12:34, 2015</div>
+									</div>
+									<div class="el__accord-cell">
+										<button class="btn btn_gray">create</button>
+									</div>
+								</div>
+								<div class="el__accord-in">
+									<!-- tb -->
+									<div class="tb tb_el">
+										<div class="tb__in">
+											<div class="tb__cell">
+												<!-- title -->
+												<div class="title title_2 title_mb-20">Campaign Dates</div>
+												<div class="tb__in">
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+												</div>
+											</div>
+											<div class="tb__cell">
+												<!-- title -->
+												<div class="title title_2 title_mb-20">Platforms</div>
+												<div class="tb__in">
+													<div class="tb__cell">
+														<div class="tb__label">DSP Name</div>
+														<div class="tb__value">TheTradeDesk</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tb__in">
+											<div class="tb__cell tb__cell_w-100p">
+												<div class="title title_2 title_mb-20">Budget & Goals</div>
+												<div class="tb__in">
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+												</div>
+												<div class="tb__in">
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- imported -->
+									<div class="imported">Imported by <span class="imported__user">John Doe</span>, Today, 12:34</div>
+								</div>
+							</div>
+						</div>
+						<!-- 2 -->
+						<div class="el__accord">
+							<div class="el__accord-title">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+								<!-- title -->
+								<a class="title title_3 title_thin" href="#">Q2 CPOV v2</a>
+							</div>
+							<div class="el__accord-container">
+								<div class="el__accord-head">
+									<div class="el__accord-cell">
+										<!-- title -->
+										<div class="title title_2 title_thin">CPOV Q2</div>
+										<div class="title title_4 title_thin title_gray">SC-0024</div>
+									</div>
+									<div class="el__accord-cell">
+										<!-- status -->
+										<div class="status status_pending status_bold">Pending</div>
+										<!-- updated -->
+										<div class="updated updated_pl-16">Last updated: Sep 12, 12:34, 2015</div>
+									</div>
+									<div class="el__accord-cell">
+										<button class="btn btn_gray">create</button>
+									</div>
+								</div>
+								<div class="el__accord-in">
+									<!-- tb -->
+									<div class="tb tb_el">
+										<div class="tb__in">
+											<div class="tb__cell">
+												<!-- title -->
+												<div class="title title_2 title_mb-20">Campaign Dates</div>
+												<div class="tb__in">
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+												</div>
+											</div>
+											<div class="tb__cell">
+												<!-- title -->
+												<div class="title title_2 title_mb-20">Platforms</div>
+												<div class="tb__in">
+													<div class="tb__cell">
+														<div class="tb__label">DSP Name</div>
+														<div class="tb__value">TheTradeDesk</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tb__in">
+											<div class="tb__cell tb__cell_w-100p">
+												<div class="title title_2 title_mb-20">Budget & Goals</div>
+												<div class="tb__in">
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+												</div>
+												<div class="tb__in">
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- imported -->
+									<div class="imported">Imported by <span class="imported__user">John Doe</span>, Today, 12:34</div>
+								</div>
+							</div>
+						</div>
+						<!-- 3 -->
+						<div class="el__accord">
+							<div class="el__accord-title">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+								<!-- title -->
+								<a class="title title_3 title_thin" href="#">Q3 CPOV</a>
+							</div>
+							<div class="el__accord-container">
+								<div class="el__accord-head">
+									<div class="el__accord-cell">
+										<!-- title -->
+										<div class="title title_2 title_thin">CPOV Q2</div>
+										<div class="title title_4 title_thin title_gray">SC-0024</div>
+									</div>
+									<div class="el__accord-cell">
+										<!-- status -->
+										<div class="status status_pending status_bold">Pending</div>
+										<!-- updated -->
+										<div class="updated updated_pl-16">Last updated: Sep 12, 12:34, 2015</div>
+									</div>
+									<div class="el__accord-cell">
+										<button class="btn btn_gray">create</button>
+									</div>
+								</div>
+								<div class="el__accord-in">
+									<!-- tb -->
+									<div class="tb tb_el">
+										<div class="tb__in">
+											<div class="tb__cell">
+												<!-- title -->
+												<div class="title title_2 title_mb-20">Campaign Dates</div>
+												<div class="tb__in">
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+												</div>
+											</div>
+											<div class="tb__cell">
+												<!-- title -->
+												<div class="title title_2 title_mb-20">Platforms</div>
+												<div class="tb__in">
+													<div class="tb__cell">
+														<div class="tb__label">DSP Name</div>
+														<div class="tb__value">TheTradeDesk</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tb__in">
+											<div class="tb__cell tb__cell_w-100p">
+												<div class="title title_2 title_mb-20">Budget & Goals</div>
+												<div class="tb__in">
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+												</div>
+												<div class="tb__in">
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- imported -->
+									<div class="imported">Imported by <span class="imported__user">John Doe</span>, Today, 12:34</div>
+								</div>
+							</div>
+						</div>
+						<!-- 4 -->
+						<div class="el__accord">
+							<div class="el__accord-title">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+								<!-- title -->
+								<a class="title title_3 title_thin" href="#">Q3 CPOV Demo</a>
+							</div>
+							<div class="el__accord-container">
+								<div class="el__accord-head">
+									<div class="el__accord-cell">
+										<!-- title -->
+										<div class="title title_2 title_thin">CPOV Q2</div>
+										<div class="title title_4 title_thin title_gray">SC-0024</div>
+									</div>
+									<div class="el__accord-cell">
+										<!-- status -->
+										<div class="status status_pending status_bold">Pending</div>
+										<!-- updated -->
+										<div class="updated updated_pl-16">Last updated: Sep 12, 12:34, 2015</div>
+									</div>
+									<div class="el__accord-cell">
+										<button class="btn btn_gray">create</button>
+									</div>
+								</div>
+								<div class="el__accord-in">
+									<!-- tb -->
+									<div class="tb tb_el">
+										<div class="tb__in">
+											<div class="tb__cell">
+												<!-- title -->
+												<div class="title title_2 title_mb-20">Campaign Dates</div>
+												<div class="tb__in">
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+												</div>
+											</div>
+											<div class="tb__cell">
+												<!-- title -->
+												<div class="title title_2 title_mb-20">Platforms</div>
+												<div class="tb__in">
+													<div class="tb__cell">
+														<div class="tb__label">DSP Name</div>
+														<div class="tb__value">TheTradeDesk</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tb__in">
+											<div class="tb__cell tb__cell_w-100p">
+												<div class="title title_2 title_mb-20">Budget & Goals</div>
+												<div class="tb__in">
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+												</div>
+												<div class="tb__in">
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+													<div class="tb__cell tb__cell_w-25p">
+														<div class="tb__label">End Date</div>
+														<div class="tb__value">June 30, 2015</div>
+													</div>
+													<div class="tb__cell">
+														<div class="tb__label">Start Date</div>
+														<div class="tb__value">June 12, 2015</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- imported -->
+									<div class="imported">Imported by <span class="imported__user">John Doe</span>, Today, 12:34</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
