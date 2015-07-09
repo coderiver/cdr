@@ -81,6 +81,10 @@ button {
 a {
   text-decoration: none; }
 
+th {
+  text-align: left;
+  font-weight: 400; }
+
 .wrapper {
   min-height: 100%; }
   .wrapper.wrapper_login {
@@ -96,6 +100,113 @@ a {
       vertical-align: middle;
       width: 0;
       height: 100%; }
+
+.row {
+  margin: 0 -10px;
+  *zoom: 1; }
+  .row:after {
+    content: " ";
+    display: table;
+    clear: both; }
+
+[class^="col-"] {
+  float: left;
+  padding: 0 10px; }
+
+.col-75 {
+  width: 75%; }
+
+.col-50 {
+  width: 50%; }
+
+.col-33 {
+  width: 33.33%; }
+
+.col-25 {
+  width: 25%; }
+
+.col-20 {
+  width: 20%; }
+
+.mt-5 {
+  margin-top: 5px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mt-15 {
+  margin-top: 15px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.mt-25 {
+  margin-top: 25px; }
+
+.mt-30 {
+  margin-top: 30px; }
+
+.mb-5 {
+  margin-bottom: 5px; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.mb-15 {
+  margin-bottom: 15px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.mb-25 {
+  margin-bottom: 25px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.mr-5 {
+  margin-right: 5px; }
+
+.mr-10 {
+  margin-right: 10px; }
+
+.mr-15 {
+  margin-right: 15px; }
+
+.mr-20 {
+  margin-right: 20px; }
+
+.mr-25 {
+  margin-right: 25px; }
+
+.mr-30 {
+  margin-right: 30px; }
+
+.ml-5 {
+  margin-left: 5px; }
+
+.ml-10 {
+  margin-left: 10px; }
+
+.ml-15 {
+  margin-left: 15px; }
+
+.ml-20 {
+  margin-left: 20px; }
+
+.ml-25 {
+  margin-left: 25px; }
+
+.ml-30 {
+  margin-left: 30px; }
+
+.panel {
+  padding: 30px 40px; }
+  .panel.panel_p-0-40 {
+    padding: 0 40px; }
+
+.border-top {
+  border-top: 1px solid #dadada; }
 
 .center {
   max-width: 1024px;
@@ -658,8 +769,10 @@ a {
     fill: #55bbcc; }
 
 .btn-back {
+  float: left;
   width: 20px;
   height: 60px;
+  margin-right: 20px;
   background: #cccccc;
   border-radius: 2px;
   font-size: 0; }
@@ -826,32 +939,22 @@ a {
   .head .head__in_gray {
     padding: 15px 0;
     background: #f7f7f7; }
-    .head .head__in_gray .head__cell {
-      vertical-align: baseline; }
   .head .head__in_brd {
     border-bottom: 1px solid #dadada; }
-  .head .head__row {
-    display: table;
-    width: 100%; }
-  .head .head__cell {
-    display: table-cell;
-    padding-right: 20px;
-    vertical-align: top; }
-  .head .head__cell_w200 {
-    width: 200px;
-    padding: 0; }
-  .head .head__type {
-    font-size: 16px; }
 
 .updated {
   color: #747474; }
   .updated.updated_pl-16 {
     padding-left: 16px; }
 
+.dt {
+  display: table; }
+
 .title {
   font-size: 34px;
   font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
-  color: #000; }
+  color: #000;
+  line-height: 1.2; }
   .title.title_2 {
     font-size: 24px; }
   .title.title_3 {
@@ -864,9 +967,15 @@ a {
     color: #a4a4a4; }
   .title.title_mb-20 {
     margin-bottom: 20px; }
-
-a.title:hover {
-  text-decoration: underline; }
+  .title .title__link {
+    color: #000; }
+    .title .title__link:hover .title__text {
+      text-decoration: underline; }
+  .title .title__counter {
+    padding-left: 2px;
+    font-size: 14px;
+    color: #55bbcc;
+    vertical-align: top; }
 
 .info {
   font-size: 0;
@@ -880,6 +989,29 @@ a.title:hover {
     .info .info__item:first-child {
       padding: 0 15px 0 0;
       border: none; }
+
+.label {
+  margin-bottom: 2px;
+  color: #A4A4A4; }
+
+.value {
+  font-size: 18px;
+  color: #444; }
+
+.table th:first-child, .table td:first-child {
+  padding-left: 40px; }
+.table th:last-child, .table td:last-child {
+  padding-right: 40px; }
+.table th {
+  padding: 0 10px 15px;
+  color: #A4A4A4; }
+.table td {
+  padding: 10px;
+  border-top: 1px solid #dadada;
+  vertical-align: middle; }
+
+.ta-right {
+  text-align: right; }
 
 .tb {
   display: table;
@@ -930,7 +1062,6 @@ a.title:hover {
     text-align: right; }
 
 .accord {
-  margin-bottom: 20px;
   background: #FFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
   .accord.is-active .accord__head .icon-arrow-down {
@@ -957,11 +1088,6 @@ a.title:hover {
     color: #000; }
     .accord .accord__title:hover {
       text-decoration: underline; }
-  .accord .accord__counter {
-    margin-left: 2px;
-    font-size: 14px;
-    color: #55bbcc;
-    vertical-align: top; }
 
 .status {
   position: relative;

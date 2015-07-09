@@ -96,12 +96,16 @@
 			<!-- center -->
 			<div class="center">
 				<div class="head__row">
-					<div class="head__cell">
-						<div class="head__type">Imported Opportunity</div>
-					</div>
-					<div class="head__cell head__cell_w200">
-						<!-- updated -->
-						<div class="updated">Last updated: Sep 12, 12:34, 2015</div>
+					<!-- row -->
+					<div class="row">
+						<div class="col-75">
+							<!-- title -->
+							<div class="title title_4 title_thin">Imported Opportunity</div>
+						</div>
+						<div class="col-25">
+							<!-- updated -->
+							<div class="updated">Last updated: Sep 12, 12:34, 2015</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -109,17 +113,17 @@
 		<div class="head__in head__in_brd">
 			<!-- center -->
 			<div class="center">
-				<div class="head__row">
-					<div class="head__cell">
-						<div class="head__cell">
-							<!-- btn-back -->
-							<button class="btn-back">
-								<svg class="icon icon-arrow-left">
-									<use xlink:href="#icon-arrow-left"/>
-								</svg>
-							</button>
-						</div>
-						<div class="head__cell">
+				<!-- row -->
+				<div class="row">
+					<div class="col-75">
+						<!-- btn-back -->
+						<button class="btn-back">
+							<svg class="icon icon-arrow-left">
+								<use xlink:href="#icon-arrow-left"/>
+							</svg>
+						</button>
+						<!-- dt -->
+						<div class="dt">
 							<!-- title -->
 							<div class="title">Xbox GTA5 inbox dv 34-567</div>
 							<!-- info -->
@@ -130,7 +134,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="head__cell head__cell_w200">
+					<div class="col-25">
 						<!-- state -->
 						<div class="state">
 							<svg class="icon icon-tick">
@@ -151,31 +155,57 @@
 		<div class="head__in">
 			<!-- center -->
 			<div class="center">
-				<div class="head__row">
-					<!-- tb -->
-					<div class="tb">
-						<div class="tb__row">
-							<div class="tb__cell">
-								<div class="tb__label">Campaigns</div>
-								<div class="tb__value">4</div>
+				<!-- panel -->
+				<div class="panel panel_p-0-40">
+					<!-- row -->
+					<div class="row">
+						<div class="col-20">
+							<!-- block -->
+							<div class="block">
+								<!-- label -->
+								<div class="label">Campaigns</div>
+								<!-- value -->
+								<div class="value">4</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">IO Amount</div>
-								<div class="tb__value">USD 53,789.00</div>
+						</div>
+						<div class="col-20">
+							<!-- block -->
+							<div class="block">
+								<!-- label -->
+								<div class="label">IO Amount</div>
+								<!-- value -->
+								<div class="value">USD 53,789.00</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Start Date</div>
-								<div class="tb__value">June 12, 2015</div>
-								<div class="tb__date">Actual: June 12, 2015</div>
+						</div>
+						<div class="col-20">
+							<!-- block -->
+							<div class="block">
+								<!-- label -->
+								<div class="label">Start Date</div>
+								<!-- value -->
+								<div class="value">June 12, 2015</div>
+								<!-- text -->
+								<div class="text">Actual: June 12, 2015</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">End Date</div>
-								<div class="tb__value">June 30, 2015</div>
-								<div class="tb__date">Actual: June 12, 2015</div>
+						</div>
+						<div class="col-20">
+							<!-- block -->
+							<div class="block">
+								<!-- label -->
+								<div class="label">End Date</div>
+								<!-- value -->
+								<div class="value">June 30, 2015</div>
+								<!-- text -->
+								<div class="text">Actual: June 12, 2015</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Salesforce ID</div>
-								<div class="tb__value">XX-5676-8900</div>
+						</div>
+						<div class="col-20">
+							<!-- block -->
+							<div class="block">
+								<!-- label -->
+								<div class="label">Salesforce ID</div>
+								<!-- value -->
+								<div class="value">XX-5676-8900</div>
 							</div>
 						</div>
 					</div>
@@ -188,260 +218,369 @@
 		<!-- center -->
 		<div class="center">
 			<!-- accord -->
-			<div class="accord is-active">
+			<div class="accord mb-20 is-active">
 				<div class="accord__head">
 					<svg class="icon icon-arrow-down">
 						<use xlink:href="#icon-arrow-down"/>
 					</svg>
 					<!-- title -->
-					<a class="title title_2" href="#">Campaigns</a>
-					<sup class="accord__counter">4</sup>
+					<div class="title title_2">
+						<a class="title__link" href="#">
+							<span class="title__text">Campaigns</span>
+							<sup class="title__counter">4</sup>
+						</a>
+					</div>
 				</div>
 				<div class="accord__in">
-					<!-- tb -->
-					<div class="tb tb_brd">
-						<div class="tb__row">
-							<div class="tb__cell">
-								<div class="tb__label">Name</div>
+					<!-- table -->
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Platforms</th>
+								<th>Start Date</th>
+								<th>End Date</th>
+								<th>Status</th>
+								<th class="ta-right">Media Budget, USD</th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Q2 CPOV</td>
+								<td>TheTradeDesk</td>
+								<td>Jun 12, 2015</td>
+								<td>Jun 24, 2015</td>
+								<td>
+									<!-- status -->
+									<div class="status status_pending">Pending</div>
+								</td>
+								<td class="ta-right">53,789.00</td>
+								<td>
+									<button class="btn btn_gray btn_small">Create</button>
+								</td>
+								<td>
+									<a class="link-icon" href="#">
+										<svg class="icon icon-view">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
+										</svg>
+										<span>Normal</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Q2 CPOV</td>
+								<td>TheTradeDesk</td>
+								<td>Jun 12, 2015</td>
+								<td>Jun 24, 2015</td>
+								<td>
+									<!-- status -->
+									<div class="status status_pending">Pending</div>
+								</td>
+								<td class="ta-right">53,789.00</td>
+								<td>
+									<button class="btn btn_gray btn_small">Create</button>
+								</td>
+								<td>
+									<a class="link-icon" href="#">
+										<svg class="icon icon-view">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
+										</svg>
+										<span>Normal</span>
+									</a>
+								</td>
+								<tr>
+									<td>Q2 CPOV</td>
+									<td>TheTradeDesk</td>
+									<td>Jun 12, 2015</td>
+									<td>Jun 24, 2015</td>
+									<td>
+										<!-- status -->
+										<div class="status status_pending">Pending</div>
+									</td>
+									<td class="ta-right">53,789.00</td>
+									<td>
+										<button class="btn btn_gray btn_small">Create</button>
+									</td>
+									<td>
+										<a class="link-icon" href="#">
+											<svg class="icon icon-view">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
+											</svg>
+											<span>Normal</span>
+										</a>
+									</td>
+									<tr>
+										<td>Q2 CPOV</td>
+										<td>TheTradeDesk</td>
+										<td>Jun 12, 2015</td>
+										<td>Jun 24, 2015</td>
+										<td>
+											<!-- status -->
+											<div class="status status_pending">Pending</div>
+										</td>
+										<td>53,789.00</td>
+										<td>
+											<button class="btn btn_gray btn_small">Create</button>
+										</td>
+										<td>
+											<a class="link-icon" href="#">
+												<svg class="icon icon-view">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
+												</svg>
+												<span>Normal</span>
+											</a>
+										</td>
+									</tr>
+								</tr>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- accord -->
+			<div class="accord mb-20 is-active">
+				<div class="accord__head">
+					<svg class="icon icon-arrow-down">
+						<use xlink:href="#icon-arrow-down"/>
+					</svg>
+					<!-- title -->
+					<div class="title title_2">
+						<a class="title__link" href="#">
+							<span class="title__text">Details</span>
+						</a>
+					</div>
+				</div>
+				<div class="accord__in">
+					<!-- panel -->
+					<div class="panel border-top">
+						<!-- row -->
+						<div class="row mb-25">
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Platforms</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Start Date</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">End Date</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Status</div>
-							</div>
-							<div class="tb__cell tb__cell_right">
-								<div class="tb__label">Media Budget, USD</div>
-							</div>
-							<div class="tb__cell"></div>
-							<div class="tb__cell"></div>
 						</div>
-						<div class="tb__row">
-							<div class="tb__cell">Q2 CPOV</div>
-							<div class="tb__cell">TheTradeDesk</div>
-							<div class="tb__cell">Jun 12, 2015</div>
-							<div class="tb__cell">Jun 24, 2015</div>
-							<div class="tb__cell">
-								<!-- status -->
-								<div class="status status_pending">Pending</div>
+						<!-- row -->
+						<div class="row">
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell tb__cell_right">53,789.00</div>
-							<div class="tb__cell">
-								<button class="btn btn_gray btn_small">Create</button>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell">
-								<a class="link-icon" href="#">
-									<svg class="icon icon-view">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
-									</svg>
-									<span>Normal</span>
-								</a>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-						</div>
-						<div class="tb__row">
-							<div class="tb__cell">Q2 CPOV</div>
-							<div class="tb__cell">TheTradeDesk</div>
-							<div class="tb__cell">Jun 12, 2015</div>
-							<div class="tb__cell">Jun 24, 2015</div>
-							<div class="tb__cell">
-								<!-- status -->
-								<div class="status status_pending">Pending</div>
-							</div>
-							<div class="tb__cell tb__cell_right">53,789.00</div>
-							<div class="tb__cell">
-								<button class="btn btn_gray btn_small">Create</button>
-							</div>
-							<div class="tb__cell">
-								<a class="link-icon" href="#">
-									<svg class="icon icon-view">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
-									</svg>
-									<span>Normal</span>
-								</a>
-							</div>
-						</div>
-						<div class="tb__row">
-							<div class="tb__cell">Q2 CPOV</div>
-							<div class="tb__cell">TheTradeDesk</div>
-							<div class="tb__cell">Jun 12, 2015</div>
-							<div class="tb__cell">Jun 24, 2015</div>
-							<div class="tb__cell">
-								<!-- status -->
-								<div class="status status_pending">Pending</div>
-							</div>
-							<div class="tb__cell tb__cell_right">53,789.00</div>
-							<div class="tb__cell">
-								<button class="btn btn_gray btn_small">Create</button>
-							</div>
-							<div class="tb__cell">
-								<a class="link-icon" href="#">
-									<svg class="icon icon-view">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
-									</svg>
-									<span>Normal</span>
-								</a>
-							</div>
-						</div>
-						<div class="tb__row">
-							<div class="tb__cell">Q2 CPOV</div>
-							<div class="tb__cell">TheTradeDesk</div>
-							<div class="tb__cell">Jun 12, 2015</div>
-							<div class="tb__cell">Jun 24, 2015</div>
-							<div class="tb__cell">
-								<!-- status -->
-								<div class="status status_pending">Pending</div>
-							</div>
-							<div class="tb__cell tb__cell_right">53,789.00</div>
-							<div class="tb__cell">
-								<button class="btn btn_gray btn_small">Create</button>
-							</div>
-							<div class="tb__cell">
-								<a class="link-icon" href="#">
-									<svg class="icon icon-view">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
-									</svg>
-									<span>Normal</span>
-								</a>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- accord -->
-			<div class="accord is-active">
+			<div class="accord mb-20 is-active">
 				<div class="accord__head">
 					<svg class="icon icon-arrow-down">
 						<use xlink:href="#icon-arrow-down"/>
 					</svg>
 					<!-- title -->
-					<a class="title title_2" href="#">Details</a>
+					<div class="title title_2">
+						<a class="title__link" href="#">
+							<span class="title__text">Approved Information</span>
+						</a>
+					</div>
 				</div>
 				<div class="accord__in">
-					<!-- tb -->
-					<div class="tb tb_fixed tb_accord">
-						<div class="tb__row">
-							<div class="tb__cell">
-								<div class="tb__label">Campaign Budget</div>
-								<div class="tb__value">USD 53,789.00</div>
+					<!-- panel -->
+					<div class="panel border-top">
+						<!-- row -->
+						<div class="row mb-25">
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Media Budget</div>
-								<div class="tb__value">USD 25,000.00</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Inventory Budget</div>
-								<div class="tb__value">USD 23,001.00</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Data Budget</div>
-								<div class="tb__value">USD 1,250.00</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
 						</div>
-						<div class="tb__row">
-							<div class="tb__cell">
-								<div class="tb__label">Campaign Budget</div>
-								<div class="tb__value">USD 53,789.00</div>
+						<!-- row -->
+						<div class="row mb-25">
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Media Budget</div>
-								<div class="tb__value">USD 25,000.00</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Inventory Budget</div>
-								<div class="tb__value">USD 23,001.00</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Data Budget</div>
-								<div class="tb__value">USD 1,250.00</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
+							</div>
+						</div>
+						<!-- row -->
+						<div class="row">
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
+							</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
+							</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
+							</div>
+							<div class="col-25">
+								<!-- block -->
+								<div class="block">
+									<!-- label -->
+									<div class="label">Campaign Budget</div>
+									<!-- value -->
+									<div class="value">USD 53,789.00</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- accord -->
-			<div class="accord is-active">
-				<div class="accord__head">
-					<svg class="icon icon-arrow-down">
-						<use xlink:href="#icon-arrow-down"/>
-					</svg>
-					<!-- title -->
-					<a class="title title_2" href="#">Approved Information</a>
-				</div>
-				<div class="accord__in">
-					<!-- tb -->
-					<div class="tb tb_fixed tb_accord">
-						<div class="tb__row">
-							<div class="tb__cell">
-								<div class="tb__label">Campaign Budget</div>
-								<div class="tb__value">USD 53,789.00</div>
-							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Media Budget</div>
-								<div class="tb__value">USD 25,000.00</div>
-							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Inventory Budget</div>
-								<div class="tb__value">USD 23,001.00</div>
-							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Data Budget</div>
-								<div class="tb__value">USD 1,250.00</div>
-							</div>
-						</div>
-						<div class="tb__row">
-							<div class="tb__cell">
-								<div class="tb__label">Campaign Budget</div>
-								<div class="tb__value">USD 53,789.00</div>
-							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Media Budget</div>
-								<div class="tb__value">USD 25,000.00</div>
-							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Inventory Budget</div>
-								<div class="tb__value">USD 23,001.00</div>
-							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Data Budget</div>
-								<div class="tb__value">USD 1,250.00</div>
-							</div>
-						</div>
-						<div class="tb__row">
-							<div class="tb__cell">
-								<div class="tb__label">Campaign Budget</div>
-								<div class="tb__value">USD 53,789.00</div>
-							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Media Budget</div>
-								<div class="tb__value">USD 25,000.00</div>
-							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Inventory Budget</div>
-								<div class="tb__value">USD 23,001.00</div>
-							</div>
-							<div class="tb__cell">
-								<div class="tb__label">Data Budget</div>
-								<div class="tb__value">USD 1,250.00</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- foot -->
-			<div class="foot">
-				<div class="foot__cell">
+			<!-- row -->
+			<div class="row mt-30">
+				<div class="col-50">
 					<button class="btn btn_gray">Browse versions</button>
 					<button class="btn">delete</button>
 				</div>
-				<div class="foot__cell">
+				<div class="col-50 ta-right">
 					<!-- imported -->
-					<div class="imported">Imported by <span class="imported__user">John Doe</span>, Today, 12:34</div>
+					<div class="imported mt-15">Imported by <span class="imported__user">John Doe</span>, Today, 12:34</div>
 				</div>
 			</div>
 		</div>
