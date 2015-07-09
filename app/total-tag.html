@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- header -->
+	<header class="header">
+		<!-- center -->
+		<div class="center">
+			<!-- btn-menu -->
+			<button class="btn-menu">
+				<svg class="icon icon-menu">
+					<use xlink:href="#icon-menu"/>
+				</svg>
+			</button>
+			<!-- chapter -->
+			<div class="chapter">
+				<div class="chapter__title">Total tag</div>
+				<!-- btn-round -->
+				<button class="btn-round">
+					<svg class="icon icon-plus">
+						<use xlink:href="#icon-plus"/>
+					</svg>
+				</button>
+			</div>
+			<!-- float-right -->
+			<div class="float-right mt-25 ml-25">
+				<!-- dropdown -->
+				<div class="dropdown dropdown_white">
+					<div class="dropdown__head">
+						<div class="dropdown__title">John</div>
+						<svg class="icon icon-arrow-down">
+							<use xlink:href="#icon-arrow-down"/>
+						</svg>
+					</div>
+					<!-- dropdown-menu -->
+					<ul class="dropdown-menu dropdown-menu_right">
+						<li><a href="#">Profile Settings</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Log Out</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- notification -->
+			<a class="notification" href="#">
+				<div class="notification__in">
+					<div class="notification__counter">2</div>
+					<svg class="icon icon-upload">
+						<use xlink:href="#icon-upload"/>
+					</svg>
+				</div>
+			</a>
+			<!-- field -->
+			<div class="field field_search field_search_header">
+				<label class="field__in">
+					<input class="input" type="text" placeholder="Search">
+					<svg class="icon icon-search">
+						<use xlink:href="#icon-search"/>
+					</svg>
+				</label>
+				<!-- dropdown-menu -->
+				<ul class="dropdown-menu dropdown-menu_search">
+					<li><a href="#"><span>Adv</span>antages</a></li>
+					<li><a href="#"><span>Adv</span>ertisers</a></li>
+					<li><a href="#"><span>Adv</span>ertisement</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- head -->
+	<div class="head head_p-12">
+		<!-- center -->
+		<div class="center">
+			<!-- row -->
+			<div class="row">
+				<div class="col-60">
+					<!-- dropdown -->
+					<div class="dropdown mt-3">
+						<div class="dropdown__head">
+							<div class="dropdown__title">All advertisers</div>
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="#icon-arrow-down"/>
+							</svg>
+						</div>
+						<!-- dropdown-menu -->
+						<ul class="dropdown-menu">
+							<li><a href="#">Item 1</a></li>
+							<li><a href="#">Item 2</a></li>
+							<li><a href="#">Item 3</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-30">
+					<!-- tabs -->
+					<div class="tabs tabs_simple">
+						<button class="tabs__item">Active</button>
+						<button class="tabs__item is-active">All</button>
+						<button class="tabs__item">Inactive</button>
+					</div>
+				</div>
+				<div class="col-10 ta-right">
+					<!-- total-counter -->
+					<div class="total-counter mt-3">Total 2,344</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- title -->
+			<div class="title title_1 title_thin title_gray mt-15 mb-15">
+				<span class="title__text">24-hourfitness.com</span>
+				<!-- country -->
+				<div class="country ml-15">US</div>
+			</div>
+			<!-- table -->
+			<table class="table table_custom mb-30">
+				<thead>
+					<tr>
+						<th class="table__w-25">Tag</th>
+						<th class="table__w-12-5">Status</th>
+						<th class="table__w-12-5">Market</th>
+						<th class="table__w-12 ta-right">Yesterday Fires</th>
+						<th class="table__w-14 ta-right">Total URLs Logged</th>
+						<th class="table__w-12 ta-right"></th>
+						<th class="table__w-12 ta-right"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<!-- title -->
+							<div class="title title_2">A3.com</div>
+						</td>
+						<td>
+							<!-- switch -->
+							<label class="switch">
+								<input type="checkbox" checked="">
+								<span class="switch__in"></span>
+							</label>
+						</td>
+						<td>
+							<!-- country -->
+							<div class="country">US</div>
+						</td>
+						<td class="fs-22 ta-right">45,890</td>
+						<td class="fs-22 ta-right">1134</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-code">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-code"/>
+								</svg>
+								<span>Get code</span>
+							</a>
+						</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-configure">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-configure"/>
+								</svg>
+								<span>Configure</span>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<!-- title -->
+							<div class="title title_2">A4.com</div>
+						</td>
+						<td>
+							<!-- switch -->
+							<label class="switch">
+								<input type="checkbox" checked="">
+								<span class="switch__in"></span>
+							</label>
+						</td>
+						<td>
+							<!-- country -->
+							<div class="country">emea</div>
+						</td>
+						<td class="fs-22 ta-right">45,890</td>
+						<td class="fs-22 ta-right">1134</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-code">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-code"/>
+								</svg>
+								<span>Get code</span>
+							</a>
+						</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-configure">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-configure"/>
+								</svg>
+								<span>Configure</span>
+							</a>
+						</td>
+					</tr>
+					<tr class="is-disabled">
+						<td>
+							<!-- title -->
+							<div class="title title_2">A5.com</div>
+						</td>
+						<td>
+							<!-- switch -->
+							<label class="switch">
+								<input type="checkbox">
+								<span class="switch__in"></span>
+							</label>
+						</td>
+						<td>
+							<!-- country -->
+							<div class="country">emea</div>
+						</td>
+						<td class="fs-22 ta-right">45,890</td>
+						<td class="fs-22 ta-right">1134</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-code">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-code"/>
+								</svg>
+								<span>Get code</span>
+							</a>
+						</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-configure">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-configure"/>
+								</svg>
+								<span>Configure</span>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<!-- title -->
+							<div class="title title_2">A6.com</div>
+						</td>
+						<td>
+							<!-- switch -->
+							<label class="switch">
+								<input type="checkbox" checked="">
+								<span class="switch__in"></span>
+							</label>
+						</td>
+						<td>
+							<!-- country -->
+							<div class="country">emea</div>
+						</td>
+						<td class="fs-22 ta-right">45,890</td>
+						<td class="fs-22 ta-right">1134</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-code">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-code"/>
+								</svg>
+								<span>Get code</span>
+							</a>
+						</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-configure">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-configure"/>
+								</svg>
+								<span>Configure</span>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- title -->
+			<div class="title title_1 title_thin title_gray mt-15 mb-15">
+				<span class="title__text">24-hourfitness.com</span>
+				<!-- country -->
+				<div class="country ml-15">US</div>
+			</div>
+			<!-- table -->
+			<table class="table table_custom mb-30">
+				<thead>
+					<tr>
+						<th class="table__w-25">Tag</th>
+						<th class="table__w-12-5">Status</th>
+						<th class="table__w-12-5">Market</th>
+						<th class="table__w-12 ta-right">Yesterday Fires</th>
+						<th class="table__w-14 ta-right">Total URLs Logged</th>
+						<th class="table__w-12 ta-right"></th>
+						<th class="table__w-12 ta-right"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<!-- title -->
+							<div class="title title_2">A3.com</div>
+						</td>
+						<td>
+							<!-- switch -->
+							<label class="switch">
+								<input type="checkbox" checked="">
+								<span class="switch__in"></span>
+							</label>
+						</td>
+						<td>
+							<!-- country -->
+							<div class="country">US</div>
+						</td>
+						<td class="fs-22 ta-right">45,890</td>
+						<td class="fs-22 ta-right">1134</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-code">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-code"/>
+								</svg>
+								<span>Get code</span>
+							</a>
+						</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-configure">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-configure"/>
+								</svg>
+								<span>Configure</span>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<!-- title -->
+							<div class="title title_2">A4.com</div>
+						</td>
+						<td>
+							<!-- switch -->
+							<label class="switch">
+								<input type="checkbox" checked="">
+								<span class="switch__in"></span>
+							</label>
+						</td>
+						<td>
+							<!-- country -->
+							<div class="country">emea</div>
+						</td>
+						<td class="fs-22 ta-right">45,890</td>
+						<td class="fs-22 ta-right">1134</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-code">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-code"/>
+								</svg>
+								<span>Get code</span>
+							</a>
+						</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-configure">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-configure"/>
+								</svg>
+								<span>Configure</span>
+							</a>
+						</td>
+					</tr>
+					<tr class="is-disabled">
+						<td>
+							<!-- title -->
+							<div class="title title_2">A5.com</div>
+						</td>
+						<td>
+							<!-- switch -->
+							<label class="switch">
+								<input type="checkbox">
+								<span class="switch__in"></span>
+							</label>
+						</td>
+						<td>
+							<!-- country -->
+							<div class="country">emea</div>
+						</td>
+						<td class="fs-22 ta-right">45,890</td>
+						<td class="fs-22 ta-right">1134</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-code">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-code"/>
+								</svg>
+								<span>Get code</span>
+							</a>
+						</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-configure">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-configure"/>
+								</svg>
+								<span>Configure</span>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<!-- title -->
+							<div class="title title_2">Verylooooooooooooooong</div>
+						</td>
+						<td>
+							<!-- switch -->
+							<label class="switch">
+								<input type="checkbox" checked="">
+								<span class="switch__in"></span>
+							</label>
+						</td>
+						<td>
+							<!-- country -->
+							<div class="country">emea</div>
+						</td>
+						<td class="fs-22 ta-right">45,890</td>
+						<td class="fs-22 ta-right">1134</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-code">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-code"/>
+								</svg>
+								<span>Get code</span>
+							</a>
+						</td>
+						<td class="ta-right">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-configure">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-configure"/>
+								</svg>
+								<span>Configure</span>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>
