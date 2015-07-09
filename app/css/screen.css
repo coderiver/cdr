@@ -333,7 +333,6 @@ th {
       background: #f0f0f0;
       opacity: 0.3; }
   .btn.btn_transparent {
-    width: auto;
     height: 30px;
     padding: 0 12px;
     background: transparent;
@@ -351,8 +350,9 @@ th {
       opacity: 0.1; }
   .btn.btn_wide {
     width: 100%; }
+  .btn.btn_md {
+    height: 40px; }
   .btn.btn_small {
-    min-width: 0;
     height: 30px;
     padding: 0 10px; }
   .btn + .btn {

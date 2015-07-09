@@ -213,7 +213,6 @@ th {
 		}
 	}
 	&.btn_transparent {
-		width: auto;
 		height: 30px;
 		padding: 0 12px;
 		background: transparent;
@@ -236,8 +235,10 @@ th {
 	&.btn_wide {
 		width: 100%;
 	}
+	&.btn_md {
+		height: 40px;
+	}
 	&.btn_small {
-		min-width: 0;
 		height: 30px;
 		padding: 0 10px;
 	}
