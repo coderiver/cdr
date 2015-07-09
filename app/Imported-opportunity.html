@@ -48,21 +48,24 @@
 				<a href="#">Digital</a>
 				<a href="#">TV</a>
 			</nav>
-			<!-- user -->
-			<div class="user">
-				<div class="user__head">
-					<div class="user__name">John</div>
-					<svg class="icon icon-arrow-down">
-						<use xlink:href="#icon-arrow-down"/>
-					</svg>
-				</div>
+			<!-- float-right -->
+			<div class="float-right mt-25 ml-25">
 				<!-- dropdown -->
-				<ul class="dropdown dropdown_right">
-					<li><a href="#">Profile Settings</a></li>
-					<li><a href="#">Support</a></li>
-					<li><a href="#">Terms & Conditions</a></li>
-					<li><a href="#">Log Out</a></li>
-				</ul>
+				<div class="dropdown dropdown_white">
+					<div class="dropdown__head">
+						<div class="dropdown__title">John</div>
+						<svg class="icon icon-arrow-down">
+							<use xlink:href="#icon-arrow-down"/>
+						</svg>
+					</div>
+					<!-- dropdown-menu -->
+					<ul class="dropdown-menu dropdown-menu_right">
+						<li><a href="#">Profile Settings</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Log Out</a></li>
+					</ul>
+				</div>
 			</div>
 			<!-- notification -->
 			<a class="notification" href="#">
@@ -81,8 +84,8 @@
 						<use xlink:href="#icon-search"/>
 					</svg>
 				</label>
-				<!-- dropdown -->
-				<ul class="dropdown dropdown_search">
+				<!-- dropdown-menu -->
+				<ul class="dropdown-menu dropdown-menu_search">
 					<li><a href="#"><span>Adv</span>antages</a></li>
 					<li><a href="#"><span>Adv</span>ertisers</a></li>
 					<li><a href="#"><span>Adv</span>ertisement</a></li>
@@ -425,7 +428,7 @@
 				</div>
 				<div class="accord__in" style="display: block;">
 					<!-- panel -->
-					<div class="panel border-top">
+					<div class="panel bt">
 						<!-- row -->
 						<div class="row mb-25">
 							<div class="col-25">
@@ -533,6 +536,28 @@
 					<div class="imported mt-15">Imported by <span class="imported__user">John Doe</span>, Today, 12:34</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
 		</div>
 	</div>
 </div>

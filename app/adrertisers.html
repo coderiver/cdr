@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- header -->
+	<header class="header">
+		<!-- center -->
+		<div class="center">
+			<!-- btn-menu -->
+			<button class="btn-menu">
+				<svg class="icon icon-menu">
+					<use xlink:href="#icon-menu"/>
+				</svg>
+			</button>
+			<!-- chapter -->
+			<div class="chapter">
+				<div class="chapter__title">Advertisers</div>
+				<!-- btn-round -->
+				<button class="btn-round">
+					<svg class="icon icon-plus">
+						<use xlink:href="#icon-plus"/>
+					</svg>
+				</button>
+			</div>
+			<!-- float-right -->
+			<div class="float-right mt-25 ml-25">
+				<!-- dropdown -->
+				<div class="dropdown dropdown_white">
+					<div class="dropdown__head">
+						<div class="dropdown__title">John</div>
+						<svg class="icon icon-arrow-down">
+							<use xlink:href="#icon-arrow-down"/>
+						</svg>
+					</div>
+					<!-- dropdown-menu -->
+					<ul class="dropdown-menu dropdown-menu_right">
+						<li><a href="#">Profile Settings</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Log Out</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- notification -->
+			<a class="notification" href="#">
+				<div class="notification__in">
+					<div class="notification__counter">2</div>
+					<svg class="icon icon-upload">
+						<use xlink:href="#icon-upload"/>
+					</svg>
+				</div>
+			</a>
+			<!-- field -->
+			<div class="field field_search field_search_header">
+				<label class="field__in">
+					<input class="input" type="text" placeholder="Search">
+					<svg class="icon icon-search">
+						<use xlink:href="#icon-search"/>
+					</svg>
+				</label>
+				<!-- dropdown-menu -->
+				<ul class="dropdown-menu dropdown-menu_search">
+					<li><a href="#"><span>Adv</span>antages</a></li>
+					<li><a href="#"><span>Adv</span>ertisers</a></li>
+					<li><a href="#"><span>Adv</span>ertisement</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- head -->
+	<div class="head head_p-12">
+		<!-- center -->
+		<div class="center">
+			<!-- row -->
+			<div class="row">
+				<div class="col-60">
+					<!-- dropdown -->
+					<div class="dropdown mt-3">
+						<div class="dropdown__head">
+							<div class="dropdown__title">All advertisers</div>
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="#icon-arrow-down"/>
+							</svg>
+						</div>
+						<!-- dropdown-menu -->
+						<ul class="dropdown-menu">
+							<li><a href="#">Item 1</a></li>
+							<li><a href="#">Item 2</a></li>
+							<li><a href="#">Item 3</a></li>
+						</ul>
+					</div>
+					<!-- dropdown -->
+					<div class="dropdown mt-3">
+						<div class="dropdown__head">
+							<div class="dropdown__title">All agencies</div>
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="#icon-arrow-down"/>
+							</svg>
+						</div>
+						<!-- dropdown-menu -->
+						<ul class="dropdown-menu">
+							<li><a href="#">Item 1</a></li>
+							<li><a href="#">Item 2</a></li>
+							<li><a href="#">Item 3</a></li>
+						</ul>
+					</div>
+					<!-- dropdown -->
+					<div class="dropdown mt-3">
+						<div class="dropdown__head">
+							<div class="dropdown__title">All industries</div>
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="#icon-arrow-down"/>
+							</svg>
+						</div>
+						<!-- dropdown-menu -->
+						<ul class="dropdown-menu">
+							<li><a href="#">Item 1</a></li>
+							<li><a href="#">Item 2</a></li>
+							<li><a href="#">Item 3</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-30">
+					<!-- tabs -->
+					<div class="tabs tabs_simple">
+						<button class="tabs__item">Accounts</button>
+						<button class="tabs__item is-active">All</button>
+						<button class="tabs__item">Brands</button>
+					</div>
+				</div>
+				<div class="col-10 ta-right">
+					<!-- total-counter -->
+					<div class="total-counter mt-3">Total 2,344</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- row -->
+			<div class="row mb-20">
+				<div class="col-25">
+					<!-- item -->
+					<div class="item">
+						<div class="item__in">
+							<div class="item__head">
+								<div class="item__type">account</div>
+								<a class="item__title" href="#">Microsoft</a>
+								<div class="item__title-sub">UM</div>
+								<!-- tags -->
+								<div class="tags">
+									<a class="tags__item" href="#">Software</a>
+									<a class="tags__item" href="#">Hardware</a>
+									<a class="tags__item" href="#">Consumer software</a>
+								</div>
+							</div>
+						</div>
+						<div class="item__foot">
+							<div class="item__col">
+								<div class="item__label">Market</div>
+								<div class="item__value">US</div>
+							</div>
+							<div class="item__col">
+								<div class="item__label">Opportunities</div>
+								<div class="item__value">12</div>
+							</div>
+						</div>				
+					</div>
+				</div>
+				<div class="col-25">
+					<!-- item -->
+					<div class="item">
+						<div class="item__in">
+							<div class="item__head">
+								<div class="item__type item__type_brand">brand</div>
+								<a class="item__title" href="#">Universal McCann: West & East Coast Retail Specific</a>
+								<div class="item__title-sub">McCan</div>
+								<!-- tags -->
+								<div class="tags">
+									<a class="tags__item" href="#">Advertising</a>
+								</div>
+							</div>
+						</div>
+						<div class="item__foot">
+							<div class="item__col">
+								<div class="item__label">Market</div>
+								<div class="item__value">US</div>
+							</div>
+							<div class="item__col">
+								<div class="item__label">Opportunities</div>
+								<div class="item__value">12</div>
+							</div>
+						</div>				
+					</div>
+				</div>
+				<div class="col-25">
+					<!-- item -->
+					<div class="item">
+						<div class="item__in">
+							<div class="item__head">
+								<div class="item__type">brand</div>
+								<a class="item__title" href="#">Universal McCann</a>
+								<div class="item__title-sub">McCan</div>
+								<!-- tags -->
+								<div class="tags">
+									<a class="tags__item" href="#">Advertising</a>
+								</div>
+							</div>
+							<div class="item__info">
+								<div class="item__label">Parent account</div>
+								<div class="item__account">Chrysler Group</div>
+							</div>
+						</div>
+						<div class="item__foot">
+							<div class="item__col">
+								<div class="item__label">Market</div>
+								<div class="item__value">US</div>
+							</div>
+							<div class="item__col">
+								<div class="item__label">Opportunities</div>
+								<div class="item__value">12</div>
+							</div>
+						</div>				
+					</div>
+				</div>
+				<div class="col-25">
+					<!-- item -->
+					<div class="item">
+						<div class="item__in">
+							<div class="item__head">
+								<div class="item__type">account</div>
+								<a class="item__title" href="#">Microsoft</a>
+								<div class="item__title-sub">UM</div>
+								<!-- tags -->
+								<div class="tags">
+									<a class="tags__item" href="#">Software</a>
+									<a class="tags__item" href="#">Hardware</a>
+									<a class="tags__item" href="#">Consumer software</a>
+								</div>
+							</div>
+						</div>
+						<div class="item__foot">
+							<div class="item__col">
+								<div class="item__label">Market</div>
+								<div class="item__value">US</div>
+							</div>
+							<div class="item__col">
+								<div class="item__label">Opportunities</div>
+								<div class="item__value">12</div>
+							</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+			<!-- row -->
+			<div class="row">
+				<div class="col-25">
+					<!-- item -->
+					<div class="item">
+						<div class="item__in">
+							<div class="item__head">
+								<div class="item__type item__type_brand">brand</div>
+								<a class="item__title" href="#">Universal McCann: West & East Coast Retail Specific</a>
+								<div class="item__title-sub">McCan</div>
+								<!-- tags -->
+								<div class="tags">
+									<a class="tags__item" href="#">Advertising</a>
+								</div>
+							</div>
+						</div>
+						<div class="item__foot">
+							<div class="item__col">
+								<div class="item__label">Market</div>
+								<div class="item__value">US</div>
+							</div>
+							<div class="item__col">
+								<div class="item__label">Opportunities</div>
+								<div class="item__value">12</div>
+							</div>
+						</div>				
+					</div>
+				</div>
+				<div class="col-25">
+					<!-- item -->
+					<div class="item">
+						<div class="item__in">
+							<div class="item__head">
+								<div class="item__type">brand</div>
+								<a class="item__title" href="#">Universal McCann</a>
+								<div class="item__title-sub">McCan</div>
+								<!-- tags -->
+								<div class="tags">
+									<a class="tags__item" href="#">Advertising</a>
+								</div>
+							</div>
+							<div class="item__info">
+								<div class="item__label">Parent account</div>
+								<div class="item__account">Chrysler Group</div>
+							</div>
+						</div>
+						<div class="item__foot">
+							<div class="item__col">
+								<div class="item__label">Market</div>
+								<div class="item__value">US</div>
+							</div>
+							<div class="item__col">
+								<div class="item__label">Opportunities</div>
+								<div class="item__value">12</div>
+							</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
