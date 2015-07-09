@@ -113,20 +113,47 @@ th {
   float: left;
   padding: 0 10px; }
 
+.col-100 {
+  width: 100%; }
+
+.col-90 {
+  width: 90%; }
+
+.col-80 {
+  width: 80%; }
+
 .col-75 {
   width: 75%; }
+
+.col-70 {
+  width: 70%; }
+
+.col-60 {
+  width: 50%; }
 
 .col-50 {
   width: 50%; }
 
+.col-40 {
+  width: 40%; }
+
 .col-33 {
   width: 33.33%; }
+
+.col-30 {
+  width: 30%; }
 
 .col-25 {
   width: 25%; }
 
 .col-20 {
   width: 20%; }
+
+.col-17 {
+  width: 16.64%; }
+
+.col-10 {
+  width: 10%; }
 
 .mt-5 {
   margin-top: 5px; }
@@ -146,6 +173,12 @@ th {
 .mt-30 {
   margin-top: 30px; }
 
+.mt-35 {
+  margin-top: 35px; }
+
+.mt-40 {
+  margin-top: 40px; }
+
 .mb-5 {
   margin-bottom: 5px; }
 
@@ -163,6 +196,12 @@ th {
 
 .mb-30 {
   margin-bottom: 30px; }
+
+.mb-35 {
+  margin-bottom: 35px; }
+
+.mb-40 {
+  margin-bottom: 40px; }
 
 .mr-5 {
   margin-right: 5px; }
@@ -182,6 +221,12 @@ th {
 .mr-30 {
   margin-right: 30px; }
 
+.mr-35 {
+  margin-right: 35px; }
+
+.mr-40 {
+  margin-right: 40px; }
+
 .ml-5 {
   margin-left: 5px; }
 
@@ -200,13 +245,30 @@ th {
 .ml-30 {
   margin-left: 30px; }
 
+.ml-35 {
+  margin-left: 35px; }
+
+.ml-40 {
+  margin-left: 40px; }
+
 .panel {
   padding: 30px 40px; }
   .panel.panel_p-0-40 {
     padding: 0 40px; }
+  .panel.panel_p-30 {
+    padding: 30px; }
 
-.border-top {
+.bt {
   border-top: 1px solid #dadada; }
+
+.br {
+  border-right: 1px solid #dadada; }
+
+.bb {
+  border-bottom: 1px solid #dadada; }
+
+.bl {
+  border-left: 1px solid #dadada; }
 
 .center {
   max-width: 1024px;
@@ -965,8 +1027,6 @@ th {
     font-family: 'Source Sans Pro Regular', Arial, sans-serif; }
   .title.title_gray {
     color: #a4a4a4; }
-  .title.title_mb-20 {
-    margin-bottom: 20px; }
   .title .title__link {
     color: #000; }
     .title .title__link:hover .title__text {
@@ -1068,6 +1128,20 @@ th {
     -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
             transform: rotate(0deg); }
+  .accord.accord_toggle.is-active .accord__head:before {
+    display: none; }
+  .accord.accord_toggle .accord__head {
+    padding: 25px 30px 25px 60px; }
+    .accord.accord_toggle .accord__head:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(rgba(0, 0, 0, 0.1), transparent); }
+    .accord.accord_toggle .accord__head .icon-arrow-down {
+      left: 30px; }
   .accord .accord__head {
     position: relative;
     padding: 20px 40px 20px 70px; }
@@ -1082,6 +1156,8 @@ th {
           -ms-transform: rotate(-90deg);
               transform: rotate(-90deg);
       fill: #cccccc; }
+  .accord .accord__in {
+    display: none; }
   .accord .accord__title {
     font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
     font-size: 24px;
@@ -1120,64 +1196,19 @@ th {
   .imported .imported__user {
     color: #000; }
 
-.el {
+.section {
   margin: 0 40px 0 -10px;
   padding: 30px 0 50px 40px;
   background: #E2E2E2; }
-  .el .el__head {
+  .section .section__head {
     margin-bottom: 20px; }
-  .el .el__in {
+  .section .section__in {
     position: relative;
     min-height: 200px;
     margin-right: -20px;
     background: #FFF; }
-    .el .el__in .btn-back {
+    .section .section__in .btn-back {
       position: absolute;
       top: 20px;
       left: -20px;
       border-radius: 2px 0 0 2px; }
-  .el .el__accord {
-    position: relative;
-    background: #FFF;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
-    .el .el__accord:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 5px;
-      background: linear-gradient(rgba(0, 0, 0, 0.1), transparent); }
-    .el .el__accord:first-child:before {
-      display: none; }
-  .el .el__accord-title {
-    position: relative;
-    padding: 23px 60px; }
-    .el .el__accord-title .icon-arrow-down {
-      position: absolute;
-      top: 50%;
-      left: 30px;
-      width: 12px;
-      height: 8px;
-      margin-top: -5px;
-      fill: #cccccc; }
-  .el .el__accord-container {
-    display: none; }
-  .el .el__accord-head {
-    display: table;
-    width: 100%;
-    padding: 30px 30px 25px; }
-  .el .el__accord-cell {
-    display: table-cell;
-    padding-left: 20px;
-    vertical-align: middle; }
-    .el .el__accord-cell:first-child {
-      padding: 0; }
-    .el .el__accord-cell:nth-child(2) {
-      width: 250px; }
-    .el .el__accord-cell:last-child {
-      width: 150px;
-      text-align: right; }
-  .el .el__accord-in {
-    padding: 30px;
-    border-top: 1px solid #dadada; }

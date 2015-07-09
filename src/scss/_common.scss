@@ -64,14 +64,35 @@ th {
 	float: left;
 	padding: 0 10px;
 }
+.col-100 {
+	width: 100%;
+}
+.col-90 {
+	width: 90%;
+}
+.col-80 {
+	width: 80%;
+}
 .col-75 {
 	width: 75%;
+}
+.col-70 {
+	width: 70%;
+}
+.col-60 {
+	width: 50%;
 }
 .col-50 {
 	width: 50%;
 }
+.col-40 {
+	width: 40%;
+}
 .col-33 {
 	width: 33.33%;
+}
+.col-30 {
+	width: 30%;
 }
 .col-25 {
 	width: 25%;
@@ -79,26 +100,32 @@ th {
 .col-20 {
 	width: 20%;
 }
+.col-17 {
+	width: 16.64%;
+}
+.col-10 {
+	width: 10%;
+}
 
-@each $s in 5, 10, 15, 20, 25, 30 {
+@each $s in 5, 10, 15, 20, 25, 30, 35, 40 {
 	.mt-#{$s} {
 		margin-top: #{$s}px;
 	}
 }
 
-@each $s in 5, 10, 15, 20, 25, 30 {
+@each $s in 5, 10, 15, 20, 25, 30, 35, 40 {
 	.mb-#{$s} {
 		margin-bottom: #{$s}px;
 	}
 }
 
-@each $s in 5, 10, 15, 20, 25, 30 {
+@each $s in 5, 10, 15, 20, 25, 30, 35, 40 {
 	.mr-#{$s} {
 		margin-right: #{$s}px;
 	}
 }
 
-@each $s in 5, 10, 15, 20, 25, 30 {
+@each $s in 5, 10, 15, 20, 25, 30, 35, 40 {
 	.ml-#{$s} {
 		margin-left: #{$s}px;
 	}
@@ -109,10 +136,22 @@ th {
 	&.panel_p-0-40 {
 		padding: 0 40px;
 	}
+	&.panel_p-30 {
+		padding: 30px;
+	}
 }
 
-.border-top {
+.bt {
 	border-top: 1px solid $brd;
+}
+.br {
+	border-right: 1px solid $brd;
+}
+.bb {
+	border-bottom: 1px solid $brd;
+}
+.bl {
+	border-left: 1px solid $brd;
 }
 
 .center {
@@ -1033,9 +1072,6 @@ th {
 	&.title_gray {
 		color: #a4a4a4;
 	}
-	&.title_mb-20 {
-		margin-bottom: 20px;
-	}
 	.title__link {
 		color: #000;
 		&:hover {
@@ -1191,6 +1227,30 @@ th {
 			}
 		}
 	}
+	&.accord_toggle {
+		&.is-active {
+			.accord__head {
+				&:before {
+					display: none;
+				}
+			}
+		}
+		.accord__head {
+			padding: 25px 30px 25px 60px;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 5px;
+				background: linear-gradient(rgba(#000,.1), rgba(#000,0));
+			}
+			.icon-arrow-down {
+				left: 30px;
+			}
+		}
+	}
 	.accord__head {
 		position: relative;
 		padding: 20px 40px 20px 70px;
@@ -1204,6 +1264,9 @@ th {
 			transform: rotate(-90deg);
 			fill: $gray;
 		}
+	}
+	.accord__in {
+		display: none;
 	}
 	.accord__title {
 		@include fs;
@@ -1254,14 +1317,14 @@ th {
 	}
 }
 
-.el {
+.section {
 	margin: 0 40px 0 -10px;
 	padding: 30px 0 50px 40px;
 	background: #E2E2E2;
-	.el__head {
+	.section__head {
 		margin-bottom: 20px;
 	}
-	.el__in {
+	.section__in {
 		position: relative;
 		min-height: 200px;
 		margin-right: -20px;
@@ -1272,65 +1335,6 @@ th {
 			left: -20px;
 			border-radius: 2px 0 0 2px
 		}
-	}
-	.el__accord {
-		position: relative;
-		background: #FFF;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		&:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 5px;
-			background: linear-gradient(rgba(#000,.1), rgba(#000,0));
-		}
-		&:first-child {
-			&:before {
-				display: none;
-			}
-		}
-	}
-	.el__accord-title {
-		position: relative;
-		padding: 23px 60px;
-		.icon-arrow-down {
-			position: absolute;
-			top: 50%;
-			left: 30px;
-			width: 12px;
-			height: 8px;
-			margin-top: -5px;
-			fill: $gray;
-		}
-	}
-	.el__accord-container {
-		display: none;
-	}
-	.el__accord-head {
-		display: table;
-		width: 100%;
-		padding: 30px 30px 25px;
-	}
-	.el__accord-cell {
-		display: table-cell;
-		padding-left: 20px;
-		vertical-align: middle;
-		&:first-child {
-			padding: 0;
-		}
-		&:nth-child(2) {
-			width: 250px;
-		}
-		&:last-child {
-			width: 150px;
-			text-align: right;
-		}
-	}
-	.el__accord-in {
-		padding: 30px;
-		border-top: 1px solid $brd;
 	}
 }
 
