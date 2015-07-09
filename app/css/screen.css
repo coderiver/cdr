@@ -1050,11 +1050,10 @@ th {
       padding: 0 15px 0 0;
       border: none; }
 
-.label {
+.data .data__label {
   margin-bottom: 2px;
   color: #A4A4A4; }
-
-.value {
+.data .data__value {
   font-size: 18px;
   color: #444; }
 

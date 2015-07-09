@@ -1104,18 +1104,15 @@ th {
 	}
 }
 
-.block {
-	
-}
-
-.label {
-	margin-bottom: 2px;
-	color: #A4A4A4;
-}
-
-.value {
-	font-size: 18px;
-	color: #444;
+.data {
+	.data__label {
+		margin-bottom: 2px;
+		color: #A4A4A4;
+	}
+	.data__value {
+		font-size: 18px;
+		color: #444;
+	}
 }
 
 .table {
