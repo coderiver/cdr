@@ -1117,6 +1117,9 @@ th {
 	&.title_5 {
 		font-size: 16px;
 	}
+	&.title_6 {
+		font-size: 14px;
+	}
 	&.title_thin {
 		@include f;
 	}
@@ -1323,8 +1326,32 @@ th {
 		left: 0;
 		width: 8px;
 		height: 8px;
-		background: #FFCE6A;
 		border-radius: 50%;
+	}
+	&.status_draft {
+		&:before {
+			background: #FFCE6A;
+		}
+	}
+	&.status_pushed {
+		&:before {
+			background: #63d300;
+		}
+	}
+	&.status_live {
+		&:before {
+			background: #55bbcc;
+		}
+	}
+	&.status_canceled {
+		&:before {
+			background: #eb430f;
+		}
+	}
+	&.status_completed {
+		&:before {
+			border: 1px solid #a7a7a7;
+		}
 	}
 	&.status_bold {
 		@include fs;

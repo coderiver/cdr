@@ -1058,6 +1058,8 @@ th {
     font-size: 18px; }
   .title.title_5 {
     font-size: 16px; }
+  .title.title_6 {
+    font-size: 14px; }
   .title.title_thin {
     font-family: 'Source Sans Pro Regular', Arial, sans-serif; }
   .title.title_gray {
@@ -1202,8 +1204,17 @@ th {
     left: 0;
     width: 8px;
     height: 8px;
-    background: #FFCE6A;
     border-radius: 50%; }
+  .status.status_draft:before {
+    background: #FFCE6A; }
+  .status.status_pushed:before {
+    background: #63d300; }
+  .status.status_live:before {
+    background: #55bbcc; }
+  .status.status_canceled:before {
+    background: #eb430f; }
+  .status.status_completed:before {
+    border: 1px solid #a7a7a7; }
   .status.status_bold {
     font-family: 'Source Sans Pro Semibold', Arial, sans-serif; }
 
@@ -1306,3 +1317,127 @@ th {
   color: #747474;
   text-transform: uppercase;
   vertical-align: middle; }
+
+.icon-arrow-down {
+  width: 12px;
+  height: 8px; }
+
+.icon-arrow-left {
+  width: 9px;
+  height: 13px; }
+
+.icon-arrow-right {
+  width: 7px;
+  height: 11px; }
+
+.icon-arrow-top {
+  width: 12px;
+  height: 7px; }
+
+.icon-calendar {
+  width: 19px;
+  height: 18px; }
+
+.icon-checkbox-tick {
+  width: 15px;
+  height: 13px; }
+
+.icon-close {
+  width: 13px;
+  height: 12px; }
+
+.icon-code {
+  width: 19px;
+  height: 9px; }
+
+.icon-configure {
+  width: 19px;
+  height: 18px; }
+
+.icon-continue {
+  width: 11px;
+  height: 9px; }
+
+.icon-decrease {
+  width: 12px;
+  height: 9px; }
+
+.icon-dots {
+  width: 19px;
+  height: 5px; }
+
+.icon-edit {
+  width: 18px;
+  height: 18px; }
+
+.icon-error {
+  width: 71px;
+  height: 71px; }
+
+.icon-growth {
+  width: 12px;
+  height: 9px; }
+
+.icon-info {
+  width: 19px;
+  height: 18px; }
+
+.icon-lock {
+  width: 17px;
+  height: 19px; }
+
+.icon-mail {
+  width: 19px;
+  height: 14px; }
+
+.icon-map-pixel {
+  width: 18px;
+  height: 18px; }
+
+.icon-map-urls {
+  width: 18px;
+  height: 18px; }
+
+.icon-menu {
+  width: 18px;
+  height: 15px; }
+
+.icon-plus {
+  width: 15px;
+  height: 15px; }
+
+.icon-progress {
+  width: 20px;
+  height: 15px; }
+
+.icon-search {
+  width: 15px;
+  height: 15px; }
+
+.icon-segment {
+  width: 18px;
+  height: 18px; }
+
+.icon-success {
+  width: 71px;
+  height: 71px; }
+
+.icon-tick {
+  width: 13px;
+  height: 11px; }
+
+.icon-upload {
+  width: 17px;
+  height: 19px; }
+
+.icon-upload-circle {
+  width: 19px;
+  height: 20px; }
+
+.icon-url {
+  width: 18px;
+  height: 19px; }
+
+.icon-view {
+  width: 22px;
+  height: 15px; }

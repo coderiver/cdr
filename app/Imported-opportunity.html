@@ -214,12 +214,27 @@
 					<svg class="icon icon-arrow-down">
 						<use xlink:href="#icon-arrow-down"/>
 					</svg>
-					<!-- title -->
-					<div class="title title_2">
-						<a class="title__link" href="#">
-							<span class="title__text">Campaigns</span>
-							<sup class="title__counter">4</sup>
-						</a>
+					<!-- row -->
+					<div class="row">
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_2">
+								<a class="title__link" href="#">
+									<span class="title__text">Campaigns</span>
+									<sup class="title__counter">4</sup>
+								</a>
+							</div>
+						</div>
+						<div class="col-50">
+							<!-- pager -->
+							<div class="pager">
+								<button class="btn"></button>
+								<button>1</button>
+								<button>2</button>
+								<button>3</button>
+								<button class="btn"></button>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="accord__in" style="display: block;">
@@ -231,7 +246,6 @@
 								<th>Platforms</th>
 								<th>Start Date</th>
 								<th>End Date</th>
-								<th>Status</th>
 								<th class="ta-right">Media Budget, USD</th>
 								<th></th>
 								<th></th>
@@ -239,92 +253,179 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Q2 CPOV</td>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Q2 CPOV</div>
+								</td>
 								<td>TheTradeDesk</td>
 								<td>Jun 12, 2015</td>
 								<td>Jun 24, 2015</td>
-								<td>
-									<!-- status -->
-									<div class="status status_pending">Pending</div>
-								</td>
 								<td class="ta-right">53,789.00</td>
 								<td>
-									<button class="btn btn_gray btn_small">Create</button>
+									<button class="btn btn_small">Create</button>
 								</td>
 								<td>
 									<a class="link-icon" href="#">
 										<svg class="icon icon-view">
 											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
 										</svg>
-										<span>Normal</span>
+										<span>View</span>
 									</a>
 								</td>
 							</tr>
 							<tr>
-								<td>Q2 CPOV</td>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Q2 CPOV</div>
+								</td>
 								<td>TheTradeDesk</td>
 								<td>Jun 12, 2015</td>
 								<td>Jun 24, 2015</td>
-								<td>
-									<!-- status -->
-									<div class="status status_pending">Pending</div>
-								</td>
 								<td class="ta-right">53,789.00</td>
 								<td>
-									<button class="btn btn_gray btn_small">Create</button>
+									<!-- status -->
+									<div class="status status_pushed">Pushed to DSP</div>
 								</td>
 								<td>
 									<a class="link-icon" href="#">
 										<svg class="icon icon-view">
 											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
 										</svg>
-										<span>Normal</span>
+										<span>View</span>
 									</a>
 								</td>
-								<tr>
-									<td>Q2 CPOV</td>
-									<td>TheTradeDesk</td>
-									<td>Jun 12, 2015</td>
-									<td>Jun 24, 2015</td>
-									<td>
-										<!-- status -->
-										<div class="status status_pending">Pending</div>
-									</td>
-									<td class="ta-right">53,789.00</td>
-									<td>
-										<button class="btn btn_gray btn_small">Create</button>
-									</td>
-									<td>
-										<a class="link-icon" href="#">
-											<svg class="icon icon-view">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
-											</svg>
-											<span>Normal</span>
-										</a>
-									</td>
-									<tr>
-										<td>Q2 CPOV</td>
-										<td>TheTradeDesk</td>
-										<td>Jun 12, 2015</td>
-										<td>Jun 24, 2015</td>
-										<td>
-											<!-- status -->
-											<div class="status status_pending">Pending</div>
-										</td>
-										<td class="ta-right">53,789.00</td>
-										<td>
-											<button class="btn btn_gray btn_small">Create</button>
-										</td>
-										<td>
-											<a class="link-icon" href="#">
-												<svg class="icon icon-view">
-													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
-												</svg>
-												<span>Normal</span>
-											</a>
-										</td>
-									</tr>
-								</tr>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Q2 CPOV</div>
+								</td>
+								<td>TheTradeDesk</td>
+								<td>Jun 12, 2015</td>
+								<td>Jun 24, 2015</td>
+								<td class="ta-right">53,789.00</td>
+								<td>
+									<!-- status -->
+									<div class="status status_live">Live</div>
+								</td>
+								<td>
+									<a class="link-icon" href="#">
+										<svg class="icon icon-view">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
+										</svg>
+										<span>View</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Q2 CPOV</div>
+								</td>
+								<td>TheTradeDesk</td>
+								<td>Jun 12, 2015</td>
+								<td>Jun 24, 2015</td>
+								<td class="ta-right">53,789.00</td>
+								<td>
+									<!-- status -->
+									<div class="status status_draft">Draft</div>
+								</td>
+								<td>
+									<a class="link-icon" href="#">
+										<svg class="icon icon-view">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
+										</svg>
+										<span>View</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Q2 CPOV</div>
+								</td>
+								<td>TheTradeDesk</td>
+								<td>Jun 12, 2015</td>
+								<td>Jun 24, 2015</td>
+								<td class="ta-right">53,789.00</td>
+								<td>
+									<!-- status -->
+									<div class="status status_canceled">Canceled</div>
+								</td>
+								<td>
+									<a class="link-icon" href="#">
+										<svg class="icon icon-view">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
+										</svg>
+										<span>View</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Q2 CPOV</div>
+								</td>
+								<td>TheTradeDesk</td>
+								<td>Jun 12, 2015</td>
+								<td>Jun 24, 2015</td>
+								<td class="ta-right">53,789.00</td>
+								<td>
+									<!-- status -->
+									<div class="status status_completed">Completed</div>
+								</td>
+								<td>
+									<a class="link-icon" href="#">
+										<svg class="icon icon-view">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
+										</svg>
+										<span>View</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Q2 CPOV</div>
+								</td>
+								<td>TheTradeDesk</td>
+								<td>Jun 12, 2015</td>
+								<td>Jun 24, 2015</td>
+								<td class="ta-right">53,789.00</td>
+								<td>
+									<!-- status -->
+									<div class="status status_draft">Draft</div>
+								</td>
+								<td>
+									<a class="link-icon" href="#">
+										<svg class="icon icon-view">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
+										</svg>
+										<span>View</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Q2 CPOV</div>
+								</td>
+								<td>TheTradeDesk</td>
+								<td>Jun 12, 2015</td>
+								<td>Jun 24, 2015</td>
+								<td class="ta-right">53,789.00</td>
+								<td>
+									<!-- status -->
+									<div class="status status_draft">Draft</div>
+								</td>
+								<td>
+									<a class="link-icon" href="#">
+										<svg class="icon icon-view">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use>
+										</svg>
+										<span>View</span>
+									</a>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -540,7 +641,7 @@
 	</div>
 </div>
 <!-- menu -->
-<div class="menu">
+<div class="menu" hidden>
 	<div class="menu__head bb">
 		<a class="menu__logo" href="#"></a>
 		<button class="menu__close">
