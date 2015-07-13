@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="7px" height="11px" viewBox="0 0 7 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="8px" height="13px" viewBox="0 0 8 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
-    <title>Shape</title>
+    <title>arrow-left</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M0.384,9.118 L4.223,5.501 L0.305,1.811 L0.306,1.811 C0.108,1.617 -0.015,1.354 -0.015,1.064 C-0.015,0.469 0.497,-0.013 1.128,-0.013 C1.436,-0.013 1.715,0.103 1.92,0.29 L1.921,0.289 L6.629,4.724 L6.629,4.725 C6.844,4.92 6.978,5.195 6.978,5.499 L6.978,5.501 L6.978,5.504 C6.978,5.808 6.844,6.082 6.629,6.278 L6.629,6.278 L1.921,10.714 L1.918,10.711 C1.713,10.896 1.434,11.01 1.128,11.01 C0.497,11.01 -0.015,10.528 -0.015,9.934 C-0.015,9.608 0.14,9.315 0.384,9.118 L0.384,9.118 Z" id="Shape" fill="#A4A4A4" sketch:type="MSShapeGroup"></path>
+        <path d="M3.17548828,6.75195312 L7.27548828,10.8519531 C7.47548828,11.0519531 7.57548828,11.3519531 7.57548828,11.6519531 C7.57548828,12.3519531 7.07548828,12.8519531 6.37548828,12.8519531 C6.07548828,12.8519531 5.77548828,12.7519531 5.57548828,12.5519531 L0.675488281,7.65195312 C0.475488281,7.45195312 0.275488281,7.15195312 0.275488281,6.75195312 C0.275488281,6.45195312 0.375488281,6.15195312 0.675488281,5.85195312 L5.57548828,0.951953125 C5.77548828,0.751953125 6.07548828,0.651953125 6.37548828,0.651953125 C7.07548828,0.651953125 7.57548828,1.15195312 7.57548828,1.85195312 C7.57548828,2.25195312 7.37548828,2.55195312 7.17548828,2.75195312 L3.17548828,6.75195312 L3.17548828,6.75195312 Z" id="arrow-left" fill="#903B3B" sketch:type="MSShapeGroup" transform="translate(3.925488, 6.751953) rotate(-180.000000) translate(-3.925488, -6.751953) "></path>
     </g>
 </svg>
