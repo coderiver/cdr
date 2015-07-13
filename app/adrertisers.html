@@ -22,32 +22,23 @@
 </head>
 <body>
 <!-- wrapper -->
-<div class="wrapper">
+<div class="wrapper js-wrapper">
 	<!-- header -->
-	<header class="header">
+	<header class="header js-header">
 		<!-- center -->
 		<div class="center">
-			<!-- btn-menu -->
-			<button class="btn-menu">
+			<button class="header__btn-menu js-menu-btn">
 				<svg class="icon icon-menu">
 					<use xlink:href="#icon-menu"/>
 				</svg>
 			</button>
-			<!-- chapter -->
-			<div class="chapter">
-				<div class="chapter__title">Advertisers</div>
-				<!-- btn-round -->
-				<button class="btn-round">
-					<svg class="icon icon-plus">
-						<use xlink:href="#icon-plus"/>
-					</svg>
-				</button>
+			<div class="header__chapter">
+				<div class="header__chapter-title">Adrertisers</div>
 			</div>
-			<!-- float-right -->
-			<div class="float-right mt-25 ml-25">
+			<div class="header__user">
 				<!-- dropdown -->
 				<div class="dropdown dropdown_white">
-					<div class="dropdown__head">
+					<div class="dropdown__head js-dropdown">
 						<div class="dropdown__title">John</div>
 						<svg class="icon icon-arrow-down">
 							<use xlink:href="#icon-arrow-down"/>
@@ -62,29 +53,30 @@
 					</ul>
 				</div>
 			</div>
-			<!-- notification -->
-			<a class="notification" href="#">
-				<div class="notification__in">
-					<div class="notification__counter">2</div>
+			<a class="header__notify" href="#">
+				<div class="header__notify-in">
+					<div class="header__notify-counter">2</div>
 					<svg class="icon icon-upload">
 						<use xlink:href="#icon-upload"/>
 					</svg>
 				</div>
 			</a>
-			<!-- field -->
-			<div class="field field_search field_search_header">
-				<label class="field__in">
-					<input class="input" type="text" placeholder="Search">
-					<svg class="icon icon-search">
-						<use xlink:href="#icon-search"/>
-					</svg>
-				</label>
-				<!-- dropdown-menu -->
-				<ul class="dropdown-menu dropdown-menu_search">
-					<li><a href="#"><span>Adv</span>antages</a></li>
-					<li><a href="#"><span>Adv</span>ertisers</a></li>
-					<li><a href="#"><span>Adv</span>ertisement</a></li>
-				</ul>
+			<div class="header__search">
+				<!-- field -->
+				<div class="field field_search_round">
+					<label class="field__in">
+						<input class="input js-dropdown" type="text" placeholder="Search">
+						<svg class="icon icon-search">
+							<use xlink:href="#icon-search"/>
+						</svg>
+					</label>
+					<!-- dropdown-menu -->
+					<ul class="dropdown-menu dropdown-menu_search">
+						<li><a href="#"><span>Adv</span>antages</a></li>
+						<li><a href="#"><span>Adv</span>ertisers</a></li>
+						<li><a href="#"><span>Adv</span>ertisement</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -97,7 +89,7 @@
 				<div class="col-60">
 					<!-- dropdown -->
 					<div class="dropdown mt-3">
-						<div class="dropdown__head">
+						<div class="dropdown__head js-dropdown">
 							<div class="dropdown__title">All advertisers</div>
 							<svg class="icon icon-arrow-down">
 								<use xlink:href="#icon-arrow-down"/>
@@ -112,7 +104,7 @@
 					</div>
 					<!-- dropdown -->
 					<div class="dropdown mt-3">
-						<div class="dropdown__head">
+						<div class="dropdown__head js-dropdown">
 							<div class="dropdown__title">All agencies</div>
 							<svg class="icon icon-arrow-down">
 								<use xlink:href="#icon-arrow-down"/>
@@ -127,7 +119,7 @@
 					</div>
 					<!-- dropdown -->
 					<div class="dropdown mt-3">
-						<div class="dropdown__head">
+						<div class="dropdown__head js-dropdown">
 							<div class="dropdown__title">All industries</div>
 							<svg class="icon icon-arrow-down">
 								<use xlink:href="#icon-arrow-down"/>
@@ -337,5 +329,29 @@
 		</div>
 	</div>
 </div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>
