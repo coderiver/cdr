@@ -27,64 +27,72 @@
 	<header class="header js-header">
 		<!-- center -->
 		<div class="center">
-			<button class="header__btn-menu js-menu-btn">
-				<svg class="icon icon-menu">
-					<use xlink:href="#icon-menu"/>
-				</svg>
-			</button>
-			<div class="header__chapter">
-				<div class="header__chapter-title">Campaigns</div>
-				<button class="header__chapter-add">
-					<svg class="icon icon-plus">
-						<use xlink:href="#icon-plus"/>
-					</svg>
-				</button>
-			</div>
-			<nav class="header__nav">
-				<a href="#">Digital</a>
-				<a href="#">TV</a>
-			</nav>
-			<div class="header__user">
-				<!-- dropdown -->
-				<div class="dropdown dropdown_white">
-					<div class="dropdown__head js-dropdown">
-						<div class="dropdown__title">John</div>
-						<svg class="icon icon-arrow-down">
-							<use xlink:href="#icon-arrow-down"/>
+			<div class="header__left">
+				<div class="header__cell">
+					<button class="header__btn-menu js-menu-btn">
+						<svg class="icon icon-menu">
+							<use xlink:href="#icon-menu"/>
 						</svg>
+					</button>
+					<div class="header__chapter">
+						<div class="header__chapter-title">Campaigns</div>
+						<button class="header__chapter-add">
+							<svg class="icon icon-plus">
+								<use xlink:href="#icon-plus"/>
+							</svg>
+						</button>
 					</div>
-					<!-- dropdown-menu -->
-					<ul class="dropdown-menu dropdown-menu_right">
-						<li><a href="#">Profile Settings</a></li>
-						<li><a href="#">Support</a></li>
-						<li><a href="#">Terms & Conditions</a></li>
-						<li><a href="#">Log Out</a></li>
-					</ul>
+					<nav class="header__nav">
+						<a href="#">Digital</a>
+						<a href="#">TV</a>
+					</nav>
 				</div>
 			</div>
-			<a class="header__notify" href="#">
-				<div class="header__notify-in">
-					<div class="header__notify-counter">2</div>
-					<svg class="icon icon-upload">
-						<use xlink:href="#icon-upload"/>
-					</svg>
-				</div>
-			</a>
-			<div class="header__search">
-				<!-- field -->
-				<div class="field field_search_round">
-					<label class="field__in">
-						<input class="input js-dropdown" type="text" placeholder="Search">
-						<svg class="icon icon-search">
-							<use xlink:href="#icon-search"/>
-						</svg>
-					</label>
-					<!-- dropdown-menu -->
-					<ul class="dropdown-menu dropdown-menu_search">
-						<li><a href="#"><span>Adv</span>antages</a></li>
-						<li><a href="#"><span>Adv</span>ertisers</a></li>
-						<li><a href="#"><span>Adv</span>ertisement</a></li>
-					</ul>
+			<div class="header__right">
+				<div class="header__cell">
+					<div class="header__search">
+						<!-- field -->
+						<div class="field field_search_round">
+							<label class="field__in">
+								<input class="input js-dropdown" type="text" placeholder="Search">
+								<svg class="icon icon-search">
+									<use xlink:href="#icon-search"/>
+								</svg>
+							</label>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_search">
+								<li><a href="#"><span>Adv</span>antages</a></li>
+								<li><a href="#"><span>Adv</span>ertisers</a></li>
+								<li><a href="#"><span>Adv</span>ertisement</a></li>
+							</ul>
+						</div>
+					</div>
+					<a class="header__notify" href="#">
+						<div class="header__notify-in">
+							<div class="header__notify-counter">2</div>
+							<svg class="icon icon-upload">
+								<use xlink:href="#icon-upload"/>
+							</svg>
+						</div>
+					</a>
+					<div class="header__user">
+						<!-- dropdown -->
+						<div class="dropdown dropdown_white">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">John</div>
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_right">
+								<li><a href="#">Profile Settings</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -679,6 +687,7 @@
 		</div>
 	</div>
 </div>
+<!-- js -->
 <script src="js/jquery.js"></script>
 <script src="js/common.js"></script>
 </body>

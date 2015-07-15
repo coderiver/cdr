@@ -6,7 +6,8 @@ $(document).ready(function() {
 		menu = $('.js-menu'),
 		menuBtn = $('.js-menu-btn'),
 		menuClose = $('.js-menu-close'),
-		dropdown = $('.js-dropdown');
+		dropdown = $('.js-dropdown'),
+		input = $('.js-input');
 
 	menuBtn.on('click', function () {
 		menu.addClass('is-open');
@@ -38,6 +39,19 @@ $(document).ready(function() {
 			wrapper.removeClass('is-header-fixed');
 			header.removeClass('is-fixed');
 		}
+	});
+
+	input.focus(function () {
+		$(this).parent().addClass('is-filled');
+	});
+
+	input.blur(function () {
+		var _this = $(this),
+			value = _this.val();
+		console.log(value.length);
+		if (value.length == 0) {
+			_this.parent().removeClass('is-filled');
+		};
 	});
 	
 });

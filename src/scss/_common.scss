@@ -53,6 +53,7 @@ th {
 .wrapper {
 	min-height: 100%;
 	padding-top: 70px;
+	transition: padding .2s;
 	&.is-header-fixed {
 		padding-top: 40px;
 	}
@@ -817,6 +818,7 @@ th {
 		padding-left: 30px;
 		background: transparent;
 		border-bottom: 2px solid rgba(#fff,.4);
+		font-size: 15px;
 		color: #FFF;
 		transition: border-color .2s;
 	}
@@ -833,7 +835,7 @@ th {
 		top: 0;
 		left: 0;
 		width: 30px;
-		height: 46px;
+		height: 44px;
 		@include vert;
 	}
 	.field-icon__error {
@@ -882,18 +884,13 @@ th {
 	right: 0;
 	height: 70px;
 	background: url(../img/bg-header.jpg) no-repeat 50% 0 $orange;
+	transition: height .2s;
 	z-index: 99;
 	&.is-fixed {
 		height: 40px;
 		background: $orange;
-		.header__user {
-			margin-top: 10px;
-		}
-		.header__notify {
+		.header__cell {
 			height: 40px;
-		}
-		.header__search {
-			margin-top: 3px;
 		}
 		.header__nav {
 			a {
@@ -910,12 +907,8 @@ th {
 		.header__btn-menu {
 			width: auto;
 			height: auto;
-			margin-top: 12px;
-			border: none;
+			border: 0px solid transparent;
 			border-radius: 0;
-		}
-		.header__chapter {
-			margin-top: 7px;
 		}
 		.header__chapter-title {
 			font-size: 20px;
@@ -935,35 +928,81 @@ th {
 			}
 		} 
 	}
-	.header__user {
-		float: right;
-		margin: 25px 0 0 25px;
+	.header__left {
+		float: left;
 	}
-	.header__search {
+	.header__right {
 		float: right;
-		width: 250px;
-		margin-top: 18px;
-		.input {
-			border: none;
-			background: rgba(#fff,.9);
+	}
+	.header__cell {
+		display: table-cell;
+		height: 70px;
+		vertical-align: middle;
+		transition: height .2s;
+		font-size: 0;
+	}
+	.header__btn-menu {
+		width: 50px;
+		height: 50px;
+		margin-right: 15px;
+		border-radius: 50%;
+		border: 6px solid #f88745;
+		font-size: 0;
+		vertical-align: middle;
+		transition: all .2s;
+		transition-delay: .1s;
+		.icon-menu {
+			width: 18px;
+			height: 16px;
+			fill: #fff;
 		}
-		&.is-closed {
-			width: 35px;
-			.field_search_round {
-				.icon {
-					left: 10px;
-					fill: #fff;
-					cursor: pointer;
-				}
+	}
+	.header__chapter {
+		display: inline-block;
+		margin-right: 75px;
+		vertical-align: middle;
+		.btn-round {
+			position: relative;
+			top: 2px;
+			vertical-align: middle;
+		}
+	}
+	.header__chapter-title {
+		display: inline-block;
+		margin-right: 15px;
+		font-size: 34px;
+		color: #FFF;
+		vertical-align: middle;
+		transition: font-size .2s;
+	}
+	.header__chapter-add {
+		width: 31px;
+		height: 31px;
+		background: #FFF;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+		border-radius: 50%;
+		font-size: 0;
+		vertical-align: middle;
+		transition: all .2s;
+		&:hover {
+			.icon-plus {
+				fill: $blue-l;
 			}
-			.input {
-				padding-right: 0;
-				background: rgba(#fff,0);
+		}
+		&:active {
+			.icon-plus {
+				fill: $blue-d;
 			}
+		}
+		.icon-plus {
+			width: 15px;
+			height: 15px;
+			fill: $blue;
 		}
 	}
 	.header__nav {
-		float: left;
+		display: inline-block;
+		vertical-align: middle;
 		a {
 			position: relative;
 			float: left;
@@ -990,67 +1029,40 @@ th {
 			}
 		}
 	}
-	.header__chapter {
-		float: left;
-		margin: 13px 75px 0 0;
-		.btn-round {
-			position: relative;
-			top: 2px;
-			vertical-align: middle;
-		}
-	}
-	.header__chapter-title {
+	.header__user {
 		display: inline-block;
-		margin-right: 15px;
-		font-size: 34px;
-		color: #FFF;
+		margin-left: 25px;
 		vertical-align: middle;
 	}
-	.header__chapter-add {
-		width: 31px;
-		height: 31px;
-		background: #FFF;
-		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
-		border-radius: 50%;
-		font-size: 0;
+	.header__search {
+		display: inline-block;
+		width: 250px;
 		vertical-align: middle;
-		&:hover {
-			.icon-plus {
-				fill: $blue-l;
+		.input {
+			border: none;
+			background: rgba(#fff,.9);
+		}
+		&.is-closed {
+			width: 35px;
+			.field_search_round {
+				.icon {
+					left: 10px;
+					fill: #fff;
+					cursor: pointer;
+				}
 			}
-		}
-		&:active {
-			.icon-plus {
-				fill: $blue-d;
+			.input {
+				padding-right: 0;
+				background: rgba(#fff,0);
 			}
-		}
-		.icon-plus {
-			width: 15px;
-			height: 15px;
-			fill: $blue;
-		}
-	}
-	.header__btn-menu {
-		float: left;
-		width: 50px;
-		height: 50px;
-		margin: 10px 15px 0 0;
-		border-radius: 50%;
-		border: 6px solid #f88745;
-		font-size: 0;
-		.icon-menu {
-			width: 17px;
-			height: 15px;
-			fill: #fff;
 		}
 	}
 	.header__notify {
-		float: right;
-		height: 70px;
+		display: inline-block;
 		margin-left: 25px;
 		padding: 0 24px 0 15px;
-		@include vert;
 		color: #FFF;
+		vertical-align: middle;
 		.icon-upload {
 			width: 17px;
 			height: 19px;
@@ -1059,8 +1071,7 @@ th {
 	}
 	.header__notify-in {
 		position: relative;
-		display: inline-block;
-		vertical-align: middle;
+		display: block;
 	}
 	.header__notify-counter {
 		position: absolute;
@@ -1073,6 +1084,7 @@ th {
 		text-align: center;
 		font-size: 12px;
 		line-height: 22px;
+		transition: top .2s;
 	}
 }
 
