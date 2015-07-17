@@ -1237,8 +1237,8 @@ th {
     .info .info__item:first-child {
       padding: 0 15px 0 0;
       border: none; }
-    .info .info__item.is-active {
-      color: #ff6633; }
+    .info .info__item.is-blue {
+      color: #55bbcc; }
 
 .data.data_white {
   color: #FFF; }
@@ -1316,13 +1316,27 @@ th {
     bottom: 0;
     background: rgba(255, 255, 255, 0.8);
     z-index: 2; }
+.table tr.is-active td {
+  background: #EEF8FA; }
+  .table tr.is-active td:first-child .icon-tick {
+    display: block; }
 .table th {
   padding: 0 10px 15px;
   color: #A4A4A4; }
 .table td {
+  position: relative;
+  height: 50px;
   padding: 10px;
   border-top: 1px solid #dadada;
   vertical-align: middle; }
+  .table td:first-child .icon-tick {
+    display: none;
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    width: 10px;
+    height: 8px;
+    fill: #55bbcc; }
 
 .ta-right {
   text-align: right; }

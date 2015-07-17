@@ -1403,8 +1403,8 @@ th {
 			padding: 0 15px 0 0;
 			border: none;
 		}
-		&.is-active {
-			color: $orange;
+		&.is-blue {
+			color: $blue;
 		}
 	}
 }
@@ -1524,15 +1524,38 @@ th {
 				}
 			}
 		}
+		&.is-active {
+			td {
+				background: #EEF8FA;
+				&:first-child {
+					.icon-tick {
+						display: block;
+					}
+				}
+			}
+		}
 	}
 	th {
 		padding: 0 10px 15px;
 		color: #A4A4A4;
 	}
 	td {
+		position: relative;
+		height: 50px;
 		padding: 10px;
 		border-top: 1px solid $brd;
 		vertical-align: middle;
+		&:first-child {
+			.icon-tick {
+				display: none;
+				position: absolute;
+				top: 18px;
+				left: 15px;
+				width: 10px;
+				height: 8px;
+				fill: $blue
+			}
+		}
 	}
 }
 
