@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper js-wrapper">
+	<!-- header -->
+	<header class="header js-header">
+		<!-- center -->
+		<div class="center">
+			<div class="header__left">
+				<div class="header__cell">
+					<button class="header__btn-menu js-menu-btn">
+						<svg class="icon icon-menu">
+							<use xlink:href="#icon-menu"/>
+						</svg>
+					</button>
+					<div class="header__chapter">
+						<div class="header__chapter-title">Campaigns</div>
+						<button class="header__chapter-add">
+							<svg class="icon icon-plus">
+								<use xlink:href="#icon-plus"/>
+							</svg>
+						</button>
+					</div>
+					<nav class="header__nav">
+						<a href="#">Digital</a>
+						<a href="#">TV</a>
+					</nav>
+				</div>
+			</div>
+			<div class="header__right">
+				<div class="header__cell">
+					<div class="header__search">
+						<!-- field -->
+						<div class="field field_search_round">
+							<label class="field__in">
+								<input class="input js-dropdown" type="text" placeholder="Search">
+								<svg class="icon icon-search">
+									<use xlink:href="#icon-search"/>
+								</svg>
+							</label>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_search">
+								<li><a href="#"><span>Adv</span>antages</a></li>
+								<li><a href="#"><span>Adv</span>ertisers</a></li>
+								<li><a href="#"><span>Adv</span>ertisement</a></li>
+							</ul>
+						</div>
+					</div>
+					<a class="header__notify" href="#">
+						<div class="header__notify-in">
+							<div class="header__notify-counter">2</div>
+							<svg class="icon icon-upload">
+								<use xlink:href="#icon-upload"/>
+							</svg>
+						</div>
+					</a>
+					<div class="header__user">
+						<!-- dropdown -->
+						<div class="dropdown dropdown_white">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">John</div>
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_right">
+								<li><a href="#">Profile Settings</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- head -->
+	<div class="head">
+		<div class="head__in head__in_brd">
+			<!-- center -->
+			<div class="center">
+				<!-- row -->
+				<div class="row">
+					<div class="col-50">
+						<!-- btn-back -->
+						<button class="btn-back">
+							<svg class="icon icon-arrow-left">
+								<use xlink:href="#icon-arrow-left"/>
+							</svg>
+						</button>
+						<!-- dt -->
+						<div class="dt">
+							<!-- title -->
+							<div class="title">Microsoft</div>
+							<!-- info -->
+							<ul class="info">
+								<li class="info__item">UM</li>
+								<li class="info__item is-active">Account</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-50">
+						<!-- tags -->
+						<div class="tags">
+							<a class="tags__item" href="#">Social</a>
+							<a class="tags__item" href="#">Video</a>
+							<a class="tags__item" href="#">Display</a>
+							<a class="tags__item" href="#">Social</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="head__in">
+			<!-- center -->
+			<div class="center">
+				<!-- panel -->
+				<div class="panel panel_p-0-40">
+					<!-- row -->
+					<div class="row">
+						<div class="col-20">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Market</div>
+								<div class="data__value">US</div>
+							</div>
+						</div>
+						<div class="col-20">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Opportunities</div>
+								<div class="data__value">4</div>
+							</div>
+						</div>
+						<div class="col-20">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Classification</div>
+								<div class="data__value">Tier 1</div>
+							</div>
+						</div>
+						<div class="col-20">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Account Type</div>
+								<div class="data__value">Agency Account</div>
+							</div>
+						</div>
+						<div class="col-20">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Salesforce ID</div>
+								<div class="data__value">XX-5676-8900</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- accord -->
+			<div class="accord mb-20 is-active">
+				<div class="accord__head">
+					<svg class="icon icon-arrow-down">
+						<use xlink:href="#icon-arrow-down"/>
+					</svg>
+					<!-- row -->
+					<div class="row">
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_2">
+								<a class="title__link" href="#">
+									<span class="title__text">Brands</span>
+									<sup class="title__counter">10</sup>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accord__in" style="display: block;">
+					<!-- panel -->
+					<div class="panel bt">
+						<!-- row -->
+						<div class="row">
+							<div class="col-25">
+								<!-- title -->
+								<div class="title title_4 title_thin mb-10">Xbox</div>
+								<div class="title title_4 title_thin mb-10">Windows</div>
+								<div class="title title_4 title_thin mb-10">Windows Phone</div>
+								<div class="title title_4 title_thin mb-10">Lumia</div>
+							</div>
+							<div class="col-25">
+								<!-- title -->
+								<div class="title title_4 title_thin mb-10">Bing</div>
+								<div class="title title_4 title_thin mb-10">Skype</div>
+								<div class="title title_4 title_thin mb-10">Windows 8</div>
+								<div class="title title_4 title_thin mb-10">Windows 10</div>
+							</div>
+							<div class="col-25">
+								<!-- title -->
+								<div class="title title_4 title_thin mb-10">Outlook.com</div>
+								<div class="title title_4 title_thin mb-10">Office 365</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- accord -->
+			<div class="accord mb-20 is-active">
+				<div class="accord__head">
+					<svg class="icon icon-arrow-down">
+						<use xlink:href="#icon-arrow-down"/>
+					</svg>
+					<!-- title -->
+					<div class="title title_2">
+						<a class="title__link" href="#">
+							<span class="title__text">Opportunities</span>
+							<sup class="title__counter">4</sup>
+						</a>
+					</div>
+				</div>
+				<div class="accord__in" style="display: block;">
+					<!-- table -->
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Stage</th>
+								<th>Platform</th>
+								<th>Media Type</th>
+								<th class="ta-right">IO Amount</th>
+								<th>Start Date</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Xbox GTA5 inbox dv 34-567</div>
+								</td>
+								<td>Closed Won</td>
+								<td>Turn</td>
+								<td>Social, Video, Display</td>
+								<td class="ta-right">$ 53,789.00</td>
+								<td>Jun 12, 2015</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Xbox GTA5 inbox dv 34-567</div>
+								</td>
+								<td>Closed Won</td>
+								<td>Turn</td>
+								<td>Social, Video, Display</td>
+								<td class="ta-right">$ 53,789.00</td>
+								<td>Jun 12, 2015</td>
+								<td>
+									<a class="link-icon" href="#">
+										<svg class="icon icon-upload-circle">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-upload-circle"></use>
+										</svg>
+										<span>View</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Xbox GTA5 inbox dv 34-567</div>
+								</td>
+								<td>Closed Won</td>
+								<td>Turn</td>
+								<td>Social, Video, Display</td>
+								<td class="ta-right">$ 53,789.00</td>
+								<td>Jun 12, 2015</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Xbox GTA5 inbox dv 34-567</div>
+								</td>
+								<td>Closed Won</td>
+								<td>Turn</td>
+								<td>Social, Video, Display</td>
+								<td class="ta-right">$ 53,789.00</td>
+								<td>Jun 12, 2015</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<!-- js -->
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

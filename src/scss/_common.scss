@@ -1403,6 +1403,9 @@ th {
 			padding: 0 15px 0 0;
 			border: none;
 		}
+		&.is-active {
+			color: $orange;
+		}
 	}
 }
 

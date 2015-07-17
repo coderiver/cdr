@@ -1237,6 +1237,8 @@ th {
     .info .info__item:first-child {
       padding: 0 15px 0 0;
       border: none; }
+    .info .info__item.is-active {
+      color: #ff6633; }
 
 .data.data_white {
   color: #FFF; }
