@@ -13,11 +13,14 @@ $orange-l: #ffd2c3;
 $blue: #55bbcc;
 $blue-l: #77c9d6;
 $blue-d: #1c89a3;
+$blue-d1: #096482;
 $gray: #cccccc;
 $gray-l: #dcdcdc;
 $gray-d: #a4a4a4;
+$gray-h: #f3f3f3;
 $brd: #dadada;
 $red: #bb3232;
+$green-l: #dce775;
 
 body {
 	min-width: 1024px;
@@ -93,8 +96,14 @@ th {
 .col-60 {
 	width: 60%;
 }
+.col-55 {
+	width: 55%;
+}
 .col-50 {
 	width: 50%;
+}
+.col-45 {
+	width: 45%;
 }
 .col-40 {
 	width: 40%;
@@ -144,6 +153,14 @@ th {
 
 .fs-22 {
 	font-size: 22px;
+}
+
+.fs-12 {
+	font-size: 12px;
+}
+
+.text-upper {
+	text-transform: uppercase;
 }
 
 .panel {
@@ -333,24 +350,13 @@ th {
 		margin-right: 5px;
 		fill: $gray;
 	}
-	.icon-code {
-		width: 19px;
-		height: 9px;
-	}
-	.icon-view {
-		width: 22px;
-		height: 15px;
-	}
-	.icon-configure {
-		width: 19px;
-		height: 18px;
-	}
 }
 
 .item {
+	position: relative;
 	display: inline-block;
 	width: 236px;
-	min-height: 260px;
+	min-height: 259px;
 	background: white;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	vertical-align: top;
@@ -358,15 +364,38 @@ th {
 	&:hover {
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
+	&.item_no_foot {
+		.item__in {
+			min-height: 259px
+		}
+		.item__head {
+			min-height: 123px;
+		}
+	}
+	&.item_small_foot {
+		.item__in {
+			min-height: 229px;
+		}
+		.item__head {
+			min-height: 100px;
+		}
+		.item__col {
+			width: auto;
+			height: auto;
+		}
+	}
 	.item__in {
-		min-height: 190px;
-		padding: 10px 15px 10px 20px;
+		min-height: 189px;
+		padding: 20px 15px 10px 20px;
 	}
 	.item__head {
-		min-height: 124px;
+		min-height: 113px;
 		margin-bottom: 10px;
 	}
 	.item__type {
+		position: absolute;
+		top: 10px;
+		right: 15px;
 		font-size: 9px;
 		text-align: right;
 		text-transform: uppercase;
@@ -378,7 +407,6 @@ th {
 	}
 	.item__title {
 		display: block;
-		max-width: 80%;
 		font-size: 18px;
 		@include fs;
 		color: black;
@@ -401,12 +429,22 @@ th {
 	.item__col {
 		display: table-cell;
 		width: 50%;
-		height: 70px;
-		padding: 12px 12px 12px 0;
-		vertical-align: top;
+		height: 69px;
+		vertical-align: middle;
 		&:first-child {
-			padding-left: 20px;
+			padding: 7px 20px;
 		}
+		&:last-child {
+			padding: 7px 20px 7px 0;
+		}
+	}
+	.item__info {
+		& + .item__info {
+			margin-top: 10px;
+		}
+	}
+	.item__data {
+		font-size: 16px;
 	}
 	.item__label {
 		color: #a4a4a4;
@@ -414,6 +452,11 @@ th {
 	.item__value {
 		font-size: 20px;
 		color: #444444;
+	}
+	.item__date {
+		font-size: 12px;
+		color: #A4A4A4;
+		text-align: right;
 	}
 }
 
@@ -496,6 +539,62 @@ th {
 			&.is-active {
 				background: white;
 				color: $cl;
+			}
+		}
+	}
+	&.tabs_line {
+		.tabs__item {
+			position: relative;
+			height: 40px;
+			padding: 0 20px;
+			@include fs;
+			font-size: 14px;
+			color: #fff;
+			overflow: visible;
+			&.is-active {
+				background: $blue;
+				&:after {
+					content: "";
+					position: absolute;
+					left: 20px;
+					right: 20px;
+					bottom: 0;
+					height: 2px;
+					background: #FFF;
+				}
+			}
+		}
+	}
+	&.tabs_small {
+		.tabs__item {
+			position: relative;
+			height: 25px;
+			padding: 0 7px;
+			border-radius: 2px;
+			font-size: 14px;
+			color: #fff;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 5px;
+				left: 0;
+				bottom: 5px;
+				width: 1px;
+				background: rgba(#fff,.3);
+			}
+			&:first-child,
+			&.is-active {
+				&:before {
+					display: none;
+				}
+			}
+			&.is-active {
+				background: $blue-d;
+				& + .tabs__item {
+					&:before {
+						display: none;
+					}
+				}
 			}
 		}
 	}
@@ -613,8 +712,6 @@ th {
 		position: absolute;
 		top: 21px;
 		left: 15px;
-		width: 10px;
-		height: 8px;
 		fill: $blue;
 	}
 }
@@ -635,15 +732,11 @@ th {
 		padding: 0 10px 0 30px;
 		vertical-align: middle;
 		.icon-tick {
-			width: 13px;
-			height: 10px;
 			fill: $blue;
 		}
 		.icon-progress {
 			position: relative;
 			top: 1px;
-			width: 20px;
-			height: 15px;
 			fill: $gray;
 		}
 	}
@@ -683,8 +776,6 @@ th {
 		.icon-arrow-down {
 			position: absolute;
 			top: 14px;
-			right: 12px;
-			width: 12px;
 			height: 8px;
 			fill: #b4b4b4;
 		}
@@ -775,11 +866,11 @@ th {
 	}
 	.tooltip__value {
 		font-size: 19px;
-		color: #DCE775;
+		color: $green-l;
 	}
 	.tooltip__type {
 		font-size: 10px;
-		color: #DCE775;
+		color: $green-l;
 	}
 }
 
@@ -850,14 +941,6 @@ th {
 		fill: rgba(#fff,.8);
 		vertical-align: middle;
 	}
-	.icon-mail {
-		width: 18px;
-		height: 13px;
-	}
-	.icon-lock {
-		width: 16px;
-		height: 18px;
-	}
 }
 
 .login {
@@ -910,6 +993,11 @@ th {
 			border: 0px solid transparent;
 			border-radius: 0;
 		}
+		.header__chapter {
+			.dropdown-menu {
+				left: -16px;
+			}
+		}
 		.header__chapter-title {
 			font-size: 20px;
 		} 
@@ -923,7 +1011,7 @@ th {
 			}
 			&:active {
 				.icon-plus {
-					fill: #1c89a3;
+					fill: $blue-d;
 				}
 			}
 		} 
@@ -965,6 +1053,9 @@ th {
 			position: relative;
 			top: 2px;
 			vertical-align: middle;
+		}
+		.dropdown-menu {
+			left: -12px;
 		}
 	}
 	.header__chapter-title {
@@ -1173,6 +1264,7 @@ th {
 	background: #FFF;
 	border-radius: 4px;
 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+	z-index: 99;
 	&:before {
 		content: "";
 		position: absolute;
@@ -1202,7 +1294,7 @@ th {
 		font-size: 14px;
 		color: $cl;
 		&:hover {
-			background: #F3F3F3;
+			background: $gray-h;
 		}
 	}
 }
@@ -1278,6 +1370,9 @@ th {
 	&.title_gray {
 		color: #a4a4a4;
 	}
+	&.title_white {
+		color: #fff;
+	}
 	.title__link {
 		color: #000;
 		&:hover {
@@ -1311,13 +1406,47 @@ th {
 }
 
 .data {
+	&.data_white {
+		color: #FFF;
+		.data__label {
+			color: $blue-d1;
+		}
+	}
 	.data__label {
 		margin-bottom: 2px;
 		color: #A4A4A4;
 	}
 	.data__value {
 		font-size: 18px;
-		color: #444;
+	}
+	.data__value_mid {
+		font-size: 24px;
+	}
+	.data__value_big {
+		font-size: 32px;
+		line-height: 1;
+	}
+	.data__value_bigger {
+		font-size: 42px;
+		line-height: 1;
+	}
+	.data__graph {
+		display: inline-block;
+		margin-left: 20px;
+		vertical-align: middle;
+		font-size: 0;
+	}
+	.data__group {
+		font-size: 0;
+		.data__value,
+		.data__graph {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.data__value {
+			min-width: 60px;
+			margin-right: 10px;
+		}
 	}
 }
 
@@ -1477,10 +1606,11 @@ th {
 	&:before {
 		content: "";
 		position: absolute;
-		top: 4px;
+		top: 50%;
 		left: 0;
 		width: 8px;
 		height: 8px;
+		margin-top: -5px;
 		border-radius: 50%;
 	}
 	&.status_draft {
@@ -1495,7 +1625,7 @@ th {
 	}
 	&.status_live {
 		&:before {
-			background: #55bbcc;
+			background: $blue;
 		}
 	}
 	&.status_canceled {
@@ -1510,6 +1640,9 @@ th {
 	}
 	&.status_bold {
 		@include fs;
+	}
+	&.status_small {
+		font-size: 12px;
 	}
 }
 
@@ -1595,32 +1728,37 @@ th {
 			fill: $gray
 		}
 	}
-	.menu__nav {
-    	padding: 18px 0 100px;
-		a {
-			display: block;
-			padding: 15px 20px 15px 75px;
-			@include fs;
-			font-size: 17px;
-			color: #000;
-			&:hover {
-				background: #F3F3F3;
-			}
-		}
-	}
+	.menu__nav,
 	.menu__links {
 		a {
 			display: block;
 			margin-bottom: 10px;
 			padding: 10px 16px 10px 75px;
 			border-right: 4px solid transparent;
-			font-size: 16px;
-			color: $cl;
 			&:hover {
+				background: $gray-h;
+			}
+			&.is-active {
 				background: #ffefea;
 				border-color: $orange;
 				color: $orange;
+				cursor: default;
 			}
+		}
+	}
+	.menu__nav {
+    	padding: 18px 0 100px;
+		a {
+			@include fs;
+			font-size: 17px;
+			color: #000;
+			text-transform: uppercase;
+		}
+	}
+	.menu__links {
+		a {
+			font-size: 16px;
+			color: $cl;
 		}
 	}
 }
@@ -1678,13 +1816,87 @@ th {
 	}
 }
 
+.campaign {
+	min-height: 538px;
+	background: $blue;
+	.campaign__head {
+		background: $blue-d;
+	}
+	.campaign__in {
+		padding: 15px 20px;
+	}
+}
 
+.progress {
+	.progress__stats {
+		margin-bottom: 10px;
+		@include clr;
+	}
+	.progress__stats-item {
+		float: right;
+		&:first-child {
+			float: left;
+		}
+	}
+	.progress__stats-value {
+		font-size: 32px;
+		line-height: 1;
+	}
+	.progress__stats-text {
+		font-size: 12px;
+	}
+	.progress__data {
+		margin-bottom: 5px;
+		background: $blue-d;
+		border-radius: 2px;
+	}
+	.progress__data-in {
+		height: 10px;
+		border-radius: 2px;
+		background: $green-l;
+	}
+	.progress__scale {
+		margin-bottom: 10px;
+		@include clr;
+	}
+	.progress__scale-item {
+		float: right;
+		font-size: 12px;
+		color: $blue-d1;
+		&:first-child {
+			float: left;
+		}
+	}
+	.progress__text {
+		font-size: 11px;
+	}
+}
 
+.graph {
+	img {
+		display: block;
+		max-width: 100%;
+	}
+}
 
-
-
-
-
+.more {
+	position: relative;
+	top: -2px;
+	width: 40px;
+	height: 20px;
+	border-radius: 2px;
+	font-size: 0;
+	vertical-align: middle;
+	&:hover {
+		background: rgba($blue,.3);
+	}
+	&:active {
+		background: rgba($blue,.2);
+	}
+	.icon-dots {
+		fill: $blue;
+	}
+}
 
 
 
