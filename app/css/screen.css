@@ -334,7 +334,8 @@ th {
   .btn:active {
     background: #fd5923; }
   .btn[disabled] {
-    background: #ffdccf; }
+    background: #787878;
+    color: #C9C9C9; }
   .btn.btn_gray {
     height: 46px;
     background: #f0f0f0;
