@@ -8,18 +8,25 @@
 }
 
 $cl: #404040;
+
 $orange: #ff6633;
 $orange-l: #ffd2c3;
+
 $blue: #55bbcc;
 $blue-l: #77c9d6;
 $blue-d: #1c89a3;
 $blue-d1: #096482;
+
 $gray: #cccccc;
 $gray-l: #dcdcdc;
 $gray-d: #a4a4a4;
 $gray-h: #f3f3f3;
+
 $brd: #dadada;
+$brd-l: #ececec;
+
 $red: #bb3232;
+
 $green-l: #dce775;
 
 body {
@@ -211,7 +218,7 @@ th {
 	border-radius: 4px;
 	font-size: 15px;
 	@include fs;
-	color: white;
+	color: #fff;
 	text-transform: uppercase;
 	&:hover {
 		background: #fe7d53;
@@ -226,7 +233,7 @@ th {
 	&.btn_gray {
 		height: 46px;
 		background: #f0f0f0;
-		border: 1px solid #a4a4a4;
+		border: 1px solid $gray-d;
 		opacity: 0.8;
 		color: $cl;
 		&:hover {
@@ -253,8 +260,8 @@ th {
 			border-color: #b2b2b2;
 		}
 		&[disabled] {
-			border-color: white;
-			color: white;
+			border-color: #fff;
+			color: #fff;
 			opacity: 0.1;
 		}
 	}
@@ -270,6 +277,15 @@ th {
 		}
 		&[disabled] {
 			opacity: .3;;
+		}
+	}
+	&.btn_white_no_brd {
+		background: #FFF;
+		border: none;
+		color: #fff;
+		&[disabled] {
+			background: rgba(#fff,.3);
+			color: rgba(#fff,.5);
 		}
 	}
 	&.btn_wide {
@@ -358,7 +374,7 @@ th {
 	display: inline-block;
 	width: 236px;
 	min-height: 259px;
-	background: white;
+	background: #fff;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	vertical-align: top;
 	color: $cl;
@@ -420,12 +436,12 @@ th {
 	}
 	.item__title-sub {
 		margin-bottom: 10px;
-		color: #a4a4a4;
+		color: $gray-d;
 	}
 	.item__foot {
 		display: table;
 		width: 100%;
-		border-top: 1px solid #dadada;
+		border-top: 1px solid $brd;
 	}
 	.item__col {
 		display: table-cell;
@@ -448,7 +464,7 @@ th {
 		font-size: 16px;
 	}
 	.item__label {
-		color: #a4a4a4;
+		color: $gray-d;
 	}
 	.item__value {
 		font-size: 20px;
@@ -456,7 +472,7 @@ th {
 	}
 	.item__date {
 		font-size: 12px;
-		color: #A4A4A4;
+		color: $gray-d;
 		text-align: right;
 	}
 }
@@ -485,13 +501,14 @@ th {
 			padding: 0 12px;
 			background: transparent;
 			border-radius: 13px;
+			@include fs;
 			font-size: 16px;
 			&:hover {
-				background: #ececec;
+				background: $brd-l;
 			}
 			&.is-active {
 				background: #9f9f9f;
-				color: white;
+				color: #fff;
 			}
 		}
 	}
@@ -517,7 +534,7 @@ th {
 			}
 			&.is-active {
 				background: $blue;
-				color: white;
+				color: #fff;
 			}
 		}
 	}
@@ -533,12 +550,12 @@ th {
 			background: transparent;
 			border-radius: 15px;
 			font-size: 16px;
-			color: white;
+			color: #fff;
 			&:hover {
 				color: $cl;
 			}
 			&.is-active {
-				background: white;
+				background: #fff;
 				color: $cl;
 			}
 		}
@@ -611,7 +628,7 @@ th {
 	width: 100%;
 	height: 40px;
 	padding: 0 12px;
-	border: 1px solid #dadada;
+	border: 1px solid $brd;
 	border-radius: 4px;
 	&:focus {
 		border-color: #b6b6b6;
@@ -619,6 +636,9 @@ th {
 	&[disabled] {
 		color: rgba($cl, 0.3);
 		opacity: 0.8;
+	}
+	@include placeholder {
+		color: rgba($cl, .6);
 	}
 	&.is-error {
 		border-color: #ff8c8c;
@@ -639,22 +659,28 @@ th {
 			font-size: 16px;
 			&:focus + .icon {
 				fill: $orange;
+				opacity: 1;
 			}
 		}
-		.icon {
+		.icon-search {
 			position: absolute;
 			top: 50%;
 			width: 15px;
 			height: 15px;
 			margin-top: -8px;
-			fill: #8c8c8c;
+			fill: $cl;
+			opacity: .6;
 		}
 	}
 	&.field_search_round {
 		.input {
 			height: 34px;
-			padding-left: 35px;
+			padding: 0 35px;
 			border-radius: 17px;
+			border-color: $brd-l;
+			&:hover {
+				border-color: $brd;
+			}
 		}
 		.icon {
 			left: 12px;
@@ -674,6 +700,22 @@ th {
 		@include fs;
 		color: #ff4040;
 	}
+	.field__reset {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 34px;
+		height: 34px;
+		font-size: 0;
+		.icon-close {
+			fill: $gray;
+		}
+		&:hover {
+			.icon-close {
+				fill: $gray-d;
+			}
+		}
+	}
 }
 
 .list {
@@ -681,11 +723,11 @@ th {
 		display: block;
 		position: relative;
 		padding: 16px 20px 16px 40px;
-		border-bottom: 1px solid #ececec;
+		border-bottom: 1px solid $brd-l;
 		text-decoration: none;
 		color: black;
 		&:first-child {
-			border-top: 1px solid #ececec;
+			border-top: 1px solid $brd-l;
 		}
 		&:hover,
 		&:active,
@@ -744,7 +786,7 @@ th {
 	.msg__text {
 		padding: 20px 30px 20px 0;
 		font-size: 16px;
-		color: white;
+		color: #fff;
 	}
 	.msg__btn {
 		padding: 15px 15px 15px 0;
@@ -770,7 +812,7 @@ th {
 		height: 40px;
 		padding: 0 30px 0 12px;
 		background: #f0f0f0;
-		border: 1px solid #a4a4a4;
+		border: 1px solid $gray-d;
 		border-radius: 4px;
 		opacity: 0.8;
 		line-height: 38px;
@@ -787,8 +829,8 @@ th {
 		top: 39px;
 		left: 0;
 		width: 100%;
-		background: white;
-		border: 1px solid #a4a4a4;
+		background: #fff;
+		border: 1px solid $gray-d;
 		border-top: none;
 		border-radius: 0 0 4px 4px;
 		z-index: 2;
@@ -913,6 +955,9 @@ th {
 		font-size: 15px;
 		color: #FFF;
 		transition: border-color .2s;
+		@include placeholder {
+			color: rgba(#fff,.8);
+		}
 	}
 	.field-icon__label {
 		position: absolute;
@@ -950,6 +995,9 @@ th {
 	vertical-align: middle;
 	.login__logo {
 		margin-bottom: 60px;
+		padding-right: 10px;
+	}
+	.login__ico {
 		@include svg(logo-screen,278,46);
 	}
 	.login__fieldset {
@@ -1040,6 +1088,12 @@ th {
 		vertical-align: middle;
 		transition: all .2s;
 		transition-delay: .1s;
+		&:hover,
+		&.is-active {
+			.icon-menu {
+				fill: $orange-l;
+			}
+		}
 		.icon-menu {
 			width: 18px;
 			height: 16px;
@@ -1104,6 +1158,7 @@ th {
 			font-size: 18px;
 			text-decoration: none;
 			color: #ffce6a;
+			transition: height .2s, line-height .2s;
 			&:after {
 				content: "";
 				position: absolute;
@@ -1112,12 +1167,15 @@ th {
 				right: 27px;
 				height: 5px;
 			}
-			&:hover {
+			&.is-active {
 				background: #EB430F;
 				color: #fff;
 				&:after {
 					background: #fff;
 				}
+			}
+			&:hover {
+				color: #FFF;
 			}
 		}
 	}
@@ -1160,6 +1218,11 @@ th {
 			height: 19px;
 			fill: #fff;
 		}
+		&:hover {
+			.icon-upload {
+				fill: $orange-l;
+			}
+		}
 	}
 	.header__notify-in {
 		position: relative;
@@ -1171,6 +1234,7 @@ th {
 		right: -24px;
 		width: 22px;
 		height: 22px;
+		padding: 1px 0 0 1px;
 		background: $blue;
 		border-radius: 50%;
 		text-align: center;
@@ -1204,13 +1268,19 @@ th {
 .dropdown {
 	position: relative;
 	display: inline-block;
-	&.is-open {
+	&.is-active {
+		.dropdown__head {
+			.icon {
+				transform: rotate(-180deg);
+			}
+		}
 		.dropdown-menu {
 			display: block;
 		}
 	}
 	&.dropdown_white {
-		&.is-open {
+		&:hover,
+		&.is-active {
 			.dropdown__head {
 				.dropdown__title {
 					color: $orange-l;
@@ -1249,6 +1319,7 @@ th {
 			height: 8px;
 			margin-left: 6px;
 			fill: $gray;
+			transition: transform .2s;
 		}
 	}
 }
@@ -1266,12 +1337,26 @@ th {
 	border-radius: 4px;
 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 	z-index: 99;
-	&:before {
+	&:before,
+	&:after {
 		content: "";
 		position: absolute;
+	}
+	&:before {
 		top: -5px;
 		left: 22px;
-		@include arr(10,5,#fff,t)
+		width: 10px;
+		height: 10px;
+		transform: rotate(45deg);
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+		background: #FFF;
+	}
+	&:after {
+		top: 0;
+		left: 12px;
+		width: 30px;
+		height: 10px;
+		background: #FFF;
 	}
 	&.dropdown-menu_right {
 		left: auto;
@@ -1280,10 +1365,14 @@ th {
 			left: auto;
 			right: 22px;
 		}
+		&:after {
+			left: auto;
+			right: 12px;
+		}
 	}
 	&.dropdown-menu_search {
 		a {
-			color: #a4a4a4;
+			color: $gray-d;
 		}
 		span {
 			color: $cl;
@@ -1369,10 +1458,13 @@ th {
 		@include f;
 	}
 	&.title_gray {
-		color: #a4a4a4;
+		color: $gray-d;
 	}
 	&.title_white {
 		color: #fff;
+	}
+	&.title_default {
+		color: $cl;
 	}
 	.title__link {
 		color: #000;
@@ -1396,9 +1488,9 @@ th {
 	.info__item {
 		display: inline-block;
 		padding: 0 15px;
-		border-left: 1px solid #dadada;
+		border-left: 1px solid $brd;
 		font-size: 16px;
-		color: #A4A4A4;
+		color: $gray-d;
 		&:first-child {
 			padding: 0 15px 0 0;
 			border: none;
@@ -1418,7 +1510,7 @@ th {
 	}
 	.data__label {
 		margin-bottom: 2px;
-		color: #A4A4A4;
+		color: $gray-d;
 	}
 	.data__value {
 		font-size: 18px;
@@ -1537,7 +1629,7 @@ th {
 	}
 	th {
 		padding: 0 10px 15px;
-		color: #A4A4A4;
+		color: $gray-d;
 	}
 	td {
 		position: relative;
@@ -1727,7 +1819,7 @@ th {
 	transform: translateX(-300px);
 	transition: transform .4s;
 	z-index: 999;
-	&.is-open {
+	&.is-active {
 		transform: translateX(0);
 	}
 	.menu__head {
@@ -1763,7 +1855,7 @@ th {
 			padding: 10px 16px 10px 75px;
 			border-right: 4px solid transparent;
 			&:hover {
-				background: $gray-h;
+				color: $orange;
 			}
 			&.is-active {
 				background: #ffefea;
