@@ -27,64 +27,79 @@
 	<header class="header js-header">
 		<!-- center -->
 		<div class="center">
-			<button class="header__btn-menu js-menu-btn">
-				<svg class="icon icon-menu">
-					<use xlink:href="#icon-menu"/>
-				</svg>
-			</button>
-			<div class="header__chapter">
-				<div class="header__chapter-title">Campaigns</div>
-				<button class="header__chapter-add">
-					<svg class="icon icon-plus">
-						<use xlink:href="#icon-plus"/>
-					</svg>
-				</button>
-			</div>
-			<nav class="header__nav">
-				<a href="#">Digital</a>
-				<a href="#">TV</a>
-			</nav>
-			<div class="header__user">
-				<!-- dropdown -->
-				<div class="dropdown dropdown_white">
-					<div class="dropdown__head js-dropdown">
-						<div class="dropdown__title">John</div>
-						<svg class="icon icon-arrow-down">
-							<use xlink:href="#icon-arrow-down"/>
+			<div class="header__left">
+				<div class="header__cell">
+					<button class="header__btn-menu js-menu-btn">
+						<svg class="icon icon-menu">
+							<use xlink:href="#icon-menu"/>
 						</svg>
+					</button>
+					<div class="header__chapter">
+						<div class="header__chapter-title">Campaigns</div>
+						<!-- dropdown -->
+						<div class="dropdown">
+							<button class="header__chapter-add js-dropdown">
+								<svg class="icon icon-plus">
+									<use xlink:href="#icon-plus"/>
+								</svg>
+							</button>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu">
+								<li><a href="#">Digital Campaign</a></li>
+								<li><a href="#">TV Campaignlia</a></li>
+							</ul>
+						</div>
 					</div>
-					<!-- dropdown-menu -->
-					<ul class="dropdown-menu dropdown-menu_right">
-						<li><a href="#">Profile Settings</a></li>
-						<li><a href="#">Support</a></li>
-						<li><a href="#">Terms & Conditions</a></li>
-						<li><a href="#">Log Out</a></li>
-					</ul>
+					<nav class="header__nav">
+						<a href="#">Digital</a>
+						<a href="#">TV</a>
+					</nav>
 				</div>
 			</div>
-			<a class="header__notify" href="#">
-				<div class="header__notify-in">
-					<div class="header__notify-counter">2</div>
-					<svg class="icon icon-upload">
-						<use xlink:href="#icon-upload"/>
-					</svg>
-				</div>
-			</a>
-			<div class="header__search">
-				<!-- field -->
-				<div class="field field_search_round">
-					<label class="field__in">
-						<input class="input js-dropdown" type="text" placeholder="Search">
-						<svg class="icon icon-search">
-							<use xlink:href="#icon-search"/>
-						</svg>
-					</label>
-					<!-- dropdown-menu -->
-					<ul class="dropdown-menu dropdown-menu_search">
-						<li><a href="#"><span>Adv</span>antages</a></li>
-						<li><a href="#"><span>Adv</span>ertisers</a></li>
-						<li><a href="#"><span>Adv</span>ertisement</a></li>
-					</ul>
+			<div class="header__right">
+				<div class="header__cell">
+					<div class="header__search">
+						<!-- field -->
+						<div class="field field_search_round">
+							<label class="field__in">
+								<input class="input" type="text" placeholder="Search">
+								<svg class="icon icon-search">
+									<use xlink:href="#icon-search"/>
+								</svg>
+							</label>
+							<button class="field__reset">
+								<svg class="icon icon-close">
+									<use xlink:href="#icon-close"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<a class="header__notify" href="#">
+						<div class="header__notify-in">
+							<div class="header__notify-counter">2</div>
+							<svg class="icon icon-upload">
+								<use xlink:href="#icon-upload"/>
+							</svg>
+						</div>
+					</a>
+					<div class="header__user">
+						<!-- dropdown -->
+						<div class="dropdown dropdown_white">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">John</div>
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_right">
+								<li><a href="#">Profile Settings</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -119,31 +134,35 @@
 								<svg class="icon icon-arrow-down">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
 								</svg>
-								<!-- title -->
-								<div class="title title_4 title_thin">
-									<a class="title__link" href="#">
-										<span class="title__text">CPOV Q2</span>
-									</a>
+								<!-- row -->
+								<div class="row row_vertical_middle">
+									<div class="col-50">
+										<!-- title -->
+										<div class="title title_4 title_thin">
+											<a class="title__link" href="#">
+												<span class="title__text">CPOV Q2</span>
+											</a>
+										</div>
+									</div>
+									<div class="col-50"></div>
 								</div>
 							</div>
 							<div class="accord__in" style="display: block;">
 								<!-- panel -->
 								<div class="panel panel_p-30">
 									<!-- row -->
-									<div class="row">
+									<div class="row row_vertical_middle">
 										<div class="col-50">
 											<!-- title -->
 											<div class="title title_2 title_thin">CPOV Q2</div>
 											<div class="title title_4 title_thin title_gray">SC-0024</div>
 										</div>
-										<div class="col-33">
-											<!-- status -->
-											<div class="status status_pending status_bold">Pending</div>
+										<div class="col-33 ta-right">
 											<!-- updated -->
-											<div class="updated updated_pl-16">Last updated: Sep 12, 12:34, 2015</div>
+											<div class="updated">Last updated: Sep 12, 12:34, 2015</div>
 										</div>
 										<div class="col-17 ta-right">
-											<button class="btn btn_gray">create</button>
+											<button class="btn">create</button>
 										</div>
 									</div>
 								</div>
@@ -263,11 +282,20 @@
 								<svg class="icon icon-arrow-down">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
 								</svg>
-								<!-- title -->
-								<div class="title title_4 title_thin">
-									<a class="title__link" href="#">
-										<span class="title__text">CPOV Q2</span>
-									</a>
+								<!-- row -->
+								<div class="row">
+									<div class="col-80">
+										<!-- title -->
+										<div class="title title_4 title_thin">
+											<a class="title__link" href="#">
+												<span class="title__text">CPOV Q2</span>
+											</a>
+										</div>
+									</div>
+									<div class="col-20">
+										<!-- status -->
+										<div class="status status_pushed">Pushed to DSP</div>
+									</div>
 								</div>
 							</div>
 							<div class="accord__in">
@@ -407,11 +435,20 @@
 								<svg class="icon icon-arrow-down">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
 								</svg>
-								<!-- title -->
-								<div class="title title_4 title_thin">
-									<a class="title__link" href="#">
-										<span class="title__text">CPOV Q2</span>
-									</a>
+								<!-- row -->
+								<div class="row">
+									<div class="col-80">
+										<!-- title -->
+										<div class="title title_4 title_thin">
+											<a class="title__link" href="#">
+												<span class="title__text">CPOV Q2</span>
+											</a>
+										</div>
+									</div>
+									<div class="col-20">
+										<!-- btn -->
+										<button class="btn btn_small">create</button>
+									</div>
 								</div>
 							</div>
 							<div class="accord__in">
