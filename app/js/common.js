@@ -7,18 +7,21 @@ $(document).ready(function() {
 		menuBtn = $('.js-menu-btn'),
 		menuClose = $('.js-menu-close'),
 		dropdown = $('.js-dropdown'),
-		input = $('.js-input');
+		input = $('.js-input'),
+		tableSwitch = $('.js-switch');
 
 	menuBtn.on('click', function () {
-		menu.addClass('is-open');
+		menuBtn.toggleClass('is-active');
+		menu.toggleClass('is-active');
 	});
 
 	menuClose.on('click', function () {
-		menu.removeClass('is-open');
+		menuBtn.removeClass('is-active');
+		menu.removeClass('is-active');
 	});
 
 	dropdown.on('click', function () {
-		$(this).parent().toggleClass('is-open');
+		$(this).parent().toggleClass('is-active');
 	});
 
 	dropdown.on('focus', function () {
@@ -52,6 +55,16 @@ $(document).ready(function() {
 		if (value.length == 0) {
 			_this.parent().removeClass('is-filled');
 		};
+	});
+
+	tableSwitch.each(function () {
+		var _this = $(this);
+		if (!_this.is(':checked')) {
+			_this.parents('tr').addClass('is-disabled');
+		}
+	});
+	tableSwitch.change(function () {
+		$(this).parents('tr').toggleClass('is-disabled');
 	});
 	
 });
