@@ -1,13 +1,15 @@
-@include font(Source Sans Pro Regular, sourcesanspro-regular);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 @mixin f {
-	font-family: 'Source Sans Pro Regular', Arial, sans-serif;
+	font-family: 'Source Sans Pro', Arial, sans-serif;
 }
-@include font(Source Sans Pro Semibold, sourcesanspro-semibold);
 @mixin fs {
-	font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+	font-weight: 600;
 }
 
 $cl: #404040;
+
+$bg: #f0f0f0;
+$bg-blue: #eef8fa;
 
 $orange: #ff6633;
 $orange-l: #ffd2c3;
@@ -31,7 +33,7 @@ $green-l: #dce775;
 
 body {
 	min-width: 1024px;
-	background: #F0F0F0;
+	background: $bg;
 	@include f;
 	font-size: 14px;
 	line-height: 1.3;
@@ -183,6 +185,7 @@ th {
 }
 
 .panel {
+	background: #FFF;
 	padding: 30px 40px;
 	&.panel_p-0-40 {
 		padding: 0 40px;
@@ -244,7 +247,7 @@ th {
 	}
 	&.btn_gray {
 		height: 46px;
-		background: #f0f0f0;
+		background: $bg;
 		border: 1px solid $gray-d;
 		opacity: 0.8;
 		color: $cl;
@@ -255,7 +258,7 @@ th {
 			background: #dfdfdf;
 		}
 		&[disabled] {
-			background: #f0f0f0;
+			background: $bg;
 			opacity: 0.3;
 		}
 	}
@@ -285,7 +288,7 @@ th {
 			background: #FAFAFA;
 		}
 		&:active {
-			background: #F0F0F0;
+			background: $bg;
 		}
 		&[disabled] {
 			opacity: .3;;
@@ -340,6 +343,7 @@ th {
 .link-icon {
 	display: inline-block;
 	font-size: 0;
+	white-space: nowrap;
 	vertical-align: middle;
 	&:hover {
 		span {
@@ -544,7 +548,7 @@ th {
 				border-radius: 0 15px 15px 0;
 			}
 			&:hover {
-				background: #eef8fa;
+				background: $bg-blue;
 			}
 			&.is-active {
 				background: $blue;
@@ -669,7 +673,6 @@ th {
 			cursor: text;
 		}
 		.input {
-			background: transparent;
 			font-size: 16px;
 			&:focus + .icon {
 				fill: $orange;
@@ -746,7 +749,7 @@ th {
 		&:hover,
 		&:active,
 		&.is-active {
-			background: #eef8fa;
+			background: $bg-blue;
 			.icon-tick {
 				display: block;
 			}
@@ -825,7 +828,7 @@ th {
 		position: relative;
 		height: 40px;
 		padding: 0 30px 0 12px;
-		background: #f0f0f0;
+		background: $bg;
 		border: 1px solid $gray-d;
 		border-radius: 4px;
 		opacity: 0.8;
@@ -855,7 +858,7 @@ th {
 			}
 			&:hover,
 			&.is-active {
-				background: #f0f0f0;
+				background: $bg;
 			}
 		}
 	}
@@ -1640,7 +1643,7 @@ th {
 		}
 		&.is-active {
 			td {
-				background: #EEF8FA;
+				background: $bg-blue;
 				&:first-child {
 					.icon-tick {
 						display: block;
@@ -2042,9 +2045,91 @@ th {
 	}
 }
 
+.widget {
+	border: 1px solid $brd;
+	.widget__head {
+		padding: 15px 20px;
+		border-bottom: 1px solid $brd;
+		background: $bg;
+	}
+	.widget__body {
+		height: 410px;
+		overflow: auto;
+		// overflow-y: auto;
+		// overflow-x: hidden;
+		// @include scrollbar {
+		// 	width: 10px;
+		// 	background: transparent;
+		// 	box-shadow: -1px 0 0 $brd;
+		// }
+		// @include scrollbar-track {
+		// 	background: transparent;
+		// }
+		// @include scrollbar-thumb {
+		// 	background: rgba($cl,.3);
+		// 	border: 2px solid #fff;
+		// 	border-radius: 15px;
+		// }
+		// @include scrollbar-track-piece {
+		// 	background: transparent;
+		// }
+	}
+	.widget__row {
+		margin-bottom: -1px;
+		padding: 15px 20px;
+		border: 1px solid $brd;
+		border-width: 1px 0;
+		@include clr;
+		&:first-child {
+			border-width: 0 0 1px;
+		}
+		&.is-active {
+			background: $bg-blue;
+			.widget__icon {
+				.icon-tick {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.widget__row_head {
+		padding: 5px 20px;
+		background: $bg;
+		color: $gray-d;
+		.widget__right {
+			padding: 2px 0;
+		}
+	}
+	.widget__right {
+		float: right;
+		margin-left: 15px;
+	}
+	.widget__left {
+		padding: 2px 0;
+		overflow: hidden;
+	}
+	.widget__icon {
+		height: 20px;
+		@include vertical;
+		.icon {
+			vertical-align: middle;
+		}
+		.icon-tick {
+			display: none;
+			fill: $blue;
+		}
+		.icon-arrow-right {
+			fill: $gray-d;
+		}
+	}
+	.title {
+		@include text-overflow;
+	}
+}
 
-
-
+.three-dots {
+	
+}
 
 
 

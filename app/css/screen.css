@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -46,30 +47,16 @@ html {
   *:before, *:after {
     box-sizing: border-box; }
 
-@font-face {
-  font-family: Source Sans Pro Regular;
-  src: url("fonts/sourcesanspro-regular.eot");
-  src: url("fonts/sourcesanspro-regular.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-regular.woff2") format("woff2"), url("fonts/sourcesanspro-regular.woff") format("woff"), url("fonts/sourcesanspro-regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: Source Sans Pro Semibold;
-  src: url("fonts/sourcesanspro-semibold.eot");
-  src: url("fonts/sourcesanspro-semibold.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-semibold.woff2") format("woff2"), url("fonts/sourcesanspro-semibold.woff") format("woff"), url("fonts/sourcesanspro-semibold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
 body {
   min-width: 1024px;
-  background: #F0F0F0;
-  font-family: 'Source Sans Pro Regular', Arial, sans-serif;
+  background: #f0f0f0;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.3;
   color: #404040; }
 
 button, input, textarea {
-  font-family: 'Source Sans Pro Regular', Arial, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 14px;
   color: #404040; }
   button:disabled, input:disabled, textarea:disabled {
@@ -285,6 +272,7 @@ th {
   text-transform: uppercase; }
 
 .panel {
+  background: #FFF;
   padding: 30px 40px; }
   .panel.panel_p-0-40 {
     padding: 0 40px; }
@@ -328,7 +316,7 @@ th {
   background: #ff6633;
   border-radius: 4px;
   font-size: 15px;
-  font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+  font-weight: 600;
   color: #fff;
   text-transform: uppercase; }
   .btn:hover {
@@ -372,7 +360,7 @@ th {
     .btn.btn_white:hover {
       background: #FAFAFA; }
     .btn.btn_white:active {
-      background: #F0F0F0; }
+      background: #f0f0f0; }
     .btn.btn_white[disabled] {
       opacity: .3; }
   .btn.btn_white_no_brd {
@@ -397,7 +385,7 @@ th {
 .link {
   font-size: 15px;
   color: #ff6633;
-  font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+  font-weight: 600;
   text-decoration: none; }
   .link:hover {
     text-decoration: underline; }
@@ -412,6 +400,7 @@ th {
 .link-icon {
   display: inline-block;
   font-size: 0;
+  white-space: nowrap;
   vertical-align: middle; }
   .link-icon:hover span {
     text-decoration: underline; }
@@ -432,7 +421,7 @@ th {
     vertical-align: middle; }
   .link-icon span {
     font-size: 14px;
-    font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+    font-weight: 600;
     color: #55bbcc; }
   .link-icon .icon {
     position: relative;
@@ -476,13 +465,13 @@ th {
     text-align: right;
     text-transform: uppercase;
     color: #ff6633;
-    font-family: 'Source Sans Pro Semibold', Arial, sans-serif; }
+    font-weight: 600; }
   .item .item__type_brand {
     color: #55bbcc; }
   .item .item__title {
     display: block;
     font-size: 18px;
-    font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+    font-weight: 600;
     color: black;
     text-decoration: none;
     line-height: 1.2; }
@@ -540,7 +529,7 @@ th {
     padding: 0 12px;
     background: transparent;
     border-radius: 13px;
-    font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+    font-weight: 600;
     font-size: 16px; }
     .tabs.tabs_simple .tabs__item:hover {
       background: #ececec; }
@@ -588,7 +577,7 @@ th {
     position: relative;
     height: 40px;
     padding: 0 20px;
-    font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+    font-weight: 600;
     font-size: 14px;
     color: #fff;
     overflow: visible; }
@@ -657,7 +646,6 @@ th {
     display: block;
     cursor: text; }
   .field.field_search .input, .field.field_search_round .input {
-    background: transparent;
     font-size: 16px; }
     .field.field_search .input:focus + .icon, .field.field_search_round .input:focus + .icon {
       fill: #ff6633;
@@ -686,7 +674,7 @@ th {
   .field .field__error {
     padding: 6px 12px 0;
     font-size: 13px;
-    font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+    font-weight: 600;
     color: #ff4040; }
   .field .field__reset {
     position: absolute;
@@ -921,7 +909,7 @@ th {
     display: block;
     padding: 3px 0 0 30px;
     font-size: 13px;
-    font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+    font-weight: 600;
     color: #bb3232; }
   .field-icon .icon {
     display: inline-block;
@@ -1264,7 +1252,7 @@ th {
 
 .title {
   font-size: 34px;
-  font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+  font-weight: 600;
   color: #000;
   line-height: 1.2; }
   .title.title_1 {
@@ -1280,7 +1268,7 @@ th {
   .title.title_6 {
     font-size: 14px; }
   .title.title_thin {
-    font-family: 'Source Sans Pro Regular', Arial, sans-serif; }
+    font-family: 'Source Sans Pro', Arial, sans-serif; }
   .title.title_gray {
     color: #a4a4a4; }
   .title.title_white {
@@ -1396,7 +1384,7 @@ th {
     background: rgba(255, 255, 255, 0.8);
     z-index: 2; }
 .table tr.is-active td {
-  background: #EEF8FA; }
+  background: #eef8fa; }
   .table tr.is-active td:first-child .icon-tick {
     display: block; }
 .table th {
@@ -1456,7 +1444,7 @@ th {
   .accord .accord__in {
     display: none; }
   .accord .accord__title {
-    font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+    font-weight: 600;
     font-size: 24px;
     color: #000; }
     .accord .accord__title:hover {
@@ -1487,7 +1475,7 @@ th {
   .status.status_completed:before {
     border: 1px solid #a7a7a7; }
   .status.status_bold {
-    font-family: 'Source Sans Pro Semibold', Arial, sans-serif; }
+    font-weight: 600; }
   .status.status_small {
     font-size: 12px; }
 
@@ -1580,7 +1568,7 @@ th {
   .menu .menu__nav {
     padding: 18px 0 100px; }
     .menu .menu__nav a {
-      font-family: 'Source Sans Pro Semibold', Arial, sans-serif;
+      font-weight: 600;
       font-size: 17px;
       color: #000;
       text-transform: uppercase; }
@@ -1698,6 +1686,66 @@ th {
     background: rgba(85, 187, 204, 0.2); }
   .more .icon-dots {
     fill: #55bbcc; }
+
+.widget {
+  border: 1px solid #dadada; }
+  .widget .widget__head {
+    padding: 15px 20px;
+    border-bottom: 1px solid #dadada;
+    background: #f0f0f0; }
+  .widget .widget__body {
+    height: 410px;
+    overflow: auto; }
+  .widget .widget__row {
+    margin-bottom: -1px;
+    padding: 15px 20px;
+    border: 1px solid #dadada;
+    border-width: 1px 0;
+    *zoom: 1; }
+    .widget .widget__row:after {
+      content: " ";
+      display: table;
+      clear: both; }
+    .widget .widget__row:first-child {
+      border-width: 0 0 1px; }
+    .widget .widget__row.is-active {
+      background: #eef8fa; }
+      .widget .widget__row.is-active .widget__icon .icon-tick {
+        display: inline-block; }
+  .widget .widget__row_head {
+    padding: 5px 20px;
+    background: #f0f0f0;
+    color: #a4a4a4; }
+    .widget .widget__row_head .widget__right {
+      padding: 2px 0; }
+  .widget .widget__right {
+    float: right;
+    margin-left: 15px; }
+  .widget .widget__left {
+    padding: 2px 0;
+    overflow: hidden; }
+  .widget .widget__icon {
+    height: 20px;
+    text-align: center;
+    font-size: 0; }
+    .widget .widget__icon:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 100%; }
+    .widget .widget__icon .icon {
+      vertical-align: middle; }
+    .widget .widget__icon .icon-tick {
+      display: none;
+      fill: #55bbcc; }
+    .widget .widget__icon .icon-arrow-right {
+      fill: #a4a4a4; }
+  .widget .title {
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
 
 .icon-arrow-down {
   width: 12px;
