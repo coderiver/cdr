@@ -1,0 +1,419 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper js-wrapper">
+	<!-- header -->
+	<header class="header js-header">
+		<!-- center -->
+		<div class="center">
+			<div class="header__left">
+				<div class="header__cell">
+					<button class="header__btn-menu js-menu-btn">
+						<svg class="icon icon-menu">
+							<use xlink:href="#icon-menu"/>
+						</svg>
+					</button>
+					<div class="header__chapter">
+						<div class="header__chapter-title">Campaigns</div>
+						<!-- dropdown -->
+						<div class="dropdown">
+							<button class="header__chapter-add">
+								<svg class="icon icon-plus">
+									<use xlink:href="#icon-plus"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__right">
+				<div class="header__cell">
+					<div class="header__search">
+						<!-- field -->
+						<div class="field field_search_round">
+							<label class="field__in">
+								<input class="input" type="text" placeholder="Search">
+								<svg class="icon icon-search">
+									<use xlink:href="#icon-search"/>
+								</svg>
+							</label>
+							<button class="field__reset">
+								<svg class="icon icon-close">
+									<use xlink:href="#icon-close"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<a class="header__notify" href="#">
+						<div class="header__notify-in">
+							<div class="header__notify-counter">2</div>
+							<svg class="icon icon-upload">
+								<use xlink:href="#icon-upload"/>
+							</svg>
+						</div>
+					</a>
+					<div class="header__user">
+						<!-- dropdown -->
+						<div class="dropdown dropdown_white">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">John</div>
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_right">
+								<li><a href="#">Profile Settings</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- row -->
+			<div class="row row_vertical_bottom mb-25">
+				<div class="col-75">
+					<!-- title -->
+					<div class="title">Summary: Q2 CPOV</div>
+					<div class="title title_4 title_gray title_thin">Cadreon Console ID: 345</div>
+				</div>
+				<div class="col-25">
+					<!-- status -->
+					<div class="status status_draft">Draft</div>
+					<!-- updated -->
+					<div class="updated">Last updated: Sep 12, 12:34, 2015</div>
+				</div>
+			</div>
+			<!-- box-shadow -->
+			<div class="box-shadow">
+				<!-- panel -->
+				<div class="panel bb">
+					<!-- title -->
+					<div class="title title_2 mb-20">Advertiser & Campaign</div>
+					<!-- row -->
+					<div class="row mb-40">
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<div class="data__value">USD 53,789.00</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<div class="data__value">USD 53,789.00</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<div class="data__value">USD 53,789.00</div>
+							</div>
+						</div>
+					</div>
+					<!-- title -->
+					<div class="title title_2 mb-20">Advertiser & Campaign</div>
+					<!-- row -->
+					<div class="row">
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<div class="data__value">USD 53,789.00</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<div class="data__value">USD 53,789.00</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<div class="data__value">USD 53,789.00</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel panel_p-40 bb">
+					<!-- title -->
+					<div class="title title_2 mb-20">Advertiser & Campaign</div>
+					<!-- row -->
+					<div class="row">
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<!-- edit -->
+								<div class="edit edit_data">
+									<div class="edit__field">
+										<div class="edit__content">USD 53,789.00</div>
+										<input class="edit__input" type="text" value="USD 53,789.00">
+									</div>
+									<button class="edit__action js-edit">
+										<svg class="icon icon-edit">
+											<use xlink:href="#icon-edit"/>
+										</svg>
+										<svg class="icon icon-tick">
+											<use xlink:href="#icon-tick"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<!-- edit -->
+								<div class="edit edit_data">
+									<div class="edit__field">
+										<div class="edit__content">USD 53,789.00</div>
+										<input class="edit__input" type="text" value="USD 53,789.00">
+									</div>
+									<button class="edit__action js-edit">
+										<svg class="icon icon-edit">
+											<use xlink:href="#icon-edit"/>
+										</svg>
+										<svg class="icon icon-tick">
+											<use xlink:href="#icon-tick"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel panel_p-40 bb">
+					<!-- title -->
+					<div class="title title_2 mb-20">Advertiser & Campaign</div>
+					<!-- row -->
+					<div class="row mb-30">
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<!-- edit -->
+								<div class="edit edit_data">
+									<div class="edit__field">
+										<div class="edit__content">USD 53,789.00</div>
+										<input class="edit__input" type="text" value="USD 53,789.00">
+									</div>
+									<button class="edit__action js-edit">
+										<svg class="icon icon-edit">
+											<use xlink:href="#icon-edit"/>
+										</svg>
+										<svg class="icon icon-tick">
+											<use xlink:href="#icon-tick"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<!-- edit -->
+								<div class="edit edit_data">
+									<div class="edit__field">
+										<div class="edit__content">USD 53,789.00</div>
+										<input class="edit__input" type="text" value="USD 53,789.00">
+									</div>
+									<button class="edit__action js-edit">
+										<svg class="icon icon-edit">
+											<use xlink:href="#icon-edit"/>
+										</svg>
+										<svg class="icon icon-tick">
+											<use xlink:href="#icon-tick"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<!-- edit -->
+								<div class="edit edit_data">
+									<div class="edit__field">
+										<div class="edit__content">USD 53,789.00</div>
+										<input class="edit__input" type="text" value="USD 53,789.00">
+									</div>
+									<button class="edit__action js-edit">
+										<svg class="icon icon-edit">
+											<use xlink:href="#icon-edit"/>
+										</svg>
+										<svg class="icon icon-tick">
+											<use xlink:href="#icon-tick"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- row -->
+					<div class="row mb-30">
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<!-- edit -->
+								<div class="edit edit_data">
+									<div class="edit__field">
+										<div class="edit__content">USD 53,789.00</div>
+										<input class="edit__input" type="text" value="USD 53,789.00">
+									</div>
+									<button class="edit__action js-edit">
+										<svg class="icon icon-edit">
+											<use xlink:href="#icon-edit"/>
+										</svg>
+										<svg class="icon icon-tick">
+											<use xlink:href="#icon-tick"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Budget</div>
+								<!-- edit -->
+								<div class="edit edit_data">
+									<div class="edit__field">
+										<div class="edit__content">USD 53,789.00</div>
+										<input class="edit__input" type="text" value="USD 53,789.00">
+									</div>
+									<button class="edit__action js-edit">
+										<svg class="icon icon-edit">
+											<use xlink:href="#icon-edit"/>
+										</svg>
+										<svg class="icon icon-tick">
+											<use xlink:href="#icon-tick"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Impressions Cap</div>
+								<!-- edit -->
+								<div class="edit edit_data">
+									<div class="edit__field">
+										<div class="edit__content">450 impressions, per day</div>
+										<input class="edit__input" type="text" value="450 impressions, per day">
+									</div>
+									<button class="edit__action js-edit">
+										<svg class="icon icon-edit">
+											<use xlink:href="#icon-edit"/>
+										</svg>
+										<svg class="icon icon-tick">
+											<use xlink:href="#icon-tick"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- row -->
+					<div class="row">
+						<div class="col-25">
+							<!-- data -->
+							<div class="title title_6 title_gray title_thin mb-10">Spend Prioritization Enabled?</div>
+							<!-- switcker -->
+							<div class="switcher switcher_radio">
+								<label class="switcher__item">
+									<input class="switcher__input" type="radio" name="yn" checked="">
+									<span class="switcher__el">Yes</span>
+								</label>
+								<label class="switcher__item">
+									<input class="switcher__input" type="radio" name="yn">
+									<span class="switcher__el">No</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel panel_p-40">
+					<!-- row -->
+					<div class="row">
+						<div class="col-50">
+							<button class="btn">PUSH TO DSP</button>
+						</div>
+						<div class="col-50 ta-right">
+							<button class="btn btn_gray">delete draft</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

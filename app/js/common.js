@@ -8,7 +8,9 @@ $(document).ready(function() {
 		menuClose = $('.js-menu-close'),
 		dropdown = $('.js-dropdown'),
 		input = $('.js-input'),
-		tableSwitch = $('.js-switch');
+		tableSwitch = $('.js-switch'),
+		select = $('.js-select'),
+		edit = $('.js-edit');
 
 	menuBtn.on('click', function () {
 		menuBtn.toggleClass('is-active');
@@ -65,6 +67,14 @@ $(document).ready(function() {
 	});
 	tableSwitch.change(function () {
 		$(this).parents('tr').toggleClass('is-disabled');
+	});
+
+	select.on('click', function () {
+		$(this).toggleClass('is-active');
+	});
+
+	edit.on('click', function () {
+		$(this).parent().toggleClass('is-active');
 	});
 	
 });

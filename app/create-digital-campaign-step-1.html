@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper js-wrapper">
+	<!-- header -->
+	<header class="header js-header">
+		<!-- center -->
+		<div class="center">
+			<div class="header__left">
+				<div class="header__cell">
+					<button class="header__btn-menu js-menu-btn">
+						<svg class="icon icon-menu">
+							<use xlink:href="#icon-menu"/>
+						</svg>
+					</button>
+					<div class="header__chapter">
+						<div class="header__chapter-title">Campaigns</div>
+						<!-- dropdown -->
+						<div class="dropdown">
+							<button class="header__chapter-add">
+								<svg class="icon icon-plus">
+									<use xlink:href="#icon-plus"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__right">
+				<div class="header__cell">
+					<div class="header__search">
+						<!-- field -->
+						<div class="field field_search_round">
+							<label class="field__in">
+								<input class="input" type="text" placeholder="Search">
+								<svg class="icon icon-search">
+									<use xlink:href="#icon-search"/>
+								</svg>
+							</label>
+							<button class="field__reset">
+								<svg class="icon icon-close">
+									<use xlink:href="#icon-close"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<a class="header__notify" href="#">
+						<div class="header__notify-in">
+							<div class="header__notify-counter">2</div>
+							<svg class="icon icon-upload">
+								<use xlink:href="#icon-upload"/>
+							</svg>
+						</div>
+					</a>
+					<div class="header__user">
+						<!-- dropdown -->
+						<div class="dropdown dropdown_white">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">John</div>
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_right">
+								<li><a href="#">Profile Settings</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- row -->
+			<div class="row mb-25">
+				<div class="col-75">
+					<!-- title -->
+					<div class="title">Select Campaign & DSP</div>
+				</div>
+				<div class="col-25">
+					<!-- status -->
+					<div class="status status_draft">Draft</div>
+					<!-- updated -->
+					<div class="updated">Last updated: Sep 12, 12:34, 2015</div>
+				</div>
+			</div>
+			<!-- box-shadow -->
+			<div class="box-shadow">
+				<!-- panel -->
+				<div class="panel bb">
+					<!-- row -->
+					<div class="row">
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_2 mb-20">Details</div>
+							<!-- data -->
+							<div class="data">
+								<div class="data__label">Campaign Name</div>
+								<div class="data__value">Xbox GTA5 inbox dv 34-567</div>
+							</div>
+						</div>
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_2 mb-20">Flight Dates</div>
+							<div class="title title_4 mb-15">Start Date</div>
+							<!-- group -->
+							<div class="group mb-25">
+								<div class="group__item group__item_w190">
+									<!-- field -->
+									<div class="field field_icon">
+										<label class="field__in">
+											<input class="input" type="text" value="July 15, 2015">
+											<span class="field__icon">
+												<svg class="icon icon-calendar">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-calendar"></use>
+												</svg>
+											</span>
+										</label>
+									</div>
+								</div>
+								<div class="group__item group__item_w100">
+									<!-- field -->
+									<div class="field">
+										<div class="field__in">
+											<input class="input" type="text" value="11">
+										</div>
+									</div>
+								</div>
+								<div class="group__item group__item_w90">
+									<!-- select -->
+									<div class="select js-select">
+										<div class="select__head">
+											<div class="select__value">AM</div>
+											<svg class="icon icon-arrow-down">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+											</svg>
+										</div>
+										<ul class="select__list">
+											<li>Item 1</li>
+											<li class="is-active">Item 1</li>
+											<li>Item 1</li>
+										</ul>
+									</div>
+								</div>
+								<div class="group__item color-default">UTC</div>
+							</div>
+							<!-- title -->
+							<div class="title title_4 mb-15">End Date</div>
+							<!-- group -->
+							<div class="group mb-10">
+								<div class="group__item group__item_w190">
+									<!-- field -->
+									<div class="field field_icon">
+										<label class="field__in">
+											<input class="input" type="text" value="July 15, 2015">
+											<span class="field__icon">
+												<svg class="icon icon-calendar">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-calendar"></use>
+												</svg>
+											</span>
+										</label>
+									</div>
+								</div>
+								<div class="group__item group__item_w100">
+									<!-- field -->
+									<div class="field">
+										<div class="field__in">
+											<input class="input" type="text" value="11">
+										</div>
+									</div>
+								</div>
+								<div class="group__item group__item_w90">
+									<!-- select -->
+									<div class="select js-select">
+										<div class="select__head">
+											<div class="select__value">AM</div>
+											<svg class="icon icon-arrow-down">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+											</svg>
+										</div>
+										<ul class="select__list">
+											<li>Item 1</li>
+											<li class="is-active">Item 1</li>
+											<li>Item 1</li>
+										</ul>
+									</div>
+								</div>
+								<div class="group__item color-default">UTC</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel panel_p-40 bb">
+					<!-- row -->
+					<div class="row">
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_2 mb-15">Budgeting</div>
+							<div class="title title_4 title_thin mb-20">Spend Prioritization Enabled?</div>
+							<!-- switcher -->
+							<div class="switcher switcher_radio mb-45">
+								<label class="switcher__item">
+									<input class="switcher__input" type="radio" name="yn" checked="">
+									<span class="switcher__el">Yes</span>
+								</label>
+								<label class="switcher__item">
+									<input class="switcher__input" type="radio" name="yn">
+									<span class="switcher__el">No</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<!-- row -->
+					<div class="row">
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_4 title_thin mb-15">Budget Cap</div>
+							<!-- field -->
+							<div class="field field_icon_left field_icon_blue mb-35">
+								<label class="field__in">
+									<input class="input" type="text" value="21,000">
+									<span class="field__icon">
+										<span class="field__icon-text">$</span>
+									</span>
+								</label>
+							</div>
+							<!-- title -->
+							<div class="title title_4 title_thin mb-15">Daily Spend Cap</div>
+							<!-- field -->
+							<div class="field field_icon_left field_icon_blue mb-35">
+								<label class="field__in">
+									<input class="input" type="text" value="1,400">
+									<span class="field__icon">
+										<span class="field__icon-text">$</span>
+									</span>
+								</label>
+							</div>
+							<!-- title -->
+							<div class="title title_4 title_thin mb-15">CPM Rate/Fee</div>
+							<!-- field -->
+							<div class="field field_icon_left field_icon_blue">
+								<label class="field__in">
+									<input class="input" type="text" value="20.00">
+									<span class="field__icon">
+										<span class="field__icon-text">$</span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="col-25 ml-10p">
+							<!-- title -->
+							<div class="title title_4 title_thin mb-15">Impressions Cap</div>
+							<!-- field -->
+							<div class="field mb-35">
+								<label class="field__in">
+									<input class="input" type="text" value="450">
+								</label>
+							</div>
+							<!-- title -->
+							<div class="title title_4 title_thin mb-15">Bidding Budget</div>
+							<!-- field -->
+							<div class="field mb-35">
+								<label class="field__in">
+									<input class="input" type="text" value="4,500">
+								</label>
+							</div>
+							<!-- title -->
+							<div class="title title_4 title_thin mb-15">Daily Cap in Impressions</div>
+							<!-- field -->
+							<div class="field">
+								<label class="field__in">
+									<input class="input" type="text" value="1,200,00">
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel panel_p-40">
+					<!-- row -->
+					<div class="row">
+						<div class="col-50">
+							<button class="btn">VIEW SUMMARY</button>
+						</div>
+						<div class="col-50 ta-right">
+							<button class="btn btn_gray">delete draft</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
