@@ -109,8 +109,8 @@
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
 							</svg>
 						</button>
-						<!-- dt -->
-						<div class="dt">
+						<!-- display-table -->
+						<div class="display-table">
 							<!-- title -->
 							<div class="edit edit_title">
 								<div class="edit__field">
@@ -271,7 +271,7 @@
 					</div>
 				</div>
 				<!-- table -->
-				<table class="table table_fixed table_segment">
+				<table class="table table_fixed table_segment bb">
 					<thead>
 						<tr>
 							<th class="table__w-31">Name</th>
@@ -282,7 +282,13 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>Primary Segment</td>
+							<td>
+								<!-- switcher -->
+								<div class="switcher">
+									
+								</div>
+								<div class="title title_6">Primary Segment</div>
+							</td>
 							<td>
 								<!-- title -->
 								<div class="edit edit_title_6 mb-10">
@@ -299,7 +305,17 @@
 										</svg>
 									</button>
 								</div>
-								<div class="title title_6 three-dots mb-10">bmw.com/i8</div>
+								<!-- dropdown -->
+								<div class="dropdown display-block mb-10 is-active">
+									<div class="title title_6 three-dots js-dropdown">bmw.com/i8</div>
+									<!-- dropdown-menu -->
+									<ul class="dropdown-menu">
+										<li><a href="#">Edit URL</a></li>
+										<li><a href="#">Edit URL Mappings</a></li>
+										<li><a href="#">Unmap URL</a></li>
+										<li><a href="#">Delete</a></li>
+									</ul>
+								</div>
 								<div class="title title_6 three-dots mb-10">http://www.bmw.com/com/en/</div>
 								<div class="title title_6 three-dots mb-10">http://www.bmw.com/com/en/nenenenenenenennene</div>
 							</td>
@@ -318,7 +334,9 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Primary Segment</td>
+							<td>
+								<div class="title title_6">Primary Segment</div>
+							</td>
 							<td>
 								<!-- title -->
 								<div class="title title_6 three-dots mb-10">BMW.com</div>
@@ -342,6 +360,29 @@
 						</tr>
 					</tbody>
 				</table>
+				<!-- panel -->
+				<div class="panel">
+					<!-- row -->
+					<div class="row row_vertical_middle">
+						<div class="col-60">
+							<button class="btn btn_gray">BACK</button>
+							<button class="btn">PUBLISH</button>
+						</div>
+						<div class="col-20 ta-right">
+							<!-- title -->
+							<div class="title title_4 display-inline mr-10">Status</div>
+							<!-- switch -->
+							<label class="switch">
+								<input type="checkbox" checked="">
+								<span class="switch__in"></span>
+							</label>
+						</div>
+						<div class="col-20 ta-right">
+							<!-- updated -->
+							<div class="updated updated_save"><div class="updated__title">Saved</div>Today, 12:34</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

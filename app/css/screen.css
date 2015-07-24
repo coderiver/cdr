@@ -1066,6 +1066,7 @@ th {
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
+  vertical-align: middle;
   z-index: 4; }
   .switch input {
     display: none; }
@@ -1591,11 +1592,23 @@ th {
 
 .updated {
   color: #747474; }
+  .updated.updated_save .updated__title {
+    display: inline-block;
+    margin-right: 5px;
+    padding-right: 5px;
+    border-right: 1px solid #dadada; }
   .updated .updated__title {
     font-weight: 600; }
 
-.dt {
+.display-table {
   display: table; }
+
+.display-inline {
+  display: inline-block;
+  vertical-align: middle; }
+
+.display-block {
+  display: block; }
 
 .title {
   font-size: 34px;

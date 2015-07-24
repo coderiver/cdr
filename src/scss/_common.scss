@@ -1017,6 +1017,7 @@ th {
 	display: inline-block;
 	@include nosel;
 	cursor: pointer;
+	vertical-align: middle;
 	z-index: 4;
 	input {
 		display: none;
@@ -1134,6 +1135,9 @@ th {
 				}
 			}
 		}
+	}
+	&.switcher_checkbox {
+
 	}
 	.switcher__item {
 		display: inline-block;
@@ -1694,13 +1698,28 @@ th {
 
 .updated {
 	color: $gray-text;
+	&.updated_save {
+		.updated__title {
+			display: inline-block;
+			margin-right: 5px;
+			padding-right: 5px;
+			border-right: 1px solid $brd;
+		}
+	}
 	.updated__title {
 		@include fs;
 	}
 }
 
-.dt {
+.display-table {
 	display: table;
+}
+.display-inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+.display-block {
+	display: block;
 }
 
 .title {
