@@ -24,15 +24,18 @@ $(document).ready(function() {
 
 	dropdown.on('click', function () {
 		$(this).parent().toggleClass('is-active');
+		return false;
 	});
 
-	dropdown.on('focus', function () {
-		$(this).parent().next().show();
-	});
+	if (dropdown.is('input')) {
+		dropdown.on('focus', function () {
+			$(this).parent().next().show();
+		});
 
-	dropdown.on('blur', function () {
-		$(this).parent().next().hide();
-	});
+		dropdown.on('blur', function () {
+			$(this).parent().next().hide();
+		});
+	};
 
 	wnd.scroll(function () {
 		var scr = wnd.scrollTop();
