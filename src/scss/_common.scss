@@ -30,6 +30,8 @@ $brd: #dadada;
 $brd-l: #ececec;
 
 $red: #bb3232;
+$red-d: #db0000;
+$red-error: #ff4040;
 
 $green-l: #dce775;
 
@@ -768,7 +770,7 @@ th {
 		padding: 6px 12px 0;
 		font-size: 13px;
 		@include fs;
-		color: #ff4040;
+		color: $red-error;
 	}
 	.field__reset {
 		position: absolute;
@@ -847,18 +849,18 @@ th {
 	}
 }
 
-.msg {
+.notify {
 	display: inline-block;
 	background: #707070;
 	border-radius: 2px;
 	vertical-align: top;
-	.msg__icon,
-	.msg__text,
-	.msg__btn {
+	.notify__icon,
+	.notify__text,
+	.notify__btn {
 		display: table-cell;
 		vertical-align: top;
 	}
-	.msg__icon {
+	.notify__icon {
 		height: 60px;
 		padding: 0 10px 0 30px;
 		vertical-align: middle;
@@ -871,13 +873,40 @@ th {
 			fill: $gray;
 		}
 	}
-	.msg__text {
+	.notify__text {
 		padding: 20px 30px 20px 0;
 		font-size: 16px;
 		color: $white;
 	}
-	.msg__btn {
+	.notify__btn {
 		padding: 15px 15px 15px 0;
+	}
+}
+
+.msg {
+	position: relative;
+	margin-bottom: 10px;
+	padding: 20px 20px 20px 16px;
+	background: #FFF;
+	border-radius: 2px;
+	&.msg_login {
+		margin-top: -30px;
+	}
+	.msg__content {
+		display: table;
+		color: $red-d;
+		a {
+			@include fs;
+			color: $red-d;
+		}
+	}
+	.msg__icon {
+		float: left;
+		margin-right: 12px;
+		.icon {
+			fill: $red-d;
+			opacity: .55;
+		}
 	}
 }
 
@@ -1190,9 +1219,11 @@ th {
 	display: inline-block;
 	width: 350px;
 	vertical-align: middle;
+	font-size: 14px;
+	text-align: left;
 	.login__logo {
 		margin-bottom: 60px;
-		padding-right: 10px;
+		padding-left: 31px;
 	}
 	.login__ico {
 		@include svg(logo-screen,278,46);
@@ -2390,6 +2421,11 @@ th {
 			}
 		}
 	}
+	&.is-error {
+		.edit__input {
+			border-color: $red-error;
+		}
+	}
 	&.edit_data {
 		.edit__content {
 			font-size: 18px;
@@ -2402,11 +2438,10 @@ th {
 	}
 	.edit__action {
 		position: absolute;
-		top: 50%;
+		top: 2px;
 		right: 0;
 		width: 20px;
 		height: 20px;
-		margin-top: -10px;
 		font-size: 0;
 		.icon {
 			fill: $gray-d;
@@ -2422,6 +2457,10 @@ th {
 	.edit__input {
 		display: none;
 		border-bottom: 1px solid $gray;
+	}
+	.edit__error {
+		@include fs;
+		color: $red-error;
 	}
 }
 

@@ -926,30 +926,51 @@ th {
   left: 15px;
   fill: #55bbcc; }
 
-.msg {
+.notify {
   display: inline-block;
   background: #707070;
   border-radius: 2px;
   vertical-align: top; }
-  .msg .msg__icon, .msg .msg__text, .msg .msg__btn {
+  .notify .notify__icon, .notify .notify__text, .notify .notify__btn {
     display: table-cell;
     vertical-align: top; }
-  .msg .msg__icon {
+  .notify .notify__icon {
     height: 60px;
     padding: 0 10px 0 30px;
     vertical-align: middle; }
-    .msg .msg__icon .icon-tick {
+    .notify .notify__icon .icon-tick {
       fill: #55bbcc; }
-    .msg .msg__icon .icon-progress {
+    .notify .notify__icon .icon-progress {
       position: relative;
       top: 1px;
       fill: #cccccc; }
-  .msg .msg__text {
+  .notify .notify__text {
     padding: 20px 30px 20px 0;
     font-size: 16px;
     color: #fff; }
-  .msg .msg__btn {
+  .notify .notify__btn {
     padding: 15px 15px 15px 0; }
+
+.msg {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 20px 20px 20px 16px;
+  background: #FFF;
+  border-radius: 2px; }
+  .msg.msg_login {
+    margin-top: -30px; }
+  .msg .msg__content {
+    display: table;
+    color: #db0000; }
+    .msg .msg__content a {
+      font-weight: 600;
+      color: #db0000; }
+  .msg .msg__icon {
+    float: left;
+    margin-right: 12px; }
+    .msg .msg__icon .icon {
+      fill: #db0000;
+      opacity: .55; }
 
 .select {
   position: relative;
@@ -1206,10 +1227,12 @@ th {
 .login {
   display: inline-block;
   width: 350px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  font-size: 14px;
+  text-align: left; }
   .login .login__logo {
     margin-bottom: 60px;
-    padding-right: 10px; }
+    padding-left: 31px; }
   .login .login__ico {
     display: inline-block;
     width: 278px;
@@ -2098,6 +2121,8 @@ th {
       display: none; }
     .edit.is-active .edit__action .icon-tick {
       display: inline-block; }
+  .edit.is-error .edit__input {
+    border-color: #ff4040; }
   .edit.edit_data .edit__content {
     font-size: 18px; }
   .edit.edit_data .edit__input {
@@ -2106,11 +2131,10 @@ th {
     font-size: 18px; }
   .edit .edit__action {
     position: absolute;
-    top: 50%;
+    top: 2px;
     right: 0;
     width: 20px;
     height: 20px;
-    margin-top: -10px;
     font-size: 0; }
     .edit .edit__action .icon {
       fill: #a4a4a4; }
@@ -2122,6 +2146,9 @@ th {
   .edit .edit__input {
     display: none;
     border-bottom: 1px solid #cccccc; }
+  .edit .edit__error {
+    font-weight: 600;
+    color: #ff4040; }
 
 .icon-arrow-down {
   width: 12px;
@@ -2138,6 +2165,10 @@ th {
 .icon-arrow-top {
   width: 12px;
   height: 7px; }
+
+.icon-attention {
+  width: 18px;
+  height: 18px; }
 
 .icon-calendar {
   width: 19px;
