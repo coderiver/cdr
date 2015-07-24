@@ -233,6 +233,7 @@ th {
 	float: left;
 }
 .box-shadow {
+	background: #FFF;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -254,6 +255,9 @@ th {
 	margin: 0 auto;
 	padding: 0 10px;
 	@include clr;
+	&.center_small {
+		max-width: 924px;
+	}
 }
 
 .container {
@@ -1821,6 +1825,21 @@ th {
 	&.table_fixed {
 		table-layout: fixed;
 	}
+	&.table_segment {
+		th, td {
+			&:last-child {
+				padding-right: 40px;
+			}
+		}
+		th {
+			padding: 10px;
+			border-top: 1px solid rgba($brd,.5);
+		}
+		td {
+			padding: 15px 10px;
+			vertical-align: top;
+		}
+	}
 	&.table_custom {
 		background: $white;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1874,6 +1893,15 @@ th {
 		}
 		&.table__w-20 {
 			width: 20%;
+		}
+		&.table__w-27 {
+			width: 27%;
+		}
+		&.table__w-29 {
+			width: 29%;
+		}
+		&.table__w-31 {
+			width: 31%;
 		}
 		&.table__w-50 {
 			width: 50%;
@@ -2446,6 +2474,7 @@ th {
 	position: relative;
 	display: inline-block;
 	padding-right: 25px;
+	vertical-align: top;
 	&.is-active {
 		display: block;
 		.edit__input {
@@ -2471,7 +2500,6 @@ th {
 	}
 	&.edit_data {
 		.edit__content {
-			border-top: 1px solid transparent;
 			font-size: 18px;
 		}
 		.edit__input {
@@ -2481,6 +2509,7 @@ th {
 	}
 	&.edit_title {
 		padding-right: 30px;
+		height: 40px;
 		.edit__content {
 			font-size: 34px;
 			font-weight: 600;
@@ -2496,8 +2525,32 @@ th {
 			}
 		}
 		.edit__input {
+			top: -1px;
 			height: 40px;
 			font-size: 34px;
+			font-weight: 600;
+			color: #000;
+		}
+	}
+	&.edit_title_6 {
+		height: 16px;
+		.edit__content {
+			font-size: 14px;
+			font-weight: 600;
+			color: #000;
+			line-height: 1.2;
+		}
+		.edit__action {
+			position: absolute;
+			top: -2px;
+			.icon-edit {
+				width: 13px;
+				height: 13px;
+			}
+		}
+		.edit__input {
+			top: -1px;
+			font-size: 14px;
 			font-weight: 600;
 			color: #000;
 		}
@@ -2527,6 +2580,7 @@ th {
 	}
 	.edit__input {
 		display: none;
+		position: relative;
 		width: 100%;
 		border-bottom: 1px solid $gray;
 	}
@@ -2550,7 +2604,9 @@ th {
 	font-size: 0;
 }
 
-
+.three-dots {
+	@include text-overflow;
+}
 
 
 
