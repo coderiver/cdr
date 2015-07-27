@@ -138,6 +138,9 @@ th {
 .col-40 {
 	width: 40%;
 }
+.col-35 {
+	width: 35%;
+}
 .col-33 {
 	width: 33.33%;
 }
@@ -355,6 +358,14 @@ th {
 	}
 	& + .btn {
 		margin-left: 17px;
+	}
+	>.icon {
+		margin-right: 18px;
+		fill: $cl;
+	}
+	>.icon-plus {
+		position: relative;
+		top: 2px;
 	}
 }
 
@@ -1079,7 +1090,6 @@ th {
 			margin: 0 12px 12px 0;
 		}
 		.switcher__el {
-			display: block;
 			height: 30px;
 			padding: 4px 13px;
 			border: 1px solid rgba($gray-d,.8);
@@ -1137,13 +1147,67 @@ th {
 		}
 	}
 	&.switcher_checkbox {
+		.switcher__item {
 
+		}
+		.switcher__el {
+			position: relative;
+			padding-left: 30px;
+			&:hover {
+				&:before {
+					background: $white;
+				}
+			}
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				background: $bg;
+				border: 1px solid $brd;
+				border-radius: 2px;
+			}
+			>.icon-tick {
+				display: none;
+				position: absolute;
+				top: 5px;
+				left: 4px;
+				width: 12px;
+				height: 10px;
+				fill: $white;
+			}
+		}
+		.switcher__input {
+			&:checked {
+				& + .switcher__el {
+					&:before {
+						background: $blue;
+						border-color: $blue;
+					}
+					>.icon-tick {
+						display: block;
+					}
+				}
+			}
+		}
+		.switcher__content {
+			display: block;
+			padding: 1px 0;
+			@include fs;
+			font-size: 14px;
+		}
 	}
 	.switcher__item {
 		display: inline-block;
 		position: relative;
 		vertical-align: middle;
+		@include nosel;
 		cursor: pointer;
+	}
+	.switcher__el {
+		display: block;
 	}
 	.switcher__input {
 		position: absolute;
@@ -1654,6 +1718,18 @@ th {
 			color: $cl;
 		}
 	}
+	&.dropdown-menu_urls {
+		right: -90px;
+		left: auto;
+		width: 300px;
+		padding: 20px;
+		&:before {
+			left: 165px;
+		}
+		&:after {
+			left: 155px;
+		}
+	}
 	a {
 		display: block;
 		padding: 7px 20px;
@@ -1949,7 +2025,7 @@ th {
 			td {
 				background: $bg-blue;
 				&:first-child {
-					.icon-tick {
+					>.icon-tick {
 						display: block;
 					}
 				}
@@ -1967,7 +2043,7 @@ th {
 		border-top: 1px solid rgba($brd,.5);
 		vertical-align: middle;
 		&:first-child {
-			.icon-tick {
+			>.icon-tick {
 				display: none;
 				position: absolute;
 				top: 18px;
@@ -1980,10 +2056,13 @@ th {
 	}
 }
 
+
+.ta-left {
+	text-align: left;
+}
 .ta-right {
 	text-align: right;
 }
-
 .ta-center {
 	text-align: center;
 }
