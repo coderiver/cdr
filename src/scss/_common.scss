@@ -909,9 +909,11 @@ th {
 
 .notify {
 	display: inline-block;
+	padding: 15px;
 	background: #707070;
 	border-radius: 2px;
 	vertical-align: top;
+	text-align: left;
 	.notify__icon,
 	.notify__text,
 	.notify__btn {
@@ -919,25 +921,24 @@ th {
 		vertical-align: top;
 	}
 	.notify__icon {
-		height: 60px;
-		padding: 0 10px 0 30px;
-		vertical-align: middle;
+		padding: 5px 0 5px 15px;
+		font-size: 0;
+		.icon {
+			position: relative;
+		}
 		.icon-tick {
+			top: 4px;
 			fill: $blue;
 		}
 		.icon-progress {
-			position: relative;
-			top: 1px;
+			top: 2px;
 			fill: $gray;
 		}
 	}
 	.notify__text {
-		padding: 20px 30px 20px 0;
+		padding: 5px 15px 5px 10px;
 		font-size: 16px;
 		color: $white;
-	}
-	.notify__btn {
-		padding: 15px 15px 15px 0;
 	}
 }
 
@@ -2727,6 +2728,15 @@ th {
 
 .wrap-dropdown {
 	font-size: 0;
+}
+
+.wrap-notify {
+	position: fixed;
+	top: 80px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 9999;
 }
 
 .three-dots {

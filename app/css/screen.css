@@ -969,28 +969,29 @@ th {
 
 .notify {
   display: inline-block;
+  padding: 15px;
   background: #707070;
   border-radius: 2px;
-  vertical-align: top; }
+  vertical-align: top;
+  text-align: left; }
   .notify .notify__icon, .notify .notify__text, .notify .notify__btn {
     display: table-cell;
     vertical-align: top; }
   .notify .notify__icon {
-    height: 60px;
-    padding: 0 10px 0 30px;
-    vertical-align: middle; }
+    padding: 5px 0 5px 15px;
+    font-size: 0; }
+    .notify .notify__icon .icon {
+      position: relative; }
     .notify .notify__icon .icon-tick {
+      top: 4px;
       fill: #55bbcc; }
     .notify .notify__icon .icon-progress {
-      position: relative;
-      top: 1px;
+      top: 2px;
       fill: #cccccc; }
   .notify .notify__text {
-    padding: 20px 30px 20px 0;
+    padding: 5px 15px 5px 10px;
     font-size: 16px;
     color: #fff; }
-  .notify .notify__btn {
-    padding: 15px 15px 15px 0; }
 
 .msg {
   position: relative;
@@ -2345,6 +2346,14 @@ th {
 
 .wrap-dropdown {
   font-size: 0; }
+
+.wrap-notify {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 9999; }
 
 .three-dots {
   overflow: hidden;
