@@ -14,6 +14,7 @@ $bg-blue: #eef8fa;
 
 $orange: #ff6633;
 $orange-l: #ffd2c3;
+$orange-md: #ff8040;
 
 $blue: #55bbcc;
 $blue-l: #77c9d6;
@@ -218,11 +219,17 @@ th {
 	&.panel_p-0-40 {
 		padding: 0 40px;
 	}
+	&.panel_p-25-40 {
+		padding: 25px 40px;
+	}
 	&.panel_p-40 {
 		padding: 40px;
 	}
 	&.panel_p-30 {
 		padding: 30px;
+	}
+	&.panel_pt-25 {
+		padding-top: 25px;
 	}
 	&.panel_pb-10 {
 		padding-bottom: 10px;
@@ -236,7 +243,6 @@ th {
 	float: left;
 }
 .box-shadow {
-	background: #FFF;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -434,6 +440,11 @@ th {
 		margin-right: 5px;
 		fill: $gray;
 	}
+	.icon-close {
+		top: 0;
+		width: 10px;
+		height: 10px;
+	}
 }
 
 .item {
@@ -442,7 +453,7 @@ th {
 	width: 236px;
 	min-height: 259px;
 	background: $white;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	@extend .box-shadow;
 	vertical-align: top;
 	color: $cl;
 	&:hover {
@@ -712,10 +723,9 @@ th {
 	}
 }
 
-.input {
+.input,
+.textarea {
 	width: 100%;
-	height: 40px;
-	padding: 0 12px;
 	border: 1px solid $brd;
 	border-radius: 4px;
 	color: $gray-text;
@@ -732,6 +742,15 @@ th {
 	&.is-error {
 		border-color: #ff8c8c;
 	}
+}
+.input {
+	height: 40px;
+	padding: 0 12px;
+}
+.textarea {
+	display: block;
+	height: 120px;
+	padding: 11px 12px;
 }
 
 .field {
@@ -926,7 +945,7 @@ th {
 	position: relative;
 	margin-bottom: 10px;
 	padding: 20px 20px 20px 16px;
-	background: #FFF;
+	background: $white;
 	border-radius: 2px;
 	&.msg_login {
 		margin-top: -30px;
@@ -1799,6 +1818,7 @@ th {
 }
 
 .title {
+	position: relative;
 	font-size: 34px;
 	@include fs;
 	color: $black;
@@ -1849,6 +1869,12 @@ th {
 		font-size: 14px;
 		color: $blue;
 		vertical-align: top;
+	}
+	.title__number {
+		position: absolute;
+		top: 0;
+		left: -20px;
+		color: $gray-d;
 	}
 }
 
@@ -1917,6 +1943,7 @@ th {
 }
 
 .table {
+	background: $white;
 	&.table_fixed {
 		table-layout: fixed;
 	}
@@ -1937,7 +1964,7 @@ th {
 	}
 	&.table_custom {
 		background: $white;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		@extend .box-shadow;
 		th, td {
 			&:first-child {
 				padding-left: 20px;
@@ -2069,7 +2096,7 @@ th {
 
 .accord {
 	background: $white;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	@extend .box-shadow;
 	&.is-active {
 		.accord__head {
 			.icon-arrow-down {
@@ -2611,7 +2638,7 @@ th {
 		.edit__content {
 			font-size: 34px;
 			font-weight: 600;
-			color: #000;
+			color: $black;
 			line-height: 1.2;
 		}
 		.edit__action {
@@ -2627,7 +2654,7 @@ th {
 			height: 40px;
 			font-size: 34px;
 			font-weight: 600;
-			color: #000;
+			color: $black;
 		}
 	}
 	&.edit_title_6 {
@@ -2635,7 +2662,7 @@ th {
 		.edit__content {
 			font-size: 14px;
 			font-weight: 600;
-			color: #000;
+			color: $black;
 			line-height: 1.2;
 		}
 		.edit__action {
@@ -2650,7 +2677,7 @@ th {
 			top: -1px;
 			font-size: 14px;
 			font-weight: 600;
-			color: #000;
+			color: $black;
 		}
 	}
 	.edit__action {
@@ -2706,7 +2733,55 @@ th {
 	@include text-overflow;
 }
 
-
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-width: 1024px;
+	padding: 50px 0;
+	background: rgba($black,.8);
+	overflow: auto;
+	@include vertical;
+	z-index: 999;
+	.popup__wrap {
+		position: relative;
+		display: inline-block;
+		width: 680px;
+		@extend .box-shadow;
+		font-size: 14px;
+		text-align: left;
+		vertical-align: middle;
+	}
+	.popup__title {
+		position: relative;
+		padding: 20px 40px;
+		background: $orange-md;
+		border-radius: 4px 4px 0 0;
+	}
+	.popup__close {
+		position: absolute;
+		top: -15px;
+		right: -45px;
+		padding: 15px;
+		font-size: 0;
+		.icon {
+			width: 15px;
+			height: 15px;
+			fill: rgba($bg,.6);
+		}
+	}
+	.popup__in {
+		background: $white;
+		border-radius: 0 0 4px 4px;
+	}
+	.panel {
+		&:last-child {
+			border-radius: 0 0 4px 4px;
+		}
+	}
+}
 
 
 

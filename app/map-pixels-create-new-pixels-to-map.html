@@ -1,0 +1,549 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper js-wrapper">
+	<!-- header -->
+	<header class="header js-header">
+		<!-- center -->
+		<div class="center">
+			<div class="header__left">
+				<div class="header__cell">
+					<button class="header__btn-menu js-menu-btn">
+						<svg class="icon icon-menu">
+							<use xlink:href="#icon-menu"/>
+						</svg>
+					</button>
+					<div class="header__chapter">
+						<div class="header__chapter-title">Total Tag</div>
+						<!-- dropdown -->
+						<div class="dropdown">
+							<button class="header__chapter-add">
+								<svg class="icon icon-plus">
+									<use xlink:href="#icon-plus"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__right">
+				<div class="header__cell">
+					<div class="header__search">
+						<!-- field -->
+						<div class="field field_search_round">
+							<label class="field__in">
+								<input class="input" type="text" placeholder="Search">
+								<svg class="icon icon-search">
+									<use xlink:href="#icon-search"/>
+								</svg>
+							</label>
+							<button class="field__reset">
+								<svg class="icon icon-close">
+									<use xlink:href="#icon-close"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<a class="header__notify" href="#">
+						<div class="header__notify-in">
+							<div class="header__notify-counter">2</div>
+							<svg class="icon icon-upload">
+								<use xlink:href="#icon-upload"/>
+							</svg>
+						</div>
+					</a>
+					<div class="header__user">
+						<!-- dropdown -->
+						<div class="dropdown dropdown_white">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">John</div>
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_right">
+								<li><a href="#">Profile Settings</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- head -->
+	<div class="head">
+		<div class="head__in">
+			<!-- center -->
+			<div class="center">
+				<!-- row -->
+				<div class="row row_vertical_bottom">
+					<div class="col-35">
+						<!-- btn-back -->
+						<button class="btn-back">
+							<svg class="icon icon-arrow-left">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
+							</svg>
+						</button>
+						<!-- display-table -->
+						<div class="display-table">
+							<!-- title -->
+							<div class="edit edit_title">
+								<div class="edit__field">
+									<div class="edit__content">Test Tag</div>
+									<input class="edit__input" type="text" value="Test Tag">
+								</div>
+								<button class="edit__action js-edit">
+									<svg class="icon icon-edit">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-edit"></use>
+									</svg>
+									<svg class="icon icon-checkbox-tick">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-checkbox-tick"></use>
+									</svg>
+								</button>
+							</div>
+							<!-- info -->
+							<ul class="info">
+								<li class="info__item">24-Hour Fitness Center</li>
+								<li class="info__item info__item_blue">Iframe</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-45">
+						<!-- tabs -->
+						<div class="tabs tabs_nav">
+							<button class="tabs__item is-active">Mappings</button>
+							<button class="tabs__item">Manage URLs</button>
+							<button class="tabs__item">Container Code</button>
+						</div>
+					</div>
+					<div class="col-20 ta-right">
+						<!-- updated -->
+						<div class="updated"><div class="updated__title">Last published</div>Sep 12, 12:34, 2015</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center center_small">
+			<!-- box-shadow -->
+			<div class="box-shadow">
+				<!-- panel -->
+				<div class="panel bb">
+					<!-- row -->
+					<div class="row">
+						<div class="col-30">
+							<!-- select -->
+							<div class="select select_big js-select">
+								<div class="select__head">
+									<div class="select__value">All Pixel Providers</div>
+									<svg class="icon icon-arrow-down">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+									</svg>
+								</div>
+								<ul class="select__list">
+									<li>Item 1</li>
+									<li class="is-active">Item 1</li>
+									<li>Item 1</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-70 ta-right">
+							<button class="btn btn_white" disabled="">Map Multiple Segments</button>
+							<button class="btn btn_white">MANAGE DOMAINS</button>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel panel_pb-10">
+					<!-- title -->
+					<div class="title title_2 mb-15">Global Segment Pixels</div>
+					<!-- link-icon -->
+					<a class="link-icon mb-40" href="#">
+						<svg class="icon icon-map-pixel">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-map-pixel"></use>
+						</svg>
+						<span>Map Pixels</span>
+					</a>
+					<!-- row -->
+					<div class="row row_vertical_middle">
+						<div class="col-60">
+							<!-- wrap-title -->
+							<div class="wrap-title">
+								<!-- title -->
+								<div class="title title_2">Custom Segments</div>
+								<!-- link-icon -->
+								<a class="link-icon" href="#">
+									<svg class="icon icon-segment">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-segment"></use>
+									</svg>
+									<span>Add Segment</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-40 ta-right">
+							<!-- dropdown -->
+							<div class="dropdown ta-left">
+								<!-- link-icon -->
+								<a class="link-icon js-dropdown" href="#">
+									<svg class="icon icon-url">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-url"></use>
+									</svg>
+									<span>URLs Display</span>
+								</a>
+								<!-- dropdown-menu -->
+								<div class="dropdown-menu dropdown-menu_urls">
+									<!-- switcher -->
+									<div class="switcher switcher_checkbox mb-20">
+										<label class="switcher__item">
+											<input class="switcher__input" type="checkbox">
+											<span class="switcher__el">
+												<span class="switcher__content">Show full URL</span>
+												<svg class="icon icon-tick">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+												</svg>
+											</span>
+										</label>
+									</div>
+									<!-- tabs -->
+									<div class="tabs tabs_rounded mb-20">
+										<button class="tabs__item">Regex</button>
+										<button class="tabs__item is-active">English</button>
+									</div>
+									<!-- field -->
+									<div class="field">
+										<div class="field__in">
+											<input class="input" type="text" value="Type part of URLs to hide">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- table -->
+				<table class="table table_fixed table_segment bb">
+					<thead>
+						<tr>
+							<th class="table__w-31">Name</th>
+							<th class="table__w-27">URLs</th>
+							<th class="table__w-29">Pixels</th>
+							<th class="ta-center">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<!-- switcher -->
+								<div class="switcher switcher_checkbox">
+									<label class="switcher__item">
+										<input class="switcher__input" type="checkbox">
+										<span class="switcher__el">
+											<span class="switcher__content">Enter a name</span>
+											<svg class="icon icon-tick">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+											</svg>
+										</span>
+									</label>
+								</div>
+							</td>
+							<td>
+								<!-- dropdown -->
+								<div class="dropdown ta-left">
+									<!-- link-icon -->
+									<a class="link-icon js-dropdown" href="#">
+										<svg class="icon icon-map-urls">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-map-urls"></use>
+										</svg>
+										<span>URLs Display</span>
+									</a>
+									<!-- dropdown-menu -->
+									<ul class="dropdown-menu">
+										<li><a href="#">Map specific URL</a></li>
+										<li><a href="#">Create URL pattern</a></li>
+										<li><a href="#">Search URLs</a></li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<!-- dropdown -->
+								<div class="dropdown ta-left">
+									<!-- link-icon -->
+									<a class="link-icon js-dropdown" href="#">
+										<svg class="icon icon-map-pixel">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-map-pixel"></use>
+										</svg>
+										<span>Map Pixels</span>
+									</a>
+									<!-- dropdown-menu -->
+									<ul class="dropdown-menu">
+										<li><a href="#">Map specific URL</a></li>
+										<li><a href="#">Create URL pattern</a></li>
+										<li><a href="#">Search URLs</a></li>
+									</ul>
+								</div>
+							</td>
+							<td class="ta-center">
+								<!-- more -->
+								<button class="more">
+									<svg class="icon icon-dots">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-dots"></use>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<!-- switcher -->
+								<div class="switcher switcher_checkbox">
+									<label class="switcher__item">
+										<input class="switcher__input" type="checkbox">
+										<span class="switcher__el">
+											<span class="switcher__content">Enter a name</span>
+											<svg class="icon icon-tick">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+											</svg>
+										</span>
+									</label>
+								</div>
+							</td>
+							<td>
+								<!-- dropdown -->
+								<div class="dropdown ta-left">
+									<!-- link-icon -->
+									<a class="link-icon js-dropdown" href="#">
+										<svg class="icon icon-map-urls">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-map-urls"></use>
+										</svg>
+										<span>URLs Display</span>
+									</a>
+									<!-- dropdown-menu -->
+									<ul class="dropdown-menu">
+										<li><a href="#">Map specific URL</a></li>
+										<li><a href="#">Create URL pattern</a></li>
+										<li><a href="#">Search URLs</a></li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<!-- dropdown -->
+								<div class="dropdown ta-left">
+									<!-- link-icon -->
+									<a class="link-icon js-dropdown" href="#">
+										<svg class="icon icon-map-pixel">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-map-pixel"></use>
+										</svg>
+										<span>Map Pixels</span>
+									</a>
+									<!-- dropdown-menu -->
+									<ul class="dropdown-menu">
+										<li><a href="#">Map specific URL</a></li>
+										<li><a href="#">Create URL pattern</a></li>
+										<li><a href="#">Search URLs</a></li>
+									</ul>
+								</div>
+							</td>
+							<td class="ta-center">
+								<!-- more -->
+								<button class="more">
+									<svg class="icon icon-dots">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-dots"></use>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="4">
+								<button class="btn btn_white mb-45">
+									<svg class="icon icon-plus">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use>
+									</svg>
+									ADD SEGMENT
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- panel -->
+				<div class="panel">
+					<!-- row -->
+					<div class="row row_vertical_middle">
+						<div class="col-60">
+							<button class="btn btn_gray">BACK</button>
+							<button class="btn">PUBLISH</button>
+						</div>
+						<div class="col-20 ta-right">
+							<!-- title -->
+							<div class="title title_4 display-inline mr-10">Status</div>
+							<!-- switch -->
+							<label class="switch">
+								<input type="checkbox" checked="">
+								<span class="switch__in"></span>
+							</label>
+						</div>
+						<div class="col-20 ta-right">
+							<!-- updated -->
+							<div class="updated updated_save"><div class="updated__title">Saved</div>Today, 12:34</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<!-- popup -->
+<div class="popup">
+	<div class="popup__wrap">
+		<button class="popup__close">
+			<svg class="icon icon-close">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+			</svg>
+		</button>
+		<div class="popup__title">
+			<!-- title -->
+			<div class="title title_3 title_white">Map Pixels: Create New</div>
+		</div>
+		<div class="popup__in">
+			<!-- panel -->
+			<div class="panel panel_pt-25 bb">
+				<!-- row -->
+				<div class="row mb-40">
+					<div class="col-50">
+						<!-- title -->
+						<div class="title title_4 mb-10">Pixel Name<div class="title__number">1.</div></div>
+						<!-- field -->
+						<div class="field">
+							<div class="field__in">
+								<input class="input" type="text" value="">
+							</div>
+						</div>
+					</div>
+					<div class="col-50">
+						<!-- title -->
+						<div class="title title_4 mb-10">Pixel Provider</div>
+						<!-- select -->
+						<div class="select js-select">
+							<div class="select__head">
+								<div class="select__value">Turn</div>
+								<svg class="icon icon-arrow-down">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<ul class="select__list">
+								<li>Item 1</li>
+								<li>Item 1</li>
+								<li>Item 1</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- tabs -->
+				<div class="tabs tabs_rounded mb-5">
+					<button class="tabs__item">Standard Pixel</button>
+					<button class="tabs__item is-active">Embeded Pixel</button>
+				</div>
+				<!-- title -->
+				<div class="title title_6 title_thin title_gray mb-20">Help text goes here</div>
+				<div class="title title_4 mb-10">Pixel Code</div>
+				<!-- field -->
+				<div class="field">
+					<div class="field__in">
+						<textarea class="textarea"></textarea>
+					</div>
+				</div>
+			</div>
+			<!-- panel -->
+			<div class="panel panel_pt-25 bb">
+				<!-- row -->
+				<div class="row">
+					<div class="col-50">
+						<!-- title -->
+						<div class="title title_4 mb-10">Pixel Name<div class="title__number">2.</div></div>
+						<!-- field -->
+						<div class="field">
+							<div class="field__in">
+								<input class="input" type="text" value="">
+							</div>
+						</div>
+					</div>
+					<div class="col-50 ta-right">
+						<!-- link-icon -->
+						<a class="link-icon" href="#">
+							<svg class="icon icon-close">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+							</svg>
+							<span>Close</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- panel -->
+			<div class="panel panel_p-25-40 bb">
+				<button class="btn btn_white">
+					<svg class="icon icon-plus">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use>
+					</svg>
+					ADD ANOTHER PIXEL
+				</button>
+			</div>
+			<!-- panel -->
+			<div class="panel panel_p-25-40 ta-right">
+				<button class="btn btn_gray">CANCEL</button>
+				<button class="btn">APPLY</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
