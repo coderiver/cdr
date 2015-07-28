@@ -838,6 +838,7 @@ th {
 		color: $red-error;
 	}
 	.field__reset {
+		display: none;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -1869,10 +1870,11 @@ th {
 	.title__link {
 		color: $black;
 		&:hover {
-			.title__text {
-				text-decoration: underline;
-			}
+			text-decoration: underline;
 		}
+		&:active {
+			color: rgba($black,.8);
+		}	
 	}
 	.title__counter {
 		padding-left: 2px;
@@ -1895,7 +1897,7 @@ th {
 		display: inline-block;
 		padding: 0 15px;
 		border-left: 1px solid $brd;
-		font-size: 16px;
+		font-size: 14px;
 		color: $gray-d;
 		&:first-child {
 			padding: 0 15px 0 0;

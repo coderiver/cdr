@@ -10,7 +10,8 @@ $(document).ready(function() {
 		input = $('.js-input'),
 		tableSwitch = $('.js-switch'),
 		select = $('.js-select'),
-		edit = $('.js-edit');
+		edit = $('.js-edit'),
+		search = $('.js-search');
 
 	menuBtn.on('click', function () {
 		menuBtn.toggleClass('is-active');
@@ -78,6 +79,27 @@ $(document).ready(function() {
 
 	edit.on('click', function () {
 		$(this).parent().toggleClass('is-active');
+	});
+
+	search.each(function () {
+		var _this = $(this),
+			input = _this.find('input'),
+			button = _this.find('button');
+		input.keyup(function () {
+			var _this = $(this),
+				value = _this.val();
+			if (value.length > 0) {
+				button.show();
+			}
+			else {
+				button.hide();
+			}
+		});
+		button.on('click', function () {
+			button.hide();
+			input.val('');
+			return false;
+		});
 	});
 	
 });

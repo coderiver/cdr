@@ -987,6 +987,7 @@ th {
     font-weight: 600;
     color: #ff4040; }
   .field .field__reset {
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -1796,8 +1797,10 @@ th {
     color: #404040; }
   .title .title__link {
     color: #000; }
-    .title .title__link:hover .title__text {
+    .title .title__link:hover {
       text-decoration: underline; }
+    .title .title__link:active {
+      color: rgba(0, 0, 0, 0.8); }
   .title .title__counter {
     padding-left: 2px;
     font-size: 14px;
@@ -1816,7 +1819,7 @@ th {
     display: inline-block;
     padding: 0 15px;
     border-left: 1px solid #dadada;
-    font-size: 16px;
+    font-size: 14px;
     color: #a4a4a4; }
     .info .info__item:first-child {
       padding: 0 15px 0 0;
