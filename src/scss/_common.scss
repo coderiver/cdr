@@ -277,6 +277,7 @@ th {
 }
 
 .btn {
+	min-width: 150px;
 	height: 46px;
 	padding: 0 30px;
 	background: $orange;
@@ -332,8 +333,8 @@ th {
 	}
 	&.btn_white {
 		background: $white;
-		border: 1px solid $brd;
-		color: $cl;
+		border: 1px solid $gray-d;
+		color: rgba($cl,.8);
 		&:hover {
 			background: #FAFAFA;
 		}
@@ -341,7 +342,9 @@ th {
 			background: $bg;
 		}
 		&[disabled] {
-			opacity: .3;;
+			background: $white;
+			border-color: rgba($gray-d,.3);
+			color: rgba($cl,.3);
 		}
 	}
 	&.btn_white_no_brd {
@@ -357,10 +360,13 @@ th {
 		width: 100%;
 	}
 	&.btn_md {
+		min-width: 0;
 		height: 40px;
 		padding: 0 20px;
+		font-size: 13px;
 	}
 	&.btn_small {
+		min-width: 0;
 		height: 30px;
 		padding: 0 10px;
 		font-size: 13px;
@@ -732,15 +738,13 @@ th {
 	border: 1px solid $brd;
 	border-radius: 4px;
 	color: $gray-text;
+	@include placeholder-color($gray-d);
 	&:focus {
 		border-color: #b6b6b6;
 	}
 	&[disabled] {
 		color: rgba($cl, 0.3);
 		opacity: 0.8;
-	}
-	@include placeholder {
-		color: rgba($cl, .6);
 	}
 	&.is-error {
 		border-color: #ff8c8c;
@@ -997,17 +1001,19 @@ th {
 		position: relative;
 		height: 40px;
 		padding: 0 30px 0 12px;
-		background: $bg;
-		border: 1px solid $gray-d;
+		background: rgba($bg,.8);
+		border: 1px solid rgba($gray-d,.8);
 		border-radius: 4px;
-		opacity: 0.8;
 		line-height: 38px;
 		@include nosel;
+		@include fs;
+		color: $cl;
 		&:hover {
-			background: #fbfbfb;
+			background: rgba(#fafafa,.8);
 		}
 		&:active {
 			background: $bg;
+			border-color: $gray-d;
 		}
 		.icon-arrow-down {
 			position: absolute;
@@ -1040,7 +1046,7 @@ th {
 			}
 			&:hover,
 			&.is-active {
-				background: $bg;
+				background: $gray-h;
 			}
 		}
 	}
@@ -1796,7 +1802,7 @@ th {
 }
 
 .updated {
-	color: $gray-text;
+	color: $cl;
 	&.updated_save {
 		.updated__title {
 			display: inline-block;
