@@ -2793,6 +2793,17 @@ th {
 	}
 }
 
+.version {
+	.version__title {
+		margin-bottom: 5px;
+		font-size: 32px;
+		color: $blue;
+		line-height: .8;
+	}
+	.version__link {
+		color: $gray-text;
+	}
+}
 
 
 

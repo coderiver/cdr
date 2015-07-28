@@ -2408,6 +2408,14 @@ th {
   .popup .panel:last-child {
     border-radius: 0 0 4px 4px; }
 
+.version .version__title {
+  margin-bottom: 5px;
+  font-size: 32px;
+  color: #55bbcc;
+  line-height: .8; }
+.version .version__link {
+  color: #747474; }
+
 .icon-arrow-down {
   width: 12px;
   height: 8px; }

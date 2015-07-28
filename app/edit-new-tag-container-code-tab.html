@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper js-wrapper">
+	<!-- header -->
+	<header class="header js-header">
+		<!-- center -->
+		<div class="center">
+			<div class="header__left">
+				<div class="header__cell">
+					<button class="header__btn-menu js-menu-btn">
+						<svg class="icon icon-menu">
+							<use xlink:href="#icon-menu"/>
+						</svg>
+					</button>
+					<div class="header__chapter">
+						<div class="header__chapter-title">Total Tag</div>
+						<!-- dropdown -->
+						<div class="dropdown">
+							<button class="header__chapter-add">
+								<svg class="icon icon-plus">
+									<use xlink:href="#icon-plus"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__right">
+				<div class="header__cell">
+					<div class="header__search">
+						<!-- field -->
+						<div class="field field_search_round">
+							<label class="field__in">
+								<input class="input" type="text" placeholder="Search">
+								<svg class="icon icon-search">
+									<use xlink:href="#icon-search"/>
+								</svg>
+							</label>
+							<button class="field__reset">
+								<svg class="icon icon-close">
+									<use xlink:href="#icon-close"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<a class="header__notify" href="#">
+						<div class="header__notify-in">
+							<div class="header__notify-counter">2</div>
+							<svg class="icon icon-upload">
+								<use xlink:href="#icon-upload"/>
+							</svg>
+						</div>
+					</a>
+					<div class="header__user">
+						<!-- dropdown -->
+						<div class="dropdown dropdown_white">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">John</div>
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_right">
+								<li><a href="#">Profile Settings</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- head -->
+	<div class="head">
+		<div class="head__in">
+			<!-- center -->
+			<div class="center">
+				<!-- row -->
+				<div class="row row_vertical_bottom">
+					<div class="col-35">
+						<!-- btn-back -->
+						<button class="btn-back">
+							<svg class="icon icon-arrow-left">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
+							</svg>
+						</button>
+						<!-- display-table -->
+						<div class="display-table">
+							<!-- title -->
+							<div class="edit edit_title">
+								<div class="edit__field">
+									<div class="edit__content">A3.com</div>
+									<input class="edit__input" type="text" value="A3.com">
+								</div>
+								<button class="edit__action js-edit">
+									<svg class="icon icon-edit">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-edit"></use>
+									</svg>
+									<svg class="icon icon-checkbox-tick">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-checkbox-tick"></use>
+									</svg>
+								</button>
+							</div>
+							<!-- info -->
+							<ul class="info">
+								<li class="info__item">Audi</li>
+								<li class="info__item info__item_blue">Iframe</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-45">
+						<!-- tabs -->
+						<div class="tabs tabs_nav">
+							<button class="tabs__item">Mappings</button>
+							<button class="tabs__item">Manage URLs</button>
+							<button class="tabs__item is-active">Container Code</button>
+						</div>
+					</div>
+					<div class="col-20 ta-right">
+						<!-- updated -->
+						<div class="updated"><div class="updated__title">Last published</div>Sep 12, 12:34, 2015</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center center_small">
+			<!-- box-shadow -->
+			<div class="box-shadow">
+				<!-- panel -->
+				<div class="panel panel_pt-25 bb">
+					<!-- row -->
+					<div class="row mb-55">
+						<div class="col-45">
+							<!-- title -->
+							<div class="title title_4 mb-10">Deployment Type</div>
+							<!-- select -->
+							<div class="select">
+								<div class="select__head">
+									<div class="select__value">Standart &lt;script&gt; tag</div>
+									<svg class="icon icon-arrow-down">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+									</svg>
+								</div>
+								<ul class="select__list">
+									<li>Item 1</li>
+									<li>Item 1</li>
+									<li>Item 1</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- row -->
+					<div class="row mb-30">
+						<div class="col-45">
+							<!-- title -->
+							<div class="title title_4 mb-10">Deployment Type</div>
+							<!-- field -->
+							<div class="field mb-15">
+								<textarea class="textarea" style="height: 210px;">&lt;input class="c_search_box c_ml c_search_psb_box false" tabindex="30" type="search" name="query" placeholder="&lt;input title="class="c_search_go c_search_psb_go" tabindex="30" type="button" style="background:url(https://a.gfx.ms/h/command6.png) -143px 0px;" value=""&gt;</textarea>
+							</div>
+							<button class="btn btn_gray">COPY CODE</button>
+						</div>
+						<div class="col-50 ml-5p">
+							<!-- title -->
+							<div class="title title_4 mb-10">Last Published Version</div>
+							<!-- version -->
+							<div class="version">
+								<div class="version__title">112589</div>
+								<a class="version__link" href="#">View file list</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel">
+					<!-- row -->
+					<div class="row row_vertical_middle">
+						<div class="col-60">
+							<button class="btn btn_gray">BACK</button>
+							<button class="btn">PUBLISH</button>
+						</div>
+						<div class="col-20 ta-right">
+							<!-- title -->
+							<div class="title title_4 display-inline mr-10">Status</div>
+							<!-- switch -->
+							<label class="switch">
+								<input type="checkbox" checked="">
+								<span class="switch__in"></span>
+							</label>
+						</div>
+						<div class="col-20 ta-right">
+							<!-- updated -->
+							<div class="updated updated_save"><div class="updated__title">Saved</div>Today, 12:34</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
