@@ -133,6 +133,9 @@ th {
 .col-50 {
 	width: 50%;
 }
+.col-47 {
+	width: 47%;
+}
 .col-45 {
 	width: 45%;
 }
@@ -161,37 +164,37 @@ th {
 	width: 10%;
 }
 
-@each $s in 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70 {
+@each $s in 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
 	.mt-#{$s} {
 		margin-top: #{$s}px;
 	}
 }
 
-@each $s in 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70 {
+@each $s in 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
 	.mb-#{$s} {
 		margin-bottom: #{$s}px;
 	}
 }
 
-@each $s in 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70 {
+@each $s in 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
 	.mr-#{$s} {
 		margin-right: #{$s}px;
 	}
 }
 
-@each $s in 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70 {
+@each $s in 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
 	.ml-#{$s} {
 		margin-left: #{$s}px;
 	}
 }
 
-@each $s in 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70 {
+@each $s in 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
 	.mr-#{$s}p {
 		margin-right: #{$s}%;
 	}
 }
 
-@each $s in 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70 {
+@each $s in 3, 5, 6, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
 	.ml-#{$s}p {
 		margin-left: #{$s}%;
 	}
@@ -2461,6 +2464,7 @@ th {
 }
 
 .widget {
+	position: relative;
 	border: 1px solid $brd;
 	.widget__head {
 		padding: 15px 20px;
@@ -2468,7 +2472,7 @@ th {
 		background: $bg;
 	}
 	.widget__body {
-		height: 410px;
+		height: 415px;
 		overflow: auto;
 		// overflow-y: auto;
 		// overflow-x: hidden;
@@ -2545,6 +2549,55 @@ th {
 			fill: $gray-d;
 		}
 	}
+	.widget__popup {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba($white,.84);
+		.widget__head {
+			background: none;
+			border: none
+		}
+	}
+	.widget__res {
+		position: relative;
+		height: 34px;
+		padding: 0 35px 0 15px;
+		background: $bg-blue;
+		border: 1px solid rgba($blue,.5);
+		border-radius: 17px;
+		.country,
+		.title {
+			color: $blue;
+		}
+		.country {
+			float: right;
+			height: 12px;
+			margin: 10px 0 0 10px;
+			padding: 0 9px;
+			border-color: $blue;
+			border-width: 0 0 0 1px;
+			line-height: 12px;
+		}
+		.title {
+			line-height: 32px;
+		}
+	}
+	.widget__res-close {
+		position: absolute;
+		top: -1px;
+		right: 0;
+		width: 35px;
+		height: 34px;
+		font-size: 0;
+		.icon {
+			width: 9px;
+			height: 8px;
+			fill: $blue;
+		}
+	}
 	.title {
 		@include text-overflow;
 	}
@@ -2564,7 +2617,7 @@ th {
 	}
 	.widget-res__close {
 		position: absolute;
-		top: 0;
+		top: -1px;
 		right: 0;
 		width: 30px;
 		height: 34px;
