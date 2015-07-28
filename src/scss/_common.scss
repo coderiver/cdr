@@ -2783,11 +2783,23 @@ th {
 	font-size: 0;
 }
 
+.wrap-help {
+	@include clr;
+	.help {
+		float: right;
+		margin-top: 11px;
+	}
+	.select {
+		margin-right: 35px;
+	}
+}
+
 .wrap-notify {
 	position: fixed;
 	top: 80px;
 	left: 0;
 	right: 0;
+	min-width: 1024px;
 	text-align: center;
 	z-index: 9999;
 }
@@ -2858,6 +2870,11 @@ th {
 	}
 }
 
+.help {
+	.icon {
+		fill: $gray;
+	}
+}
 
 
 

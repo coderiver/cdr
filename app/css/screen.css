@@ -2466,11 +2466,24 @@ th {
 .wrap-dropdown {
   font-size: 0; }
 
+.wrap-help {
+  *zoom: 1; }
+  .wrap-help:after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .wrap-help .help {
+    float: right;
+    margin-top: 11px; }
+  .wrap-help .select {
+    margin-right: 35px; }
+
 .wrap-notify {
   position: fixed;
   top: 80px;
   left: 0;
   right: 0;
+  min-width: 1024px;
   text-align: center;
   z-index: 9999; }
 
@@ -2534,6 +2547,9 @@ th {
   line-height: .8; }
 .version .version__link {
   color: #747474; }
+
+.help .icon {
+  fill: #cccccc; }
 
 .icon-arrow-down {
   width: 12px;

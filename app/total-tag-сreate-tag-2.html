@@ -95,64 +95,12 @@
 			</div>
 		</div>
 	</header>
-	<!-- head -->
-	<div class="head">
-		<div class="head__in">
-			<!-- center -->
-			<div class="center">
-				<!-- row -->
-				<div class="row row_vertical_bottom">
-					<div class="col-35">
-						<!-- btn-back -->
-						<button class="btn-back">
-							<svg class="icon icon-arrow-left">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
-							</svg>
-						</button>
-						<!-- display-table -->
-						<div class="display-table">
-							<!-- title -->
-							<div class="edit edit_title">
-								<div class="edit__field">
-									<div class="edit__content">A3.com</div>
-									<input class="edit__input" type="text" value="A3.com">
-								</div>
-								<button class="edit__action js-edit">
-									<svg class="icon icon-edit">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-edit"></use>
-									</svg>
-									<svg class="icon icon-checkbox-tick">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-checkbox-tick"></use>
-									</svg>
-								</button>
-							</div>
-							<!-- info -->
-							<ul class="info">
-								<li class="info__item">Audi</li>
-								<li class="info__item info__item_blue">Iframe</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-45">
-						<!-- tabs -->
-						<div class="tabs tabs_nav">
-							<button class="tabs__item">Mappings</button>
-							<button class="tabs__item">Manage URLs</button>
-							<button class="tabs__item is-active">Container Code</button>
-						</div>
-					</div>
-					<div class="col-20 ta-right">
-						<!-- updated -->
-						<div class="updated"><div class="updated__title">Last published</div>Sep 12, 12:34, 2015</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!-- container -->
 	<div class="container">
 		<!-- center -->
 		<div class="center center_small">
+			<!-- title -->
+			<div class="title mb-10 ml-10">Get Code</div>
 			<!-- box-shadow -->
 			<div class="box-shadow">
 				<!-- panel -->
@@ -186,12 +134,22 @@
 								</div>
 							</div>
 						</div>
+						<div class="col-47 ml-6p">
+							<!-- title -->
+							<div class="title title_4 mb-10">Tag Name</div>
+							<!-- field -->
+							<div class="field">
+								<div class="field__in">
+									<input class="input" type="text" value="">
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- row -->
 					<div class="row mb-30">
 						<div class="col-47">
 							<!-- title -->
-							<div class="title title_4 mb-10">Deployment Type</div>
+							<div class="title title_4 mb-10">Tag Code</div>
 							<!-- field -->
 							<div class="field mb-15">
 								<textarea class="textarea" style="height: 210px;">&lt;input class="c_search_box c_ml c_search_psb_box false" tabindex="30" type="search" name="query" placeholder="&lt;input title="class="c_search_go c_search_psb_go" tabindex="30" type="button" style="background:url(https://a.gfx.ms/h/command6.png) -143px 0px;" value=""&gt;</textarea>
@@ -200,11 +158,13 @@
 						</div>
 						<div class="col-47 ml-6p">
 							<!-- title -->
-							<div class="title title_4 mb-10">Last Published Version</div>
-							<!-- version -->
-							<div class="version">
-								<div class="version__title">112589</div>
-								<a class="version__link" href="#">View file list</a>
+							<div class="title title_4 mb-10">Selected Format</div>
+							<!-- switcher -->
+							<div class="switcher switcher_btns">
+								<label class="switcher__item">
+									<input class="switcher__input" type="radio" name="media" checked="">
+									<span class="switcher__el">Javascript</span>
+								</label>
 							</div>
 						</div>
 					</div>
@@ -214,21 +174,11 @@
 					<!-- row -->
 					<div class="row row_vertical_middle">
 						<div class="col-60">
-							<button class="btn btn_gray">BACK</button>
-							<button class="btn">PUBLISH</button>
+							<a class="link mr-25" href="#">I’ll add mappings later</a>
+							<button class="btn">ADD MAPPINGS</button>
 						</div>
-						<div class="col-20 ta-right">
-							<!-- title -->
-							<div class="title title_4 display-inline mr-10">Status</div>
-							<!-- switch -->
-							<label class="switch">
-								<input type="checkbox" checked="">
-								<span class="switch__in"></span>
-							</label>
-						</div>
-						<div class="col-20 ta-right">
-							<!-- updated -->
-							<div class="updated updated_save"><div class="updated__title">Saved</div>Today, 12:34</div>
+						<div class="col-40 ta-right">
+							<button class="btn btn_gray">REMOVE TAG</button>
 						</div>
 					</div>
 				</div>
@@ -255,6 +205,21 @@
 		<div class="menu__links">
 			<a class="is-active" href="#">Advertisers</a>
 			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<!-- wrap-notify -->
+<div class="wrap-notify">
+	<!-- center -->
+	<div class="center">
+		<!-- notify -->
+		<div class="notify">
+			<div class="notify__icon">
+				<svg class="icon icon-tick">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+				</svg>
+			</div>
+			<div class="notify__text">Tag created successfully</div>
 		</div>
 	</div>
 </div>
