@@ -1711,6 +1711,7 @@ th {
 	background: $white;
 	border-radius: 4px;
 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+	text-align: left;
 	z-index: 99;
 	&:before,
 	&:after {
@@ -1765,14 +1766,45 @@ th {
 			left: 155px;
 		}
 	}
+	li {
+		position: relative;
+		&:hover {
+			>a {
+				background: $gray-h;
+			}
+			ul {
+				display: block;
+			}
+		}
+	}
 	a {
 		display: block;
+		position: relative;
 		padding: 7px 20px;
 		font-size: 14px;
 		color: $cl;
 		&:hover {
 			background: $gray-h;
 		}
+		>.icon-arrow-right {
+			position: absolute;
+			top: 10px;
+			right: 12px;
+			width: 6px;
+			height: 10px;
+			fill: $gray-d;
+		}
+	}
+	ul {
+		display: none;
+		position: absolute;
+		top: -10px;
+		left: 100%;
+		min-width: 192px;
+		padding: 10px 0;
+		background: $white;
+		border-radius: 4px;
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 	}
 }
 
@@ -1899,6 +1931,7 @@ th {
 }
 
 .info {
+	padding-top: 2px;
 	font-size: 0;
 	line-height: 1;
 	.info__item {
