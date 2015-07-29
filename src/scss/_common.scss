@@ -344,6 +344,12 @@ th {
 			background: $white;
 			border-color: rgba($gray-d,.3);
 			color: rgba($cl,.3);
+			.icon {
+				fill: rgba($gray-d,.3);
+			}
+		}
+		.icon {
+			fill: $gray-d;
 		}
 	}
 	&.btn_white_no_brd {

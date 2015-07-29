@@ -630,6 +630,10 @@ th {
       background: #fff;
       border-color: rgba(164, 164, 164, 0.3);
       color: rgba(64, 64, 64, 0.3); }
+      .btn.btn_white[disabled] .icon {
+        fill: rgba(164, 164, 164, 0.3); }
+    .btn.btn_white .icon {
+      fill: #a4a4a4; }
   .btn.btn_white_no_brd {
     background: #fff;
     border: none;
