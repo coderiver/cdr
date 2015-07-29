@@ -985,7 +985,7 @@ th {
     padding: 6px 12px 0;
     font-size: 13px;
     font-weight: 600;
-    color: #ff4040; }
+    color: #db0000; }
   .field .field__reset {
     display: none;
     position: absolute;
@@ -1597,7 +1597,7 @@ th {
     border-radius: 50%;
     text-align: center;
     font-size: 12px;
-    line-height: 22px;
+    line-height: 20px;
     transition: top .2s; }
 
 .btn-back {
@@ -1748,6 +1748,8 @@ th {
 
 .updated {
   color: #404040; }
+  .updated.updated_gray {
+    color: #a4a4a4; }
   .updated.updated_save .updated__title {
     display: inline-block;
     margin-right: 5px;
@@ -2394,7 +2396,7 @@ th {
     .edit.is-active .edit__action .icon-tick, .edit.is-active .edit__action .icon-checkbox-tick {
       display: inline-block; }
   .edit.is-error .edit__input {
-    border-color: #ff4040; }
+    border-color: #db0000; }
   .edit.edit_data .edit__content {
     font-size: 18px; }
   .edit.edit_data .edit__input {
@@ -2445,8 +2447,12 @@ th {
     width: 20px;
     height: 20px;
     font-size: 0; }
-    .edit .edit__action .icon {
+    .edit .edit__action:hover .icon {
+      fill: #dcdcdc; }
+    .edit .edit__action:active .icon {
       fill: #a4a4a4; }
+    .edit .edit__action .icon {
+      fill: #cccccc; }
     .edit .edit__action .icon-edit {
       width: 15px;
       height: 15px; }
@@ -2462,7 +2468,8 @@ th {
     border-bottom: 1px solid #cccccc; }
   .edit .edit__error {
     font-weight: 600;
-    color: #ff4040; }
+    font-size: 12px;
+    color: #db0000; }
 
 .wrap-title .title {
   display: inline-block;

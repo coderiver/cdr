@@ -32,7 +32,6 @@ $brd-l: #ececec;
 
 $red: #bb3232;
 $red-d: #db0000;
-$red-error: #ff4040;
 
 $green-l: #dce775;
 
@@ -835,7 +834,7 @@ th {
 		padding: 6px 12px 0;
 		font-size: 13px;
 		@include fs;
-		color: $red-error;
+		color: $red-d;
 	}
 	.field__reset {
 		display: none;
@@ -1604,7 +1603,7 @@ th {
 		border-radius: 50%;
 		text-align: center;
 		font-size: 12px;
-		line-height: 22px;
+		line-height: 20px;
 		transition: top .2s;
 	}
 }
@@ -1804,6 +1803,9 @@ th {
 
 .updated {
 	color: $cl;
+	&.updated_gray {
+		color: $gray-d;
+	}
 	&.updated_save {
 		.updated__title {
 			display: inline-block;
@@ -2682,7 +2684,7 @@ th {
 	}
 	&.is-error {
 		.edit__input {
-			border-color: $red-error;
+			border-color: $red-d;
 		}
 	}
 	&.edit_data {
@@ -2749,8 +2751,18 @@ th {
 		width: 20px;
 		height: 20px;
 		font-size: 0;
+		&:hover {
+			.icon {
+				fill: $gray-l;
+			}
+		}
+		&:active {
+			.icon {
+				fill: $gray-d;
+			}
+		}
 		.icon {
-			fill: $gray-d;
+			fill: $gray;
 		}
 		.icon-edit {
 			width: 15px;
@@ -2773,7 +2785,8 @@ th {
 	}
 	.edit__error {
 		@include fs;
-		color: $red-error;
+		font-size: 12px;
+		color: $red-d;
 	}
 }
 
