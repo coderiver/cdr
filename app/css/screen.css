@@ -570,6 +570,8 @@ th {
     clear: both; }
   .center.center_small {
     max-width: 924px; }
+  .center.center_smaller {
+    max-width: 680px; }
 
 .container {
   padding: 20px 0 50px; }
@@ -589,8 +591,8 @@ th {
   .btn:active {
     background: #fd5923; }
   .btn[disabled] {
-    background: #787878;
-    color: #C9C9C9; }
+    background: #ffd2c3;
+    color: rgba(255, 255, 255, 0.5); }
   .btn.btn_gray {
     height: 46px;
     background: #f0f0f0;
@@ -653,6 +655,8 @@ th {
     height: 30px;
     padding: 0 10px;
     font-size: 13px; }
+  .btn.btn_width_big {
+    min-width: 190px; }
   .btn + .btn {
     margin-left: 17px; }
   .btn > .icon-plus {
@@ -2595,6 +2599,47 @@ th {
 .help .icon {
   fill: #cccccc; }
 
+.push {
+  display: inline-block;
+  width: 370px;
+  padding: 35px;
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  vertical-align: top; }
+
+.loader {
+  height: 400px;
+  text-align: center;
+  font-size: 0; }
+  .loader:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%; }
+  .loader img {
+    -webkit-animation: loader 1s infinite linear;
+            animation: loader 1s infinite linear;
+    vertical-align: middle; }
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
+
 .icon-arrow-down {
   width: 12px;
   height: 8px; }
@@ -2654,7 +2699,8 @@ th {
 
 .icon-error {
   width: 71px;
-  height: 71px; }
+  height: 71px;
+  fill: #ff4040; }
 
 .icon-growth {
   width: 12px;
@@ -2703,7 +2749,8 @@ th {
 
 .icon-success {
   width: 71px;
-  height: 71px; }
+  height: 71px;
+  fill: #55bbcc; }
 
 .icon-tick {
   width: 13px;

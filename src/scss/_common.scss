@@ -32,6 +32,7 @@ $brd-l: #ececec;
 
 $red: #bb3232;
 $red-d: #db0000;
+$red-l: #ff4040;
 
 $green-l: #dce775;
 
@@ -269,6 +270,9 @@ th {
 	&.center_small {
 		max-width: 924px;
 	}
+	&.center_smaller {
+		max-width: 680px;
+	}
 }
 
 .container {
@@ -292,8 +296,8 @@ th {
 		background: #fd5923;
 	}
 	&[disabled] {
-		background: #787878;
-		color: #C9C9C9;
+		background: $orange-l;
+		color: rgba($white, .5);
 	}
 	&.btn_gray {
 		height: 46px;
@@ -375,6 +379,9 @@ th {
 		height: 30px;
 		padding: 0 10px;
 		font-size: 13px;
+	}
+	&.btn_width_big {
+		min-width: 190px;
 	}
 	& + .btn {
 		margin-left: 17px;
@@ -2926,10 +2933,32 @@ th {
 	}
 }
 
+.push {
+	display: inline-block;
+	width: 370px;
+	padding: 35px;
+	border: 1px solid $brd;
+	border-radius: 4px;
+	vertical-align: top;
+}
 
+.loader {
+	height: 400px;
+	@include vertical;
+	img {
+		animation: loader 1s infinite linear;
+		vertical-align: middle;
+	}
+}
 
-
-
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
 
 
 
