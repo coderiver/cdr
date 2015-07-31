@@ -1894,6 +1894,10 @@ th {
   .data .data__group .data__value {
     min-width: 60px;
     margin-right: 10px; }
+.data.data_important .data__value {
+  color: #000; }
+.data.data_important .data__label {
+  font-weight: 600; }
 
 .table {
   background: #fff; }

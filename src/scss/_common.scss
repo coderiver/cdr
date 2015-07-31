@@ -1999,6 +1999,14 @@ th {
 			margin-right: 10px;
 		}
 	}
+	&.data_important{
+		.data__value{
+			color: #000;
+		}
+		.data__label{
+			@include fs();
+		}
+	}
 }
 
 .table {
