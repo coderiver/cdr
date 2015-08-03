@@ -250,16 +250,16 @@ th {
 }
 
 .bt {
-	border-top: 1px solid $brd;
+	border-top: 1px solid rgba($brd,.5);
 }
 .br {
-	border-right: 1px solid $brd;
+	border-right: 1px solid rgba($brd,.5);
 }
 .bb {
-	border-bottom: 1px solid $brd;
+	border-bottom: 1px solid rgba($brd,.5);
 }
 .bl {
-	border-left: 1px solid $brd;
+	border-left: 1px solid rgba($brd,.5);
 }
 
 .center {

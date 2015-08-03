@@ -548,16 +548,16 @@ th {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
 
 .bt {
-  border-top: 1px solid #dadada; }
+  border-top: 1px solid rgba(218, 218, 218, 0.5); }
 
 .br {
-  border-right: 1px solid #dadada; }
+  border-right: 1px solid rgba(218, 218, 218, 0.5); }
 
 .bb {
-  border-bottom: 1px solid #dadada; }
+  border-bottom: 1px solid rgba(218, 218, 218, 0.5); }
 
 .bl {
-  border-left: 1px solid #dadada; }
+  border-left: 1px solid rgba(218, 218, 218, 0.5); }
 
 .center {
   max-width: 1024px;
