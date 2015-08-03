@@ -2259,7 +2259,7 @@ th {
 		left: 0;
 		width: 8px;
 		height: 8px;
-		margin-top: -5px;
+		margin-top: -4px;
 		border-radius: 50%;
 	}
 	&.status_draft {
@@ -2441,6 +2441,7 @@ th {
 	}
 	.pager__prev,
 	.pager__next {
+		min-width: 0;
 		width: 40px;
 		padding: 0;
 		font-size: 0;
@@ -2602,6 +2603,9 @@ th {
 				.icon-tick {
 					display: inline-block;
 				}
+				.status {
+					display: none;
+				}
 			}
 		}
 	}
@@ -2641,6 +2645,9 @@ th {
 		}
 		.icon-arrow-right {
 			fill: $gray-d;
+		}
+		.status {
+			font-size: 14px;
 		}
 	}
 	.widget__popup {

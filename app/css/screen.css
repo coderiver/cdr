@@ -2069,7 +2069,7 @@ th {
     left: 0;
     width: 8px;
     height: 8px;
-    margin-top: -5px;
+    margin-top: -4px;
     border-radius: 50%; }
   .status.status_draft:before {
     background: #FFCE6A; }
@@ -2207,6 +2207,7 @@ th {
     padding: 0 13px;
     vertical-align: top; }
   .pager .pager__prev, .pager .pager__next {
+    min-width: 0;
     width: 40px;
     padding: 0;
     font-size: 0; }
@@ -2327,6 +2328,8 @@ th {
       background: #eef8fa; }
       .widget .widget__row.is-active .widget__right-in .icon-tick {
         display: inline-block; }
+      .widget .widget__row.is-active .widget__right-in .status {
+        display: none; }
   .widget .widget__row_head {
     padding: 5px 20px;
     background: #f0f0f0;
@@ -2362,6 +2365,8 @@ th {
       fill: #55bbcc; }
     .widget .widget__right-in .icon-arrow-right {
       fill: #a4a4a4; }
+    .widget .widget__right-in .status {
+      font-size: 14px; }
   .widget .widget__popup {
     display: none;
     position: absolute;
