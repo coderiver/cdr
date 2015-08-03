@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var wnd = $(window),
 		wrapper = $('.js-wrapper'),
 		header = $('.js-header'),
+		headerSearch = $('.js-header-search'),
 		menu = $('.js-menu'),
 		menuBtn = $('.js-menu-btn'),
 		menuClose = $('.js-menu-close'),
@@ -11,7 +12,9 @@ $(document).ready(function() {
 		tableSwitch = $('.js-switch'),
 		select = $('.js-select'),
 		edit = $('.js-edit'),
-		search = $('.js-search');
+		search = $('.js-search'),
+		notify = $('.js-notify'),
+		notifyShow = $('.js-notify-show');
 
 	menuBtn.on('click', function () {
 		menuBtn.toggleClass('is-active');
@@ -43,11 +46,16 @@ $(document).ready(function() {
 		if (scr > 0) {
 			wrapper.addClass('is-header-fixed');
 			header.addClass('is-fixed');
+			headerSearch.addClass('is-hide');
 		}
 		else {
 			wrapper.removeClass('is-header-fixed');
 			header.removeClass('is-fixed');
+			headerSearch.removeClass('is-hide');
 		}
+	});
+	headerSearch.find('.icon-search').on('click', function () {
+		headerSearch.removeClass('is-hide');
 	});
 
 	input.focus(function () {
@@ -100,6 +108,10 @@ $(document).ready(function() {
 			input.val('');
 			return false;
 		});
+	});
+
+	notifyShow.on('click', function () {
+		notify.fadeIn();
 	});
 	
 });

@@ -369,7 +369,7 @@ th {
 		width: 100%;
 	}
 	&.btn_md {
-		min-width: 0;
+		min-width: 120px;
 		height: 40px;
 		padding: 0 20px;
 		font-size: 13px;
@@ -411,6 +411,22 @@ th {
 			text-decoration: none;
 			cursor: default;
 		}
+	}
+}
+
+.link-gray {
+	font-size: 16px;
+	color: $gray-text;
+	&:hover {
+		text-decoration: underline;
+	}
+	&:active {
+		opacity: .8;
+	}
+	&[disabled] {
+		text-decoration: none;
+		opacity: .35;
+		cursor: default;
 	}
 }
 
@@ -747,7 +763,8 @@ th {
 	width: 100%;
 	border: 1px solid $brd;
 	border-radius: 4px;
-	color: $gray-text;
+	@include fs;
+	color: $cl;
 	@include placeholder-color($gray-d);
 	&:focus {
 		border-color: #b6b6b6;
@@ -932,6 +949,11 @@ th {
 	border-radius: 2px;
 	vertical-align: top;
 	text-align: left;
+	color: $white;
+	&.notify_gray {
+		background: $gray;
+		color: $cl;
+	}
 	.notify__icon,
 	.notify__text,
 	.notify__btn {
@@ -956,7 +978,6 @@ th {
 	.notify__text {
 		padding: 5px 15px 5px 10px;
 		font-size: 16px;
-		color: $white;
 	}
 }
 
@@ -1132,7 +1153,7 @@ th {
 		}
 		.switcher__el {
 			height: 30px;
-			padding: 4px 13px;
+			padding: 3px 13px 5px;
 			border: 1px solid rgba($gray-d,.8);
 			border-radius: 15px;
 			font-size: 16px;
@@ -1439,7 +1460,7 @@ th {
 					fill: $blue-d;
 				}
 			}
-		} 
+		}
 	}
 	.header__left {
 		float: left;
@@ -1562,25 +1583,29 @@ th {
 	}
 	.header__search {
 		display: inline-block;
-		width: 250px;
 		vertical-align: middle;
-		.input {
-			border: none;
-			background: rgba($white,.9);
-		}
-		&.is-closed {
-			width: 35px;
+		&.is-hide {
 			.field_search_round {
 				.icon {
 					left: 10px;
 					fill: $white;
 					cursor: pointer;
+					opacity: 1;
 				}
 			}
 			.input {
+				width: 35px;
 				padding-right: 0;
 				background: rgba($white,0);
+				font-size: 0;
+				cursor: pointer;
 			}
+		}
+		.input {
+			width: 250px;
+			border: none;
+			background: rgba($white,.9);
+			transition: width .2s, background .2s;
 		}
 	}
 	.header__notify {
@@ -2636,6 +2661,20 @@ th {
 	}
 }
 
+.widget-help {
+	height: 482px;
+	padding: 40px;
+	@include vertical;
+	.widget-help__title {
+		display: inline-block;
+		@include fs;
+		font-size: 18px;
+		text-transform: uppercase;
+		color: $gray;
+		vertical-align: middle;
+	}
+}
+
 .widget-res {
 	padding-top: 110px;
 }
@@ -2655,6 +2694,16 @@ th {
 		width: 35px;
 		height: 32px;
 		font-size: 0;
+		&:hover {
+			.icon {
+				fill: $blue-l;
+			}
+		}
+		&:active {
+			.icon {
+				fill: $blue-d;
+			}
+		}
 		.icon {
 			width: 9px;
 			height: 8px;
@@ -2852,6 +2901,7 @@ th {
 }
 
 .wrap-notify {
+	display: none;
 	position: fixed;
 	top: 80px;
 	left: 0;
@@ -2907,10 +2957,20 @@ th {
 		right: -45px;
 		padding: 15px;
 		font-size: 0;
+		&:hover {
+			.icon {
+				fill: $gray-l;
+			}
+		}
+		&:active {
+			.icon {
+				fill: $gray-d;
+			}
+		}
 		.icon {
 			width: 15px;
 			height: 15px;
-			fill: rgba($bg,.6);
+			fill: $gray;
 		}
 	}
 	.popup__in {

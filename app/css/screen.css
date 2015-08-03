@@ -646,7 +646,7 @@ th {
   .btn.btn_wide {
     width: 100%; }
   .btn.btn_md {
-    min-width: 0;
+    min-width: 120px;
     height: 40px;
     padding: 0 20px;
     font-size: 13px; }
@@ -679,6 +679,18 @@ th {
     .link.is-disabled:hover {
       text-decoration: none;
       cursor: default; }
+
+.link-gray {
+  font-size: 16px;
+  color: #747474; }
+  .link-gray:hover {
+    text-decoration: underline; }
+  .link-gray:active {
+    opacity: .8; }
+  .link-gray[disabled] {
+    text-decoration: none;
+    opacity: .35;
+    cursor: default; }
 
 .link-icon {
   display: inline-block;
@@ -921,7 +933,8 @@ th {
   width: 100%;
   border: 1px solid #dadada;
   border-radius: 4px;
-  color: #747474; }
+  font-weight: 600;
+  color: #404040; }
   .input:-moz-placeholder, .input::-moz-placeholder, .textarea:-moz-placeholder, .textarea::-moz-placeholder {
     color: #a4a4a4;
     opacity: 1; }
@@ -1062,7 +1075,11 @@ th {
   background: #707070;
   border-radius: 2px;
   vertical-align: top;
-  text-align: left; }
+  text-align: left;
+  color: #fff; }
+  .notify.notify_gray {
+    background: #cccccc;
+    color: #404040; }
   .notify .notify__icon, .notify .notify__text, .notify .notify__btn {
     display: table-cell;
     vertical-align: top; }
@@ -1079,8 +1096,7 @@ th {
       fill: #cccccc; }
   .notify .notify__text {
     padding: 5px 15px 5px 10px;
-    font-size: 16px;
-    color: #fff; }
+    font-size: 16px; }
 
 .msg {
   position: relative;
@@ -1233,7 +1249,7 @@ th {
       margin: 0 12px 12px 0; }
     .switcher.switcher_btns .switcher__el {
       height: 30px;
-      padding: 4px 13px;
+      padding: 3px 13px 5px;
       border: 1px solid rgba(164, 164, 164, 0.8);
       border-radius: 15px;
       font-size: 16px;
@@ -1566,20 +1582,23 @@ th {
     vertical-align: middle; }
   .header .header__search {
     display: inline-block;
-    width: 250px;
     vertical-align: middle; }
+    .header .header__search.is-hide .field_search_round .icon {
+      left: 10px;
+      fill: #fff;
+      cursor: pointer;
+      opacity: 1; }
+    .header .header__search.is-hide .input {
+      width: 35px;
+      padding-right: 0;
+      background: rgba(255, 255, 255, 0);
+      font-size: 0;
+      cursor: pointer; }
     .header .header__search .input {
+      width: 250px;
       border: none;
-      background: rgba(255, 255, 255, 0.9); }
-    .header .header__search.is-closed {
-      width: 35px; }
-      .header .header__search.is-closed .field_search_round .icon {
-        left: 10px;
-        fill: #fff;
-        cursor: pointer; }
-      .header .header__search.is-closed .input {
-        padding-right: 0;
-        background: rgba(255, 255, 255, 0); }
+      background: rgba(255, 255, 255, 0.9);
+      transition: width .2s, background .2s; }
   .header .header__notify {
     display: inline-block;
     margin-left: 25px;
@@ -2360,6 +2379,25 @@ th {
     text-overflow: ellipsis;
     white-space: nowrap; }
 
+.widget-help {
+  height: 482px;
+  padding: 40px;
+  text-align: center;
+  font-size: 0; }
+  .widget-help:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%; }
+  .widget-help .widget-help__title {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #cccccc;
+    vertical-align: middle; }
+
 .widget-res {
   padding-top: 110px; }
 
@@ -2382,6 +2420,10 @@ th {
     width: 35px;
     height: 32px;
     font-size: 0; }
+    .selected .selected__close:hover .icon {
+      fill: #77c9d6; }
+    .selected .selected__close:active .icon {
+      fill: #1c89a3; }
     .selected .selected__close .icon {
       width: 9px;
       height: 8px;
@@ -2526,6 +2568,7 @@ th {
     margin-right: 35px; }
 
 .wrap-notify {
+  display: none;
   position: fixed;
   top: 80px;
   left: 0;
@@ -2584,10 +2627,14 @@ th {
     right: -45px;
     padding: 15px;
     font-size: 0; }
+    .popup .popup__close:hover .icon {
+      fill: #dcdcdc; }
+    .popup .popup__close:active .icon {
+      fill: #a4a4a4; }
     .popup .popup__close .icon {
       width: 15px;
       height: 15px;
-      fill: rgba(240, 240, 240, 0.6); }
+      fill: #cccccc; }
   .popup .popup__in {
     background: #fff;
     border-radius: 0 0 4px 4px; }
