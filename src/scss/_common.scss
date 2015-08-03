@@ -250,16 +250,16 @@ th {
 }
 
 .bt {
-	border-top: 1px solid rgba($brd,.5);
+	border-top: 1px solid $brd;
 }
 .br {
-	border-right: 1px solid rgba($brd,.5);
+	border-right: 1px solid $brd;
 }
 .bb {
-	border-bottom: 1px solid rgba($brd,.5);
+	border-bottom: 1px solid $brd;
 }
 .bl {
-	border-left: 1px solid rgba($brd,.5);
+	border-left: 1px solid $brd;
 }
 
 .center {
@@ -298,6 +298,18 @@ th {
 	&[disabled] {
 		background: $orange-l;
 		color: rgba($white, .5);
+	}
+	&.btn_simple {
+		background: $gray-h;
+		text-transform: none;
+		font-size: 14px;
+		color: #000;
+		&:hover {
+			background: #F6F6F6;
+		}
+		&:active {
+			background: #F1F1F1;
+		}
 	}
 	&.btn_gray {
 		height: 46px;
@@ -395,26 +407,6 @@ th {
 }
 
 .link {
-	font-size: 15px;
-	color: $orange;
-	@include fs;
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
-	&:active {
-		opacity: 0.8;
-	}
-	&.is-disabled {
-		opacity: 0.35;
-		&:hover {
-			text-decoration: none;
-			cursor: default;
-		}
-	}
-}
-
-.link-gray {
 	font-size: 16px;
 	color: $gray-text;
 	&:hover {
@@ -423,7 +415,8 @@ th {
 	&:active {
 		opacity: .8;
 	}
-	&[disabled] {
+	&[disabled],
+	&.is-disabled {
 		text-decoration: none;
 		opacity: .35;
 		cursor: default;
@@ -650,7 +643,7 @@ th {
 		.tabs__item {
 			min-width: 94px;
 			height: 30px;
-			padding: 0 12px;
+			padding: 0 12px 2px;
 			background: transparent;
 			border: 1px solid $blue;
 			border-width: 1px 1px 1px 0;
@@ -1679,14 +1672,6 @@ th {
 			display: block;
 		}
 	}
-	&.dropdown_btn {
-		.dropdown__head {
-			padding: 5px 10px;
-			background: $bg;
-			border-radius: 4px;
-			@include fs;
-		}
-	}
 	&.dropdown_white {
 		&:hover,
 		&.is-active {
@@ -2047,7 +2032,7 @@ th {
 		}
 		th {
 			padding: 10px;
-			border-top: 1px solid rgba($brd,.5);
+			border-top: 1px solid $brd;
 		}
 		td {
 			padding: 15px 10px;
@@ -2159,7 +2144,7 @@ th {
 		position: relative;
 		height: 50px;
 		padding: 10px;
-		border-top: 1px solid rgba($brd,.5);
+		border-top: 1px solid $brd;
 		vertical-align: middle;
 		&:first-child {
 			>.icon-tick {
@@ -2536,9 +2521,8 @@ th {
 .more {
 	position: relative;
 	top: -2px;
-	width: 40px;
-	height: 20px;
-	border-radius: 2px;
+	padding: 3px;
+	border-radius: 4px;
 	font-size: 0;
 	vertical-align: middle;
 	&:hover {
@@ -2546,6 +2530,10 @@ th {
 	}
 	&:active {
 		background: rgba($blue,.2);
+	}
+	&:disabled {
+		background: none;
+		opacity: .3;
 	}
 	.icon-dots {
 		fill: $blue;
@@ -2696,25 +2684,31 @@ th {
 	color: $blue;
 	@include clr;
 	vertical-align: top;
-	.selected__close {
-		float: right;
-		width: 35px;
-		height: 32px;
-		font-size: 0;
-		&:hover {
+	cursor: pointer;
+	&:hover {
+		.selected__close {
 			.icon {
 				fill: $blue-l;
 			}
 		}
-		&:active {
+	}
+	&:active {
+		.selected__close {
 			.icon {
 				fill: $blue-d;
 			}
 		}
+	}
+	.selected__close {
+		float: right;
+		width: 35px;
+		height: 32px;
+		@include vertical;
 		.icon {
 			width: 9px;
 			height: 8px;
 			fill: $blue;
+			vertical-align: middle;
 		}
 	}
 	.selected__country {

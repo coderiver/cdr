@@ -548,16 +548,16 @@ th {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
 
 .bt {
-  border-top: 1px solid rgba(218, 218, 218, 0.5); }
+  border-top: 1px solid #dadada; }
 
 .br {
-  border-right: 1px solid rgba(218, 218, 218, 0.5); }
+  border-right: 1px solid #dadada; }
 
 .bb {
-  border-bottom: 1px solid rgba(218, 218, 218, 0.5); }
+  border-bottom: 1px solid #dadada; }
 
 .bl {
-  border-left: 1px solid rgba(218, 218, 218, 0.5); }
+  border-left: 1px solid #dadada; }
 
 .center {
   max-width: 1024px;
@@ -593,6 +593,15 @@ th {
   .btn[disabled] {
     background: #ffd2c3;
     color: rgba(255, 255, 255, 0.5); }
+  .btn.btn_simple {
+    background: #f3f3f3;
+    text-transform: none;
+    font-size: 14px;
+    color: #000; }
+    .btn.btn_simple:hover {
+      background: #F6F6F6; }
+    .btn.btn_simple:active {
+      background: #F1F1F1; }
   .btn.btn_gray {
     height: 46px;
     background: #f0f0f0;
@@ -666,28 +675,13 @@ th {
     fill: #404040; }
 
 .link {
-  font-size: 15px;
-  color: #ff6633;
-  font-weight: 600;
-  text-decoration: none; }
+  font-size: 16px;
+  color: #747474; }
   .link:hover {
     text-decoration: underline; }
   .link:active {
-    opacity: 0.8; }
-  .link.is-disabled {
-    opacity: 0.35; }
-    .link.is-disabled:hover {
-      text-decoration: none;
-      cursor: default; }
-
-.link-gray {
-  font-size: 16px;
-  color: #747474; }
-  .link-gray:hover {
-    text-decoration: underline; }
-  .link-gray:active {
     opacity: .8; }
-  .link-gray[disabled] {
+  .link[disabled], .link.is-disabled {
     text-decoration: none;
     opacity: .35;
     cursor: default; }
@@ -851,7 +845,7 @@ th {
   .tabs.tabs_blue .tabs__item {
     min-width: 94px;
     height: 30px;
-    padding: 0 12px;
+    padding: 0 12px 2px;
     background: transparent;
     border: 1px solid #55bbcc;
     border-width: 1px 1px 1px 0;
@@ -1654,11 +1648,6 @@ th {
             transform: rotate(-180deg); }
   .dropdown.is-active .dropdown-menu {
     display: block; }
-  .dropdown.dropdown_btn .dropdown__head {
-    padding: 5px 10px;
-    background: #f0f0f0;
-    border-radius: 4px;
-    font-weight: 600; }
   .dropdown.dropdown_white:hover .dropdown__head .dropdown__title, .dropdown.dropdown_white.is-active .dropdown__head .dropdown__title {
     color: #ffd2c3; }
   .dropdown.dropdown_white:hover .dropdown__head .icon, .dropdown.dropdown_white.is-active .dropdown__head .icon {
@@ -1926,7 +1915,7 @@ th {
     padding-right: 40px; }
   .table.table_segment th {
     padding: 10px;
-    border-top: 1px solid rgba(218, 218, 218, 0.5); }
+    border-top: 1px solid #dadada; }
   .table.table_segment td {
     padding: 15px 10px;
     vertical-align: top; }
@@ -1996,7 +1985,7 @@ th {
     position: relative;
     height: 50px;
     padding: 10px;
-    border-top: 1px solid rgba(218, 218, 218, 0.5);
+    border-top: 1px solid #dadada;
     vertical-align: middle; }
     .table td:first-child > .icon-tick {
       display: none;
@@ -2283,15 +2272,17 @@ th {
 .more {
   position: relative;
   top: -2px;
-  width: 40px;
-  height: 20px;
-  border-radius: 2px;
+  padding: 3px;
+  border-radius: 4px;
   font-size: 0;
   vertical-align: middle; }
   .more:hover {
     background: rgba(85, 187, 204, 0.3); }
   .more:active {
     background: rgba(85, 187, 204, 0.2); }
+  .more:disabled {
+    background: none;
+    opacity: .3; }
   .more .icon-dots {
     fill: #55bbcc; }
 
@@ -2415,24 +2406,33 @@ th {
   border-radius: 17px;
   color: #55bbcc;
   *zoom: 1;
-  vertical-align: top; }
+  vertical-align: top;
+  cursor: pointer; }
   .selected:after {
     content: " ";
     display: table;
     clear: both; }
+  .selected:hover .selected__close .icon {
+    fill: #77c9d6; }
+  .selected:active .selected__close .icon {
+    fill: #1c89a3; }
   .selected .selected__close {
     float: right;
     width: 35px;
     height: 32px;
+    text-align: center;
     font-size: 0; }
-    .selected .selected__close:hover .icon {
-      fill: #77c9d6; }
-    .selected .selected__close:active .icon {
-      fill: #1c89a3; }
+    .selected .selected__close:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 100%; }
     .selected .selected__close .icon {
       width: 9px;
       height: 8px;
-      fill: #55bbcc; }
+      fill: #55bbcc;
+      vertical-align: middle; }
   .selected .selected__country {
     float: right;
     height: 12px;
