@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper js-wrapper">
+	<!-- header -->
+	<header class="header js-header">
+		<!-- center -->
+		<div class="center">
+			<div class="header__left">
+				<div class="header__cell">
+					<button class="header__btn-menu js-menu-btn">
+						<svg class="icon icon-menu">
+							<use xlink:href="#icon-menu"/>
+						</svg>
+					</button>
+					<div class="header__chapter">
+						<div class="header__chapter-title">Reports</div>
+					</div>
+					<!-- dropdown -->
+					<div class="dropdown dropdown_big dropdown_white">
+						<div class="dropdown__head js-dropdown">
+							<div class="dropdown__title">Ad Server Discrepancy</div>
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="#icon-arrow-down"/>
+							</svg>
+						</div>
+						<!-- dropdown-menu -->
+						<ul class="dropdown-menu">
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header__right">
+				<div class="header__cell">
+					<div class="header__search js-header-search">
+						<!-- field -->
+						<div class="field field_search_round js-search">
+							<label class="field__in">
+								<input class="input" type="text" placeholder="Search">
+								<svg class="icon icon-search">
+									<use xlink:href="#icon-search"/>
+								</svg>
+							</label>
+							<button class="field__reset">
+								<svg class="icon icon-close">
+									<use xlink:href="#icon-close"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<a class="header__notify" href="#">
+						<div class="header__notify-in">
+							<div class="header__notify-counter">2</div>
+							<svg class="icon icon-upload">
+								<use xlink:href="#icon-upload"/>
+							</svg>
+						</div>
+					</a>
+					<div class="header__user">
+						<!-- dropdown -->
+						<div class="dropdown dropdown_white">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">John</div>
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_right">
+								<li><a href="#">Profile Settings</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- head -->
+	<div class="head">
+		<!-- center -->
+		<div class="center">
+			<!-- panel -->
+			<div class="panel panel_p-30-0">
+				<!-- row -->
+				<div class="row">
+					<div class="col-25">
+						<!-- title -->
+						<div class="title title_6 title_gray title_thin mb-15">Advertiser</div>
+						<!-- dropdown -->
+						<div class="dropdown dropdown_big">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">Select Advertiser</div>
+								<svg class="icon icon-arrow-down">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu">
+								<li><a href="#">Item</a></li>
+								<li><a href="#">Item</a></li>
+								<li><a href="#">Item</a></li>
+								<li><a href="#">Item</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-25">
+						<!-- title -->
+						<div class="title title_6 title_gray title_thin mb-15 is-disable">Campaign</div>
+						<!-- dropdown -->
+						<div class="dropdown dropdown_big is-disable">
+							<div class="dropdown__head">
+								<div class="dropdown__title">All</div>
+								<svg class="icon icon-arrow-down">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu">
+								<li><a href="#">Item</a></li>
+								<li><a href="#">Item</a></li>
+								<li><a href="#">Item</a></li>
+								<li><a href="#">Item</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-25">
+						<!-- title -->
+						<div class="title title_6 title_gray title_thin mb-15 is-disable">Placement</div>
+						<!-- dropdown -->
+						<div class="dropdown dropdown_big is-disable">
+							<div class="dropdown__head">
+								<div class="dropdown__title">All</div>
+								<svg class="icon icon-arrow-down">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu">
+								<li><a href="#">Item</a></li>
+								<li><a href="#">Item</a></li>
+								<li><a href="#">Item</a></li>
+								<li><a href="#">Item</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-25">
+						<!-- title -->
+						<div class="title title_6 title_gray title_thin mb-8 is-disable">Report Dates</div>
+						<!-- field -->
+						<div class="field">
+							<label class="field__in">
+								<input class="input" type="text" value="May 2 - May 3, 2015">
+								<span class="field__icon">
+									<svg class="icon icon-calendar">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-calendar"></use>
+									</svg>
+								</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- updated -->
+			<div class="updated ta-right">
+				<svg class="icon icon-attention">
+					<use xlink:href="#icon-attention"/>
+				</svg>
+				Report data last updated: May 03 2015, 12:33 AM GMT
+			</div>
+			<!-- no-result -->
+			<div class="no-result">
+				<div class="no-result__circle">
+					<svg class="icon icon-no-result">
+						<use xlink:href="#icon-no-result"/>
+					</svg>
+				</div>
+				<!-- title -->
+				<div class="title title_default_color title_thin">Please select advertiser to start <br>viewing the report</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
