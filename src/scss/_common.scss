@@ -349,6 +349,7 @@ th {
 			opacity: 0.1;
 		}
 	}
+	&.btn-default,
 	&.btn_white {
 		background: $white;
 		border: 1px solid $gray-d;
@@ -1736,6 +1737,7 @@ th {
 	}
 }
 
+.cad-dropdown-menu,
 .dropdown-menu {
 	display: none;
 	position: absolute;
@@ -3079,11 +3081,184 @@ th {
 			vertical-align: middle;
 		}
 	}
+	.title {
+		opacity: .8;
+	}
 }
 
-
-
-
+.calendar {
+	min-width: 292px;
+	padding: 0 20px;
+	@include nosel;
+	&.single {
+		.daterangepicker_input {
+			display: none;
+		}
+	}
+	&.left,
+	&.right {
+		float: left;
+	}
+	.daterangepicker_input {
+		position: relative;
+		padding: 10px 0 15px;
+		input {
+			width: 100%;
+			height: 40px;
+			padding: 0 12px;
+			border: 1px solid $brd;
+			border-radius: 4px;
+			@include fs;
+			color: $cl;
+			@include placeholder-color($gray-d);
+			&:focus {
+				border-color: #b6b6b6;
+			}
+		}
+		i {
+			position: absolute;
+			top: 22px;
+			right: 10px;
+			width: 10px;
+			@include svg(calendar,19,18);
+		}
+	}
+	.table-condensed {
+		font-size: 14px;
+		thead {
+			border-bottom: 1px solid rgba($brd,.5);
+			tr {
+				&:last-child {
+					th {
+						padding-bottom: 8px;
+					}
+				}
+			}
+			.month,
+			.prev,
+			.next {
+				padding-bottom: 11px;
+			}
+			.month {
+				padding-top: 2px;
+				font-size: 18px;
+				text-align: center;
+				color: #000;
+			}
+			.prev,
+			.next {
+				cursor: pointer;
+				&:hover {
+					i {
+						opacity: .6;
+					}
+				}
+				&:active {
+					i {
+						opacity: 1;
+					}
+				}
+				i {
+					display: inline-block;
+					margin: 0 8px;
+					opacity: .8;
+					vertical-align: middle;
+				}
+			}
+			.prev {
+				text-align: left;
+				i {
+					@include svg(arrow-left,9,13)
+				}
+				
+			}
+			.next {
+				text-align: right;
+				i {
+					@include svg(arrow-right,9,13)
+				}
+				
+			}
+		}
+		tbody {
+			tr {
+				&:first-child {
+					td {
+						border-top: 5px solid #fff;
+					}
+				}
+				&:last-child {
+					td {
+						border-bottom: 5px solid #fff;
+					}
+				}
+			}
+			.off, 
+			.off.in-range, 
+			.off.start-date, 
+			.off.end-date {
+				color: #999;
+				background: #fff;
+			}
+			.disabled, 
+			option.disabled {
+				color: #999;
+			}
+			.available:hover {
+				background: $orange-l;
+			}
+			.in-range {
+				background: $orange-l;
+				border-radius: 0;
+			}
+			.start-date {
+				border-radius: 4px 0 0 4px;
+			}
+			.end-date {
+				border-radius: 0 4px 4px 0;
+			}
+			.start-date.end-date {
+				border-radius: 4px;
+			}
+			.active, 
+			.active:hover {
+				background: $orange;
+				color: #fff;
+			}
+		}
+		th {
+			color: $gray-d;
+		}
+		th, td {
+			position: relative;
+			text-align: center;
+			vertical-align: middle;
+		}
+		td {
+			padding: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	}
+}
+.ranges {
+	padding: 20px 20px 10px;
+	border-top: 1px solid rgba($brd,.5);
+	clear: both;
+	.range_inputs {
+		@include clr;
+		button {
+			float: right;
+			margin-left: 10px;
+		}
+		.btn-default {
+			@extend .btn_white;
+		}
+		.btn-sm {
+			@extend .btn_small;
+		}
+	}
+}
 
 
 

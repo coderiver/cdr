@@ -14,7 +14,9 @@ $(document).ready(function() {
 		edit = $('.js-edit'),
 		search = $('.js-search'),
 		notify = $('.js-notify'),
-		notifyShow = $('.js-notify-show');
+		notifyShow = $('.js-notify-show'),
+		dp = $('.js-dp'),
+		dpRange = $('.js-dp-range');
 
 	menuBtn.on('click', function () {
 		menuBtn.toggleClass('is-active');
@@ -113,5 +115,14 @@ $(document).ready(function() {
 	notifyShow.on('click', function () {
 		notify.fadeIn();
 	});
+
+	if (dp.length) {
+		dp.daterangepicker({
+			singleDatePicker: true
+		});
+	};
+	if (dpRange.length) {
+		dpRange.daterangepicker();
+	};
 	
 });
