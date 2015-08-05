@@ -127,6 +127,9 @@ th {
 .col-70 {
 	width: 70%;
 }
+.col-69 {
+	width: 69%;
+}
 .col-67 {
 	width: 66.67%;
 }
@@ -153,6 +156,9 @@ th {
 }
 .col-33 {
 	width: 33.33%;
+}
+.col-31 {
+	width: 31%;
 }
 .col-30 {
 	width: 30%;
@@ -925,6 +931,11 @@ th {
 		font-size: 18px;
 		color: $white;
 	}
+	.input {
+		&[disabled] + .field__icon {
+			opacity: .3;
+		}
+	}
 }
 
 .list {
@@ -1046,6 +1057,16 @@ th {
 		}
 		.select__list {
 			display: block;
+		}
+	}
+	&.is-disable {
+		opacity: .3;
+		cursor: not-allowed;
+		&:hover,
+		&:active {
+			.select__head {
+				background: rgba($bg,.8);
+			}
 		}
 	}
 	&.select_big {
@@ -1939,6 +1960,29 @@ th {
 	}
 	.icon-attention {
 		top: -2px;
+		fill: $blue
+	}
+}
+
+.inform {
+	font-size: 0;
+	&.inform_gray {
+		color: $gray-d;
+		.icon {
+			fill: $gray;
+		}
+	}
+	.inform__important {
+		font-weight: 600;
+	}
+	.inform__content {
+		display: inline;
+		padding-left: 7px;
+		font-size: 12px;
+		vertical-align: middle;
+	}
+	.icon {
+		vertical-align: middle;
 		fill: $blue
 	}
 }

@@ -127,6 +127,9 @@ th {
 .col-70 {
   width: 70%; }
 
+.col-69 {
+  width: 69%; }
+
 .col-67 {
   width: 66.67%; }
 
@@ -153,6 +156,9 @@ th {
 
 .col-33 {
   width: 33.33%; }
+
+.col-31 {
+  width: 31%; }
 
 .col-30 {
   width: 30%; }
@@ -1089,6 +1095,8 @@ th {
     font-weight: 600;
     font-size: 18px;
     color: #fff; }
+  .field .input[disabled] + .field__icon {
+    opacity: .3; }
 
 .list .list__item {
   display: block;
@@ -1179,6 +1187,11 @@ th {
               transform: rotate(180deg); }
   .select.is-active .select__list {
     display: block; }
+  .select.is-disable {
+    opacity: .3;
+    cursor: not-allowed; }
+    .select.is-disable:hover .select__head, .select.is-disable:active .select__head {
+      background: rgba(240, 240, 240, 0.8); }
   .select.select_big .select__head {
     height: 46px;
     font-weight: 600;
@@ -1877,6 +1890,23 @@ th {
     vertical-align: middle; }
   .updated .icon-attention {
     top: -2px;
+    fill: #55bbcc; }
+
+.inform {
+  font-size: 0; }
+  .inform.inform_gray {
+    color: #a4a4a4; }
+    .inform.inform_gray .icon {
+      fill: #cccccc; }
+  .inform .inform__important {
+    font-weight: 600; }
+  .inform .inform__content {
+    display: inline;
+    padding-left: 7px;
+    font-size: 12px;
+    vertical-align: middle; }
+  .inform .icon {
+    vertical-align: middle;
     fill: #55bbcc; }
 
 .display-table {

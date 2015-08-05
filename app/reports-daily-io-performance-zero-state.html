@@ -40,7 +40,7 @@
 					<!-- dropdown -->
 					<div class="dropdown dropdown_big dropdown_white">
 						<div class="dropdown__head js-dropdown">
-							<div class="dropdown__title">Ad Server Discrepancy</div>
+							<div class="dropdown__title">Daily IO Performance</div>
 							<svg class="icon icon-arrow-down">
 								<use xlink:href="#icon-arrow-down"/>
 							</svg>
@@ -57,22 +57,6 @@
 			</div>
 			<div class="header__right">
 				<div class="header__cell">
-					<div class="header__search js-header-search">
-						<!-- field -->
-						<div class="field field_search_round js-search">
-							<label class="field__in">
-								<input class="input" type="text" placeholder="Search">
-								<svg class="icon icon-search">
-									<use xlink:href="#icon-search"/>
-								</svg>
-							</label>
-							<button class="field__reset">
-								<svg class="icon icon-close">
-									<use xlink:href="#icon-close"/>
-								</svg>
-							</button>
-						</div>
-					</div>
 					<a class="header__notify" href="#">
 						<div class="header__notify-in">
 							<div class="header__notify-counter">2</div>
@@ -137,7 +121,7 @@
 						<!-- dropdown -->
 						<div class="dropdown dropdown_big is-disable">
 							<div class="dropdown__head">
-								<div class="dropdown__title">All</div>
+								<div class="dropdown__title">Select Campaign</div>
 								<svg class="icon icon-arrow-down">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
 								</svg>
@@ -153,21 +137,19 @@
 					</div>
 					<div class="col-25">
 						<!-- title -->
-						<div class="title title_6 title_gray title_thin mb-15 is-disable">Placement</div>
-						<!-- dropdown -->
-						<div class="dropdown dropdown_big is-disable">
-							<div class="dropdown__head">
-								<div class="dropdown__title">All</div>
+						<div class="title title_6 title_gray title_thin mb-8 is-disable">Placement</div>
+						<!-- select -->
+						<div class="select is-disable">
+							<div class="select__head">
+								<div class="select__value">theTradeDesk</div>
 								<svg class="icon icon-arrow-down">
 									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
 								</svg>
 							</div>
-							<!-- dropdown-menu -->
-							<ul class="dropdown-menu">
-								<li><a href="#">Item</a></li>
-								<li><a href="#">Item</a></li>
-								<li><a href="#">Item</a></li>
-								<li><a href="#">Item</a></li>
+							<ul class="select__list">
+								<li>Item 1</li>
+								<li>Item 1</li>
+								<li>Item 1</li>
 							</ul>
 						</div>
 					</div>
@@ -194,12 +176,26 @@
 	<div class="container">
 		<!-- center -->
 		<div class="center">
-			<!-- inform -->
-			<div class="inform ta-right">
-				<svg class="icon icon-attention">
-					<use xlink:href="#icon-attention"/>
-				</svg>
-				<div class="inform__content">Report data last updated: May 03 2015, 12:33 AM GMT</div>
+			<!-- row -->
+			<div class="row">
+				<div class="col-69">
+					<!-- inform -->
+					<div class="inform inform_gray">
+						<svg class="icon icon-attention">
+							<use xlink:href="#icon-attention"/>
+						</svg>
+						<div class="inform__content"><span class="inform__important">Disclaimer:</span> This report is provided for directional purposes only and does not reflect final performance statistics or billing amounts</div>
+					</div>
+				</div>
+				<div class="col-28">
+					<!-- inform -->
+					<div class="inform ta-right">
+						<svg class="icon icon-attention">
+							<use xlink:href="#icon-attention"/>
+						</svg>
+						<div class="inform__content">Report data last updated: May 03 2015, 12:33 AM GMT</div>
+					</div>
+				</div>
 			</div>
 			<!-- no-result -->
 			<div class="no-result">
@@ -209,7 +205,7 @@
 					</svg>
 				</div>
 				<!-- title -->
-				<div class="title title_default_color title_thin">Please select advertiser to start <br>viewing the report</div>
+				<div class="title title_default_color title_thin">Please select advertiser and campaign <br>to start viewing the report</div>
 			</div>
 		</div>
 	</div>
