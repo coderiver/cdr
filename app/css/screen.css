@@ -80,6 +80,10 @@ th {
   transition: padding .2s; }
   .wrapper.is-header-fixed {
     padding-top: 40px; }
+  .wrapper.wrapper_head {
+    padding-top: 120px; }
+    .wrapper.wrapper_head.is-header-fixed {
+      padding-top: 90px; }
   .wrapper.wrapper_login {
     height: 100vh;
     padding: 50px 0;
@@ -152,6 +156,9 @@ th {
 
 .col-30 {
   width: 30%; }
+
+.col-27 {
+  width: 27%; }
 
 .col-25 {
   width: 25%; }
@@ -596,7 +603,7 @@ th {
 .btn {
   min-width: 150px;
   height: 46px;
-  padding: 0 30px;
+  padding: 0 20px;
   background: #ff6633;
   border-radius: 4px;
   font-size: 15px;
@@ -1461,6 +1468,16 @@ th {
     .login .login__fieldset .field-icon {
       margin-bottom: 15px; }
 
+.wrap-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-width: 1024px;
+  z-index: 99; }
+  .wrap-header .header {
+    position: relative; }
+
 .header {
   position: fixed;
   top: 0;
@@ -1811,8 +1828,6 @@ th {
   .head .head__in_gray {
     padding: 15px 0;
     background: #f7f7f7; }
-  .head .head__in_brd {
-    border-bottom: 1px solid #dadada; }
 
 .updated {
   color: #404040; }
@@ -1882,10 +1897,7 @@ th {
     .title .title__link:active {
       color: rgba(0, 0, 0, 0.8); }
   .title .title__counter {
-    padding-left: 2px;
-    font-size: 14px;
-    color: #55bbcc;
-    vertical-align: top; }
+    color: #a4a4a4; }
   .title .title__number {
     position: absolute;
     top: 0;
@@ -1899,7 +1911,7 @@ th {
   .info .info__item {
     display: inline-block;
     padding: 0 15px;
-    border-left: 1px solid #dadada;
+    border-left: 1px solid #b9b9b9;
     font-size: 14px;
     color: #a4a4a4; }
     .info .info__item:first-child {
@@ -2042,11 +2054,20 @@ th {
   text-align: center; }
 
 .accord {
+  position: relative;
   background: #fff; }
   .accord.is-active .accord__head .icon-arrow-down {
     -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
             transform: rotate(0deg); }
+  .accord.accord_toggle:last-child:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), transparent); }
   .accord.accord_toggle.is-active .accord__head:before {
     display: none; }
   .accord.accord_toggle .accord__head:before {
@@ -2123,8 +2144,9 @@ th {
       text-align: right; }
 
 .imported {
-  color: #747474; }
+  color: #404040; }
   .imported .imported__user {
+    font-weight: 600;
     color: #000; }
 
 .section {
