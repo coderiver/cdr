@@ -500,6 +500,12 @@ th {
 	&:hover {
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
+	&.item_empty {
+		height: 259px;
+		background: #e9e9e9;
+		box-shadow: none;
+		@include vertical;
+	}
 	&.item_no_foot {
 		.item__in {
 			min-height: 259px
@@ -593,6 +599,19 @@ th {
 		font-size: 12px;
 		color: $gray-d;
 		text-align: right;
+	}
+	.item__circle {
+		display: inline-block;
+		width: 180px;
+		height: 180px;
+		background: $white;
+		border-radius: 50%;
+		vertical-align: middle;
+		@include vertical;
+		.icon {
+			fill: $gray;
+			vertical-align: middle;
+		}
 	}
 }
 
@@ -2024,6 +2043,14 @@ th {
 			color: $blue-d1;
 		}
 	}
+	&.data_important{
+		.data__value{
+			color: #000;
+		}
+		.data__label{
+			@include fs();
+		}
+	}
 	.data__label {
 		margin-bottom: 2px;
 		color: $gray-d;
@@ -2041,6 +2068,10 @@ th {
 	.data__value_bigger {
 		font-size: 42px;
 		line-height: 1;
+		.data__empty {
+			padding: 5px 0;
+			font-size: 32px;
+		}
 	}
 	.data__graph {
 		display: inline-block;
@@ -2060,13 +2091,8 @@ th {
 			margin-right: 10px;
 		}
 	}
-	&.data_important{
-		.data__value{
-			color: #000;
-		}
-		.data__label{
-			@include fs();
-		}
+	.data__empty {
+		color: #94E3ED;
 	}
 }
 

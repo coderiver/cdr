@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper wrapper_head js-wrapper">
+	<!-- wrap-header -->
+	<div class="wrap-header">
+		<!-- header -->
+		<header class="header js-header">
+			<!-- center -->
+			<div class="center">
+				<div class="header__left">
+					<div class="header__cell">
+						<button class="header__btn-menu js-menu-btn">
+							<svg class="icon icon-menu">
+								<use xlink:href="#icon-menu"/>
+							</svg>
+						</button>
+						<div class="header__chapter">
+							<div class="header__chapter-title">Campaigns</div>
+							<!-- dropdown -->
+							<div class="dropdown">
+								<button class="header__chapter-add js-dropdown">
+									<svg class="icon icon-plus">
+										<use xlink:href="#icon-plus"/>
+									</svg>
+								</button>
+								<!-- dropdown-menu -->
+								<ul class="dropdown-menu">
+									<li><a href="#">Digital Campaign</a></li>
+									<li><a href="#">TV Campaignlia</a></li>
+								</ul>
+							</div>
+						</div>
+						<nav class="header__nav">
+							<a class="is-active" href="#">Digital</a>
+							<a href="#">TV</a>
+						</nav>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__cell">
+						<div class="header__search js-header-search">
+							<!-- field -->
+							<div class="field field_search_round js-search">
+								<label class="field__in">
+									<input class="input" type="text" placeholder="Search">
+									<svg class="icon icon-search">
+										<use xlink:href="#icon-search"/>
+									</svg>
+								</label>
+								<button class="field__reset">
+									<svg class="icon icon-close">
+										<use xlink:href="#icon-close"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<a class="header__notify" href="#">
+							<div class="header__notify-in">
+								<div class="header__notify-counter">2</div>
+								<svg class="icon icon-upload">
+									<use xlink:href="#icon-upload"/>
+								</svg>
+							</div>
+						</a>
+						<div class="header__user">
+							<!-- dropdown -->
+							<div class="dropdown dropdown_white">
+								<div class="dropdown__head js-dropdown">
+									<div class="dropdown__title">John</div>
+									<svg class="icon icon-arrow-down">
+										<use xlink:href="#icon-arrow-down"/>
+									</svg>
+								</div>
+								<!-- dropdown-menu -->
+								<ul class="dropdown-menu dropdown-menu_right">
+									<li><a href="#">Profile Settings</a></li>
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+									<li><a href="#">Log Out</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- head -->
+		<div class="head head_p-12">
+			<!-- center -->
+			<div class="center">
+				<!-- row -->
+				<div class="row">
+					<div class="col-60">
+						<!-- dropdown -->
+						<div class="dropdown mt-3 mr-30">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">All advertisers</div>
+								<svg class="icon icon-arrow-down">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+								<li><a href="#">Item 3</a></li>
+							</ul>
+						</div>
+						<!-- dropdown -->
+						<div class="dropdown mt-3 mr-30">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">All start dates</div>
+								<svg class="icon icon-arrow-down">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+								<li><a href="#">Item 3</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-40 ta-right">
+						<!-- tabs -->
+						<div class="tabs tabs_simple">
+							<button class="tabs__item is-active">All</button>
+							<button class="tabs__item">Imported</button>
+							<button class="tabs__item">Draft</button>
+							<button class="tabs__item">Live</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- row -->
+			<div class="row">
+				<div class="col-25">
+					<!-- title -->
+					<div class="title title_6 text-upper mb-15">Imported Opportunities</div>
+					<!-- item -->
+					<div class="item item_no_foot mb-20">
+						<div class="item__in">
+							<div class="item__head">
+								<a class="item__title" href="#">Xbox GTA5 inbox dv 34-567</a>
+								<div class="item__title-sub">Microsoft</div>
+								<!-- tags -->
+								<div class="tags">
+									<a class="tags__item" href="#">Advertising</a>
+									<a class="tags__item" href="#">Display</a>
+								</div>
+							</div>
+							<div class="item__info">
+								<div class="item__label">Platforms</div>
+								<div class="item__data">TheTradeDesk, 
+									<button class="more">
+										<svg class="icon icon-dots">
+											<use xlink:href="#icon-dots"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="item__info">
+								<div class="item__label">Start Date</div>
+								<div class="item__data">June 12, 2015</div>
+							</div>
+						</div>			
+					</div>
+				</div>
+				<div class="col-25">
+					<!-- title -->
+					<div class="title title_6 text-upper mb-15">Imported Opportunities</div>
+					<!-- item -->
+					<div class="item item_empty mb-20">
+						<div class="item__circle">
+							<svg class="icon icon-no-result-search ml-5">
+								<use xlink:href="#icon-no-result-search"/>
+							</svg>
+						</div>			
+					</div>
+				</div>
+				<div class="col-50">
+					<!-- title -->
+					<div class="title title_6 text-upper mb-15">live Campaigns</div>
+					<!-- campaign -->
+					<div class="campaign mb-20">
+						<div class="campaign__head">
+							<!-- tabs -->
+							<div class="tabs tabs_line">
+								<button class="tabs__item is-active">7 DAYS</button>
+								<button class="tabs__item">1 DAY</button>
+								<button class="tabs__item float-right">TheTradeDesk</button>
+							</div>
+						</div>
+						<div class="campaign__in">
+							<!-- row -->
+							<div class="row mb-10">
+								<div class="col-70">
+									<!-- title -->
+									<div class="title title_4 title_white mb-10">Sheba _TTD_Global +2 Be with Your Pet UM Magna PT ET</div>
+									<!-- tabs -->
+									<div class="tabs tabs_small">
+										<button class="tabs__item is-active">Display</button>
+										<button class="tabs__item">Mars</button>
+										<button class="tabs__item">Q2 MRS_ad_display_ggt45-567</button>
+									</div>
+								</div>
+								<div class="col-30">
+									<!-- data -->
+									<div class="data data_white">
+										<div class="data__label">Average eCPM
+											<svg class="icon icon-growth ml-5">
+												<use xlink:href="#icon-growth"/>
+											</svg>
+										</div>
+										<div class="data__value data__value_bigger">
+											<div class="data__empty">No Data</div>
+										</div>
+										<div class="data__text">Start date:</div>
+										<div class="data__text">9-Jul-2015, GMT+2</div>
+									</div>
+								</div>
+							</div>
+							<!-- graph -->
+							<div class="graph mb-10">
+								<img src="img/graph-empty.jpg" alt="">
+							</div>
+							<!-- row -->
+							<div class="row">
+								<div class="col-45">
+									<!-- data -->
+									<div class="data data_white mb-10">
+										<div class="data__label">Impressions</div>
+										<div class="data__value data__value_big">
+											<div class="data__empty">No Data</div>
+										</div>
+									</div>
+									<!-- data -->
+									<div class="data data_white">
+										<div class="data__label">Pacing</div>
+										<!-- progress -->
+										<div class="progress">
+											<div class="progress__stats">
+												<div class="progress__stats-item">
+													<div class="progress__stats-value">0%</div>
+													<div class="progress__stats-text">Budget spent</div>
+												</div>
+												<div class="progress__stats-item">
+													<div class="progress__stats-value">21</div>
+													<div class="progress__stats-text">Days left</div>
+												</div>
+											</div>
+											<div class="progress__data">
+												<div class="progress__data-in" style="width: 0%;"></div>
+											</div>
+											<div class="progress__scale">
+												<div class="progress__scale-item">9-Jul</div>
+												<div class="progress__scale-item">11-Aug</div>
+											</div>
+											<div class="progress__text">Salesforce Advertisers ID: XX-1126-AA112</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-45 float-right">
+									<!-- data -->
+									<div class="data data_white mb-10">
+										<div class="data__label">Clicks</div>
+										<div class="data__value data__value_big">
+											<div class="data__empty">No Data</div>
+										</div>
+									</div>
+									<!-- data -->
+									<div class="data data_white mb-25">
+										<div class="data__label">eCPC, average</div>
+										<div class="data__group">
+											<div class="data__value data__value_mid">
+												<div class="data__empty">No Data</div>
+											</div>
+										</div>
+									</div>
+									<!-- data -->
+									<div class="data data_white mb-10">
+										<div class="data__label">CTR, average</div>
+										<div class="data__group">
+											<div class="data__value data__value_mid">
+												<div class="data__empty">No Data</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<!-- js -->
+<script src="js/jquery.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
