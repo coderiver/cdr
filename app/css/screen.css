@@ -1754,8 +1754,13 @@ th {
       display: inline-block;
       vertical-align: middle; }
     .dropdown .dropdown__head .dropdown__title {
+      max-width: 160px;
       font-size: 16px;
-      color: #404040; }
+      color: #404040;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
     .dropdown .dropdown__head .icon {
       width: 12px;
       height: 8px;
@@ -1769,7 +1774,6 @@ th {
   position: absolute;
   top: 100%;
   left: 0;
-  right: 0;
   min-width: 192px;
   margin-top: 10px;
   padding: 10px 0;
@@ -1797,13 +1801,34 @@ th {
     width: 30px;
     height: 10px;
     background: #fff; }
-  .cad-dropdown-menu.dropdown-menu_right, .dropdown-menu.dropdown-menu_right {
+  .cad-dropdown-menu.daterangepicker, .dropdown-menu.daterangepicker {
+    padding: 0; }
+  .cad-dropdown-menu.dropdown-menu_tick li.is-active a, .dropdown-menu.dropdown-menu_tick li.is-active a {
+    position: relative;
+    padding-right: 40px;
+    background: #eef8fa;
+    cursor: default; }
+  .cad-dropdown-menu.dropdown-menu_tick li.is-active .icon-tick, .dropdown-menu.dropdown-menu_tick li.is-active .icon-tick {
+    display: block; }
+  .cad-dropdown-menu.dropdown-menu_tick a, .dropdown-menu.dropdown-menu_tick a {
+    font-weight: 600; }
+  .cad-dropdown-menu.dropdown-menu_tick .icon-tick, .dropdown-menu.dropdown-menu_tick .icon-tick {
+    display: none;
+    position: absolute;
+    top: 11px;
+    right: 20px;
+    fill: #55bbcc; }
+  .cad-dropdown-menu.dropdown-menu_gray, .dropdown-menu.dropdown-menu_gray {
+    padding: 0; }
+    .cad-dropdown-menu.dropdown-menu_gray:before, .cad-dropdown-menu.dropdown-menu_gray:after, .dropdown-menu.dropdown-menu_gray:before, .dropdown-menu.dropdown-menu_gray:after {
+      background: #f0f0f0; }
+  .cad-dropdown-menu.opensleft, .cad-dropdown-menu.dropdown-menu_right, .dropdown-menu.opensleft, .dropdown-menu.dropdown-menu_right {
     left: auto;
     right: 0; }
-    .cad-dropdown-menu.dropdown-menu_right:before, .dropdown-menu.dropdown-menu_right:before {
+    .cad-dropdown-menu.opensleft:before, .cad-dropdown-menu.dropdown-menu_right:before, .dropdown-menu.opensleft:before, .dropdown-menu.dropdown-menu_right:before {
       left: auto;
       right: 22px; }
-    .cad-dropdown-menu.dropdown-menu_right:after, .dropdown-menu.dropdown-menu_right:after {
+    .cad-dropdown-menu.opensleft:after, .cad-dropdown-menu.dropdown-menu_right:after, .dropdown-menu.opensleft:after, .dropdown-menu.dropdown-menu_right:after {
       left: auto;
       right: 12px; }
   .cad-dropdown-menu.dropdown-menu_search a, .dropdown-menu.dropdown-menu_search a {
@@ -1819,37 +1844,37 @@ th {
       left: 165px; }
     .cad-dropdown-menu.dropdown-menu_urls:after, .dropdown-menu.dropdown-menu_urls:after {
       left: 155px; }
-  .cad-dropdown-menu li, .dropdown-menu li {
+  .cad-dropdown-menu > li, .dropdown-menu > li {
     position: relative; }
-    .cad-dropdown-menu li:hover > a, .dropdown-menu li:hover > a {
+    .cad-dropdown-menu > li:hover > a, .dropdown-menu > li:hover > a {
       background: #f3f3f3; }
-    .cad-dropdown-menu li:hover ul, .dropdown-menu li:hover ul {
+    .cad-dropdown-menu > li:hover ul, .dropdown-menu > li:hover ul {
       display: block; }
-  .cad-dropdown-menu a, .dropdown-menu a {
-    display: block;
-    position: relative;
-    padding: 7px 20px;
-    font-size: 14px;
-    color: #404040; }
-    .cad-dropdown-menu a:hover, .dropdown-menu a:hover {
-      background: #f3f3f3; }
-    .cad-dropdown-menu a > .icon-arrow-right, .dropdown-menu a > .icon-arrow-right {
+    .cad-dropdown-menu > li a, .dropdown-menu > li a {
+      display: block;
+      position: relative;
+      padding: 7px 20px;
+      font-size: 14px;
+      color: #404040; }
+      .cad-dropdown-menu > li a:hover, .dropdown-menu > li a:hover {
+        background: #f3f3f3; }
+      .cad-dropdown-menu > li a > .icon-arrow-right, .dropdown-menu > li a > .icon-arrow-right {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        width: 6px;
+        height: 10px;
+        fill: #a4a4a4; }
+    .cad-dropdown-menu > li ul, .dropdown-menu > li ul {
+      display: none;
       position: absolute;
-      top: 10px;
-      right: 12px;
-      width: 6px;
-      height: 10px;
-      fill: #a4a4a4; }
-  .cad-dropdown-menu ul, .dropdown-menu ul {
-    display: none;
-    position: absolute;
-    top: -10px;
-    left: 100%;
-    min-width: 192px;
-    padding: 10px 0;
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); }
+      top: -10px;
+      left: 100%;
+      min-width: 192px;
+      padding: 10px 0;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); }
 
 .state {
   margin-bottom: 12px; }
@@ -2046,6 +2071,14 @@ th {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden; }
+  .table.table_row {
+    table-layout: fixed; }
+    .table.table_row td {
+      padding: 13px 40px;
+      border-top: none;
+      border-left: 1px solid rgba(218, 218, 218, 0.5); }
+      .table.table_row td:first-child {
+        border: none; }
   .table th:first-child, .table td:first-child {
     padding-left: 40px; }
   .table th:last-child, .table td:last-child {
@@ -2314,6 +2347,17 @@ th {
 
 .pager {
   font-size: 0; }
+  .pager.pager_nav .pager__prev, .pager.pager_nav .pager__next {
+    vertical-align: middle; }
+  .pager.pager_nav .pager__list {
+    padding: 0 8px;
+    vertical-align: middle; }
+  .pager.pager_nav .pager__btn {
+    width: 40px;
+    height: 20px;
+    color: #000; }
+    .pager.pager_nav .pager__btn:first-child {
+      border-right: 1px solid #dadada; }
   .pager .pager__list {
     display: inline-block;
     padding: 0 13px;
@@ -2412,6 +2456,26 @@ th {
 .widget {
   position: relative;
   border: 1px solid #dadada; }
+  .widget.widget_dropdown {
+    width: 290px;
+    border: none; }
+    .widget.widget_dropdown .widget__head {
+      border-radius: 4px 4px 0 0; }
+    .widget.widget_dropdown .widget__body {
+      height: auto;
+      max-height: 290px; }
+    .widget.widget_dropdown .widget__row {
+      padding-right: 15px; }
+      .widget.widget_dropdown .widget__row.is-active .widget__right-in .icon-tick {
+        visibility: visible; }
+      .widget.widget_dropdown .widget__row.is-active .widget__right-in .status {
+        display: inline-block; }
+    .widget.widget_dropdown .widget__right-in .icon-tick, .widget.widget_dropdown .widget__right-in .status, .widget.widget_dropdown .widget__right-in .label {
+      display: inline-block;
+      vertical-align: middle; }
+    .widget.widget_dropdown .widget__right-in .icon-tick {
+      margin-left: 15px;
+      visibility: hidden; }
   .widget .widget__head {
     padding: 15px 20px;
     border-bottom: 1px solid #dadada;
@@ -2492,6 +2556,12 @@ th {
     .widget .widget__popup .widget__head {
       background: none;
       border: none; }
+  .widget .widget__foot {
+    padding: 15px 20px;
+    border-top: 1px solid #dadada;
+    text-align: center; }
+    .widget .widget__foot .btn + .btn {
+      margin-left: 7px; }
   .widget .title {
     overflow: hidden;
     -ms-text-overflow: ellipsis;
@@ -2844,9 +2914,14 @@ th {
   .no-result .title {
     opacity: .8; }
 
+.daterangepicker.show-calendar .calendar {
+  display: block; }
+.daterangepicker .calendar {
+  display: none; }
+
 .calendar {
-  min-width: 292px;
-  padding: 0 20px;
+  width: 292px;
+  padding: 20px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -2856,10 +2931,11 @@ th {
   .calendar.single .daterangepicker_input {
     display: none; }
   .calendar.left, .calendar.right {
-    float: left; }
+    float: left;
+    border-right: 1px solid rgba(218, 218, 218, 0.5); }
   .calendar .daterangepicker_input {
     position: relative;
-    padding: 10px 0 15px; }
+    margin-bottom: 15px; }
     .calendar .daterangepicker_input input {
       width: 100%;
       height: 40px;
@@ -2877,7 +2953,7 @@ th {
         border-color: #b6b6b6; }
     .calendar .daterangepicker_input i {
       position: absolute;
-      top: 22px;
+      top: 12px;
       right: 10px;
       width: 10px;
       display: inline-block;
@@ -2960,9 +3036,30 @@ th {
       cursor: pointer; }
 
 .ranges {
-  padding: 20px 20px 10px;
-  border-top: 1px solid rgba(218, 218, 218, 0.5);
-  clear: both; }
+  float: left;
+  width: 192px;
+  padding: 20px; }
+  .ranges > ul {
+    margin: -20px -20px 17px; }
+    .ranges > ul + .range_inputs {
+      float: left; }
+    .ranges > ul li {
+      position: relative;
+      padding: 11px 40px 11px 20px;
+      font-weight: 600;
+      cursor: pointer; }
+      .ranges > ul li.active {
+        background: #eef8fa; }
+        .ranges > ul li.active:after {
+          content: "";
+          position: absolute;
+          top: 14px;
+          right: 20px;
+          display: inline-block;
+          width: 13px;
+          height: 11px;
+          background: url("../img/tick.svg") no-repeat 0 0;
+          background-size: 13px 11px; }
   .ranges .range_inputs {
     *zoom: 1; }
     .ranges .range_inputs:after {
@@ -2970,8 +3067,20 @@ th {
       display: table;
       clear: both; }
     .ranges .range_inputs button {
-      float: right;
-      margin-left: 10px; }
+      float: right; }
+      .ranges .range_inputs button + button {
+        margin: 0; }
+    .ranges .range_inputs .btn-default {
+      margin-right: 10px; }
+
+.label {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase; }
+  .label.label_brand {
+    color: #55bbcc; }
+  .label.label_account {
+    color: #ff6633; }
 
 .icon-arrow-down {
   width: 12px;

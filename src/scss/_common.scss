@@ -1785,8 +1785,10 @@ th {
 			vertical-align: middle;
 		}
 		.dropdown__title {
+			max-width: 160px;
 			font-size: 16px;
 			color: $cl;
+			@include text-overflow;
 		}
 		.icon {
 			width: 12px;
@@ -1804,7 +1806,6 @@ th {
 	position: absolute;
 	top: 100%;
 	left: 0;
-	right: 0;
 	min-width: 192px;
 	margin-top: 10px;
 	padding: 10px 0;
@@ -1834,6 +1835,42 @@ th {
 		height: 10px;
 		background: $white;
 	}
+	&.daterangepicker {
+		padding: 0;
+	}
+	&.dropdown-menu_tick {
+		li {
+			&.is-active {
+				a {
+					position: relative;
+					padding-right: 40px;
+					background: $bg-blue;
+					cursor: default;
+				}
+				.icon-tick {
+					display: block;
+				}
+			}
+		}
+		a {
+			font-weight: 600;
+		}
+		.icon-tick {
+			display: none;
+			position: absolute;
+			top: 11px;
+			right: 20px;
+			fill: $blue;
+		}
+	}
+	&.dropdown-menu_gray {
+		padding: 0;
+		&:before,
+		&:after {
+			background: $bg;
+		}
+	}
+	&.opensleft,
 	&.dropdown-menu_right {
 		left: auto;
 		right: 0;
@@ -1866,7 +1903,7 @@ th {
 			left: 155px;
 		}
 	}
-	li {
+	>li {
 		position: relative;
 		&:hover {
 			>a {
@@ -1876,35 +1913,35 @@ th {
 				display: block;
 			}
 		}
-	}
-	a {
-		display: block;
-		position: relative;
-		padding: 7px 20px;
-		font-size: 14px;
-		color: $cl;
-		&:hover {
-			background: $gray-h;
+		a {
+			display: block;
+			position: relative;
+			padding: 7px 20px;
+			font-size: 14px;
+			color: $cl;
+			&:hover {
+				background: $gray-h;
+			}
+			>.icon-arrow-right {
+				position: absolute;
+				top: 10px;
+				right: 12px;
+				width: 6px;
+				height: 10px;
+				fill: $gray-d;
+			}
 		}
-		>.icon-arrow-right {
+		ul {
+			display: none;
 			position: absolute;
-			top: 10px;
-			right: 12px;
-			width: 6px;
-			height: 10px;
-			fill: $gray-d;
+			top: -10px;
+			left: 100%;
+			min-width: 192px;
+			padding: 10px 0;
+			background: $white;
+			border-radius: 4px;
+			box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 		}
-	}
-	ul {
-		display: none;
-		position: absolute;
-		top: -10px;
-		left: 100%;
-		min-width: 192px;
-		padding: 10px 0;
-		background: $white;
-		border-radius: 4px;
-		box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 	}
 }
 
@@ -2181,6 +2218,17 @@ th {
 			text-overflow: ellipsis;
 			white-space: nowrap;
 			overflow: hidden;
+		}
+	}
+	&.table_row {
+		table-layout: fixed;
+		td {
+			padding: 13px 40px;
+			border-top: none;
+			border-left: 1px solid rgba($brd,.5);
+			&:first-child {
+				border: none;
+			}
 		}
 	}
 	th, td {
@@ -2553,6 +2601,24 @@ th {
 
 .pager {
 	font-size: 0;
+	&.pager_nav {
+		.pager__prev,
+		.pager__next {
+			vertical-align: middle;
+		}
+		.pager__list {
+			padding: 0 8px;
+			vertical-align: middle;
+		}
+		.pager__btn {
+			width: 40px;
+			height: 20px;
+			color: $black;
+			&:first-child {
+				border-right: 1px solid $brd;
+			}
+		}
+	}
 	.pager__list {
 		display: inline-block;
 		padding: 0 13px;
@@ -2677,6 +2743,42 @@ th {
 .widget {
 	position: relative;
 	border: 1px solid $brd;
+	&.widget_dropdown {
+		width: 290px;
+		border: none;
+		.widget__head {
+			border-radius: 4px 4px 0 0;
+		}
+		.widget__body {
+			height: auto;
+			max-height: 290px;
+		}
+		.widget__row {
+			padding-right: 15px;
+			&.is-active {
+				.widget__right-in {
+					.icon-tick {
+						visibility: visible;
+					}
+					.status {
+						display: inline-block;
+					}
+				}
+			}
+		}
+		.widget__right-in {
+			.icon-tick,
+			.status,
+			.label {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.icon-tick {
+				margin-left: 15px;
+				visibility: hidden;
+			}
+		}
+	}
 	.widget__head {
 		padding: 15px 20px;
 		border-bottom: 1px solid $brd;
@@ -2783,6 +2885,14 @@ th {
 		.widget__head {
 			background: none;
 			border: none
+		}
+	}
+	.widget__foot {
+		padding: 15px 20px;
+		border-top: 1px solid $brd;
+		text-align: center;
+		.btn + .btn {
+			margin-left: 7px;
 		}
 	}
 	.title {
@@ -3184,9 +3294,19 @@ th {
 	}
 }
 
+.daterangepicker {
+	&.show-calendar {
+		.calendar {
+			display: block;
+		}
+	}
+	.calendar {
+		display: none;
+	}
+}
 .calendar {
-	min-width: 292px;
-	padding: 0 20px;
+	width: 292px;
+	padding: 20px;
 	@include nosel;
 	&.single {
 		.daterangepicker_input {
@@ -3196,10 +3316,11 @@ th {
 	&.left,
 	&.right {
 		float: left;
+		border-right: 1px solid rgba($brd,.5)
 	}
 	.daterangepicker_input {
 		position: relative;
-		padding: 10px 0 15px;
+		margin-bottom: 15px;
 		input {
 			width: 100%;
 			height: 40px;
@@ -3215,7 +3336,7 @@ th {
 		}
 		i {
 			position: absolute;
-			top: 22px;
+			top: 12px;
 			right: 10px;
 			width: 10px;
 			@include svg(calendar,19,18);
@@ -3340,16 +3461,41 @@ th {
 	}
 }
 .ranges {
-	padding: 20px 20px 10px;
-	border-top: 1px solid rgba($brd,.5);
-	clear: both;
+	float: left;
+	width: 192px;
+	padding: 20px;
+	>ul {
+		margin: -20px -20px 17px;
+		& + .range_inputs {
+			float: left;
+		}
+		li {
+			position: relative;
+			padding: 11px 40px 11px 20px;
+			font-weight: 600;
+			cursor: pointer;
+			&.active {
+				background: $bg-blue;
+				&:after {
+					content: "";
+					position: absolute;
+					top: 14px;
+					right: 20px;
+					@include svg(tick,13,11);
+				}
+			}
+		}
+	}
 	.range_inputs {
 		@include clr;
 		button {
 			float: right;
-			margin-left: 10px;
+			& + button {
+				margin: 0;
+			}
 		}
 		.btn-default {
+			margin-right: 10px;
 			@extend .btn_white;
 		}
 		.btn-sm {
@@ -3358,6 +3504,17 @@ th {
 	}
 }
 
+.label {
+	font-size: 9px;
+	font-weight: 600;
+	text-transform: uppercase;
+	&.label_brand {
+		color: $blue;
+	}
+	&.label_account {
+		color: $orange;
+	}
+}
 
 
 

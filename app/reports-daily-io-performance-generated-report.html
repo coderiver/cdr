@@ -1,0 +1,747 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper js-wrapper">
+	<!-- header -->
+	<header class="header js-header">
+		<!-- center -->
+		<div class="center">
+			<div class="header__left">
+				<div class="header__cell">
+					<button class="header__btn-menu js-menu-btn">
+						<svg class="icon icon-menu">
+							<use xlink:href="#icon-menu"/>
+						</svg>
+					</button>
+					<div class="header__chapter">
+						<div class="header__chapter-title">Reports</div>
+					</div>
+					<!-- dropdown -->
+					<div class="dropdown dropdown_big dropdown_white">
+						<div class="dropdown__head js-dropdown">
+							<div class="dropdown__title">Daily IO Performance</div>
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="#icon-arrow-down"/>
+							</svg>
+						</div>
+						<!-- dropdown-menu -->
+						<ul class="dropdown-menu dropdown-menu_tick">
+							<li>
+								<a href="#">
+									Ad Server Discrepancy
+									<svg class="icon icon-tick">
+										<use xlink:href="#icon-tick"/>
+									</svg>
+								</a>
+							</li>
+							<li class="is-active">
+								<a href="#">
+									Daily IO Performance
+									<svg class="icon icon-tick">
+										<use xlink:href="#icon-tick"/>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header__right">
+				<div class="header__cell">
+					<a class="header__notify" href="#">
+						<div class="header__notify-in">
+							<div class="header__notify-counter">2</div>
+							<svg class="icon icon-upload">
+								<use xlink:href="#icon-upload"/>
+							</svg>
+						</div>
+					</a>
+					<div class="header__user">
+						<!-- dropdown -->
+						<div class="dropdown dropdown_white">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">John</div>
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_right">
+								<li><a href="#">Profile Settings</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- head -->
+	<div class="head">
+		<!-- center -->
+		<div class="center">
+			<!-- panel -->
+			<div class="panel panel_p-30-0">
+				<!-- row -->
+				<div class="row">
+					<div class="col-25">
+						<!-- title -->
+						<div class="title title_6 title_gray title_thin mb-15">Advertiser</div>
+						<!-- dropdown -->
+						<div class="dropdown dropdown_big">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">Bmw</div>
+								<svg class="icon icon-arrow-down">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<div class="dropdown-menu dropdown-menu_gray">
+								<!-- widget -->
+								<div class="widget widget_dropdown">
+									<div class="widget__head">
+										<!-- field -->
+										<div class="field field_search_round js-search">
+											<label class="field__in">
+												<input class="input" type="text" placeholder="Search">
+												<svg class="icon icon-search">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+												</svg>
+											</label>
+											<button class="field__reset">
+												<svg class="icon icon-close">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="widget__body">
+										<div class="widget__row is-active">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- label -->
+													<div class="label label_brand">brand</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">BMW</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- label -->
+													<div class="label label_account">account</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Audi</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- label -->
+													<div class="label label_brand">brand</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- label -->
+													<div class="label label_account">account</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Audi</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-25">
+						<!-- title -->
+						<div class="title title_6 title_gray title_thin mb-15">Campaign</div>
+						<!-- dropdown -->
+						<div class="dropdown dropdown_big">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">BMW 2015 CXE - Chichichichichihciic</div>
+								<svg class="icon icon-arrow-down">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<div class="dropdown-menu dropdown-menu_gray">
+								<!-- widget -->
+								<div class="widget widget_dropdown">
+									<div class="widget__head">
+										<!-- field -->
+										<div class="field field_search_round js-search">
+											<label class="field__in">
+												<input class="input" type="text" placeholder="Search">
+												<svg class="icon icon-search">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+												</svg>
+											</label>
+											<button class="field__reset">
+												<svg class="icon icon-close">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="widget__body">
+										<div class="widget__row is-active">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- status -->
+													<div class="status status_live">Live</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">BMW 2015 CXE - Chicago</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- status -->
+													<div class="status status_live">Live</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">BMW 2015 CXE - New York May 20015</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- status -->
+													<div class="status status_live">Live</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">BMW 2015 CXE - Chicago</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- status -->
+													<div class="status status_live">Live</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">BMW 2015 CXE - New York May 20015</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- status -->
+													<div class="status status_live">Live</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">BMW 2015 CXE - Chicago</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- status -->
+													<div class="status status_live">Live</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">BMW 2015 CXE - New York May 20015</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- status -->
+													<div class="status status_live">Live</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">BMW 2015 CXE - Chicago</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<!-- status -->
+													<div class="status status_live">Live</div>
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">BMW 2015 CXE - New York May 20015</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-25">
+						<!-- title -->
+						<div class="title title_6 title_gray title_thin mb-8 is-disable">Placement</div>
+						<!-- select -->
+						<div class="select is-disable">
+							<div class="select__head">
+								<div class="select__value">theTradeDesk</div>
+								<svg class="icon icon-arrow-down">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<ul class="select__list">
+								<li>Item 1</li>
+								<li>Item 1</li>
+								<li>Item 1</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-25">
+						<!-- title -->
+						<div class="title title_6 title_gray title_thin mb-8">Report Dates</div>
+						<!-- field -->
+						<div class="field">
+							<label class="field__in">
+								<input class="input js-dp-multi pull-right" type="text" value="May 2 - May 3, 2015">
+								<span class="field__icon">
+									<svg class="icon icon-calendar">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-calendar"></use>
+									</svg>
+								</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- row -->
+			<div class="row mb-15">
+				<div class="col-69">
+					<!-- inform -->
+					<div class="inform inform_gray">
+						<svg class="icon icon-attention">
+							<use xlink:href="#icon-attention"/>
+						</svg>
+						<div class="inform__content"><span class="inform__important">Disclaimer:</span> This report is provided for directional purposes only and does not reflect final performance statistics or billing amounts</div>
+					</div>
+				</div>
+				<div class="col-28">
+					<!-- inform -->
+					<div class="inform ta-right">
+						<svg class="icon icon-attention">
+							<use xlink:href="#icon-attention"/>
+						</svg>
+						<div class="inform__content">Report data last updated: May 03 2015, 12:33 AM GMT</div>
+					</div>
+				</div>
+			</div>
+			<!-- box-shadow -->
+			<div class="box-shadow mb-20">
+				<!-- table -->
+				<table class="table table_row">
+					<tr>
+						<td>
+							<div class="data">
+								<div class="data__label">Impressions</div>
+								<div class="data__value">2480</div>
+							</div>
+						</td>
+						<td>
+							<div class="data">
+								<div class="data__label">Clicks</div>
+								<div class="data__value">82</div>
+							</div>
+						</td>
+						<td>
+							<div class="data">
+								<div class="data__label">Days left</div>
+								<div class="data__value">21 left</div>
+							</div>
+						</td>
+						<td>
+							<div class="data">
+								<div class="data__label">Total Actions</div>
+								<div class="data__value">4</div>
+							</div>
+						</td>
+						<td>
+							<div class="data">
+								<div class="data__label">Gross Cost</div>
+								<div class="data__value">$2100</div>
+							</div>
+						</td>
+						<td>
+							<div class="data">
+								<div class="data__label">Net Cost</div>
+								<div class="data__value">$9742</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- panel -->
+			<div class="panel">
+				<!-- row -->
+				<div class="row row_vertical_middle mb-25">
+					<div class="col-50">
+						<!-- title -->
+						<div class="title title_2">BMW Campaigns</div>
+					</div>
+					<div class="col-50 ta-right">
+						<!-- dropdown -->
+						<div class="dropdown display-inline mr-40 ta-left" style="width: 190px;">
+							<!-- select -->
+							<div class="select js-dropdown">
+								<div class="select__head">
+									<div class="select__value">19/19 Columns</div>
+									<svg class="icon icon-arrow-down">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+									</svg>
+								</div>
+							</div>
+							<!-- dropdown-menu -->
+							<div class="dropdown-menu dropdown-menu_gray">
+								<!-- widget -->
+								<div class="widget widget_dropdown">
+									<div class="widget__head">
+										<!-- field -->
+										<div class="field field_search_round js-search">
+											<label class="field__in">
+												<input class="input" type="text" placeholder="Search">
+												<svg class="icon icon-search">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+												</svg>
+											</label>
+											<button class="field__reset">
+												<svg class="icon icon-close">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="widget__body">
+										<div class="widget__row is-active">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Platform</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Platform</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Platform</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Platform</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Platform</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Platform</a>
+												</div>
+											</div>
+										</div><div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Platform</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Platform</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="widget__foot">
+										<button class="btn btn_small btn_white">CLEAR ALL</button>
+										<button class="btn btn_small">APPLY</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- pager -->
+						<div class="pager pager_nav display-inline">
+							<button class="pager__prev btn btn_md btn_white">
+								<svg class="icon icon-arrow-left">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
+								</svg>
+							</button>
+							<div class="pager__list">
+								<button class="pager__btn">1</button>
+								<button class="pager__btn">3</button>
+							</div>
+							<button class="pager__next btn btn_md btn_white">
+								<svg class="icon icon-arrow-right">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- table -->
+				<table class="table">
+					<thead>
+						<tr>
+							<td colspan="5">Totals</td>
+							<td>2480</td>
+							<td>82</td>
+							<td>15</td>
+						</tr>
+						<tr>
+							<th>Opportunity</th>
+							<th>Sub-Campaign Name</th>
+							<th>Package</th>
+							<th>Line Item</th>
+							<th class="ta-right">Date</th>
+							<th class="ta-right">Impressions</th>
+							<th class="ta-right">Clicks</th>
+							<th class="ta-right">Total Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Opportunity</td>
+							<td>BMW 2015 Web Spring</td>
+							<td>BMW 2015 CXWWWWWWW</td>
+							<td>BMW 2015 CXW - Bayyyyyyy</td>
+							<td class="ta-right">10 Jun 2015</td>
+							<td class="ta-right">126</td>
+							<td class="ta-right">4</td>
+							<td class="ta-right">5</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<!-- js -->
+<script src="js/jquery.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
