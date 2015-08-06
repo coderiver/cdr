@@ -2690,6 +2690,7 @@ th {
     font-size: 12px; }
   .selected .selected__title {
     padding: 7px 0;
+    word-break: break-all;
     overflow: hidden; }
 
 .group {
@@ -2833,6 +2834,8 @@ th {
   padding: 15px 15px 10px;
   border-radius: 4px;
   border: 1px solid #dadada; }
+  .wrap-selected.wrap-selected_no_border {
+    border: none; }
   .wrap-selected .selected {
     margin-bottom: 15px; }
 
@@ -2864,6 +2867,8 @@ th {
     vertical-align: middle;
     width: 0;
     height: 100%; }
+  .popup.popup_big .popup__wrap {
+    width: 850px; }
   .popup .popup__wrap {
     position: relative;
     display: inline-block;

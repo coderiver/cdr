@@ -3051,6 +3051,7 @@ th {
 	}
 	.selected__title {
 		padding: 7px 0;
+		word-break: break-all;
 		overflow: hidden;
 	}
 }
@@ -3245,6 +3246,9 @@ th {
 	padding: 15px 15px 10px;
 	border-radius: 4px;
 	border: 1px solid $brd;
+	&.wrap-selected_no_border {
+		border: none;
+	}
 	.selected {
 		margin-bottom: 15px;
 	}
@@ -3271,6 +3275,11 @@ th {
 	overflow: auto;
 	@include vertical;
 	z-index: 999;
+	&.popup_big {
+		.popup__wrap {
+			width: 850px;
+		}
+	}
 	.popup__wrap {
 		position: relative;
 		display: inline-block;
