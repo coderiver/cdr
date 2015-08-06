@@ -644,8 +644,9 @@ th {
 			position: relative;
 		}
 	}
-	&.tabs_nav {
-		margin-bottom: -20px;
+	&.tabs_nav,
+	&.tabs_nav_panel {
+		position: relative;
 		.tabs__item {
 			padding: 0 20px 17px;
 			font-size: 18px;
@@ -657,6 +658,18 @@ th {
 				border-bottom: 3px solid $orange;
 				color: $cl;
 			}
+		}
+	}
+	&.tabs_nav {
+		margin-bottom: -20px;
+	}
+	&.tabs_nav_panel {
+		padding: 0 20px;
+		background: #FFF;
+		text-align: right;
+		.tabs__item {
+			margin-bottom: -1px;
+			padding-top: 17px;
 		}
 	}
 	&.tabs_simple {
@@ -1728,6 +1741,8 @@ th {
 .dropdown {
 	position: relative;
 	display: inline-block;
+	max-width: 100%;
+	vertical-align: middle;
 	&.is-active {
 		.dropdown__head {
 			.icon {
@@ -1749,9 +1764,18 @@ th {
 			.dropdown__title {
 				font-size: 18px;
 			}
+		}
+	}
+	&.dropdown_bigger {
+		.dropdown__head {
+			padding-right: 21px;
+			.dropdown__title {
+				font-size: 24px;
+				font-weight: 600;
+				color: #000;
+			}
 			.icon {
-				position: relative;
-				top: 1px;
+				margin-top: -3px;
 			}
 		}
 	}
@@ -1777,23 +1801,23 @@ th {
 		}
 	}
 	.dropdown__head {
+		position: relative;
+		padding-right: 18px;
 		@include nosel;
 		cursor: pointer;
-		.dropdown__title,
-		.icon {
-			display: inline-block;
-			vertical-align: middle;
-		}
 		.dropdown__title {
-			max-width: 160px;
+			max-width: 100%;
 			font-size: 16px;
 			color: $cl;
 			@include text-overflow;
 		}
 		.icon {
+			position: absolute;
+			top: 50%;
+			right: 0;
 			width: 12px;
 			height: 8px;
-			margin-left: 6px;
+			margin-top: -4px;
 			fill: $gray;
 			transition: transform .2s;
 		}
@@ -1865,6 +1889,7 @@ th {
 	}
 	&.dropdown-menu_gray {
 		padding: 0;
+		background: $bg;
 		&:before,
 		&:after {
 			background: $bg;
@@ -2258,6 +2283,11 @@ th {
 				}
 			}
 		}
+		tr {
+			&.is-active {
+				background: #ffefea;
+			}
+		}
 		th, td {
 			&:first-child {
 				padding-left: 20px;
@@ -2268,6 +2298,9 @@ th {
 		}
 		td {
 			@include text-overflow;
+			&.is-orange {
+				color: $orange;
+			}
 		}
 	}
 	th, td {
@@ -2346,8 +2379,8 @@ th {
 			}
 		}
 		&.is-active {
+			background: $bg-blue;
 			td {
-				background: $bg-blue;
 				&:first-child {
 					>.icon-tick {
 						display: block;
@@ -2796,6 +2829,7 @@ th {
 	border: 1px solid $brd;
 	&.widget_dropdown {
 		width: 290px;
+		background: #FFF;
 		border: none;
 		.widget__head {
 			border-radius: 4px 4px 0 0;
@@ -3216,7 +3250,8 @@ th {
 	}
 }
 
-.wrap-table {
+.wrap-table,
+.wrap-graph {
 	margin: 0 -20px;
 }
 
@@ -3517,9 +3552,9 @@ th {
 }
 .ranges {
 	float: left;
-	width: 192px;
 	padding: 20px;
 	>ul {
+		width: 192px;
 		margin: -20px -20px 17px;
 		& + .range_inputs {
 			float: left;
