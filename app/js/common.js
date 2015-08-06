@@ -137,5 +137,23 @@ $(document).ready(function() {
 			}
 		});
 	};
+
+	(function () {
+		var body = $('body'),
+			popover;
+		$('[data-popover]').hover(function () {
+			var _this = $(this),
+				content = _this.data('popover'),
+				posTop = _this.offset().top,
+				posLeft = _this.offset().left,
+				height = _this.height(),
+				margin = 5,
+				top = posTop + height + margin;
+			body.append('<div class="popover" style="top: ' + top + 'px; left: ' + posLeft + 'px">' + content + '</div>');
+		}, function () {
+			$('.popover').remove();
+		});
+	}());
+	
 	
 });

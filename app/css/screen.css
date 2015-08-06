@@ -2079,6 +2079,28 @@ th {
       border-left: 1px solid rgba(218, 218, 218, 0.5); }
       .table.table_row td:first-child {
         border: none; }
+  .table.table_report {
+    table-layout: fixed; }
+    .table.table_report thead tr:first-child th {
+      padding: 10px;
+      background: #f0f0f0;
+      font-weight: 600;
+      color: #404040; }
+    .table.table_report thead tr:nth-child(2) th {
+      padding: 25px 10px 15px; }
+    .table.table_report thead tr th:first-child {
+      padding-left: 20px; }
+    .table.table_report thead tr th:last-child {
+      padding-right: 20px; }
+    .table.table_report th:first-child, .table.table_report td:first-child {
+      padding-left: 20px; }
+    .table.table_report th:last-child, .table.table_report td:last-child {
+      padding-right: 20px; }
+    .table.table_report td {
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
   .table th:first-child, .table td:first-child {
     padding-left: 40px; }
   .table th:last-child, .table td:last-child {
@@ -2091,10 +2113,16 @@ th {
     width: 12.5%; }
   .table th.table__w-13, .table td.table__w-13 {
     width: 13%; }
+  .table th.table__w-14, .table td.table__w-14 {
+    width: 14%; }
   .table th.table__w-15, .table td.table__w-15 {
     width: 15%; }
+  .table th.table__w-16, .table td.table__w-16 {
+    width: 16%; }
   .table th.table__w-17, .table td.table__w-17 {
     width: 17%; }
+  .table th.table__w-18, .table td.table__w-18 {
+    width: 18%; }
   .table th.table__w-25, .table td.table__w-25 {
     width: 25%; }
   .table th.table__w-20, .table td.table__w-20 {
@@ -2107,6 +2135,8 @@ th {
     width: 31%; }
   .table th.table__w-50, .table td.table__w-50 {
     width: 50%; }
+  .table th.table__w-66, .table td.table__w-66 {
+    width: 66%; }
   .table th.table__pl-50, .table td.table__pl-50 {
     padding-left: 50px; }
   .table tr.is-disabled td {
@@ -2782,6 +2812,9 @@ th {
   .wrap-selected .selected {
     margin-bottom: 15px; }
 
+.wrap-table {
+  margin: 0 -20px; }
+
 .three-dots {
   overflow: hidden;
   -ms-text-overflow: ellipsis;
@@ -3081,6 +3114,26 @@ th {
     color: #55bbcc; }
   .label.label_account {
     color: #ff6633; }
+
+.popover {
+  position: absolute;
+  padding: 18px 20px;
+  background: #707070;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 999; }
+  .popover:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 22px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #707070 transparent; }
 
 .icon-arrow-down {
   width: 12px;
