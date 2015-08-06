@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper js-wrapper">
+	<!-- header -->
+	<header class="header js-header">
+		<!-- center -->
+		<div class="center">
+			<div class="header__left">
+				<div class="header__cell">
+					<button class="header__btn-menu js-menu-btn">
+						<svg class="icon icon-menu">
+							<use xlink:href="#icon-menu"/>
+						</svg>
+					</button>
+					<div class="header__chapter">
+						<div class="header__chapter-title">Campaigns</div>
+						<!-- dropdown -->
+						<div class="dropdown">
+							<button class="header__chapter-add js-dropdown">
+								<svg class="icon icon-plus">
+									<use xlink:href="#icon-plus"/>
+								</svg>
+							</button>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu">
+								<li><a href="#">Digital Campaign</a></li>
+								<li><a href="#">TV Campaignlia</a></li>
+							</ul>
+						</div>
+					</div>
+					<nav class="header__nav">
+						<a class="is-active" href="#">Digital</a>
+						<a href="#">TV</a>
+					</nav>
+				</div>
+			</div>
+			<div class="header__right">
+				<div class="header__cell">
+					<div class="header__search js-header-search">
+						<!-- field -->
+						<div class="field field_search_round js-search">
+							<label class="field__in">
+								<input class="input" type="text" placeholder="Search">
+								<svg class="icon icon-search">
+									<use xlink:href="#icon-search"/>
+								</svg>
+							</label>
+							<button class="field__reset">
+								<svg class="icon icon-close">
+									<use xlink:href="#icon-close"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<a class="header__notify" href="#">
+						<div class="header__notify-in">
+							<div class="header__notify-counter">2</div>
+							<svg class="icon icon-upload">
+								<use xlink:href="#icon-upload"/>
+							</svg>
+						</div>
+					</a>
+					<div class="header__user">
+						<!-- dropdown -->
+						<div class="dropdown dropdown_white">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">John</div>
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="#icon-arrow-down"/>
+								</svg>
+							</div>
+							<!-- dropdown-menu -->
+							<ul class="dropdown-menu dropdown-menu_right">
+								<li><a href="#">Profile Settings</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Log Out</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- head -->
+	<div class="head">
+		<div class="head__in head__in_gray">
+			<!-- center -->
+			<div class="center">
+				<div class="head__row">
+					<!-- row -->
+					<div class="row">
+						<div class="col-75">
+							<!-- title -->
+							<div class="title title_5 title_default">Imported Opportunity</div>
+						</div>
+						<div class="col-25">
+							<!-- updated -->
+							<div class="updated ta-right">Last updated: Sep 12, 12:34, 2015</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="head__in">
+			<!-- center -->
+			<div class="center">
+				<!-- row -->
+				<div class="row">
+					<div class="col-60">
+						<!-- btn-back -->
+						<button class="btn-back">
+							<svg class="icon icon-arrow-left">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
+							</svg>
+						</button>
+						<!-- display-table -->
+						<div class="display-table">
+							<!-- title -->
+							<div class="title">Sheba _TTD_Global +2 Be with Your Pet UM Magna PT ET</div>
+							<!-- info -->
+							<ul class="info">
+								<li class="info__item">UM</li>
+								<li class="info__item">Microsoft</li>
+								<li class="info__item">John Doe</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-40">
+						<!-- data -->
+						<div class="data data_dark float-right ta-right">
+							<div class="data__label">IO Amount</div>
+							<div class="data__value data__value_biggest">$6.33</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- box-shadow -->
+			<div class="box-shadow">
+				<!-- panel -->
+				<div class="panel panel_gray panel_p-20">
+					<!-- row -->
+					<div class="row row_height_simple mb-20">
+						<div class="col-44">
+							<!-- panel -->
+							<div class="panel panel_p-20-30">
+								<!-- row -->
+								<div class="row mb-25">
+									<div class="col-50">
+										<!-- title -->
+										<div class="title title_4">Pacing</div>
+									</div>
+									<div class="col-50 ta-right">
+										<!-- title -->
+										<div class="title title_4">Budget: <span class="title__gray">$12,980K</span></div>
+									</div>
+								</div>
+								<!-- data -->
+								<div class="data mb-30">
+									<div class="data__label">Flight Duration</div>
+									<!-- progress -->
+									<div class="progress progress_row mt-15">
+										<div class="progress__stats">
+											<div class="progress__stats-item">
+												<div class="progress__stats-value">67%</div>
+											</div>
+											<div class="progress__visual">
+												<div class="progress__data">
+													<div class="progress__data-in" style="width: 60%;"></div>
+												</div>
+												<div class="progress__scale">
+													<div class="progress__scale-item">9-Jul</div>
+													<div class="progress__scale-item">11-Aug</div>
+												</div>
+											</div>
+											<div class="progress__stats-item">
+												<div class="progress__stats-value">21 days left</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- data -->
+								<div class="data">
+									<div class="data__label">Budget Spend</div>
+									<!-- progress -->
+									<div class="progress progress_row mt-15">
+										<div class="progress__stats">
+											<div class="progress__stats-item">
+												<div class="progress__stats-value">83%</div>
+											</div>
+											<div class="progress__visual">
+												<div class="progress__data">
+													<div class="progress__data-in" style="width: 60%;"></div>
+												</div>
+												<div class="progress__scale">
+													<div class="progress__scale-item">9-Jul</div>
+													<div class="progress__scale-item">11-Aug</div>
+												</div>
+											</div>
+											<div class="progress__stats-item">
+												<div class="progress__stats-value">$7,765K left</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-28">
+							<!-- panel -->
+							<div class="panel panel_p-20-30">
+								<!-- title -->
+								<div class="title title_4 mb-25">Impressions</div>
+								<!-- data -->
+								<div class="data mb-55">
+									<div class="data__label">Average</div>
+									<div class="data__value data__value_mid"><span class="data__value-bold">23,000</span>/day</div>
+								</div>
+								<!-- data -->
+								<div class="data mb-5">
+									<div class="data__label">Yesterday</div>
+									<!-- progress -->
+									<div class="progress progress_simple mt-20">
+										<div class="progress__visual">
+											<div class="progress__data">
+												<div class="progress__data-in" style="width: 30%;"></div>
+											</div>
+										</div>
+										<div class="progress__text"><span>10,600</span> from 23,000 | 52%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-28">
+							<!-- panel -->
+							<div class="panel panel_p-20-30">
+								<!-- title -->
+								<div class="title title_4 mb-25">Daily Spend</div>
+								<!-- data -->
+								<div class="data mb-55">
+									<div class="data__label">Average</div>
+									<div class="data__value data__value_mid"><span class="data__value-bold">$2,200</span>/day</div>
+								</div>
+								<!-- data -->
+								<div class="data mb-5">
+									<div class="data__label">Yesterday</div>
+									<!-- progress -->
+									<div class="progress progress_simple mt-20">
+										<div class="progress__visual">
+											<div class="progress__data progress__data_value">
+												<div class="progress__data-in" style="width: 80%;"><span>100%</span></div>
+											</div>
+										</div>
+										<div class="progress__text"><span>$3,890.01</span> from 2,200 | 146%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- table -->
+					<table class="table table_row_small">
+						<tr>
+							<td>
+								<!-- data -->
+								<div class="data">
+									<div class="data__label">Average CPM</div>
+									<div class="data__value">$5.60</div>
+								</div>
+							</td>
+							<td>
+								<!-- data -->
+								<div class="data">
+									<div class="data__label">Clicks</div>
+									<div class="data__value">14,789,901</div>
+								</div>
+							</td>
+							<td>
+								<!-- data -->
+								<div class="data">
+									<div class="data__label">Average CTR</div>
+									<div class="data__value">0.10%</div>
+								</div>
+							</td>
+							<td>
+								<!-- data -->
+								<div class="data">
+									<div class="data__label">Average eCPC</div>
+									<div class="data__value">$4.40</div>
+								</div>
+							</td>
+							<td>
+								<!-- data -->
+								<div class="data">
+									<div class="data__label">Budget Spend</div>
+									<div class="data__value">$210,567.89</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<!-- js -->
+<script src="js/jquery.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
