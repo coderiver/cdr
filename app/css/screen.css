@@ -577,8 +577,8 @@ th {
     padding: 40px; }
   .panel.panel_p-30 {
     padding: 30px; }
-  .panel.panel_p-30 {
-    padding: 30px; }
+  .panel.panel_p-25 {
+    padding: 25px; }
   .panel.panel_p-20 {
     padding: 20px; }
   .panel.panel_p-30-0 {
@@ -909,6 +909,8 @@ th {
       .tabs.tabs_nav .tabs__item.is-active, .tabs.tabs_nav_panel .tabs__item.is-active {
         border-bottom: 3px solid #ff6633;
         color: #404040; }
+      .tabs.tabs_nav .tabs__item span, .tabs.tabs_nav_panel .tabs__item span {
+        color: #a4a4a4; }
   .tabs.tabs_nav {
     margin-bottom: -20px; }
   .tabs.tabs_nav_panel {
@@ -1626,6 +1628,8 @@ th {
       vertical-align: middle; }
     .header .header__chapter .dropdown-menu {
       left: -12px; }
+    .header .header__chapter + .dropdown {
+      margin-left: -35px; }
   .header .header__chapter-title {
     display: inline-block;
     margin-right: 15px;
@@ -2163,6 +2167,11 @@ th {
       white-space: nowrap; }
       .table.table_report td.is-orange {
         color: #ff6633; }
+    .table.table_report .title {
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
   .table th:first-child, .table td:first-child {
     padding-left: 40px; }
   .table th:last-child, .table td:last-child {
@@ -2193,6 +2202,8 @@ th {
     width: 27%; }
   .table th.table__w-29, .table td.table__w-29 {
     width: 29%; }
+  .table th.table__w-30, .table td.table__w-30 {
+    width: 30%; }
   .table th.table__w-31, .table td.table__w-31 {
     width: 31%; }
   .table th.table__w-50, .table td.table__w-50 {
@@ -2319,6 +2330,12 @@ th {
     border: 1px solid #a7a7a7; }
   .status.status_bold {
     font-weight: 600; }
+  .status.status_big {
+    padding-left: 20px; }
+    .status.status_big:before {
+      width: 12px;
+      height: 12px;
+      margin-top: -6px; }
   .status.status_small {
     font-size: 12px; }
 

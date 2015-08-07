@@ -264,8 +264,8 @@ th {
 	&.panel_p-30 {
 		padding: 30px;
 	}
-	&.panel_p-30 {
-		padding: 30px;
+	&.panel_p-25 {
+		padding: 25px;
 	}
 	&.panel_p-20 {
 		padding: 20px;
@@ -681,6 +681,9 @@ th {
 			&.is-active {
 				border-bottom: 3px solid $orange;
 				color: $cl;
+			}
+			span {
+				color: $gray-d;
 			}
 		}
 	}
@@ -1605,6 +1608,9 @@ th {
 		.dropdown-menu {
 			left: -12px;
 		}
+		& + .dropdown {
+			margin-left: -35px;
+		}
 	}
 	.header__chapter-title {
 		display: inline-block;
@@ -2359,6 +2365,9 @@ th {
 				color: $orange;
 			}
 		}
+		.title {
+			@include text-overflow;
+		}
 	}
 	th, td {
 		&:first-child {
@@ -2406,6 +2415,10 @@ th {
 		&.table__w-29 {
 			width: 29%;
 		}
+		&.table__w-30 {
+			width: 30%;
+		}
+
 		&.table__w-31 {
 			width: 31%;
 		}
@@ -2596,6 +2609,14 @@ th {
 	}
 	&.status_bold {
 		@include fs;
+	}
+	&.status_big {
+		padding-left: 20px;
+		&:before {
+			width: 12px;
+			height: 12px;
+			margin-top: -6px;
+		}
 	}
 	&.status_small {
 		font-size: 12px;
