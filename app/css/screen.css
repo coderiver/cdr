@@ -917,6 +917,7 @@ th {
   .tabs.tabs_nav {
     margin-bottom: -20px; }
   .tabs.tabs_nav_panel {
+    min-height: 60px;
     padding: 0 20px;
     background: #FFF;
     text-align: right; }
@@ -2316,6 +2317,8 @@ th {
 .status {
   position: relative;
   padding-left: 16px; }
+  .status.is-disabled {
+    opacity: .5; }
   .status:before {
     content: "";
     position: absolute;
