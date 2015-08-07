@@ -3182,9 +3182,9 @@ th {
     .calendar .table-condensed tbody .disabled, .calendar .table-condensed tbody option.disabled {
       color: #999; }
     .calendar .table-condensed tbody .available:hover {
-      background: #ffd2c3; }
+      background: #eef8fa; }
     .calendar .table-condensed tbody .in-range {
-      background: #ffd2c3;
+      background: #eef8fa;
       border-radius: 0; }
     .calendar .table-condensed tbody .start-date {
       border-radius: 4px 0 0 4px; }
@@ -3193,7 +3193,7 @@ th {
     .calendar .table-condensed tbody .start-date.end-date {
       border-radius: 4px; }
     .calendar .table-condensed tbody .active, .calendar .table-condensed tbody .active:hover {
-      background: #ff6633;
+      background: #55bbcc;
       color: #fff; }
     .calendar .table-condensed th {
       color: #a4a4a4; }
@@ -3210,15 +3210,19 @@ th {
   float: left;
   padding: 20px; }
   .ranges > ul {
+    position: relative;
     width: 192px;
-    margin: -20px -20px 17px; }
+    margin: -20px -20px 17px;
+    z-index: 4; }
     .ranges > ul + .range_inputs {
-      float: left; }
+      margin-right: 10px; }
     .ranges > ul li {
       position: relative;
       padding: 11px 40px 11px 20px;
       font-weight: 600;
       cursor: pointer; }
+      .ranges > ul li:hover {
+        background: #f3f3f3; }
       .ranges > ul li.active {
         background: #eef8fa; }
         .ranges > ul li.active:after {

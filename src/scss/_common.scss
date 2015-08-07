@@ -3674,10 +3674,10 @@ th {
 				color: #999;
 			}
 			.available:hover {
-				background: $orange-l;
+				background: $bg-blue;
 			}
 			.in-range {
-				background: $orange-l;
+				background: $bg-blue;
 				border-radius: 0;
 			}
 			.start-date {
@@ -3691,7 +3691,7 @@ th {
 			}
 			.active, 
 			.active:hover {
-				background: $orange;
+				background: $blue;
 				color: #fff;
 			}
 		}
@@ -3714,16 +3714,21 @@ th {
 	float: left;
 	padding: 20px;
 	>ul {
+		position: relative;
 		width: 192px;
 		margin: -20px -20px 17px;
+		z-index: 4;
 		& + .range_inputs {
-			float: left;
+			margin-right: 10px;
 		}
 		li {
 			position: relative;
 			padding: 11px 40px 11px 20px;
 			font-weight: 600;
 			cursor: pointer;
+			&:hover {
+				background: $gray-h;
+			}
 			&.active {
 				background: $bg-blue;
 				&:after {
