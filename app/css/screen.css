@@ -882,10 +882,13 @@ th {
 
 .tags {
   font-size: 0; }
+  .tags.tags_row .tags__item {
+    margin-bottom: 0; }
   .tags .tags__item {
     display: inline-block;
     margin: 0 4px 4px 0;
     padding: 4px 10px;
+    background: #fff;
     border: 1px solid #e6e6e6;
     border-radius: 2px;
     font-size: 12px;
@@ -1934,6 +1937,8 @@ th {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
   .head.head_p-12 {
     padding: 12px 0; }
+  .head.head_p-10 {
+    padding: 10px 0; }
   .head .head__in {
     padding: 20px 0; }
   .head .head__in_gray {
@@ -1966,6 +1971,8 @@ th {
     color: #a4a4a4; }
     .inform.inform_gray .icon {
       fill: #cccccc; }
+  .inform.inform_big .inform__content {
+    font-size: 14px; }
   .inform .inform__important {
     font-weight: 600; }
   .inform .inform__content {
@@ -2058,6 +2065,8 @@ th {
   color: #fff; }
   .data.data_white .data__label {
     color: #096482; }
+  .data.data_white .data__empty {
+    color: #94E3ED; }
 .data.data_important .data__value {
   color: #000; }
 .data.data_important .data__label {
@@ -2081,6 +2090,9 @@ th {
 .data .data__value_biggest {
   font-size: 52px;
   line-height: 1; }
+  .data .data__value_biggest .data__empty {
+    padding: 10px 0;
+    font-size: 32px; }
 .data .data__value-bold {
   font-weight: 600; }
 .data .data__graph {
@@ -2097,7 +2109,7 @@ th {
     min-width: 60px;
     margin-right: 10px; }
 .data .data__empty {
-  color: #94E3ED; }
+  color: #a4a4a4; }
 
 .table {
   background: #fff; }
@@ -2125,22 +2137,17 @@ th {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden; }
-  .table.table_row, .table.table_row_small {
+  .table.table_row {
     table-layout: fixed; }
-    .table.table_row td, .table.table_row_small td {
-      padding: 13px 40px;
+    .table.table_row td {
+      padding: 13px 20px;
       border-top: none;
       border-left: 1px solid rgba(218, 218, 218, 0.5); }
-      .table.table_row td:first-child, .table.table_row_small td:first-child {
+      .table.table_row td:first-child {
+        padding-left: 20px;
         border: none; }
-  .table.table_row td {
-    padding: 13px 40px; }
-  .table.table_row_small td {
-    padding: 13px 20px; }
-    .table.table_row_small td:first-child {
-      padding-left: 20px; }
-    .table.table_row_small td:last-child {
-      padding-right: 20px; }
+      .table.table_row td:last-child {
+        padding-right: 20px; }
   .table.table_report {
     table-layout: fixed; }
     .table.table_report thead tr:first-child th {
@@ -2592,6 +2599,8 @@ th {
     float: left; }
 .progress .progress__text {
   font-size: 11px; }
+.progress .progress__text_empty {
+  color: #a4a4a4; }
 
 .graph img {
   display: block;
