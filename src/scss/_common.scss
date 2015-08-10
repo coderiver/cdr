@@ -978,6 +978,29 @@ th {
 		font-size: 18px;
 		color: $white;
 	}
+	.field__del {
+		position: absolute;
+		top: 0;
+		right: -40px;
+		width: 40px;
+		height: 40px;
+		font-size: 0;
+		&:hover {
+			.icon {
+				fill: $gray-h;
+			}
+		}
+		&:active {
+			.icon {
+				fill: $gray-d;
+			}
+		}
+		.icon {
+			width: 10px;
+			height: 10px;
+			fill: $gray;
+		}
+	}
 	.input {
 		&[disabled] + .field__icon {
 			opacity: .3;
@@ -3526,7 +3549,7 @@ th {
 	&.loader_small {
 		height: 260px;
 		img {
-			
+
 		}
 	}
 	img {

@@ -1130,6 +1130,21 @@ th {
     font-weight: 600;
     font-size: 18px;
     color: #fff; }
+  .field .field__del {
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    font-size: 0; }
+    .field .field__del:hover .icon {
+      fill: #f3f3f3; }
+    .field .field__del:active .icon {
+      fill: #a4a4a4; }
+    .field .field__del .icon {
+      width: 10px;
+      height: 10px;
+      fill: #cccccc; }
   .field .input[disabled] + .field__icon {
     opacity: .3; }
 
