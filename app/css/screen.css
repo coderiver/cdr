@@ -3289,6 +3289,28 @@ th {
     border-width: 0 5px 5px 5px;
     border-color: transparent transparent #707070 transparent; }
 
+.no-data {
+  padding: 80px 0 70px;
+  text-align: center; }
+  .no-data .no-data__icon {
+    display: inline-block;
+    width: 68px;
+    height: 68px;
+    margin-bottom: 15px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0; }
+    .no-data .no-data__icon:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 100%; }
+  .no-data .icon {
+    fill: #a4a4a4;
+    vertical-align: middle; }
+
 .icon-arrow-down {
   width: 12px;
   height: 8px; }
@@ -3379,6 +3401,14 @@ th {
 .icon-menu {
   width: 18px;
   height: 15px; }
+
+.icon-no-data {
+  width: 34px;
+  height: 27px; }
+
+.icon-no-line {
+  width: 28px;
+  height: 23px; }
 
 .icon-no-result {
   width: 54px;

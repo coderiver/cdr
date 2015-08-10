@@ -3804,7 +3804,23 @@ th {
 	}
 }
 
-
+.no-data {
+	padding: 80px 0 70px;
+	text-align: center;
+	.no-data__icon {
+		display: inline-block;
+		width: 68px;
+		height: 68px;
+		margin-bottom: 15px;
+		background: $bg;
+		border-radius: 50%;
+		@include vertical;
+	}
+	.icon {
+		fill: $gray-d;
+		vertical-align: middle;
+	}
+}
 
 
 
