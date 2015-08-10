@@ -84,6 +84,10 @@ th {
     padding-top: 120px; }
     .wrapper.wrapper_head.is-header-fixed {
       padding-top: 90px; }
+  .wrapper.wrapper_head_more {
+    padding-top: 166px; }
+    .wrapper.wrapper_head_more.is-header-fixed {
+      padding-top: 136px; }
   .wrapper.wrapper_login {
     height: 100vh;
     padding: 50px 0;
@@ -1179,7 +1183,7 @@ th {
 .notify {
   display: inline-block;
   padding: 15px;
-  background: #707070;
+  background: rgba(64, 64, 64, 0.86);
   border-radius: 2px;
   vertical-align: top;
   text-align: left;
@@ -1453,7 +1457,7 @@ th {
   position: absolute;
   padding: 7px 10px;
   border-radius: 2px;
-  background: #404040;
+  background: rgba(64, 64, 64, 0.86);
   text-align: center; }
   .tooltip:after {
     content: "";
@@ -1961,9 +1965,14 @@ th {
     padding: 10px 0; }
   .head .head__in {
     padding: 20px 0; }
+  .head .head__in_p-12 {
+    padding: 12px 0; }
   .head .head__in_gray {
     padding: 15px 0;
     background: #f7f7f7; }
+  .head .head__in_bg {
+    padding: 15px 0;
+    background: #f0f0f0; }
 
 .updated {
   color: #404040; }
@@ -3293,7 +3302,7 @@ th {
 .popover {
   position: absolute;
   padding: 18px 20px;
-  background: #707070;
+  background: rgba(64, 64, 64, 0.86);
   border-radius: 4px;
   font-size: 14px;
   font-weight: 600;
