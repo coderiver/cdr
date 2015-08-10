@@ -2961,7 +2961,7 @@ th {
 }
 
 .graph {
-	img {
+	>img {
 		display: block;
 		max-width: 100%;
 	}
@@ -3523,6 +3523,12 @@ th {
 .loader {
 	height: 400px;
 	@include vertical;
+	&.loader_small {
+		height: 260px;
+		img {
+			
+		}
+	}
 	img {
 		animation: loader 1s infinite linear;
 		vertical-align: middle;

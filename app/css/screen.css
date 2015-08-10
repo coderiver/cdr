@@ -2605,7 +2605,7 @@ th {
 .progress .progress__text_empty {
   color: #a4a4a4; }
 
-.graph img {
+.graph > img {
   display: block;
   max-width: 100%; }
 
@@ -3050,6 +3050,8 @@ th {
     vertical-align: middle;
     width: 0;
     height: 100%; }
+  .loader.loader_small {
+    height: 260px; }
   .loader img {
     -webkit-animation: loader 1s infinite linear;
             animation: loader 1s infinite linear;
