@@ -1242,6 +1242,16 @@ th {
 
 .switcher {
 	font-size: 0;
+	&.switcher_group {
+		.switcher__item {
+			margin-bottom: 10px;
+		}
+		&.switcher_checkbox {
+			.switcher__content {
+				font-weight: 400;
+			}
+		}
+	}
 	&.switcher_logos {
 		.switcher__item {
 			margin: 0 50px 20px 0;
@@ -1326,9 +1336,6 @@ th {
 		}
 	}
 	&.switcher_checkbox {
-		.switcher__item {
-
-		}
 		.switcher__el {
 			position: relative;
 			padding-left: 30px;

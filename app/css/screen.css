@@ -1338,6 +1338,10 @@ th {
 
 .switcher {
   font-size: 0; }
+  .switcher.switcher_group .switcher__item {
+    margin-bottom: 10px; }
+  .switcher.switcher_group.switcher_checkbox .switcher__content {
+    font-weight: 400; }
   .switcher.switcher_logos .switcher__item {
     margin: 0 50px 20px 0; }
   .switcher.switcher_logos .switcher__el {
