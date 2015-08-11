@@ -86,6 +86,23 @@ th {
 		padding-top: 166px;
 		&.is-header-fixed {
 			padding-top: 136px;
+			.head {
+				box-shadow: 0 0 10px rgba(0,0,0,.2);
+			}
+			.head__in {
+				&:first-child {
+					box-shadow: none;
+				}
+			}
+		}
+		.head {
+			box-shadow: none;
+		}
+		.head__in {
+			&:first-child {
+				position: relative;
+				box-shadow: 0 0 10px rgba(0,0,0,.2);
+			}
 		}
 	}
 	&.wrapper_login {

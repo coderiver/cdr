@@ -88,6 +88,15 @@ th {
     padding-top: 166px; }
     .wrapper.wrapper_head_more.is-header-fixed {
       padding-top: 136px; }
+      .wrapper.wrapper_head_more.is-header-fixed .head {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+      .wrapper.wrapper_head_more.is-header-fixed .head__in:first-child {
+        box-shadow: none; }
+    .wrapper.wrapper_head_more .head {
+      box-shadow: none; }
+    .wrapper.wrapper_head_more .head__in:first-child {
+      position: relative;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
   .wrapper.wrapper_login {
     height: 100vh;
     padding: 50px 0;
