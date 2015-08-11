@@ -82,7 +82,7 @@ th {
 			padding-top: 90px;
 		}
 	}
-	&.wrapper_head_more {
+	&.wrapper_head_camapigns {
 		padding-top: 166px;
 		&.is-header-fixed {
 			padding-top: 136px;
@@ -94,6 +94,59 @@ th {
 					box-shadow: none;
 				}
 			}
+		}
+		.head {
+			box-shadow: none;
+		}
+		.head__in {
+			&:first-child {
+				position: relative;
+				box-shadow: 0 0 10px rgba(0,0,0,.2);
+			}
+		}
+	}
+	&.wrapper_head_steps {
+		padding-top: 239px;
+		&.is-header-fixed {
+			padding-top: 170px;
+			.head {
+				box-shadow: 0 0 10px rgba(0,0,0,.2);
+			}
+			.head__in {
+				&:first-child {
+					box-shadow: none;
+				}
+			}
+			.steps {
+				height: 23px;
+				.steps__item {
+					&.is-active {
+						&:before {
+							margin-right: 12px;
+						}
+						&:after {
+							margin-left: 12px;
+						}
+					}
+					&:before,
+					&:after {
+						top: 7px;
+					}
+					&:before {
+						margin-right: 9px;
+					}
+					&:after {
+						margin-left: 9px;
+					}
+				}
+				.steps__counter {
+					width: 18px;
+					height: 18px;
+					color: transparent;
+					line-height: 18px;
+				}
+			}
+
 		}
 		.head {
 			box-shadow: none;
@@ -214,31 +267,31 @@ th {
 	width: 10%;
 }
 
-@each $s in 3, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
+@each $s in 3, 5, 7, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
 	.mt-#{$s} {
 		margin-top: #{$s}px;
 	}
 }
 
-@each $s in 3, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
+@each $s in 3, 5, 7, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
 	.mb-#{$s} {
 		margin-bottom: #{$s}px;
 	}
 }
 
-@each $s in 3, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
+@each $s in 3, 5, 7, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
 	.mr-#{$s} {
 		margin-right: #{$s}px;
 	}
 }
 
-@each $s in 3, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
+@each $s in 3, 5, 7, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
 	.ml-#{$s} {
 		margin-left: #{$s}px;
 	}
 }
 
-@each $s in 3, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
+@each $s in 3, 5, 7, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90 {
 	.mr-#{$s}p {
 		margin-right: #{$s}%;
 	}
@@ -344,7 +397,7 @@ th {
 	padding: 20px 0 50px; 
 }
 
-.btn {
+.button {
 	min-width: 150px;
 	height: 46px;
 	padding: 0 20px;
@@ -364,7 +417,7 @@ th {
 		background: $orange-l;
 		color: rgba($white, .5);
 	}
-	&.btn_simple {
+	&.button_simple {
 		background: $gray-h;
 		text-transform: none;
 		font-size: 14px;
@@ -376,7 +429,7 @@ th {
 			background: #F1F1F1;
 		}
 	}
-	&.btn_gray {
+	&.button_gray {
 		height: 46px;
 		background: $bg;
 		border: 1px solid $gray-d;
@@ -393,7 +446,7 @@ th {
 			opacity: 0.3;
 		}
 	}
-	&.btn_transparent {
+	&.button_transparent {
 		background: transparent;
 		border: 1px solid #8b8b8b;
 		border-radius: 2px;
@@ -411,8 +464,8 @@ th {
 			opacity: 0.1;
 		}
 	}
-	&.btn-default,
-	&.btn_white {
+	&.button-default,
+	&.button_white {
 		background: $white;
 		border: 1px solid $gray-d;
 		color: rgba($cl,.8);
@@ -434,7 +487,7 @@ th {
 			fill: $gray-d;
 		}
 	}
-	&.btn_white_no_brd {
+	&.button_white_no_brd {
 		background: $white;
 		border: none;
 		color: $white;
@@ -443,25 +496,25 @@ th {
 			color: rgba($white,.5);
 		}
 	}
-	&.btn_wide {
+	&.button_wide {
 		width: 100%;
 	}
-	&.btn_md {
+	&.button_md {
 		min-width: 120px;
 		height: 40px;
 		padding: 0 20px;
 		font-size: 13px;
 	}
-	&.btn_small {
+	&.button_small {
 		min-width: 0;
 		height: 30px;
 		padding: 0 10px;
 		font-size: 13px;
 	}
-	&.btn_width_big {
+	&.button_width_big {
 		min-width: 190px;
 	}
-	& + .btn {
+	& + .button {
 		margin-left: 17px;
 	}
 	>.icon-plus {
@@ -702,6 +755,7 @@ th {
 		position: relative;
 		.tabs__item {
 			padding: 0 20px 17px;
+			@include fs;
 			font-size: 18px;
 			color: $gray-d;
 			&:hover {
@@ -864,7 +918,6 @@ th {
 	width: 100%;
 	border: 1px solid $brd;
 	border-radius: 4px;
-	@include fs;
 	color: $cl;
 	@include placeholder-color($gray-d);
 	&:focus {
@@ -922,7 +975,6 @@ th {
 		}
 		.input {
 			font-size: 16px;
-			font-weight: 400;
 			&:focus + .icon {
 				fill: $orange;
 				opacity: 1;
@@ -1086,7 +1138,7 @@ th {
 	}
 	.notify__icon,
 	.notify__text,
-	.notify__btn {
+	.notify__button {
 		display: table-cell;
 		vertical-align: top;
 	}
@@ -1143,10 +1195,18 @@ th {
 	cursor: pointer;
 	&.is-active {
 		.select__head {
-			border-radius: 4px 4px 0 0;
 			.icon-arrow-down {
 				transform: rotate(180deg)
 			}
+		}
+		.select__icon {
+			border-radius: 4px 0 0 0;
+			& + .select__value {
+				border-radius: 0 4px 0 0;
+			}
+		}
+		.select__value {
+			border-radius: 4px 4px 0 0;	
 		}
 		.select__list {
 			display: block;
@@ -1171,15 +1231,7 @@ th {
 	}
 	.select__head {
 		position: relative;
-		height: 40px;
-		padding: 0 30px 0 12px;
-		background: rgba($bg,.8);
-		border: 1px solid rgba($gray-d,.8);
-		border-radius: 4px;
-		line-height: 38px;
-		@include nosel;
-		@include fs;
-		color: $cl;
+		overflow: hidden;
 		&:hover {
 			background: rgba(#fafafa,.8);
 		}
@@ -1196,8 +1248,33 @@ th {
 			fill: #b4b4b4;
 		}
 	}
+	.select__icon {
+		float: left;
+		width: 41px;
+		height: 40px;
+		background: $blue;
+		border-radius: 4px 0 0 4px;
+		@include fs;
+		font-size: 18px;
+		text-align: center;
+		color: #FFF;
+		line-height: 40px;
+		& + .select__value {
+			border-radius: 0 4px 4px 0;
+			border-width: 1px 1px 1px 0;
+		}
+	}
 	.select__value {
+		height: 40px;
+		padding: 0 30px 0 12px;
+		background: rgba($bg,.8);
+		border: 1px solid rgba($gray-d,.8);
+		border-radius: 4px;
+		@include nosel;
+		@include fs;
+		color: $cl;
 		@include text-overflow;
+		line-height: 38px;
 	}
 	.select__list {
 		display: none;
@@ -1296,7 +1373,7 @@ th {
 			}
 		}
 	}
-	&.switcher_btns {
+	&.switcher_buttons {
 		margin-bottom: -12px;
 		.switcher__item {
 			margin: 0 12px 12px 0;
@@ -1592,7 +1669,7 @@ th {
 		.header__notify-counter {
 			top: -2px;
 		}
-		.header__btn-menu {
+		.header__button-menu {
 			width: auto;
 			height: auto;
 			border: 0px solid transparent;
@@ -1634,7 +1711,7 @@ th {
 		transition: height .2s;
 		font-size: 0;
 	}
-	.header__btn-menu {
+	.header__button-menu {
 		width: 50px;
 		height: 50px;
 		margin-right: 15px;
@@ -1660,7 +1737,7 @@ th {
 		display: inline-block;
 		margin-right: 75px;
 		vertical-align: middle;
-		.btn-round {
+		.button-round {
 			position: relative;
 			top: 2px;
 			vertical-align: middle;
@@ -1807,7 +1884,7 @@ th {
 	}
 }
 
-.btn-back {
+.button-back {
 	float: left;
 	width: 20px;
 	height: 60px;
@@ -2085,8 +2162,14 @@ th {
 	.head__in {
 		padding: 20px 0;
 	}
+	.head__in_p-0 {
+		padding: 0;
+	}
 	.head__in_p-12 {
 		padding: 12px 0;
+	}
+	.head__in_p-15 {
+		padding: 15px 0;
 	}
 	.head__in_gray {
 		padding: 15px 0;
@@ -2095,6 +2178,24 @@ th {
 	.head__in_bg {
 		padding: 15px 0;
 		background: $bg;
+	}
+	.head__in_steps {
+		padding: 30px 0 25px;
+		border-bottom: 1px solid $brd;
+		background: $bg;
+	}
+	.head__table {
+		display: table;
+	}
+	.head__col {
+		display: table-cell;
+		padding: 0 20px;
+		border-left: 1px solid $brd;
+		vertical-align: middle;
+		&:first-child {
+			padding-left: 0;
+			border: none;
+		}
 	}
 }
 
@@ -2225,8 +2326,27 @@ th {
 		left: -20px;
 		color: $gray-d;
 	}
+	.title__number-circle {
+		position: absolute;
+		top: -5px;
+		left: -50px;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background: $bg;
+		font-size: 18px;
+		color: #000;
+		text-align: center;
+		line-height: 32px;
+	}
 	.title__gray {
 		color: $gray-d;
+	}
+	.title__gray-dark {
+		color: $gray-text;
+	}
+	.title__thin {
+		font-weight: 400;
 	}
 }
 
@@ -2729,7 +2849,7 @@ th {
 		min-height: 200px;
 		margin-right: -20px;
 		background: $white;
-		.btn-back {
+		.button-back {
 			position: absolute;
 			top: 20px;
 			left: -20px;
@@ -2844,7 +2964,7 @@ th {
 			padding: 0 8px;
 			vertical-align: middle;
 		}
-		.pager__btn {
+		.pager__button {
 			width: 40px;
 			height: 20px;
 			color: $black;
@@ -2874,7 +2994,7 @@ th {
 	.pager__next {
 		padding-left: 2px;
 	}
-	.pager__btn {
+	.pager__button {
 		width: 26px;
 		height: 40px;
 		font-size: 16px;
@@ -3201,7 +3321,7 @@ th {
 		padding: 15px 20px;
 		border-top: 1px solid $brd;
 		text-align: center;
-		.btn + .btn {
+		.button + .button {
 			margin-left: 7px;
 		}
 	}
@@ -3438,6 +3558,9 @@ th {
 		padding-right: 10px;
 		border-right: 1px solid $brd;
 		vertical-align: middle;
+	}
+	.link-icon {
+		vertical-align: baseline;
 	}
 }
 
@@ -3830,12 +3953,12 @@ th {
 				margin: 0;
 			}
 		}
-		.btn-default {
+		.button-default {
 			margin-right: 10px;
-			@extend .btn_white;
+			@extend .button_white;
 		}
-		.btn-sm {
-			@extend .btn_small;
+		.button-sm {
+			@extend .button_small;
 		}
 	}
 }
@@ -3888,9 +4011,90 @@ th {
 	}
 }
 
+.steps {
+	height: 62px;
+	text-align: center;
+	font-size: 0;
+	transition: height .2s;
+	overflow: hidden;
+	.steps__item {
+		display: inline-block;
+		position: relative;
+		padding: 0 100px;
+		vertical-align: top;
+		&:first-child {
+			&:before {
+				display: none;
+			}
+		}
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+		&.is-active {
+			&:before {
+				margin-right: 20px;
+			}
+			&:after {
+				margin-left: 20px;
+			}
+			.steps__counter {
+				background: $orange;
+				box-shadow: none;
+				color: #FFF;
+			}
+		}
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: 15px;
+			height: 4px;
+			background: rgba($gray-d,.5);
+			transition: margin .2s, top .2s;
+		}
+		&:before {
+			left: 0;
+			right: 50%;
+			margin-right: 17px;
+		}
+		&:after {
+			right: 0;
+			left: 50%;
+			margin-left: 17px;
+		}
+	}
+	.steps__counter {
+		width: 34px;
+		height: 34px;
+		margin-bottom: 10px;
+		background-color: #FFF;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		border-radius: 50%;
+		font-size: 18px;
+		line-height: 34px;
+		transition: all .2s;
+	}
+	.steps__title {
+		margin: 0 -70px;
+		font-size: 14px;
+		color: $gray-d;
+	}
+}
 
-
-
+.gender {
+	width: 150px;
+	height: 150px;
+	background-color: #FFF;
+	border: 1px solid $brd;
+	border-radius: 5px;
+	@include vertical;
+	.icon {
+		fill: $gray-d;
+		vertical-align: middle;
+	}
+}
 
 
 

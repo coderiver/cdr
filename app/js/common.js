@@ -5,7 +5,7 @@ $(document).ready(function() {
 		header = $('.js-header'),
 		headerSearch = $('.js-header-search'),
 		menu = $('.js-menu'),
-		menuBtn = $('.js-menu-btn'),
+		menubutton = $('.js-menu-button'),
 		menuClose = $('.js-menu-close'),
 		dropdown = $('.js-dropdown'),
 		input = $('.js-input'),
@@ -19,13 +19,13 @@ $(document).ready(function() {
 		dpRange = $('.js-dp-range'),
 		dpMulti = $('.js-dp-multi');
 
-	menuBtn.on('click', function () {
-		menuBtn.toggleClass('is-active');
+	menubutton.on('click', function () {
+		menubutton.toggleClass('is-active');
 		menu.toggleClass('is-active');
 	});
 
 	menuClose.on('click', function () {
-		menuBtn.removeClass('is-active');
+		menubutton.removeClass('is-active');
 		menu.removeClass('is-active');
 	});
 

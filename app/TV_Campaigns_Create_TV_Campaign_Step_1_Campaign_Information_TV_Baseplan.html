@@ -1,0 +1,628 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper wrapper_head_steps js-wrapper">
+	<!-- wrap-header -->
+	<div class="wrap-header">
+		<!-- header -->
+		<header class="header js-header">
+			<!-- center -->
+			<div class="center">
+				<div class="header__left">
+					<div class="header__cell">
+						<button class="header__button-menu js-menu-button">
+							<svg class="icon icon-menu">
+								<use xlink:href="#icon-menu"/>
+							</svg>
+						</button>
+						<div class="header__chapter">
+							<div class="header__chapter-title">Campaigns</div>
+							<!-- dropdown -->
+							<div class="dropdown">
+								<button class="header__chapter-add js-dropdown">
+									<svg class="icon icon-plus">
+										<use xlink:href="#icon-plus"/>
+									</svg>
+								</button>
+								<!-- dropdown-menu -->
+								<ul class="dropdown-menu">
+									<li><a href="#">Digital Campaign</a></li>
+									<li><a href="#">TV Campaignlia</a></li>
+								</ul>
+							</div>
+						</div>
+						<nav class="header__nav">
+							<a class="is-active" href="#">Digital</a>
+							<a href="#">TV</a>
+						</nav>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__cell">
+						<div class="header__search js-header-search">
+							<!-- field -->
+							<div class="field field_search_round js-search">
+								<label class="field__in">
+									<input class="input" type="text" placeholder="Search">
+									<svg class="icon icon-search">
+										<use xlink:href="#icon-search"/>
+									</svg>
+								</label>
+								<button class="field__reset">
+									<svg class="icon icon-close">
+										<use xlink:href="#icon-close"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<a class="header__notify" href="#">
+							<div class="header__notify-in">
+								<div class="header__notify-counter">2</div>
+								<svg class="icon icon-upload">
+									<use xlink:href="#icon-upload"/>
+								</svg>
+							</div>
+						</a>
+						<div class="header__user">
+							<!-- dropdown -->
+							<div class="dropdown dropdown_white">
+								<div class="dropdown__head js-dropdown">
+									<div class="dropdown__title">John</div>
+									<svg class="icon icon-arrow-down">
+										<use xlink:href="#icon-arrow-down"/>
+									</svg>
+								</div>
+								<!-- dropdown-menu -->
+								<ul class="dropdown-menu dropdown-menu_right">
+									<li><a href="#">Profile Settings</a></li>
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+									<li><a href="#">Log Out</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- head -->
+		<div class="head">
+			<div class="head__in head__in_p-15">
+				<!-- center -->
+				<div class="center">
+					<div class="head__table">
+						<div class="head__col">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<span>Cancel</span>
+							</a>
+						</div>
+						<div class="head__col">
+							<!-- title -->
+							<div class="title title_4">Creating New TV Campaign</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="head__in head__in_steps">
+				<!-- center -->
+				<div class="center">
+					<!-- steps -->
+					<div class="steps is-small">
+						<div class="steps__item is-active">
+							<div class="steps__counter">1</div>
+							<div class="steps__title">Campaign Info</div>
+						</div>
+						<div class="steps__item">
+							<div class="steps__counter">2</div>
+							<div class="steps__title">Target Audience</div>
+						</div>
+						<div class="steps__item">
+							<div class="steps__counter">3</div>
+							<div class="steps__title">Inventory</div>
+						</div>
+						<div class="steps__item">
+							<div class="steps__counter">4</div>
+							<div class="steps__title">Summary</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- title -->
+			<div class="title mt-10 mb-20">Step 1: <span class="title__thin title__gray-dark">Campaign Information</span></div>
+			<!-- box-shadow -->
+			<div class="box-shadow">
+				<!-- panel -->
+				<div class="panel bb">
+					<!-- row -->
+					<div class="row">
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_4 mb-10">Campaign Name</div>
+							<!-- field -->
+							<div class="field mb-5">
+								<div class="field__in">
+									<input class="input" type="text">
+								</div>
+							</div>
+							<!-- title -->
+							<div class="title title_6 title_thin title_gray mb-40">Please type a campaign name.</div>
+							<!-- title -->
+							<div class="title title_4 mb-10">Campaign Budget</div>
+							<!-- select -->
+							<div class="select js-select mb-45">
+								<div class="select__head">
+									<div class="select__icon">$</div>
+									<div class="select__value"></div>
+									<svg class="icon icon-arrow-down">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+									</svg>
+								</div>
+								<ul class="select__list">
+									<li>Item 1</li>
+									<li>Item 1</li>
+									<li>Item 1</li>
+								</ul>
+							</div>
+							<!-- title -->
+							<div class="title title_4 mb-10">CPM Goal</div>
+							<!-- select -->
+							<div class="select js-select">
+								<div class="select__head">
+									<div class="select__icon">$</div>
+									<div class="select__value"></div>
+									<svg class="icon icon-arrow-down">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+									</svg>
+								</div>
+								<ul class="select__list">
+									<li>Item 1</li>
+									<li>Item 1</li>
+									<li>Item 1</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_4 mb-10">Select Advertiser</div>
+							<!-- widget -->
+							<div class="widget">
+								<div class="widget__head">
+									<!-- field -->
+									<div class="field field_search_round js-search">
+										<label class="field__in">
+											<input class="input" type="text" placeholder="Search">
+											<svg class="icon icon-search">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+											</svg>
+										</label>
+										<button class="field__reset">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="widget__body">
+									<div class="widget__row">
+										<div class="widget__right">
+											<div class="widget__right-in">
+												<!-- country -->
+												<div class="country">DE</div>
+											</div>
+										</div>
+										<div class="widget__left">
+											<!-- title -->
+											<div class="title title_6">
+												<a class="title__link" href="#">BMW</a>
+											</div>
+										</div>
+									</div>
+									<div class="widget__row">
+										<div class="widget__right">
+											<div class="widget__right-in">
+												<!-- country -->
+												<div class="country">DE</div>
+											</div>
+										</div>
+										<div class="widget__left">
+											<!-- title -->
+											<div class="title title_6">
+												<a class="title__link" href="#">Johnson & Johnson Global</a>
+											</div>
+										</div>
+									</div>
+									<div class="widget__row">
+										<div class="widget__right">
+											<div class="widget__right-in">
+												<!-- country -->
+												<div class="country">DE</div>
+											</div>
+										</div>
+										<div class="widget__left">
+											<!-- title -->
+											<div class="title title_6">
+												<a class="title__link" href="#">BMW</a>
+											</div>
+										</div>
+									</div>
+									<div class="widget__row">
+										<div class="widget__right">
+											<div class="widget__right-in">
+												<!-- country -->
+												<div class="country">DE</div>
+											</div>
+										</div>
+										<div class="widget__left">
+											<!-- title -->
+											<div class="title title_6">
+												<a class="title__link" href="#">Johnson & Johnson Global</a>
+											</div>
+										</div>
+									</div>
+									<div class="widget__row">
+										<div class="widget__right">
+											<div class="widget__right-in">
+												<!-- country -->
+												<div class="country">DE</div>
+											</div>
+										</div>
+										<div class="widget__left">
+											<!-- title -->
+											<div class="title title_6">
+												<a class="title__link" href="#">BMW</a>
+											</div>
+										</div>
+									</div>
+									<div class="widget__row">
+										<div class="widget__right">
+											<div class="widget__right-in">
+												<!-- country -->
+												<div class="country">DE</div>
+											</div>
+										</div>
+										<div class="widget__left">
+											<!-- title -->
+											<div class="title title_6">
+												<a class="title__link" href="#">Johnson & Johnson Global</a>
+											</div>
+										</div>
+									</div>
+									<div class="widget__row">
+										<div class="widget__right">
+											<div class="widget__right-in">
+												<!-- country -->
+												<div class="country">DE</div>
+											</div>
+										</div>
+										<div class="widget__left">
+											<!-- title -->
+											<div class="title title_6">
+												<a class="title__link" href="#">BMW</a>
+											</div>
+										</div>
+									</div>
+									<div class="widget__row">
+										<div class="widget__right">
+											<div class="widget__right-in">
+												<!-- country -->
+												<div class="country">DE</div>
+											</div>
+										</div>
+										<div class="widget__left">
+											<!-- title -->
+											<div class="title title_6">
+												<a class="title__link" href="#">Johnson & Johnson Global</a>
+											</div>
+										</div>
+									</div>
+									<div class="widget__row">
+										<div class="widget__right">
+											<div class="widget__right-in">
+												<!-- country -->
+												<div class="country">DE</div>
+											</div>
+										</div>
+										<div class="widget__left">
+											<!-- title -->
+											<div class="title title_6">
+												<a class="title__link" href="#">BMW</a>
+											</div>
+										</div>
+									</div>
+									<div class="widget__row">
+										<div class="widget__right">
+											<div class="widget__right-in">
+												<!-- country -->
+												<div class="country">DE</div>
+											</div>
+										</div>
+										<div class="widget__left">
+											<!-- title -->
+											<div class="title title_6">
+												<a class="title__link" href="#">BMW</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel bb">
+					<!-- wrap-title -->
+					<div class="wrap-title mb-25">
+						<!-- title -->
+						<div class="title title_2">Run Dates</div>
+						<!-- link-icon -->
+						<a class="link-icon" href="#">
+							<svg class="icon icon-split">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-split"></use>
+							</svg>
+							<span>Split Budget Equaly</span>
+						</a>
+					</div>
+					<!-- row -->
+					<div class="row">
+						<div class="col-50">
+							<!-- m -->
+							<div class="ml-50">
+								<div class="row mb-25">
+									<div class="col-50">
+										<!-- title -->
+										<div class="title title_4 mb-10">Run Dates <div class="title__number-circle">1</div></div>
+										<!-- field -->
+										<div class="field">
+											<labe class="field__in">
+												<input class="input js-dp" type="text" value="08/04/2015">
+												<div class="field__icon">
+													<svg class="icon icon-calendar">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-calendar"></use>
+													</svg>
+												</div>
+											</labe>
+										</div>
+									</div>
+									<div class="col-50">
+										<!-- title -->
+										<div class="title title_4 mb-10">End Date</div>
+										<!-- field -->
+										<div class="field">
+											<labe class="field__in">
+												<input class="input js-dp" type="text" value="08/04/2015">
+												<div class="field__icon">
+													<svg class="icon icon-calendar">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-calendar"></use>
+													</svg>
+												</div>
+											</labe>
+										</div>
+									</div>
+								</div>
+								<div class="row mb-30">
+									<div class="col-50">
+										<!-- title -->
+										<div class="title title_4 mb-10">Run Dates <div class="title__number-circle">2</div></div>
+										<!-- field -->
+										<div class="field">
+											<labe class="field__in">
+												<input class="input js-dp" type="text" value="08/04/2015">
+												<div class="field__icon">
+													<svg class="icon icon-calendar">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-calendar"></use>
+													</svg>
+												</div>
+											</labe>
+										</div>
+									</div>
+									<div class="col-50">
+										<!-- title -->
+										<div class="title title_4 mb-10">End Date</div>
+										<!-- field -->
+										<div class="field">
+											<labe class="field__in">
+												<input class="input js-dp" type="text" value="08/04/2015">
+												<div class="field__icon">
+													<svg class="icon icon-calendar">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-calendar"></use>
+													</svg>
+												</div>
+											</labe>
+										</div>
+									</div>
+								</div>
+								<button class="button button_md button_white mb-10">
+									<svg class="icon icon-plus">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use>
+									</svg>
+									ADD SEGMENT
+								</button>
+							</div>
+						</div>
+						<div class="col-47 ml-3p">
+							<!-- title -->
+							<div class="title title_4 mb-10">Budget for this Period</div>
+							<!-- m -->
+							<div class="mb-25">
+								<!-- select -->
+								<div class="select display-inline mr-5 js-select" style="width: 182px;">
+									<div class="select__head">
+										<div class="select__icon">$</div>
+										<div class="select__value">1 000 000</div>
+										<svg class="icon icon-arrow-down">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+										</svg>
+									</div>
+									<ul class="select__list">
+										<li>Item 1</li>
+										<li>Item 1</li>
+										<li>Item 1</li>
+									</ul>
+								</div>
+								<!-- select -->
+								<div class="select display-inline js-select" style="width: 120px;">
+									<div class="select__head">
+										<div class="select__icon">%</div>
+										<div class="select__value">5</div>
+										<svg class="icon icon-arrow-down">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+										</svg>
+									</div>
+									<ul class="select__list">
+										<li>Item 1</li>
+										<li>Item 1</li>
+										<li>Item 1</li>
+									</ul>
+								</div>
+							</div>
+							<!-- title -->
+							<div class="title title_4 mb-10">Budget for this Period</div>
+							<!-- m -->
+							<div class="mb-25">
+								<!-- select -->
+								<div class="select display-inline mr-5 js-select" style="width: 182px;">
+									<div class="select__head">
+										<div class="select__icon">$</div>
+										<div class="select__value">1 000 000</div>
+										<svg class="icon icon-arrow-down">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+										</svg>
+									</div>
+									<ul class="select__list">
+										<li>Item 1</li>
+										<li>Item 1</li>
+										<li>Item 1</li>
+									</ul>
+								</div>
+								<!-- select -->
+								<div class="select display-inline mr-15 js-select" style="width: 120px;">
+									<div class="select__head">
+										<div class="select__icon">%</div>
+										<div class="select__value">5</div>
+										<svg class="icon icon-arrow-down">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+										</svg>
+									</div>
+									<ul class="select__list">
+										<li>Item 1</li>
+										<li>Item 1</li>
+										<li>Item 1</li>
+									</ul>
+								</div>
+								<!-- link-icon -->
+								<a class="link-icon" href="#">
+									<svg class="icon icon-close">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+									</svg>
+									<span>Remove</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel panel_gray">
+					<!-- title -->
+					<div class="title title_2 mb-25">TV Base Plan</div>
+					<!-- row -->
+					<div class="row">
+						<div class="col-25">
+							<!-- data -->
+							<div class="data mb-20">
+								<div class="data__label">Total Impressions</div>
+								<div class="data__value data__value_big">879,009</div>
+							</div>
+							<!-- data -->
+							<div class="data mb-20">
+								<div class="data__label">Average CPM</div>
+								<div class="data__value data__value_big">$5.60</div>
+							</div>
+						</div>
+						<div class="col-75">
+							<!-- row -->
+							<div class="row">
+								<div class="col-50">
+									<!-- gender -->
+									<div class="gender float-left mr-20">
+										<svg class="icon icon-male">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-male"></use>
+										</svg>
+									</div>
+									<!-- display-table -->
+									<div class="display-table">
+										sdf
+									</div>
+								</div>
+								<div class="col-50">
+									<!-- gender -->
+									<div class="gender float-left mr-20">
+										<svg class="icon icon-female">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-female"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<!-- js -->
+<script src="js/jquery.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

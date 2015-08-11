@@ -62,9 +62,9 @@
         if (this.element.hasClass('dropup'))
             this.drops = 'up';
 
-        this.buttonClasses = 'btn btn-sm';
-        this.applyClass = 'btn-success';
-        this.cancelClass = 'btn-default';
+        this.buttonClasses = 'button button-sm';
+        this.applyClass = 'button-success';
+        this.cancelClass = 'button-default';
 
         this.locale = {
             format: 'MM/DD/YYYY',
@@ -120,8 +120,8 @@
                 '</div>' +
                 '<div class="ranges">' +
                     '<div class="range_inputs">' +
-                        '<button class="applyBtn" disabled="disabled" type="button"></button> ' +
-                        '<button class="cancelBtn" type="button"></button>' +
+                        '<button class="applybutton" disabled="disabled" type="button"></button> ' +
+                        '<button class="cancelbutton" type="button"></button>' +
                     '</div>' +
                 '</div>' +
             '</div>';
@@ -349,7 +349,7 @@
         if (this.autoApply && typeof options.ranges !== 'object') {
             this.container.find('.ranges').hide();
         } else if (this.autoApply) {
-            this.container.find('.applyBtn, .cancelBtn').addClass('hide');
+            this.container.find('.applybutton, .cancelbutton').addClass('hide');
         }
 
         if (this.singleDatePicker) {
@@ -370,13 +370,13 @@
         this.container.removeClass('opensleft opensright').addClass('opens' + this.opens);
 
         //apply CSS classes and labels to buttons
-        this.container.find('.applyBtn, .cancelBtn').addClass(this.buttonClasses);
+        this.container.find('.applybutton, .cancelbutton').addClass(this.buttonClasses);
         if (this.applyClass.length)
-            this.container.find('.applyBtn').addClass(this.applyClass);
+            this.container.find('.applybutton').addClass(this.applyClass);
         if (this.cancelClass.length)
-            this.container.find('.cancelBtn').addClass(this.cancelClass);
-        this.container.find('.applyBtn').html(this.locale.applyLabel);
-        this.container.find('.cancelBtn').html(this.locale.cancelLabel);
+            this.container.find('.cancelbutton').addClass(this.cancelClass);
+        this.container.find('.applybutton').html(this.locale.applyLabel);
+        this.container.find('.cancelbutton').html(this.locale.cancelLabel);
 
         //
         // event listeners
@@ -396,8 +396,8 @@
             .on('change.daterangepicker', '.daterangepicker_input input', $.proxy(this.updateFormInputs, this));
 
         this.container.find('.ranges')
-            .on('click.daterangepicker', 'button.applyBtn', $.proxy(this.clickApply, this))
-            .on('click.daterangepicker', 'button.cancelBtn', $.proxy(this.clickCancel, this))
+            .on('click.daterangepicker', 'button.applybutton', $.proxy(this.clickApply, this))
+            .on('click.daterangepicker', 'button.cancelbutton', $.proxy(this.clickCancel, this))
             .on('click.daterangepicker', 'li', $.proxy(this.clickRange, this))
             .on('mouseenter.daterangepicker', 'li', $.proxy(this.hoverRange, this))
             .on('mouseleave.daterangepicker', 'li', $.proxy(this.updateFormInputs, this));
@@ -933,9 +933,9 @@
                 this.container.find('input[name=daterangepicker_end]').val(this.endDate.format(this.locale.format));
 
             if (this.singleDatePicker || (this.endDate && (this.startDate.isBefore(this.endDate) || this.startDate.isSame(this.endDate)))) {
-                this.container.find('button.applyBtn').removeAttr('disabled');
+                this.container.find('button.applybutton').removeAttr('disabled');
             } else {
-                this.container.find('button.applyBtn').attr('disabled', 'disabled');
+                this.container.find('button.applybutton').attr('disabled', 'disabled');
             }
         },
 
