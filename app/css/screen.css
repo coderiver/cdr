@@ -2250,6 +2250,18 @@ th {
   background: #fff; }
   .table.table_fixed {
     table-layout: fixed; }
+  .table.table_transparent {
+    background: transparent; }
+    .table.table_transparent tr:first-child td {
+      border-color: #dadada; }
+    .table.table_transparent tr:last-child td {
+      border-bottom: 1px solid #dadada; }
+    .table.table_transparent th:first-child, .table.table_transparent td:first-child {
+      padding-left: 20px; }
+    .table.table_transparent th:last-child, .table.table_transparent td:last-child {
+      padding-right: 20px; }
+    .table.table_transparent td {
+      border-color: rgba(218, 218, 218, 0.3); }
   .table.table_segment th:last-child, .table.table_segment td:last-child {
     padding-right: 40px; }
   .table.table_segment th {
@@ -3519,6 +3531,25 @@ th {
   .gender .icon {
     fill: #a4a4a4;
     vertical-align: middle; }
+
+.ages {
+  width: 144px;
+  min-height: 160px;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  font-size: 0; }
+  .ages .ages__item {
+    display: inline-block;
+    width: 62px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #55bbcc;
+    border-radius: 15px;
+    text-align: center;
+    color: #FFF;
+    vertical-align: top;
+    font-size: 16px; }
 
 .icon-arrow-down {
   width: 12px;
