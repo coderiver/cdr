@@ -128,6 +128,19 @@ th {
 							margin-left: 12px;
 						}
 					}
+					&.is-done {
+						&:before {
+							margin-right: 9px;
+						}
+						&:after {
+							margin-left: 9px;
+						}
+						& + .is-active {
+							&:before {
+								margin-right: 9px;
+							}
+						}
+					}
 					&:before,
 					&:after {
 						top: 7px;
@@ -909,6 +922,9 @@ th {
 				}
 			}
 		}
+	}
+	&.tabs_center {
+		text-align: center;
 	}
 	.tabs__item {
 		vertical-align: top;
@@ -4077,9 +4093,25 @@ th {
 			}
 		}
 		&.is-done {
+			&:before,
+			&:after {
+				background: $orange;
+			}
+			&:before {
+				margin-right: 17px;
+			}
+			&:after {
+				margin-left: 17px;
+			}
 			.steps__counter {
 				.icon {
 					display: block;
+				}
+			}
+			& + .is-active {
+				&:before {
+					margin-right: 17px;
+					background: $orange;
 				}
 			}
 		}
@@ -4126,7 +4158,6 @@ th {
 		height: 18px;
 		margin: 0 -70px;
 		font-size: 14px;
-		color: $gray-d;
 		transition: height .2s;
 		overflow: hidden;
 	}
