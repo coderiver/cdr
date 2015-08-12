@@ -3551,6 +3551,35 @@ th {
     vertical-align: top;
     font-size: 16px; }
 
+.load {
+  padding: 90px 40px;
+  border: 3px dashed #cccccc;
+  border-radius: 20px;
+  text-align: center; }
+
+.or {
+  margin-bottom: 20px;
+  font-size: 0; }
+  .or:before, .or:after {
+    content: "";
+    display: inline-block;
+    width: 115px;
+    height: 1px;
+    background: #dadada;
+    vertical-align: middle; }
+  .or .or__title {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #dadada;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 38px;
+    vertical-align: middle;
+    color: #000; }
+
 .icon-arrow-down {
   width: 12px;
   height: 8px; }
