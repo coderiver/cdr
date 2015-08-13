@@ -1,0 +1,432 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper wrapper_head_steps js-wrapper">
+	<!-- wrap-header -->
+	<div class="wrap-header">
+		<!-- header -->
+		<header class="header js-header">
+			<!-- center -->
+			<div class="center">
+				<div class="header__left">
+					<div class="header__cell">
+						<button class="header__button-menu js-menu-button">
+							<svg class="icon icon-menu">
+								<use xlink:href="#icon-menu"/>
+							</svg>
+						</button>
+						<div class="header__chapter">
+							<div class="header__chapter-title">Campaigns</div>
+							<!-- dropdown -->
+							<div class="dropdown">
+								<button class="header__chapter-add js-dropdown">
+									<svg class="icon icon-plus">
+										<use xlink:href="#icon-plus"/>
+									</svg>
+								</button>
+								<!-- dropdown-menu -->
+								<ul class="dropdown-menu">
+									<li><a href="#">Digital Campaign</a></li>
+									<li><a href="#">TV Campaignlia</a></li>
+								</ul>
+							</div>
+						</div>
+						<nav class="header__nav">
+							<a class="is-active" href="#">Digital</a>
+							<a href="#">TV</a>
+						</nav>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__cell">
+						<div class="header__search js-header-search">
+							<!-- field -->
+							<div class="field field_search_round js-search">
+								<label class="field__in">
+									<input class="input" type="text" placeholder="Search">
+									<svg class="icon icon-search">
+										<use xlink:href="#icon-search"/>
+									</svg>
+								</label>
+								<button class="field__reset">
+									<svg class="icon icon-close">
+										<use xlink:href="#icon-close"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<a class="header__notify" href="#">
+							<div class="header__notify-in">
+								<div class="header__notify-counter">2</div>
+								<svg class="icon icon-upload">
+									<use xlink:href="#icon-upload"/>
+								</svg>
+							</div>
+						</a>
+						<div class="header__user">
+							<!-- dropdown -->
+							<div class="dropdown dropdown_white">
+								<div class="dropdown__head js-dropdown">
+									<div class="dropdown__title">John</div>
+									<svg class="icon icon-arrow-down">
+										<use xlink:href="#icon-arrow-down"/>
+									</svg>
+								</div>
+								<!-- dropdown-menu -->
+								<ul class="dropdown-menu dropdown-menu_right">
+									<li><a href="#">Profile Settings</a></li>
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+									<li><a href="#">Log Out</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- head -->
+		<div class="head">
+			<div class="head__in head__in_p-15">
+				<!-- center -->
+				<div class="center">
+					<div class="head__table">
+						<div class="head__col">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<span>Cancel</span>
+							</a>
+						</div>
+						<div class="head__col">
+							<!-- title -->
+							<div class="title title_5">Test TV Campaign</div>
+						</div>
+						<div class="head__col">
+							<!-- title -->
+							<div class="title title_5 title_thin display-inline mr-15">Draft saved, 8:34am</div>
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-close">
+									<use xlink:href="#icon-close"/>
+								</svg>
+								<span>Discard</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="head__in head__in_steps">
+				<!-- center -->
+				<div class="center">
+					<!-- steps -->
+					<div class="steps is-small">
+						<div class="steps__item is-active is-done">
+							<div class="steps__counter">1
+								<svg class="icon icon-tick">
+									<use xlink:href="#icon-tick"/>
+								</svg>
+							</div>
+							<div class="steps__title">Campaign Info</div>
+						</div>
+						<div class="steps__item is-active is-done">
+							<div class="steps__counter">2
+								<svg class="icon icon-tick">
+									<use xlink:href="#icon-tick"/>
+								</svg>
+							</div>
+							<div class="steps__title">Target Audience</div>
+						</div>
+						<div class="steps__item is-active is-done">
+							<div class="steps__counter">3
+								<svg class="icon icon-tick">
+									<use xlink:href="#icon-tick"/>
+								</svg>
+							</div>
+							<div class="steps__title">Inventory</div>
+						</div>
+						<div class="steps__item is-active">
+							<div class="steps__counter">4
+								<svg class="icon icon-tick">
+									<use xlink:href="#icon-tick"/>
+								</svg>
+							</div>
+							<div class="steps__title">Summary</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- title -->
+			<div class="title mt-10 mb-20">Step 4: <span class="title__thin title__gray-dark">Summary</span></div>
+			<!-- box-shadow -->
+			<div class="box-shadow">
+				<!-- panel -->
+				<div class="panel bb">
+					<!-- bb -->
+					<div class="bb mb-30">
+						<!-- title -->
+						<div class="title title_2 mb-15">Campaign Information</div>
+					</div>
+					<!-- row -->
+					<div class="row mb-40">
+						<div class="col-25">
+							<!-- data -->
+							<div class="data data_margin_big">
+								<div class="data__label">Campaign Name</div>
+								<div class="data__value">Test TV Campaign</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data data_margin_big">
+								<div class="data__label">Advertiser</div>
+								<div class="data__value">BMW</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data data_margin_big">
+								<div class="data__label">Budget</div>
+								<div class="data__value">USD 1,332,800.00</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data data_margin_big">
+								<div class="data__label">CPM Goal</div>
+								<div class="data__value">USD 15,500.50</div>
+							</div>
+						</div>
+					</div>
+					<!-- data -->
+					<div class="data data_margin_big mb-40">
+						<div class="data__label">Run Dates</div>
+						<div class="data__value">June 19 — June 24, 2015<span class="data__sep">|</span>Period budget: USD 145,900.00 (11%)</div>
+						<div class="data__value">June 22 — June 28, 2015<span class="data__sep">|</span>Period budget: USD 1,196,900.00 (89%)</div>
+					</div>
+					<!-- data -->
+					<div class="data data_margin_big mb-15">
+						<div class="data__label">TV Base Plan</div>
+						<div class="data__value">TV_campaign_baseplan_2334v2.csv</div>
+					</div>
+					<button class="button button_gray button_small mb-40">View Upload Results</button>
+					<!-- bb -->
+					<div class="bb mb-30">
+						<!-- title -->
+						<div class="title title_2 mb-15">Target Audience</div>
+					</div>
+					<!-- row -->
+					<div class="row mb-40">
+						<div class="col-25">
+							<!-- data -->
+							<div class="data data_margin_big">
+								<div class="data__label">Audience Name</div>
+								<div class="data__value">My New Custom 1</div>
+							</div>
+						</div>
+						<div class="col-25">
+							<!-- data -->
+							<div class="data data_margin_big">
+								<div class="data__label">Buying Demo</div>
+								<div class="data__value">Male<span class="data__sep">|</span>25-36, 35-44</div>
+								<div class="data__value">Female<span class="data__sep">|</span>25-36, 35-44</div>
+							</div>
+						</div>
+						<div class="col-50">
+							<!-- data -->
+							<div class="data data_margin_big">
+								<div class="data__label">Minimum Adult Composition</div>
+								<div class="data__value">30%</div>
+							</div>
+						</div>
+					</div>
+					<!-- data -->
+					<div class="data data_margin_big mb-40">
+						<div class="data__label">Additional Parameters</div>
+						<!-- row -->
+						<div class="row">
+							<div class="col-25">
+								<div class="data__value">Income</div>
+								<div class="data__label">$0 - 24,999</div>
+								<div class="data__label">$25,000 - 49,999</div>
+							</div>
+							<div class="col-25">
+								<div class="data__value">Children</div>
+								<div class="data__label">Kids Under 3</div>
+								<div class="data__label">Kids Under 6</div>
+								<div class="data__label">Kids Under 12</div>
+								<div class="data__label">Kids Under 18</div>
+							</div>
+							<div class="col-17">
+								<div class="data__value">State</div>
+								<div class="data__label">Arizona</div>
+								<div class="data__label">California</div>
+								<div class="data__label">Nevada</div>
+							</div>
+							<div class="col-33">
+								<div class="data__value">MRI</div>
+								<!-- selected -->
+								<div class="selected selected_content mt-15">
+									<p>(Non-Dairy Cream Substitutes: Heavy Users:
+									4+ Servings/Average Day: Total Category</p>
+									<br>
+									<p><b>AND</b></p>
+									<p>Non-Dairy Cream Substitutes: Medium Users:
+									2-3 Servings/Average Day: Total Category)</p>
+									<br>
+									<p><b>NOT</b></p>
+									<p>(Non-Dairy Cream Substitutes: Households:
+									Used in last 6 months: Powder)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- bb -->
+					<div class="bb mb-30">
+						<!-- title -->
+						<div class="title title_2 mb-15">Inventory</div>
+					</div>
+					<!-- row -->
+					<div class="row">
+						<div class="col-28">
+							<!-- data -->
+							<div class="data data_margin_big">
+								<div class="data__label">Must Have Networks</div>
+								<div class="data__list">
+									<div class="data__list-item">
+										<div class="data__list-title">AMC</div>
+									</div>
+									<div class="data__list-item">
+										<div class="data__list-title">Audience Network</div>
+									</div>
+									<div class="data__list-item">
+										<div class="data__list-title">Adult Swim</div>
+									</div>
+									<div class="data__list-item">
+										<div class="data__list-title">American Heroes Channel</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-28">
+							<!-- data -->
+							<div class="data data_margin_big">
+								<div class="data__label">Must Have Networks</div>
+								<div class="data__list">
+									<div class="data__list-item">
+										<div class="data__list-title">AMC</div>
+									</div>
+									<div class="data__list-item">
+										<div class="data__list-title">Audience Network</div>
+									</div>
+									<div class="data__list-item">
+										<div class="data__list-title">Adult Swim</div>
+									</div>
+									<div class="data__list-item">
+										<div class="data__list-title">American Heroes Channel</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-20">
+							<!-- data -->
+							<div class="data data_margin_big">
+								<div class="data__label">Ad Length</div>
+								<div class="data__value">45% — 60s</div>
+								<div class="data__value">15% — 30s</div>
+								<div class="data__value">40% — 10s</div>
+							</div>
+						</div>
+						<div class="col-24">
+							<!-- data -->
+							<div class="data data_margin_big mb-15">
+								<div class="data__label">Daypart and Day</div>
+								<div class="data__value">Standard</div>
+							</div>
+							<!-- data -->
+							<div class="data mb-15">
+								<div class="data__value">1. Early Morning</div>
+								<div class="data__label">Mon, Tue, Wed</div>
+							</div>
+							<!-- data -->
+							<div class="data">
+								<div class="data__value">2. Early Fringe</div>
+								<div class="data__label">Mon, Tue, Wed, Tue, Fri, Sat, Sun</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel">
+					<!-- row -->
+					<div class="row">
+						<div class="col-60">
+							<button class="button button_gray">Previous step</button>
+							<button class="button mr-25">Generate plan</button>
+							<!-- updated -->
+							<div class="updated updated_gray display-inline">Last updated Sep 12, 12:34, 2015</div>
+						</div>
+						<div class="col-40 ta-right">
+							<button class="button button_gray">delete campaign</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<!-- js -->
+<script src="js/jquery.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
