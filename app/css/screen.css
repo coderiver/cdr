@@ -866,6 +866,15 @@ th {
   color: #404040; }
   .item:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  .item.item_created {
+    display: block;
+    width: 230px;
+    margin: 0 auto;
+    box-shadow: none;
+    border: 1px solid #dadada;
+    border-radius: 4px; }
+    .item.item_created .item__in {
+      padding: 15px 20px 20px; }
   .item.item_empty {
     height: 259px;
     background: #e9e9e9;
@@ -2347,18 +2356,26 @@ th {
   background: #fff; }
   .table.table_fixed {
     table-layout: fixed; }
-  .table.table_transparent {
-    background: transparent; }
-    .table.table_transparent tr:first-child td {
+  .table.table_transparent, .table.table_transparent_p-30 {
+    background: transparent;
+    table-layout: fixed; }
+    .table.table_transparent tr:first-child td, .table.table_transparent_p-30 tr:first-child td {
       border-color: #dadada; }
-    .table.table_transparent tr:last-child td {
+    .table.table_transparent tr:last-child td, .table.table_transparent_p-30 tr:last-child td {
       border-bottom: 1px solid #dadada; }
-    .table.table_transparent th:first-child, .table.table_transparent td:first-child {
-      padding-left: 20px; }
-    .table.table_transparent th:last-child, .table.table_transparent td:last-child {
-      padding-right: 20px; }
-    .table.table_transparent td {
+    .table.table_transparent th, .table.table_transparent td, .table.table_transparent_p-30 th, .table.table_transparent_p-30 td {
+      padding-left: 15px;
+      padding-right: 15px; }
+      .table.table_transparent th:first-child, .table.table_transparent td:first-child, .table.table_transparent_p-30 th:first-child, .table.table_transparent_p-30 td:first-child {
+        padding-left: 20px; }
+      .table.table_transparent th:last-child, .table.table_transparent td:last-child, .table.table_transparent_p-30 th:last-child, .table.table_transparent_p-30 td:last-child {
+        padding-right: 20px; }
+    .table.table_transparent td, .table.table_transparent_p-30 td {
       border-color: rgba(218, 218, 218, 0.3); }
+  .table.table_transparent_p-30 th:first-child, .table.table_transparent_p-30 td:first-child {
+    padding-left: 30px; }
+  .table.table_transparent_p-30 th:last-child, .table.table_transparent_p-30 td:last-child {
+    padding-right: 30px; }
   .table.table_segment th:last-child, .table.table_segment td:last-child {
     padding-right: 40px; }
   .table.table_segment th {
@@ -2423,12 +2440,20 @@ th {
       -ms-text-overflow: ellipsis;
       text-overflow: ellipsis;
       white-space: nowrap; }
+  .table.table_p-30 th:first-child {
+    padding-left: 30px; }
+  .table.table_p-30 th:last-child {
+    padding-right: 30px; }
   .table th:first-child, .table td:first-child {
     padding-left: 40px; }
   .table th:last-child, .table td:last-child {
     padding-right: 30px; }
+  .table th.table__w-9, .table td.table__w-9 {
+    width: 9%; }
   .table th.table__w-10, .table td.table__w-10 {
     width: 10%; }
+  .table th.table__w-11, .table td.table__w-11 {
+    width: 11%; }
   .table th.table__w-12, .table td.table__w-12 {
     width: 12%; }
   .table th.table__w-12-5, .table td.table__w-12-5 {
@@ -2445,6 +2470,8 @@ th {
     width: 17%; }
   .table th.table__w-18, .table td.table__w-18 {
     width: 18%; }
+  .table th.table__w-22, .table td.table__w-22 {
+    width: 22%; }
   .table th.table__w-25, .table td.table__w-25 {
     width: 25%; }
   .table th.table__w-20, .table td.table__w-20 {
@@ -3213,7 +3240,7 @@ th {
 .wrap-table, .wrap-graph {
   margin: 0 -20px; }
 
-.three-dots {
+.three-dots, .table.table_transparent td, .table.table_transparent_p-30 td {
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   text-overflow: ellipsis;

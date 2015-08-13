@@ -645,6 +645,17 @@ th {
 	&:hover {
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
+	&.item_created {
+		display: block;
+		width: 230px;
+		margin: 0 auto;
+		box-shadow: none;
+		border: 1px solid $brd;
+		border-radius: 4px;
+		.item__in {
+			padding: 15px 20px 20px;
+		}
+	}
 	&.item_empty {
 		height: 259px;
 		background: #e9e9e9;
@@ -2597,8 +2608,10 @@ th {
 	&.table_fixed {
 		table-layout: fixed;
 	}
-	&.table_transparent {
+	&.table_transparent,
+	&.table_transparent_p-30 {
 		background: transparent;
+		table-layout: fixed;
 		tr {
 			&:first-child {
 				td {
@@ -2612,6 +2625,8 @@ th {
 			}
 		}
 		th, td {
+			padding-left: 15px;
+			padding-right: 15px;
 			&:first-child {
 				padding-left: 20px;
 			}
@@ -2621,6 +2636,17 @@ th {
 		}
 		td {
 			border-color: rgba($brd,.3);
+			@extend .three-dots;
+		}
+	}
+	&.table_transparent_p-30 {
+		th, td {
+			&:first-child {
+				padding-left: 30px;
+			}
+			&:last-child {
+				padding-right: 30px;
+			}
 		}
 	}
 	&.table_segment {
@@ -2726,6 +2752,16 @@ th {
 			@include text-overflow;
 		}
 	}
+	&.table_p-30 {
+		th {
+			&:first-child {
+				padding-left: 30px;
+			}
+			&:last-child {
+				padding-right: 30px;
+			}
+		}
+	}
 	th, td {
 		&:first-child {
 			padding-left: 40px;
@@ -2733,8 +2769,14 @@ th {
 		&:last-child {
 			padding-right: 30px;
 		}
+		&.table__w-9 {
+			width: 9%;
+		}
 		&.table__w-10 {
 			width: 10%;
+		}
+		&.table__w-11 {
+			width: 11%;
 		}
 		&.table__w-12 {
 			width: 12%;
@@ -2759,6 +2801,9 @@ th {
 		}
 		&.table__w-18 {
 			width: 18%;
+		}
+		&.table__w-22 {
+			width: 22%;
 		}
 		&.table__w-25 {
 			width: 25%;
