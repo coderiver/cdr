@@ -151,6 +151,9 @@ th {
       width: 0;
       height: 100%; }
 
+.scroll {
+  overflow: auto; }
+
 .row {
   margin: 0 -10px;
   font-size: 0; }
@@ -703,7 +706,8 @@ th {
   font-size: 15px;
   font-weight: 600;
   color: #fff;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  vertical-align: middle; }
   .button:hover {
     background: #fe7d53; }
   .button:active {
@@ -784,6 +788,11 @@ th {
     font-size: 13px; }
   .button.button_width_big {
     min-width: 190px; }
+  .button.button_width_md {
+    min-width: 110px; }
+  .button.button_width_auto {
+    width: auto;
+    min-width: 0; }
   .button + .button {
     margin-left: 17px; }
   .button > .icon-plus {
@@ -1426,10 +1435,50 @@ th {
 
 .switcher {
   font-size: 0; }
+  .switcher.switcher_gender .switcher__el {
+    position: relative; }
+    .switcher.switcher_gender .switcher__el:hover:before {
+      background: #fff; }
+    .switcher.switcher_gender .switcher__el:before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      width: 20px;
+      height: 20px;
+      background: #f0f0f0;
+      border: 1px solid #dadada;
+      border-radius: 2px;
+      box-shadow: 0 0 0 2px #fff; }
+    .switcher.switcher_gender .switcher__el > .icon-tick {
+      display: none;
+      position: absolute;
+      top: -1px;
+      right: -2px;
+      width: 12px;
+      height: 10px;
+      fill: #fff; }
+  .switcher.switcher_gender .switcher__input:checked + .switcher__el:before {
+    background: #55bbcc;
+    border-color: #55bbcc; }
+  .switcher.switcher_gender .switcher__input:checked + .switcher__el > .icon-tick {
+    display: block; }
+  .switcher.switcher_gender .gender {
+    display: block;
+    width: 190px;
+    height: 190px; }
   .switcher.switcher_group .switcher__item {
+    display: block;
     margin-bottom: 10px; }
   .switcher.switcher_group.switcher_checkbox .switcher__content {
     font-weight: 400; }
+  .switcher.switcher_cols {
+    margin-bottom: -40px;
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2; }
+    .switcher.switcher_cols .switcher__item {
+      margin: 0 20px 40px 0; }
   .switcher.switcher_logos .switcher__item {
     margin: 0 50px 20px 0; }
   .switcher.switcher_logos .switcher__el {
@@ -1464,6 +1513,15 @@ th {
       background: #55bbcc;
       border-color: #55bbcc;
       color: #fff; }
+  .switcher.switcher_buttons_ages {
+    margin-bottom: -10px; }
+    .switcher.switcher_buttons_ages .switcher__item {
+      margin: 0 5px 10px 0; }
+    .switcher.switcher_buttons_ages .switcher__el {
+      min-width: 62px;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: center; }
   .switcher.switcher_radio .switcher__item {
     margin: 0 30px 0 0; }
   .switcher.switcher_radio .switcher__el {
@@ -2114,6 +2172,8 @@ th {
   .inform .icon {
     vertical-align: middle;
     fill: #55bbcc; }
+  .inform .icon-progress {
+    fill: #cccccc; }
 
 .display-table {
   display: table; }
@@ -3116,6 +3176,9 @@ th {
   border: 1px solid #dadada; }
   .wrap-selected.wrap-selected_no_border {
     border: none; }
+  .wrap-selected.wrap-selected_simple {
+    padding: 0;
+    border: none; }
   .wrap-selected .selected {
     margin-bottom: 15px; }
 
@@ -3149,6 +3212,10 @@ th {
     height: 100%; }
   .popup.popup_big .popup__wrap {
     width: 850px; }
+  .popup.popup_md .popup__wrap {
+    width: 540px; }
+  .popup.popup_small .popup__wrap {
+    width: 440px; }
   .popup .popup__wrap {
     position: relative;
     display: inline-block;
@@ -3161,6 +3228,10 @@ th {
     padding: 20px 40px;
     background: #ff8040;
     border-radius: 4px 4px 0 0; }
+    .popup .popup__title .field_search_round .input {
+      border: none;
+      background: rgba(255, 255, 255, 0.9);
+      transition: width .2s, background .2s; }
   .popup .popup__close {
     position: absolute;
     top: -15px;
