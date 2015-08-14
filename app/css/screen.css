@@ -1919,6 +1919,8 @@ th {
     font-size: 12px;
     line-height: 20px;
     transition: top .2s; }
+  .header .dropdown__title {
+    font-weight: 600; }
 
 .button-back {
   float: left;
