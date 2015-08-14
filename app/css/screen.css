@@ -1757,6 +1757,8 @@ th {
       line-height: 40px; }
       .header.is-fixed .header__nav a:after {
         display: none; }
+    .header.is-fixed .header__notify {
+      margin-left: 15px; }
     .header.is-fixed .header__notify-counter {
       top: -2px; }
     .header.is-fixed .header__button-menu {
