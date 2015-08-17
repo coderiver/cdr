@@ -711,6 +711,27 @@ th {
 .container {
   padding: 20px 0 50px; }
 
+.back {
+  height: 31px;
+  padding: 0 13px;
+  background: #eb430f;
+  border-radius: 2px;
+  color: #FFF;
+  font-size: 0;
+  vertical-align: middle; }
+  .back:hover {
+    background: #F15322; }
+  .back:active {
+    background: #df4110; }
+  .back .back__title, .back .icon {
+    display: inline-block;
+    vertical-align: middle; }
+  .back .back__title {
+    font-size: 14px; }
+  .back .icon {
+    margin-right: 9px;
+    fill: #fff; }
+
 .button {
   min-width: 150px;
   height: 46px;
@@ -1314,16 +1335,15 @@ th {
 .list .list__item {
   display: block;
   position: relative;
-  padding: 16px 20px 16px 40px;
+  padding: 16px 40px 16px 20px;
   border-bottom: 1px solid #ececec;
   text-decoration: none;
+  font-weight: 600;
   color: black; }
   .list .list__item:first-child {
     border-top: 1px solid #ececec; }
   .list .list__item:hover, .list .list__item:active, .list .list__item.is-active {
     background: #eef8fa; }
-    .list .list__item:hover .icon-tick, .list .list__item:active .icon-tick, .list .list__item.is-active .icon-tick {
-      display: block; }
   .list .list__item:hover {
     text-decoration: underline; }
   .list .list__item:active {
@@ -1332,11 +1352,13 @@ th {
     cursor: default; }
     .list .list__item.is-active:hover {
       text-decoration: none; }
+    .list .list__item.is-active .icon-tick {
+      display: block; }
 .list .icon-tick {
   display: none;
   position: absolute;
   top: 21px;
-  left: 15px;
+  right: 20px;
   fill: #55bbcc; }
 
 .notify {
@@ -1632,6 +1654,12 @@ th {
   .switcher.switcher_radio .switcher__input:checked + .switcher__el:before {
     background: #fff;
     border: 8px solid #55bbcc; }
+  .switcher.switcher_checkbox.switcher_big .switcher__content {
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400; }
+  .switcher.switcher_checkbox.switcher_white .switcher__content {
+    color: #fff; }
   .switcher.switcher_checkbox .switcher__el {
     position: relative;
     padding-left: 30px; }
@@ -1935,7 +1963,7 @@ th {
         right: 27px;
         height: 5px; }
       .header .header__nav a.is-active {
-        background: #EB430F;
+        background: #eb430f;
         color: #fff; }
         .header .header__nav a.is-active:after {
           background: #fff; }
@@ -3387,6 +3415,8 @@ th {
     height: 100%; }
   .popup.popup_big .popup__wrap {
     width: 850px; }
+  .popup.popup_md_big .popup__wrap {
+    width: 700px; }
   .popup.popup_md .popup__wrap {
     width: 540px; }
   .popup.popup_small .popup__wrap {
@@ -3407,6 +3437,8 @@ th {
       border: none;
       background: rgba(255, 255, 255, 0.9);
       transition: width .2s, background .2s; }
+    .popup .popup__title .back {
+      margin-left: -20px; }
   .popup .popup__close {
     position: absolute;
     top: -15px;
@@ -3424,6 +3456,9 @@ th {
   .popup .popup__in {
     background: #fff;
     border-radius: 0 0 4px 4px; }
+    .popup .popup__in .list .list__item:last-child {
+      border: none;
+      border-radius: 0 0 4px 4px; }
   .popup .panel:last-child {
     border-radius: 0 0 4px 4px; }
 

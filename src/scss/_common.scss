@@ -12,6 +12,7 @@ $bg-blue: #eef8fa;
 $orange: #ff6633;
 $orange-l: #ffd2c3;
 $orange-md: #ff8040;
+$orange-d: #eb430f;
 
 $blue: #55bbcc;
 $blue-l: #77c9d6;
@@ -442,6 +443,34 @@ th {
 
 .container {
 	padding: 20px 0 50px; 
+}
+
+.back {
+	height: 31px;
+	padding: 0 13px;
+	background: $orange-d;
+	border-radius: 2px;
+	color: #FFF;
+	font-size: 0;
+	vertical-align: middle;
+	&:hover {
+		background: #F15322;
+	}
+	&:active {
+		background: #df4110;
+	}
+	.back__title,
+	.icon {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.back__title {
+		font-size: 14px;
+	}
+	.icon {
+		margin-right: 9px;
+		fill: $white;
+	}
 }
 
 .button {
@@ -1227,9 +1256,10 @@ th {
 	.list__item {
 		display: block;
 		position: relative;
-		padding: 16px 20px 16px 40px;
+		padding: 16px 40px 16px 20px;
 		border-bottom: 1px solid $brd-l;
 		text-decoration: none;
+		font-weight: 600;
 		color: black;
 		&:first-child {
 			border-top: 1px solid $brd-l;
@@ -1238,9 +1268,6 @@ th {
 		&:active,
 		&.is-active {
 			background: $bg-blue;
-			.icon-tick {
-				display: block;
-			}
 		}
 		&:hover {
 			text-decoration: underline;
@@ -1253,13 +1280,16 @@ th {
 			&:hover {
 				text-decoration: none;
 			}
+			.icon-tick {
+				display: block;
+			}
 		}
 	}
 	.icon-tick {
 		display: none;
 		position: absolute;
 		top: 21px;
-		left: 15px;
+		right: 20px;
 		fill: $blue;
 	}
 }
@@ -1653,6 +1683,18 @@ th {
 		}
 	}
 	&.switcher_checkbox {
+		&.switcher_big {
+			.switcher__content {
+				padding: 0;
+				font-size: 16px;
+				font-weight: 400;
+			}
+		}
+		&.switcher_white {
+			.switcher__content {
+				color: $white
+			}
+		}
 		.switcher__el {
 			position: relative;
 			padding-left: 30px;
@@ -2024,7 +2066,7 @@ th {
 				height: 5px;
 			}
 			&.is-active {
-				background: #EB430F;
+				background: $orange-d;
 				color: $white;
 				&:after {
 					background: $white;
@@ -3128,7 +3170,7 @@ th {
 	}
 	&.status_canceled {
 		&:before {
-			background: #eb430f;
+			background: $orange-d;
 		}
 	}
 	&.status_completed {
@@ -4004,6 +4046,11 @@ th {
 			width: 850px;
 		}
 	}
+	&.popup_md_big {
+		.popup__wrap {
+			width: 700px;
+		}
+	}
 	&.popup_md {
 		.popup__wrap {
 			width: 540px;
@@ -4035,6 +4082,9 @@ th {
 				transition: width .2s,background .2s;
 			}
 		}
+		.back {
+			margin-left: -20px;
+		}
 	}
 	.popup__close {
 		position: absolute;
@@ -4061,6 +4111,14 @@ th {
 	.popup__in {
 		background: $white;
 		border-radius: 0 0 4px 4px;
+		.list {
+			.list__item {
+				&:last-child {
+					border: none;
+					border-radius: 0 0 4px 4px;
+				}
+			}
+		}
 	}
 	.panel {
 		&:last-child {

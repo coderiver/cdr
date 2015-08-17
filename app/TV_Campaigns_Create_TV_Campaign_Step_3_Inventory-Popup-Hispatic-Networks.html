@@ -1,0 +1,667 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper wrapper_head_steps js-wrapper">
+	<!-- wrap-header -->
+	<div class="wrap-header">
+		<!-- header -->
+		<header class="header js-header">
+			<!-- center -->
+			<div class="center">
+				<div class="header__left">
+					<div class="header__cell">
+						<button class="header__button-menu js-menu-button">
+							<svg class="icon icon-menu">
+								<use xlink:href="#icon-menu"/>
+							</svg>
+						</button>
+						<div class="header__chapter">
+							<div class="header__chapter-title">Campaigns</div>
+							<!-- dropdown -->
+							<div class="dropdown">
+								<button class="header__chapter-add js-dropdown">
+									<svg class="icon icon-plus">
+										<use xlink:href="#icon-plus"/>
+									</svg>
+								</button>
+								<!-- dropdown-menu -->
+								<ul class="dropdown-menu">
+									<li><a href="#">Digital Campaign</a></li>
+									<li><a href="#">TV Campaignlia</a></li>
+								</ul>
+							</div>
+						</div>
+						<nav class="header__nav">
+							<a class="is-active" href="#">Digital</a>
+							<a href="#">TV</a>
+						</nav>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__cell">
+						<div class="header__search js-header-search">
+							<!-- field -->
+							<div class="field field_search_round js-search">
+								<label class="field__in">
+									<input class="input" type="text" placeholder="Search">
+									<svg class="icon icon-search">
+										<use xlink:href="#icon-search"/>
+									</svg>
+								</label>
+								<button class="field__reset">
+									<svg class="icon icon-close">
+										<use xlink:href="#icon-close"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<a class="header__notify" href="#">
+							<div class="header__notify-in">
+								<div class="header__notify-counter">2</div>
+								<svg class="icon icon-upload">
+									<use xlink:href="#icon-upload"/>
+								</svg>
+							</div>
+						</a>
+						<div class="header__user">
+							<!-- dropdown -->
+							<div class="dropdown dropdown_white">
+								<div class="dropdown__head js-dropdown">
+									<div class="dropdown__title">John</div>
+									<svg class="icon icon-arrow-down">
+										<use xlink:href="#icon-arrow-down"/>
+									</svg>
+								</div>
+								<!-- dropdown-menu -->
+								<ul class="dropdown-menu dropdown-menu_right">
+									<li><a href="#">Profile Settings</a></li>
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+									<li><a href="#">Log Out</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- head -->
+		<div class="head">
+			<div class="head__in head__in_p-15">
+				<!-- center -->
+				<div class="center">
+					<div class="head__table">
+						<div class="head__col">
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<span>Cancel</span>
+							</a>
+						</div>
+						<div class="head__col">
+							<!-- title -->
+							<div class="title title_5">Test TV Campaign</div>
+						</div>
+						<div class="head__col">
+							<!-- title -->
+							<div class="title title_5 title_thin display-inline mr-15">Draft saved, 8:34am</div>
+							<!-- link-icon -->
+							<a class="link-icon" href="#">
+								<svg class="icon icon-close">
+									<use xlink:href="#icon-close"/>
+								</svg>
+								<span>Discard</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="head__in head__in_steps">
+				<!-- center -->
+				<div class="center">
+					<!-- steps -->
+					<div class="steps is-small">
+						<div class="steps__item is-active is-done">
+							<div class="steps__counter">1
+								<svg class="icon icon-tick">
+									<use xlink:href="#icon-tick"/>
+								</svg>
+							</div>
+							<div class="steps__title">Campaign Info</div>
+						</div>
+						<div class="steps__item is-active is-done">
+							<div class="steps__counter">2
+								<svg class="icon icon-tick">
+									<use xlink:href="#icon-tick"/>
+								</svg>
+							</div>
+							<div class="steps__title">Target Audience</div>
+						</div>
+						<div class="steps__item is-active">
+							<div class="steps__counter">3
+								<svg class="icon icon-tick">
+									<use xlink:href="#icon-tick"/>
+								</svg>
+							</div>
+							<div class="steps__title">Inventory</div>
+						</div>
+						<div class="steps__item">
+							<div class="steps__counter">4
+								<svg class="icon icon-tick">
+									<use xlink:href="#icon-tick"/>
+								</svg>
+							</div>
+							<div class="steps__title">Summary</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="container">
+		<!-- center -->
+		<div class="center">
+			<!-- title -->
+			<div class="title mt-10 mb-20">Step 3: <span class="title__thin title__gray-dark">Select Inventory</span></div>
+			<!-- box-shadow -->
+			<div class="box-shadow">
+				<!-- panel -->
+				<div class="panel bb">
+					<!-- title -->
+					<div class="title title_2 mb-15">Inventory Preferences</div>
+					<!-- row -->
+					<div class="row">
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_4 title_thin mb-10">Must have networks</div>
+							<!-- link-icon -->
+							<a class="link link_icon mt-5" href="#">
+								<span class="link__icon">
+									<svg class="icon icon-plus">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use>
+									</svg>
+								</span>
+								Add Networks
+							</a>
+						</div>
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_4 title_thin mb-10">Must exclude networks</div>
+							<!-- link-icon -->
+							<a class="link link_icon mt-5" href="#">
+								<span class="link__icon">
+									<svg class="icon icon-plus">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use>
+									</svg>
+								</span>
+								Add Networks
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel bb">
+					<!-- title -->
+					<div class="title title_2 mb-15">Inventory Preferences</div>
+					<!-- row -->
+					<div class="row">
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_4 title_thin mb-10">Must have networks</div>
+							<!-- b -->
+							<div class="bb bb_dark mb-15">
+								<!-- wrap-selected -->
+								<div class="wrap-selected wrap-selected_simple mb-5">
+									<!-- selected -->
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+											</svg>
+										</button>
+										<div class="selected__title">AMC</div>
+									</div>
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+											</svg>
+										</button>
+										<div class="selected__title">American Heroes Channel</div>
+									</div>
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+											</svg>
+										</button>
+										<div class="selected__title">Audience Network</div>
+									</div>
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+											</svg>
+										</button>
+										<div class="selected__title">Adult Swim</div>
+									</div>
+								</div>
+							</div>
+							<!-- wrap-link -->
+							<div class="wrap-link">
+								<div class="wrap-link__item">
+									<!-- link-icon -->
+									<a class="link-icon" href="#">
+										<svg class="icon icon-edit">
+											<use xlink:href="#icon-edit"/>
+										</svg>
+										<span>Edit</span>
+									</a>
+								</div>
+								<div class="wrap-link__item">
+									<!-- link-icon -->
+									<a class="link-icon" href="#">
+										<svg class="icon icon-close">
+											<use xlink:href="#icon-close"/>
+										</svg>
+										<span>Clear</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-50">
+							<!-- title -->
+							<div class="title title_4 title_thin mb-10">Must exclude networks</div>
+							<!-- b -->
+							<div class="bb bb_dark mb-15">
+								<!-- wrap-selected -->
+								<div class="wrap-selected wrap-selected_simple mb-5">
+									<!-- selected -->
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+											</svg>
+										</button>
+										<div class="selected__title">Animal Planet</div>
+									</div>
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+											</svg>
+										</button>
+										<div class="selected__title">Anime Network</div>
+									</div>
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+											</svg>
+										</button>
+										<div class="selected__title">ASX TV</div>
+									</div>
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+											</svg>
+										</button>
+										<div class="selected__title">Aspire</div>
+									</div>
+								</div>
+							</div>
+							<!-- title -->
+							<div class="title title_5 title_thin mb-10">Exclude Kids' Networks</div>
+							<!-- wrap-link -->
+							<div class="wrap-link">
+								<div class="wrap-link__item">
+									<!-- link-icon -->
+									<a class="link-icon" href="#">
+										<svg class="icon icon-edit">
+											<use xlink:href="#icon-edit"/>
+										</svg>
+										<span>Edit</span>
+									</a>
+								</div>
+								<div class="wrap-link__item">
+									<!-- link-icon -->
+									<a class="link-icon" href="#">
+										<svg class="icon icon-close">
+											<use xlink:href="#icon-close"/>
+										</svg>
+										<span>Clear</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel panel_pb-0 panel_gray bb">
+					<!-- title -->
+					<div class="title title_2 mb-15">Allocation Preferences</div>
+					<div class="title title_4 title_thin mb-10">Allocate Ad Length</div>
+					<!-- inform -->
+					<div class="inform inform_big inform_bg_red">
+						<svg class="icon icon-attention">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-attention"></use>
+						</svg>
+						<div class="inform__content">Must be equal 100%, please try to adjust accordingly!</div>
+					</div>
+					<!-- panel -->
+					<div class="panel panel_p-25 mb-25">
+						<!-- graph -->
+						<div class="graph mb-20">
+							<img src="img/graph-3.jpg" alt="">
+						</div>
+						<!-- row -->
+						<div class="row">
+							<div class="col-25">
+								<!-- field -->
+								<div class="field field_icon_left field_icon_blue" style="width: 120px; margin-left: 56px;">
+									<label class="field__in">
+										<input class="input" type="text" value="15">
+										<span class="field__icon">
+											<span class="field__icon-text">%</span>
+										</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-25">
+								<!-- field -->
+								<div class="field field_icon_left field_icon_blue" style="width: 120px; margin-left: 47px;">
+									<label class="field__in">
+										<input class="input" type="text" value="50">
+										<span class="field__icon">
+											<span class="field__icon-text">%</span>
+										</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-25">
+								<!-- field -->
+								<div class="field field_icon_left field_icon_blue" style="width: 120px; margin-left: 36px;">
+									<label class="field__in">
+										<input class="input" type="text" value="50">
+										<span class="field__icon">
+											<span class="field__icon-text">%</span>
+										</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- row -->
+					<div class="row">
+						<div class="col-30">
+							<!-- title -->
+							<div class="title title_5 title_thin">Allocate by Daypart and Day</div>
+						</div>
+						<div class="col-70">
+							<!-- tabs -->
+							<div class="tabs tabs_nav_panel tabs_nav_panel_small">
+								<a class="tabs__item" href="#">STANDARD</a>
+								<a class="tabs__item" href="#">STANDARD<br>W/ WEEKEND</a>
+								<a class="tabs__item" href="#">NON-STANDARD W/ PRIME<br>ACCESS/WEEKEND</a>
+								<a class="tabs__item is-active" href="#">BROADCAST</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- panel -->
+				<div class="panel panel_pt-20 panel_gray bb">
+					<!-- days -->
+					<table class="days">
+						<thead>
+							<tr>
+								<th>Daypart</th>
+								<th>Monday</th>
+								<th>Tuesday</th>
+								<th>Wednesday</th>
+								<th>Thursday</th>
+								<th>Friday</th>
+								<th>Saturday</th>
+								<th>Sunday</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="days__part">Early Morning News</div>
+									<div class="days__time">6a-9a</div>
+								</td>
+								<td>
+									<svg class="icon icon-checkbox-tick">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-checkbox-tick"></use>
+									</svg>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="days__part">Daytime</div>
+									<div class="days__time">9a-4p</div>
+								</td>
+								<td></td>
+								<td class="is-active">
+									<svg class="icon icon-checkbox-tick">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-checkbox-tick"></use>
+									</svg>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="days__part">Evening News</div>
+									<div class="days__time">6:30-7p</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td class="is-disabled"></td>
+								<td class="is-disabled"></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="days__part">Prime</div>
+									<div class="days__time">M-Sa 8-11pm</div>
+									<div class="days__time">Su 7-11pm</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="days__part">Late Night</div>
+									<div class="days__time">11:30p-2a</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- panel -->
+				<div class="panel">
+					<!-- row -->
+					<div class="row">
+						<div class="col-60">
+							<button class="button button_gray">Previous step</button>
+							<button class="button mr-25">next step</button>
+							<!-- updated -->
+							<div class="updated updated_gray display-inline">Last updated Sep 12, 12:34, 2015</div>
+						</div>
+						<div class="col-40 ta-right">
+							<button class="button button_gray">delete campaign</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<!-- popup -->
+<div class="popup popup_md_big">
+	<div class="popup__wrap">
+		<button class="popup__close">
+			<svg class="icon icon-close">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+			</svg>
+		</button>
+		<div class="popup__title">
+			<!-- row -->
+			<div class="row row_vertical_middle">
+				<div class="col-60">
+					<!-- back -->
+					<button class="back mr-20">
+						<svg class="icon icon-arrow-left">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
+						</svg>
+						<span class="back__title">Back</span>
+					</button>
+					<!-- title -->
+					<div class="title title_3 title_white display-inline">Hispatic Networks</div>
+				</div>
+				<div class="col-40 ta-right">
+					<!-- switcher -->
+					<div class="switcher switcher_checkbox switcher_big switcher_white">
+						<label class="switcher__item">
+							<input class="switcher__input" type="checkbox" checked="">
+							<span class="switcher__el">
+								<span class="switcher__content">Exclude these networks</span>
+								<svg class="icon icon-tick">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+								</svg>
+							</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup__in">
+			<!-- list -->
+			<div class="list">
+				<a class="list__item" href="#">
+					<svg class="icon icon-tick">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+					</svg>
+					A&E
+				</a>
+				<a class="list__item is-active" href="#">
+					<svg class="icon icon-tick">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+					</svg>
+					Adult Swim
+				</a>
+				<a class="list__item" href="#">
+					<svg class="icon icon-tick">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+					</svg>
+					AMC
+				</a>
+				<a class="list__item is-active" href="#">
+					<svg class="icon icon-tick">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+					</svg>
+					American Heroes Channel
+				</a>
+				<a class="list__item" href="#">
+					<svg class="icon icon-tick">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+					</svg>
+					Animal Planet
+				</a>
+				<a class="list__item is-active" href="#">
+					<svg class="icon icon-tick">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+					</svg>
+					Unnamed (Horizontal Line)
+				</a>
+				<a class="list__item" href="#">
+					<svg class="icon icon-tick">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+					</svg>
+					Anime Network
+				</a>
+				<a class="list__item" href="#">
+					<svg class="icon icon-tick">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+					</svg>
+					Aspire
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- js -->
+<script src="js/jquery.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
