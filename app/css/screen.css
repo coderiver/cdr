@@ -1693,6 +1693,8 @@ th {
     padding: 1px 0;
     font-weight: 600;
     font-size: 14px; }
+    .switcher.switcher_checkbox .switcher__content .link-icon {
+      display: block; }
   .switcher .switcher__item {
     display: inline-block;
     position: relative;
@@ -2297,7 +2299,11 @@ th {
   .inform.inform_big .inform__content {
     font-size: 14px; }
   .inform.inform_bigger .inform__content {
+    padding-top: 0;
+    padding-bottom: 0;
     font-size: 16px; }
+  .inform.inform_bigger .icon-attention {
+    margin-top: 1px; }
   .inform .inform__important {
     font-weight: 600; }
   .inform .inform__content {

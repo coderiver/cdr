@@ -1742,6 +1742,9 @@ th {
 			padding: 1px 0;
 			font-weight: 600;
 			font-size: 14px;
+			.link-icon {
+				display: block;
+			}
 		}
 	}
 	.switcher__item {
@@ -2519,7 +2522,12 @@ th {
 	}
 	&.inform_bigger {
 		.inform__content {
+			padding-top: 0;
+			padding-bottom: 0;
 			font-size: 16px;
+		}
+		.icon-attention {
+			margin-top: 1px;
 		}
 	}
 	.inform__important {
