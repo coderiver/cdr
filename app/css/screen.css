@@ -795,6 +795,8 @@ th {
     font-size: 13px; }
   .button.button_width_big {
     min-width: 190px; }
+  .button.button_width_md_big {
+    min-width: 170px; }
   .button.button_width_md {
     min-width: 110px; }
   .button.button_width_auto {
@@ -808,9 +810,30 @@ th {
     margin-right: 18px;
     fill: #404040; }
 
+.accord-links .accord-links__item {
+  margin-bottom: 15px; }
+.accord-links .accord-links__sub {
+  padding-left: 30px; }
+  .accord-links .accord-links__sub li {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 20px; }
+    .accord-links .accord-links__sub li .icon {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      fill: #cccccc; }
+    .accord-links .accord-links__sub li .icon-tick {
+      width: 10px;
+      height: 8px; }
+
 .link {
+  display: inline-block;
+  position: relative;
   font-size: 16px;
   color: #747474; }
+  .link.link_icon {
+    padding-left: 30px; }
   .link:hover {
     text-decoration: underline; }
   .link:active {
@@ -819,6 +842,30 @@ th {
     text-decoration: none;
     opacity: .35;
     cursor: default; }
+  .link.is-active {
+    text-decoration: underline; }
+  .link .link__icon {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: #ff6633;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0; }
+    .link .link__icon:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 100%; }
+    .link .link__icon .icon {
+      fill: #fff;
+      vertical-align: middle; }
+    .link .link__icon .icon-plus {
+      width: 12px;
+      height: 12px; }
 
 .link-icon {
   display: inline-block;
@@ -855,6 +902,9 @@ th {
     top: 0;
     width: 10px;
     height: 10px; }
+  .link-icon .icon-edit {
+    width: 14px;
+    height: 14px; }
 
 .item {
   position: relative;
@@ -1479,10 +1529,14 @@ th {
     border-color: #55bbcc; }
   .switcher.switcher_gender .switcher__input:checked + .switcher__el > .icon-tick {
     display: block; }
+  .switcher.switcher_gender .switcher__input:checked + .switcher__el .gender .icon {
+    fill: #a4a4a4; }
   .switcher.switcher_gender .gender {
     display: block;
     width: 190px;
     height: 190px; }
+    .switcher.switcher_gender .gender .icon {
+      fill: #cccccc; }
   .switcher.switcher_group .switcher__item {
     display: block;
     margin-bottom: 10px; }
@@ -2182,6 +2236,8 @@ th {
       fill: #cccccc; }
   .inform.inform_big .inform__content {
     font-size: 14px; }
+  .inform.inform_bigger .inform__content {
+    font-size: 16px; }
   .inform .inform__important {
     font-weight: 600; }
   .inform .inform__content {
@@ -2620,7 +2676,9 @@ th {
       width: 12px;
       height: 12px;
       margin-top: -6px; }
-  .status.status_small {
+  .status.status_big-font {
+    font-size: 16px; }
+  .status.status_small-font {
     font-size: 12px; }
 
 .foot {
