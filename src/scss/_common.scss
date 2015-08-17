@@ -3,9 +3,6 @@
 	font-family: 'Source Sans Pro', Arial, sans-serif;
 	font-weight: 400;
 }
-@mixin fs {
-	font-weight: 600;
-}
 
 $cl: #404040;
 
@@ -33,6 +30,7 @@ $brd-l: #ececec;
 $red: #bb3232;
 $red-d: #db0000;
 $red-l: #ff4040;
+$red-bg: #e25151;
 
 $green-l: #dce775;
 
@@ -383,8 +381,14 @@ th {
 	&.panel_pt-25 {
 		padding-top: 25px;
 	}
+	&.panel_pt-20 {
+		padding-top: 20px;
+	}
 	&.panel_pb-10 {
 		padding-bottom: 10px;
+	}
+	&.panel_pb-0 {
+		padding-bottom: 0;
 	}
 }
 
@@ -411,6 +415,18 @@ th {
 	border-left: 1px solid rgba($brd,.5);
 }
 
+.bt,
+.br,
+.bb,
+.bl {
+	.bt_dark,
+	.br_dark,
+	.bb_dark,
+	.bl_dark {
+		border-color: $brd;
+	}
+}
+
 .center {
 	max-width: 1024px;
 	margin: 0 auto;
@@ -435,7 +451,7 @@ th {
 	background: $orange;
 	border-radius: 4px;
 	font-size: 15px;
-	@include fs;
+	font-weight: 600;
 	color: $white;
 	text-transform: uppercase;
 	vertical-align: middle;
@@ -670,7 +686,7 @@ th {
 	}
 	span {
 		font-size: 14px;
-		@include fs;
+		font-weight: 600;
 		color: $blue;
 	}
 	.icon {
@@ -755,7 +771,7 @@ th {
 		text-align: right;
 		text-transform: uppercase;
 		color: $orange;
-		@include fs;
+		font-weight: 600;
 	}
 	.item__type_brand {
 		color: $blue;
@@ -763,7 +779,7 @@ th {
 	.item__title {
 		display: block;
 		font-size: 18px;
-		@include fs;
+		font-weight: 600;
 		color: black;
 		text-decoration: none;
 		line-height: 1.2;
@@ -862,7 +878,7 @@ th {
 		position: relative;
 		.tabs__item {
 			padding: 0 20px 17px;
-			@include fs;
+			font-weight: 600;
 			font-size: 18px;
 			color: $gray-d;
 			&:hover {
@@ -890,6 +906,20 @@ th {
 			padding-top: 17px;
 		}
 	}
+	&.tabs_nav_panel_small {
+		height: 41px;
+		min-height: 0;
+		background: none;
+		.tabs__item {
+			display: inline-block;
+			height: 42px;
+			padding: 2px 20px 5px;
+			font-size: 15px;
+			vertical-align: top;
+			line-height: 1.1;
+			text-align: center;
+		}
+	}
 	&.tabs_simple {
 		.tabs__item {
 			height: 26px;
@@ -897,7 +927,7 @@ th {
 			padding: 0 12px;
 			background: transparent;
 			border-radius: 13px;
-			@include fs;
+			font-weight: 600;
 			font-size: 16px;
 			&:hover {
 				background: $brd-l;
@@ -961,7 +991,7 @@ th {
 			position: relative;
 			height: 40px;
 			padding: 0 20px;
-			@include fs;
+			font-weight: 600;
 			font-size: 14px;
 			color: $white;
 			overflow: visible;
@@ -1125,7 +1155,7 @@ th {
 	.field__error {
 		padding: 6px 12px 0;
 		font-size: 13px;
-		@include fs;
+		font-weight: 600;
 		color: $red-d;
 	}
 	.field__reset {
@@ -1159,7 +1189,7 @@ th {
 		}
 	}
 	.field__icon {
-		@include fs;
+		font-weight: 600;
 		font-size: 18px;
 		color: $white;
 	}
@@ -1286,7 +1316,7 @@ th {
 		display: table;
 		color: $red-d;
 		a {
-			@include fs;
+			font-weight: 600;
 			color: $red-d;
 		}
 	}
@@ -1335,7 +1365,7 @@ th {
 	&.select_big {
 		.select__head {
 			height: 46px;
-			@include fs;
+			font-weight: 600;
 			line-height: 44px;
 		}
 	}
@@ -1364,7 +1394,7 @@ th {
 		height: 40px;
 		background: $blue;
 		border-radius: 4px 0 0 4px;
-		@include fs;
+		font-weight: 600;
 		font-size: 18px;
 		text-align: center;
 		color: #FFF;
@@ -1381,7 +1411,7 @@ th {
 		border: 1px solid rgba($gray-d,.8);
 		border-radius: 4px;
 		@include nosel;
-		@include fs;
+		font-weight: 600;
 		color: $cl;
 		@include text-overflow;
 		line-height: 38px;
@@ -1668,7 +1698,7 @@ th {
 		.switcher__content {
 			display: block;
 			padding: 1px 0;
-			@include fs;
+			font-weight: 600;
 			font-size: 14px;
 		}
 	}
@@ -1784,7 +1814,7 @@ th {
 		display: block;
 		padding: 3px 0 0 30px;
 		font-size: 13px;
-		@include fs;
+		font-weight: 600;
 		color: $red;
 	}	
 	.icon {
@@ -2406,7 +2436,7 @@ th {
 		}
 	}
 	.updated__title {
-		@include fs;
+		font-weight: 600;
 	}
 	.icon {
 		display: inline-block;
@@ -2426,6 +2456,18 @@ th {
 		color: $gray-d;
 		.icon {
 			fill: $gray;
+		}
+	}
+	&.inform_bg_red {
+		padding: 10px 20px;
+		background: $red-bg;
+		.inform__content {
+			padding-left: 12px;
+			font-weight: 600;
+			color: $white;
+		}
+		.icon {
+			fill: rgba($white,.5)
 		}
 	}
 	&.inform_big {
@@ -2470,7 +2512,7 @@ th {
 .title {
 	position: relative;
 	font-size: 34px;
-	@include fs;
+	font-weight: 600;
 	color: $black;
 	line-height: 1.2;
 	&.is-disable {
@@ -2673,7 +2715,7 @@ th {
 		background: $bg-blue;
 		border: 1px solid $blue;
 		border-radius: 17px;
-		@include fs;
+		font-weight: 600;
 		font-size: 16px;
 		color: $blue
 	}
@@ -3035,7 +3077,7 @@ th {
 		display: none;
 	}
 	.accord__title {
-		@include fs;
+		font-weight: 600;
 		font-size: 24px;
 		color: $black;
 		&:hover {
@@ -3089,7 +3131,7 @@ th {
 		}
 	}
 	&.status_bold {
-		@include fs;
+		font-weight: 600;
 	}
 	&.status_big {
 		padding-left: 20px;
@@ -3211,7 +3253,7 @@ th {
 	.menu__nav {
     	padding: 18px 0 100px;
 		a {
-			@include fs;
+			font-weight: 600;
 			font-size: 17px;
 			color: $black;
 			text-transform: uppercase;
@@ -3628,7 +3670,7 @@ th {
 	@include vertical;
 	.widget-help__title {
 		display: inline-block;
-		@include fs;
+		font-weight: 600;
 		font-size: 18px;
 		text-transform: uppercase;
 		color: $gray;
@@ -3654,6 +3696,13 @@ th {
 	&.selected_content {
 		padding: 15px 20px;
 		cursor: text;
+	}
+	&.selected_big {
+		.selected__title {
+			padding: 5px 0;
+			font-weight: 600;
+			font-size: 16px;
+		}
 	}
 	&:hover {
 		.selected__close {
@@ -3692,6 +3741,7 @@ th {
 	}
 	.selected__title {
 		padding: 7px 0;
+		font-size: 14px;
 		word-break: break-all;
 		overflow: hidden;
 	}
@@ -3841,7 +3891,7 @@ th {
 		border-bottom: 1px solid $gray;
 	}
 	.edit__error {
-		@include fs;
+		font-weight: 600;
 		font-size: 12px;
 		color: $red-d;
 	}
@@ -3890,6 +3940,7 @@ th {
 	padding: 15px 15px 10px;
 	border-radius: 4px;
 	border: 1px solid $brd;
+	font-size: 0;
 	&.wrap-selected_no_border {
 		border: none;
 	}
@@ -3898,13 +3949,32 @@ th {
 		border: none;
 	}
 	.selected {
+		margin-right: 5px;
 		margin-bottom: 15px;
+	}
+	.selected_big {
+		margin-bottom: 10px;
 	}
 }
 
 .wrap-table,
 .wrap-graph {
 	margin: 0 -20px;
+}
+
+.wrap-link {
+	.wrap-link__item {
+		display: inline-block;
+		margin-left: 18px;
+		padding-left: 18px;
+		border-left: 1px solid $brd;
+		vertical-align: middle;
+		&:first-child {
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+	}
 }
 
 .three-dots {
@@ -4098,7 +4168,7 @@ th {
 			padding: 0 12px;
 			border: 1px solid $brd;
 			border-radius: 4px;
-			@include fs;
+			font-weight: 600;
 			color: $cl;
 			@include placeholder-color($gray-d);
 			&:focus {
@@ -4498,7 +4568,72 @@ th {
 	}
 }
 
+.days {
+	width: 100%;
+	table-layout: fixed;
+	tr {
 
+	}
+	th, td {
+		height: 55px;
+		padding: 3px 10px;
+		border: 1px solid rgba($brd,.5);
+		border-width: 0 1px 1px 0;
+		background: $white;
+		vertical-align: middle;
+		text-align: center;
+		line-height: 1.2;
+		&:first-child {
+			padding-left: 20px;
+			text-align: left;
+			color: $cl;
+		}
+		&:last-child {
+			border-width: 0 0 1px;
+		}
+	}
+	th {
+		font-weight: 600;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: $gray-d;
+	}
+	td {
+		&.is-active {
+			position: relative;
+			background: $bg-blue;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border: 3px solid $white;
+			}
+			.icon {
+				fill: $blue;
+			}
+		}
+		&.is-disabled {
+			background: $bg;
+		}
+		.icon {
+			fill: $gray;
+		}
+		.icon-checkbox-tick {
+			width: 17px;
+			height: 15px;
+		}
+	}
+	.days__part {
+		font-weight: 600;
+	}
+	.days__time {
+		font-size: 12px;
+		color: $gray-d;
+	}
+}
 
 
 
