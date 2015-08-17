@@ -2451,7 +2451,7 @@ th {
 }
 
 .inform {
-	font-size: 0;
+	@include clr;
 	&.inform_gray {
 		color: $gray-d;
 		.icon {
@@ -2484,16 +2484,22 @@ th {
 		font-weight: 600;
 	}
 	.inform__content {
-		display: inline;
-		padding-left: 7px;
+		display: table;
+		padding: 2px 0 2px 7px;
 		font-size: 12px;
 		vertical-align: middle;
 	}
 	.icon {
-		vertical-align: middle;
+		float: left;
 		fill: $blue
 	}
 	.icon-progress {
+		fill: $gray;
+	}
+	.icon-error {
+		width: 55px;
+		height: 55px;
+		margin: 2px 15px 0 0;
 		fill: $gray;
 	}
 }

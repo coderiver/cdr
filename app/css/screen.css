@@ -2248,7 +2248,11 @@ th {
     fill: #55bbcc; }
 
 .inform {
-  font-size: 0; }
+  *zoom: 1; }
+  .inform:after {
+    content: " ";
+    display: table;
+    clear: both; }
   .inform.inform_gray {
     color: #a4a4a4; }
     .inform.inform_gray .icon {
@@ -2269,14 +2273,19 @@ th {
   .inform .inform__important {
     font-weight: 600; }
   .inform .inform__content {
-    display: inline;
-    padding-left: 7px;
+    display: table;
+    padding: 2px 0 2px 7px;
     font-size: 12px;
     vertical-align: middle; }
   .inform .icon {
-    vertical-align: middle;
+    float: left;
     fill: #55bbcc; }
   .inform .icon-progress {
+    fill: #cccccc; }
+  .inform .icon-error {
+    width: 55px;
+    height: 55px;
+    margin: 2px 15px 0 0;
     fill: #cccccc; }
 
 .display-table {
