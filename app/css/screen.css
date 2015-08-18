@@ -3984,6 +3984,18 @@ th {
     font-size: 12px;
     color: #a4a4a4; }
 
+.progress-status {
+  display: inline-block;
+  padding: 5px 13px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #f0f0f0;
+  border-radius: 4px;
+  white-space: nowrap;
+  vertical-align: middle; }
+  .progress-status.progress-status_waiting {
+    color: rgba(64, 64, 64, 0.3); }
+
 .icon-arrow-down {
   width: 12px;
   height: 8px; }
