@@ -2060,6 +2060,23 @@ th {
     height: 15px;
     fill: #55bbcc; }
 
+.button-icon {
+  width: 20px;
+  height: 20px;
+  font-size: 0; }
+  .button-icon:hover .icon {
+    fill: #55bbcc; }
+  .button-icon:active .icon {
+    fill: #77c9d6; }
+  .button-icon[disabled] .icon {
+    fill: #cccccc;
+    opacity: .4; }
+  .button-icon .icon {
+    fill: #cccccc; }
+  .button-icon .icon-edit {
+    width: 16px;
+    height: 16px; }
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -4019,6 +4036,10 @@ th {
 .icon-dots {
   width: 19px;
   height: 5px; }
+
+.icon-download {
+  width: 16px;
+  height: 17px; }
 
 .icon-edit {
   width: 18px;

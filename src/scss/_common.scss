@@ -2199,6 +2199,35 @@ th {
 	}
 }
 
+.button-icon {
+	width: 20px;
+	height: 20px;
+	font-size: 0;
+	&:hover {
+		.icon {
+			fill: $blue;
+		}
+	}
+	&:active {
+		.icon {
+			fill: $blue-l;
+		}
+	}
+	&[disabled] {
+		.icon {
+			fill: $gray;
+			opacity: .4;
+		}
+	}
+	.icon {
+		fill: $gray;
+	}
+	.icon-edit {
+		width: 16px;
+		height: 16px;
+	}
+}
+
 .dropdown {
 	position: relative;
 	display: inline-block;
