@@ -64,6 +64,12 @@ button {
 }
 a {
 	text-decoration: none;
+	&:hover,
+	&:active,
+	&:focus,
+	&:active:focus {
+		color: inherit;
+	}
 }
 th {
 	text-align: left;
@@ -664,11 +670,30 @@ th {
 	color: $gray-text;
 	&.link_icon {
 		padding-left: 30px;
+		&:hover {
+			.link__icon {
+				display: block;
+			}
+		}
+		&.is-active {
+			.link__icon {
+				display: block;
+				background: none;
+				.icon-plus {
+					display: none;
+				}
+				.icon-tick {
+					display: inline;
+				}
+			}
+		}
 	}
 	&:hover {
+		opacity: .8;
 		text-decoration: underline;
 	}
-	&:active {
+	&:active,
+	&:focus, {
 		opacity: .8;
 	}
 	&[disabled],
@@ -676,9 +701,6 @@ th {
 		text-decoration: none;
 		opacity: .35;
 		cursor: default;
-	}
-	&.is-active {
-		text-decoration: underline;
 	}
 	.link__icon {
 		position: absolute;
@@ -689,13 +711,18 @@ th {
 		background: $orange;
 		border-radius: 50%;
 		@include vertical;
+		display: none;
 		.icon {
-			fill: $white;
 			vertical-align: middle;
 		}
 		.icon-plus {
 			width: 12px;
 			height: 12px;
+			fill: $white;
+		}
+		.icon-tick {
+			display: none;
+			fill: $blue
 		}
 	}
 }
@@ -1138,6 +1165,7 @@ th {
 	display: block;
 	height: 120px;
 	padding: 11px 12px;
+	resize: vertical;
 }
 
 .field {
@@ -2630,7 +2658,8 @@ th {
 		float: left;
 		fill: $blue
 	}
-	.icon-cad-progress {
+	.icon-progress {
+		margin-top: 3px;
 		fill: $gray;
 	}
 	.icon-error {
@@ -3803,8 +3832,11 @@ th {
 	vertical-align: top;
 	cursor: pointer;
 	&.selected_content {
-		padding: 15px 20px;
+		padding: 8px 15px;
 		cursor: text;
+		.selected__close {
+			margin-right: -15px;
+		}
 	}
 	&.selected_big {
 		.selected__title {
@@ -4083,6 +4115,19 @@ th {
 			padding: 0;
 			border: none;
 		}
+	}
+}
+
+.wrap-field {
+	.textarea {
+		border-radius: 6px 6px 0 0;
+	}
+	.wrap-field__foot {
+		padding: 15px;
+		border: 1px solid $brd;
+		border-width: 0 1px 1px;
+		border-radius: 0 0 6px 6px;
+		text-align: right;
 	}
 }
 
@@ -4559,6 +4604,7 @@ th {
 			.steps__counter {
 				background: $orange;
 				box-shadow: none;
+				box-shadow: 0 0 0 3px $bg;
 				color: #FFF;
 			}
 		}
@@ -4629,6 +4675,7 @@ th {
 		margin: 0 -70px;
 		font-size: 14px;
 		transition: height .2s;
+		color: $gray-d;
 		overflow: hidden;
 	}
 }
