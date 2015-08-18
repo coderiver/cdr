@@ -191,20 +191,20 @@ th {
 	overflow: auto;
 }
 
-.row {
+.cad-row {
 	margin: 0 -10px;
 	font-size: 0;
-	&.row_vertical_middle {
+	&.cad-row_vertical_middle {
 		[class^="col-"] {
 			vertical-align: middle;
 		}
 	}
-	&.row_vertical_bottom {
+	&.cad-row_vertical_bottom {
 		[class^="col-"] {
 			vertical-align: bottom;
 		}
 	}
-	&.row_clear {
+	&.cad-row_clear {
 		margin: 0;
 		[class^="col-"] {
 			padding: 0;
@@ -355,58 +355,58 @@ th {
 	text-transform: uppercase;
 }
 
-.panel {
+.cad-panel {
 	background: $white;
 	padding: 30px 40px;
-	&.panel_gray {
+	&.cad-panel_gray {
 		background: #f7f7f7;
 	}
-	&.panel_p-0 {
+	&.cad-panel_p-0 {
 		padding: 0;
 	}
-	&.panel_p-0-40 {
+	&.cad-panel_p-0-40 {
 		padding: 0 40px;
 	}
-	&.panel_p-25-40 {
+	&.cad-panel_p-25-40 {
 		padding: 25px 40px;
 	}
-	&.panel_p-25-20 {
+	&.cad-panel_p-25-20 {
 		padding: 25px 20px;
 	}
-	&.panel_p-20-40 {
+	&.cad-panel_p-20-40 {
 		padding: 20px 40px;
 	}
-	&.panel_p-20-30 {
+	&.cad-panel_p-20-30 {
 		padding: 20px 30px;
 	}
-	&.panel_p-40-30 {
+	&.cad-panel_p-40-30 {
 		padding: 40px 30px;
 	}
-	&.panel_p-40 {
+	&.cad-panel_p-40 {
 		padding: 40px;
 	}
-	&.panel_p-30 {
+	&.cad-panel_p-30 {
 		padding: 30px;
 	}
-	&.panel_p-25 {
+	&.cad-panel_p-25 {
 		padding: 25px;
 	}
-	&.panel_p-20 {
+	&.cad-panel_p-20 {
 		padding: 20px;
 	}
-	&.panel_p-30-0 {
+	&.cad-panel_p-30-0 {
 		padding: 30px 0;
 	}
-	&.panel_pt-25 {
+	&.cad-panel_pt-25 {
 		padding-top: 25px;
 	}
-	&.panel_pt-20 {
+	&.cad-panel_pt-20 {
 		padding-top: 20px;
 	}
-	&.panel_pb-10 {
+	&.cad-panel_pb-10 {
 		padding-bottom: 10px;
 	}
-	&.panel_pb-0 {
+	&.cad-panel_pb-0 {
 		padding-bottom: 0;
 	}
 }
@@ -459,7 +459,7 @@ th {
 	}
 }
 
-.container {
+.cad-container {
 	padding: 20px 0 50px; 
 }
 
@@ -1211,6 +1211,9 @@ th {
 			left: 14px;
 		}
 	}
+	.field__in {
+		display: block;
+	}
 	.field__error {
 		padding: 6px 12px 0;
 		font-size: 13px;
@@ -1352,7 +1355,7 @@ th {
 			top: 4px;
 			fill: $blue;
 		}
-		.icon-progress {
+		.icon-cad-progress {
 			top: 2px;
 			fill: $gray;
 		}
@@ -1971,7 +1974,7 @@ th {
 			border-radius: 0;
 		}
 		.header__chapter {
-			.dropdown-menu {
+			.cad-dropdown-menu {
 				left: -16px;
 			}
 		}
@@ -2037,7 +2040,7 @@ th {
 			top: 2px;
 			vertical-align: middle;
 		}
-		.dropdown-menu {
+		.cad-dropdown-menu {
 			left: -12px;
 		}
 		& + .dropdown {
@@ -2269,7 +2272,7 @@ th {
 				transform: rotate(-180deg);
 			}
 		}
-		.dropdown-menu {
+		.cad-dropdown-menu {
 			display: block;
 		}
 	}
@@ -2344,8 +2347,7 @@ th {
 	}
 }
 
-.cad-dropdown-menu,
-.dropdown-menu {
+.cad-dropdown-menu {
 	display: none;
 	position: absolute;
 	top: 100%;
@@ -2382,7 +2384,7 @@ th {
 	&.daterangepicker {
 		padding: 0;
 	}
-	&.dropdown-menu_tick {
+	&.cad-dropdown-menu_tick {
 		li {
 			&.is-active {
 				a {
@@ -2407,7 +2409,7 @@ th {
 			fill: $blue;
 		}
 	}
-	&.dropdown-menu_gray {
+	&.cad-dropdown-menu_gray {
 		padding: 0;
 		background: $bg;
 		&:before,
@@ -2416,7 +2418,7 @@ th {
 		}
 	}
 	&.opensleft,
-	&.dropdown-menu_right {
+	&.cad-dropdown-menu_right {
 		left: auto;
 		right: 0;
 		&:before {
@@ -2428,7 +2430,7 @@ th {
 			right: 12px;
 		}
 	}
-	&.dropdown-menu_search {
+	&.cad-dropdown-menu_search {
 		a {
 			color: $gray-d;
 		}
@@ -2436,7 +2438,7 @@ th {
 			color: $cl;
 		}
 	}
-	&.dropdown-menu_urls {
+	&.cad-dropdown-menu_urls {
 		right: -90px;
 		left: auto;
 		width: 300px;
@@ -2628,7 +2630,7 @@ th {
 		float: left;
 		fill: $blue
 	}
-	.icon-progress {
+	.icon-cad-progress {
 		fill: $gray;
 	}
 	.icon-error {
@@ -2863,13 +2865,13 @@ th {
 	}
 }
 
-.table {
+.cab-table {
 	background: $white;
-	&.table_fixed {
+	&.cab-table_fixed {
 		table-layout: fixed;
 	}
-	&.table_transparent,
-	&.table_transparent_p-30 {
+	&.cab-table_transparent,
+	&.cab-table_transparent_p-30 {
 		background: transparent;
 		table-layout: fixed;
 		tr {
@@ -2899,7 +2901,7 @@ th {
 			@extend .three-dots;
 		}
 	}
-	&.table_transparent_p-30 {
+	&.cab-table_transparent_p-30 {
 		th, td {
 			&:first-child {
 				padding-left: 30px;
@@ -2909,7 +2911,7 @@ th {
 			}
 		}
 	}
-	&.table_p-20 {
+	&.cab-table_p-20 {
 		th, td {
 			&:first-child {
 				padding-left: 20px;
@@ -2919,7 +2921,7 @@ th {
 			}
 		}
 	}
-	&.table_p-30 {
+	&.cab-table_p-30 {
 		th, td {
 			&:first-child {
 				padding-left: 30px;
@@ -2929,7 +2931,7 @@ th {
 			}
 		}
 	}
-	&.table_segment {
+	&.cab-table_segment {
 		th, td {
 			&:last-child {
 				padding-right: 40px;
@@ -2944,7 +2946,7 @@ th {
 			vertical-align: top;
 		}
 	}
-	&.table_custom {
+	&.cab-table_custom {
 		background: $white;
 		@extend .box-shadow;
 		th, td {
@@ -2967,7 +2969,7 @@ th {
 			overflow: hidden;
 		}
 	}
-	&.table_row {
+	&.cab-table_row {
 		table-layout: fixed;
 		td {
 			padding: 13px 20px;
@@ -2983,7 +2985,7 @@ th {
 			}
 		}
 	}
-	&.table_report {
+	&.cab-table_report {
 		table-layout: fixed;
 		thead {
 			tr {
@@ -3033,7 +3035,7 @@ th {
 			@include text-overflow;
 		}
 	}
-	&.table_p-30 {
+	&.cab-table_p-30 {
 		th {
 			&:first-child {
 				padding-left: 30px;
@@ -3051,7 +3053,7 @@ th {
 			padding-right: 30px;
 		}
 		@for $i from 1 through 66 {
-			&.table__w-#{$i} {
+			&.cab-table__w-#{$i} {
 				width: #{$i}%;
 			}
 		}
@@ -3391,18 +3393,18 @@ th {
 	vertical-align: middle;
 }
 
-.pager {
+.cad-pager {
 	font-size: 0;
-	&.pager_nav {
-		.pager__prev,
-		.pager__next {
+	&.cad-pager_nav {
+		.cad-pager__prev,
+		.cad-pager__next {
 			vertical-align: middle;
 		}
-		.pager__list {
+		.cad-pager__list {
 			padding: 0 8px;
 			vertical-align: middle;
 		}
-		.pager__button {
+		.cad-pager__button {
 			width: 40px;
 			height: 20px;
 			color: $black;
@@ -3414,13 +3416,13 @@ th {
 			}
 		}
 	}
-	.pager__list {
+	.cad-pager__list {
 		display: inline-block;
 		padding: 0 13px;
 		vertical-align: top;
 	}
-	.pager__prev,
-	.pager__next {
+	.cad-pager__prev,
+	.cad-pager__next {
 		min-width: 0;
 		width: 40px;
 		padding: 0;
@@ -3429,13 +3431,13 @@ th {
 			fill: #b7b7b7;
 		}
 	}
-	.pager__prev {
+	.cad-pager__prev {
 		padding-right: 2px;
 	}
-	.pager__next {
+	.cad-pager__next {
 		padding-left: 2px;
 	}
-	.pager__button {
+	.cad-pager__button {
 		width: 26px;
 		height: 40px;
 		font-size: 16px;
@@ -3461,47 +3463,47 @@ th {
 	}
 }
 
-.progress {
-	&.progress_row {
-		.progress__stats {
+.cad-progress {
+	&.cad-progress_row {
+		.cad-progress__stats {
 			margin: 0;
 		}
-		.progress__stats-item {
+		.cad-progress__stats-item {
 			float: left;
 			width: 92px;
 			font-size: 18px;
 			&:first-child {
 				width: 60px;
-				.progress__stats-value {
+				.cad-progress__stats-value {
 					font-size: 24px;
 				}
 			}
 		}
-		.progress__stats-value {
+		.cad-progress__stats-value {
 			font-size: 18px;
 			font-weight: 600;
 		}
-		.progress__visual {
+		.cad-progress__visual {
 			float: left;
 			width: 180px;
 			margin-right: 20px;
 			padding-top: 4px;
 		}
-		.progress__data {
+		.cad-progress__data {
 			background: $bg;
 		}
-		.progress__data-in {
+		.cad-progress__data-in {
 			background: $blue;
 		}
 	}
-	&.progress_simple {
-		.progress__data {
+	&.cad-progress_simple {
+		.cad-progress__data {
 			margin-bottom: 7px;
 			background: $bg;
 		}
-		.progress__data_value {
+		.cad-progress__data_value {
 			background: $blue-d;
-			.progress__data-in {
+			.cad-progress__data-in {
 				position: relative;
 				border-radius: 2px 0 0 2px;
 				&:after {
@@ -3524,48 +3526,48 @@ th {
 				}
 			}
 		}
-		.progress__data-in {
+		.cad-progress__data-in {
 			background: $blue;
 		}
-		.progress__text {
+		.cad-progress__text {
 			font-size: 14px;
 			span {
 				font-weight: 600;
 			}
 		}
 	}
-	.progress__stats {
+	.cad-progress__stats {
 		margin-bottom: 10px;
 		@include clr;
 	}
-	.progress__stats-item {
+	.cad-progress__stats-item {
 		float: right;
 		&:first-child {
 			float: left;
 		}
 	}
-	.progress__stats-value {
+	.cad-progress__stats-value {
 		font-size: 32px;
 		line-height: 1;
 	}
-	.progress__stats-text {
+	.cad-progress__stats-text {
 		font-size: 12px;
 	}
-	.progress__data {
+	.cad-progress__data {
 		margin-bottom: 5px;
 		background: $blue-d;
 		border-radius: 3px;
 	}
-	.progress__data-in {
+	.cad-progress__data-in {
 		height: 10px;
 		border-radius: 2px;
 		background: $green-l;
 	}
-	.progress__scale {
+	.cad-progress__scale {
 		margin-bottom: 10px;
 		@include clr;
 	}
-	.progress__scale-item {
+	.cad-progress__scale-item {
 		float: right;
 		font-size: 12px;
 		color: $blue-d1;
@@ -3573,10 +3575,10 @@ th {
 			float: left;
 		}
 	}
-	.progress__text {
+	.cad-progress__text {
 		font-size: 11px;
 	}
-	.progress__text_empty {
+	.cad-progress__text_empty {
 		color: $gray-d;
 	}
 }
@@ -4179,7 +4181,7 @@ th {
 			}
 		}
 	}
-	.panel {
+	.cad-panel {
 		&:last-child {
 			border-radius: 0 0 4px 4px;
 		}
@@ -4421,6 +4423,11 @@ th {
 			padding: 5px;
 			font-size: 16px;
 			cursor: pointer;
+		}
+	}
+	.fa {
+		&:before {
+			display: none;
 		}
 	}
 }
@@ -4758,7 +4765,7 @@ th {
 	}
 }
 
-.progress-status {
+.cad-progress-status {
 	display: inline-block;
 	padding: 5px 13px;
 	font-size: 14px;
@@ -4767,7 +4774,7 @@ th {
 	border-radius: 4px;
 	white-space: nowrap;
 	vertical-align: middle;
-	&.progress-status_waiting {
+	&.cad-progress-status_waiting {
 		color: rgba($cl,.3);
 	}
 }
