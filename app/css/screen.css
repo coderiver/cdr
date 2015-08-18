@@ -2042,6 +2042,24 @@ th {
     height: 13px;
     fill: #fff; }
 
+.button-add {
+  width: 31px;
+  height: 31px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+  font-size: 0;
+  vertical-align: middle;
+  transition: all .2s; }
+  .button-add:hover .icon-plus {
+    fill: #77c9d6; }
+  .button-add:active .icon-plus {
+    fill: #1c89a3; }
+  .button-add .icon-plus {
+    width: 15px;
+    height: 15px;
+    fill: #55bbcc; }
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -2616,6 +2634,8 @@ th {
     width: 30%; }
   .table th.table__w-31, .table td.table__w-31 {
     width: 31%; }
+  .table th.table__w-32, .table td.table__w-32 {
+    width: 32%; }
   .table th.table__w-50, .table td.table__w-50 {
     width: 50%; }
   .table th.table__w-66, .table td.table__w-66 {

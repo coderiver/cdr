@@ -2173,6 +2173,32 @@ th {
 	}
 }
 
+.button-add {
+	width: 31px;
+	height: 31px;
+	background: $white;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+	border-radius: 50%;
+	font-size: 0;
+	vertical-align: middle;
+	transition: all .2s;
+	&:hover {
+		.icon-plus {
+			fill: $blue-l;
+		}
+	}
+	&:active {
+		.icon-plus {
+			fill: $blue-d;
+		}
+	}
+	.icon-plus {
+		width: 15px;
+		height: 15px;
+		fill: $blue;
+	}
+}
+
 .dropdown {
 	position: relative;
 	display: inline-block;
@@ -2994,9 +3020,11 @@ th {
 		&.table__w-30 {
 			width: 30%;
 		}
-
 		&.table__w-31 {
 			width: 31%;
+		}
+		&.table__w-32 {
+			width: 32%;
 		}
 		&.table__w-50 {
 			width: 50%;
