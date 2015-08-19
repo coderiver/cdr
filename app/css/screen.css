@@ -2202,7 +2202,7 @@ th {
       transition: -webkit-transform .2s;
       transition: transform .2s; }
 
-.cad-dropdown-menu {
+.cad-dropdown-menu, .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
@@ -2212,13 +2212,14 @@ th {
   padding: 10px 0;
   background: #fff;
   border-radius: 4px;
+  border: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
   text-align: left;
   z-index: 99; }
-  .cad-dropdown-menu:before, .cad-dropdown-menu:after {
+  .cad-dropdown-menu:before, .cad-dropdown-menu:after, .dropdown-menu:before, .dropdown-menu:after {
     content: "";
     position: absolute; }
-  .cad-dropdown-menu:before {
+  .cad-dropdown-menu:before, .dropdown-menu:before {
     top: -5px;
     left: 22px;
     width: 10px;
@@ -2228,78 +2229,78 @@ th {
             transform: rotate(45deg);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
     background: #fff; }
-  .cad-dropdown-menu:after {
+  .cad-dropdown-menu:after, .dropdown-menu:after {
     top: 0;
     left: 12px;
     width: 30px;
     height: 10px;
     background: #fff; }
-  .cad-dropdown-menu.daterangepicker {
+  .cad-dropdown-menu.daterangepicker, .dropdown-menu.daterangepicker {
     padding: 0; }
-  .cad-dropdown-menu.cad-dropdown-menu_tick li.is-active a {
+  .cad-dropdown-menu.cad-dropdown-menu_tick li.is-active a, .dropdown-menu.cad-dropdown-menu_tick li.is-active a {
     position: relative;
     padding-right: 40px;
     background: #eef8fa;
     cursor: default; }
-  .cad-dropdown-menu.cad-dropdown-menu_tick li.is-active .icon-tick {
+  .cad-dropdown-menu.cad-dropdown-menu_tick li.is-active .icon-tick, .dropdown-menu.cad-dropdown-menu_tick li.is-active .icon-tick {
     display: block; }
-  .cad-dropdown-menu.cad-dropdown-menu_tick a {
+  .cad-dropdown-menu.cad-dropdown-menu_tick a, .dropdown-menu.cad-dropdown-menu_tick a {
     font-weight: 600; }
-  .cad-dropdown-menu.cad-dropdown-menu_tick .icon-tick {
+  .cad-dropdown-menu.cad-dropdown-menu_tick .icon-tick, .dropdown-menu.cad-dropdown-menu_tick .icon-tick {
     display: none;
     position: absolute;
     top: 11px;
     right: 20px;
     fill: #55bbcc; }
-  .cad-dropdown-menu.cad-dropdown-menu_gray {
+  .cad-dropdown-menu.cad-dropdown-menu_gray, .dropdown-menu.cad-dropdown-menu_gray {
     padding: 0;
     background: #f0f0f0; }
-    .cad-dropdown-menu.cad-dropdown-menu_gray:before, .cad-dropdown-menu.cad-dropdown-menu_gray:after {
+    .cad-dropdown-menu.cad-dropdown-menu_gray:before, .cad-dropdown-menu.cad-dropdown-menu_gray:after, .dropdown-menu.cad-dropdown-menu_gray:before, .dropdown-menu.cad-dropdown-menu_gray:after {
       background: #f0f0f0; }
-  .cad-dropdown-menu.opensleft, .cad-dropdown-menu.cad-dropdown-menu_right {
+  .cad-dropdown-menu.opensleft, .cad-dropdown-menu.cad-dropdown-menu_right, .dropdown-menu.opensleft, .dropdown-menu.cad-dropdown-menu_right {
     left: auto;
     right: 0; }
-    .cad-dropdown-menu.opensleft:before, .cad-dropdown-menu.cad-dropdown-menu_right:before {
+    .cad-dropdown-menu.opensleft:before, .cad-dropdown-menu.cad-dropdown-menu_right:before, .dropdown-menu.opensleft:before, .dropdown-menu.cad-dropdown-menu_right:before {
       left: auto;
       right: 22px; }
-    .cad-dropdown-menu.opensleft:after, .cad-dropdown-menu.cad-dropdown-menu_right:after {
+    .cad-dropdown-menu.opensleft:after, .cad-dropdown-menu.cad-dropdown-menu_right:after, .dropdown-menu.opensleft:after, .dropdown-menu.cad-dropdown-menu_right:after {
       left: auto;
       right: 12px; }
-  .cad-dropdown-menu.cad-dropdown-menu_search a {
+  .cad-dropdown-menu.cad-dropdown-menu_search a, .dropdown-menu.cad-dropdown-menu_search a {
     color: #a4a4a4; }
-  .cad-dropdown-menu.cad-dropdown-menu_search span {
+  .cad-dropdown-menu.cad-dropdown-menu_search span, .dropdown-menu.cad-dropdown-menu_search span {
     color: #404040; }
-  .cad-dropdown-menu.cad-dropdown-menu_urls {
+  .cad-dropdown-menu.cad-dropdown-menu_urls, .dropdown-menu.cad-dropdown-menu_urls {
     right: -90px;
     left: auto;
     width: 300px;
     padding: 20px; }
-    .cad-dropdown-menu.cad-dropdown-menu_urls:before {
+    .cad-dropdown-menu.cad-dropdown-menu_urls:before, .dropdown-menu.cad-dropdown-menu_urls:before {
       left: 165px; }
-    .cad-dropdown-menu.cad-dropdown-menu_urls:after {
+    .cad-dropdown-menu.cad-dropdown-menu_urls:after, .dropdown-menu.cad-dropdown-menu_urls:after {
       left: 155px; }
-  .cad-dropdown-menu > li {
+  .cad-dropdown-menu > li, .dropdown-menu > li {
     position: relative; }
-    .cad-dropdown-menu > li:hover > a {
+    .cad-dropdown-menu > li:hover > a, .dropdown-menu > li:hover > a {
       background: #f3f3f3; }
-    .cad-dropdown-menu > li:hover ul {
+    .cad-dropdown-menu > li:hover ul, .dropdown-menu > li:hover ul {
       display: block; }
-    .cad-dropdown-menu > li a {
+    .cad-dropdown-menu > li a, .dropdown-menu > li a {
       display: block;
       position: relative;
       padding: 7px 20px;
       font-size: 14px;
       color: #404040; }
-      .cad-dropdown-menu > li a:hover {
+      .cad-dropdown-menu > li a:hover, .dropdown-menu > li a:hover {
         background: #f3f3f3; }
-      .cad-dropdown-menu > li a > .icon-arrow-right {
+      .cad-dropdown-menu > li a > .icon-arrow-right, .dropdown-menu > li a > .icon-arrow-right {
         position: absolute;
         top: 10px;
         right: 12px;
         width: 6px;
         height: 10px;
         fill: #a4a4a4; }
-    .cad-dropdown-menu > li ul {
+    .cad-dropdown-menu > li ul, .dropdown-menu > li ul {
       display: none;
       position: absolute;
       top: -10px;
@@ -3808,7 +3809,8 @@ th {
       background: url("../img/calendar.svg") no-repeat 0 0;
       background-size: 19px 18px; }
   .calendar .table-condensed {
-    font-size: 14px; }
+    font-size: 14px;
+    table-layout: fixed; }
     .calendar .table-condensed thead {
       border-bottom: 1px solid rgba(218, 218, 218, 0.5); }
       .calendar .table-condensed thead tr:last-child th {

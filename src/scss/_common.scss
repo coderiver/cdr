@@ -2410,7 +2410,8 @@ th {
 	}
 }
 
-.cad-dropdown-menu {
+.cad-dropdown-menu,
+.dropdown-menu {
 	display: none;
 	position: absolute;
 	top: 100%;
@@ -2420,6 +2421,7 @@ th {
 	padding: 10px 0;
 	background: $white;
 	border-radius: 4px;
+	border: none;
 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 	text-align: left;
 	z-index: 99;
@@ -4393,6 +4395,7 @@ th {
 	}
 	.table-condensed {
 		font-size: 14px;
+		table-layout: fixed;
 		thead {
 			border-bottom: 1px solid rgba($brd,.5);
 			tr {
