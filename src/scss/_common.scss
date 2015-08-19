@@ -1620,13 +1620,31 @@ th {
 					}
 				}
 			}
+			&:disabled:checked + .switcher__el {
+				cursor: default;
+				&:before {
+					background: $bg;
+					border-color: transparent;
+					color: $gray-d;
+				}
+				>.icon-tick {
+					fill: $gray-d;
+					opacity: .5;
+				}
+			}
+			&:disabled:not(:checked) + .switcher__el {
+				cursor: default;
+				&:before {
+					background: $white;
+				}
+			}
 		}
 		.gender {
 			display: block;
 			width: 190px;
 			height: 190px;
 			.icon {
-				fill: $gray;
+				fill: $brd;
 			}
 		}
 	}
@@ -1705,6 +1723,20 @@ th {
 			padding-left: 5px;
 			padding-right: 5px;
 			text-align: center;
+		}
+		.switcher__input {
+			&:disabled:checked + .switcher__el {
+				background: $bg;
+				border-color: transparent;
+				opacity: .5;
+				font-weight: 400;
+				color: $gray-d;
+				cursor: default;
+			}
+			&:disabled:not(:checked) + .switcher__el {
+				opacity: 0;
+				cursor: default;
+			}
 		}
 	}
 	&.switcher_radio {
@@ -4604,7 +4636,6 @@ th {
 			.steps__counter {
 				background: $orange;
 				box-shadow: none;
-				box-shadow: 0 0 0 3px $bg;
 				color: #FFF;
 			}
 		}

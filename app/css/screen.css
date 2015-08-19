@@ -1610,12 +1610,25 @@ th {
     display: block; }
   .switcher.switcher_gender .switcher__input:checked + .switcher__el .gender .icon {
     fill: #a4a4a4; }
+  .switcher.switcher_gender .switcher__input:disabled:checked + .switcher__el {
+    cursor: default; }
+    .switcher.switcher_gender .switcher__input:disabled:checked + .switcher__el:before {
+      background: #f0f0f0;
+      border-color: transparent;
+      color: #a4a4a4; }
+    .switcher.switcher_gender .switcher__input:disabled:checked + .switcher__el > .icon-tick {
+      fill: #a4a4a4;
+      opacity: .5; }
+  .switcher.switcher_gender .switcher__input:disabled:not(:checked) + .switcher__el {
+    cursor: default; }
+    .switcher.switcher_gender .switcher__input:disabled:not(:checked) + .switcher__el:before {
+      background: #fff; }
   .switcher.switcher_gender .gender {
     display: block;
     width: 190px;
     height: 190px; }
     .switcher.switcher_gender .gender .icon {
-      fill: #cccccc; }
+      fill: #dadada; }
   .switcher.switcher_group .switcher__item {
     display: block;
     margin-bottom: 10px; }
@@ -1671,6 +1684,16 @@ th {
       padding-left: 5px;
       padding-right: 5px;
       text-align: center; }
+    .switcher.switcher_buttons_ages .switcher__input:disabled:checked + .switcher__el {
+      background: #f0f0f0;
+      border-color: transparent;
+      opacity: .5;
+      font-weight: 400;
+      color: #a4a4a4;
+      cursor: default; }
+    .switcher.switcher_buttons_ages .switcher__input:disabled:not(:checked) + .switcher__el {
+      opacity: 0;
+      cursor: default; }
   .switcher.switcher_radio .switcher__item {
     margin: 0 30px 0 0; }
   .switcher.switcher_radio .switcher__el {
@@ -3970,7 +3993,6 @@ th {
     .steps .steps__item.is-active .steps__counter {
       background: #ff6633;
       box-shadow: none;
-      box-shadow: 0 0 0 3px #f0f0f0;
       color: #FFF; }
     .steps .steps__item.is-done:before, .steps .steps__item.is-done:after {
       background: #ff6633; }
