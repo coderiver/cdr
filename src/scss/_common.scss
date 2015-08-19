@@ -1278,10 +1278,13 @@ th {
 			vertical-align: middle;
 		}
 	}
-	.field__icon {
+	.field__icon-text {
+		display: inline-block;
+		padding-bottom: 2px;
 		font-weight: 600;
 		font-size: 18px;
 		color: $white;
+		vertical-align: middle;
 	}
 	.field__del {
 		position: absolute;
@@ -2270,7 +2273,7 @@ th {
 	width: 31px;
 	height: 31px;
 	background: $white;
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
 	border-radius: 50%;
 	font-size: 0;
 	vertical-align: middle;
@@ -2855,6 +2858,9 @@ th {
 	.data__label {
 		margin-bottom: 2px;
 		color: $gray-d;
+		& + .data__label {
+			margin-top: 7px;
+		}
 	}
 	.data__value {
 		font-size: 18px;
@@ -4635,6 +4641,7 @@ th {
 			}
 			.steps__counter {
 				background: $orange;
+				box-shadow: 0 0 0 3px;
 				box-shadow: none;
 				color: #FFF;
 			}

@@ -1348,10 +1348,13 @@ th {
     .field .field__icon .icon {
       fill: #a4a4a4;
       vertical-align: middle; }
-  .field .field__icon {
+  .field .field__icon-text {
+    display: inline-block;
+    padding-bottom: 2px;
     font-weight: 600;
     font-size: 18px;
-    color: #fff; }
+    color: #fff;
+    vertical-align: middle; }
   .field .field__del {
     position: absolute;
     top: 0;
@@ -2107,7 +2110,7 @@ th {
   width: 31px;
   height: 31px;
   background: #fff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
   border-radius: 50%;
   font-size: 0;
   vertical-align: middle;
@@ -2530,6 +2533,8 @@ th {
 .data .data__label {
   margin-bottom: 2px;
   color: #a4a4a4; }
+  .data .data__label + .data__label {
+    margin-top: 7px; }
 .data .data__value {
   font-size: 18px; }
 .data .data__value_mid, .data .data__value_md {
@@ -3992,6 +3997,7 @@ th {
       margin-left: 20px; }
     .steps .steps__item.is-active .steps__counter {
       background: #ff6633;
+      box-shadow: 0 0 0 3px;
       box-shadow: none;
       color: #FFF; }
     .steps .steps__item.is-done:before, .steps .steps__item.is-done:after {
