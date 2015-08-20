@@ -691,7 +691,7 @@ th {
 .float-left {
   float: left; }
 
-.box-shadow, .item, .cab-table.cab-table_custom, .accord, .popup .popup__wrap {
+.box-shadow, .item, .cab-table.cab-table_custom, .accord, .popup {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
 
 .bt {
@@ -1637,13 +1637,6 @@ th {
     margin-bottom: 10px; }
   .switcher.switcher_group.switcher_checkbox .switcher__content {
     font-weight: 400; }
-  .switcher.switcher_cols {
-    margin-bottom: -40px;
-    -webkit-columns: 2;
-       -moz-columns: 2;
-            columns: 2; }
-    .switcher.switcher_cols .switcher__item {
-      margin: 0 20px 40px 0; }
   .switcher.switcher_logos .switcher__item {
     margin: 0 50px 20px 0; }
   .switcher.switcher_logos .switcher__el {
@@ -3625,40 +3618,44 @@ th {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.modal-backdrop.in {
+  opacity: .8; }
+
+.modal {
   min-width: 1024px;
-  padding: 50px 0;
-  background: rgba(0, 0, 0, 0.8);
-  overflow: auto;
+  padding: 30px;
   text-align: center;
   font-size: 0;
-  z-index: 999; }
-  .popup:before {
+  overflow: auto; }
+  .modal:before {
     content: "";
     display: inline-block;
     vertical-align: middle;
     width: 0;
     height: 100%; }
-  .popup.popup_big .popup__wrap {
-    width: 850px; }
-  .popup.popup_md_big .popup__wrap {
-    width: 700px; }
-  .popup.popup_md .popup__wrap {
-    width: 540px; }
-  .popup.popup_small .popup__wrap {
-    width: 440px; }
-  .popup .popup__wrap {
-    position: relative;
-    display: inline-block;
-    width: 680px;
-    font-size: 14px;
-    text-align: left;
-    vertical-align: middle; }
+
+.modal-dialog {
+  display: inline-block;
+  width: 700px;
+  margin: 0;
+  vertical-align: middle; }
+
+.modal-lg {
+  width: 850px; }
+
+.modal-sm {
+  width: 540px; }
+
+.modal-content {
+  box-shadow: none;
+  border: none;
+  border-radius: 4px; }
+
+.popup {
+  position: relative;
+  font-size: 14px;
+  text-align: left;
+  vertical-align: middle; }
   .popup .popup__title {
     position: relative;
     padding: 20px 40px;

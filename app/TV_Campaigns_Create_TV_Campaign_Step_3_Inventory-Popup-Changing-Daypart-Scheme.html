@@ -567,33 +567,48 @@
 		</div>
 	</div>
 </div>
-<!-- popup -->
-<div class="popup popup_small">
-	<div class="popup__wrap">
-		<button class="popup__close">
-			<svg class="icon icon-close">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-			</svg>
-		</button>
-		<div class="popup__title">
-			<!-- title -->
-			<div class="title title_3 title_white">Changing Daypart Scheme</div>
-		</div>
-		<div class="popup__in">
-			<!-- cad-panel -->
-			<div class="cad-panel bb">
-				<!-- inform -->
-				<div class="inform inform_big">
-					<svg class="icon icon-error">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-error"></use>
+<!-- modal-backdrop -->
+<div class="modal-backdrop fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"
+></div>
+<!-- modal -->
+<div modal-render="{{$isRendered}}" tabindex="-1" role="dialog" class="modal fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)"
+	style="display: block;">
+	<div class="modal-dialog modal-sm" ng-class="size ? 'modal-' + size : ''">
+		<div class="modal-content" modal-transclude>
+			<!-- popup -->
+			<div class="popup">
+				<button class="popup__close">
+					<svg class="icon icon-close">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
 					</svg>
-					<div class="inform__content">While switching to other daypart/day scheme all previously selected data would be lost.<br>Please confirm this action.</div>
+				</button>
+				<div class="popup__title">
+					<!-- title -->
+					<div class="title title_3 title_white">Changing Daypart Scheme</div>
 				</div>
-			</div>
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_p-25-40 ta-right">
-				<button class="button button_md button_gray">NORMAL</button>
-				<button class="button button_md">Yes, proceed</button>
+				<div class="popup__in">
+					<!-- cad-panel -->
+					<div class="cad-panel bb">
+						<!-- inform -->
+						<div class="inform inform_big">
+							<svg class="icon icon-error">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-error"></use>
+							</svg>
+							<div class="inform__content">While switching to other daypart/day scheme all previously selected data would be lost.<br>Please confirm this action.</div>
+						</div>
+					</div>
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_p-25-40 ta-right">
+						<button class="button button_md button_gray">NORMAL</button>
+						<button class="button button_md">Yes, proceed</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

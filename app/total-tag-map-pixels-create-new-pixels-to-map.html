@@ -442,105 +442,120 @@
 		</div>
 	</div>
 </div>
-<!-- popup -->
-<div class="popup">
-	<div class="popup__wrap">
-		<button class="popup__close">
-			<svg class="icon icon-close">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-			</svg>
-		</button>
-		<div class="popup__title">
-			<!-- title -->
-			<div class="title title_3 title_white">Map Pixels: Create New</div>
-		</div>
-		<div class="popup__in">
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_pt-25 bb">
-				<!-- cad-row -->
-				<div class="cad-row mb-40">
-					<div class="col-50">
-						<!-- title -->
-						<div class="title title_4 mb-10">Pixel Name<div class="title__number">1.</div></div>
-						<!-- field -->
-						<div class="field">
-							<div class="field__in">
-								<input class="input" type="text" value="">
-							</div>
-						</div>
-					</div>
-					<div class="col-50">
-						<!-- title -->
-						<div class="title title_4 mb-10">Pixel Provider</div>
-						<!-- select -->
-						<div class="select js-select">
-							<div class="select__head">
-								<div class="select__value">Turn</div>
-								<svg class="icon icon-arrow-down">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
-								</svg>
-							</div>
-							<ul class="select__list">
-								<li>Item 1</li>
-								<li>Item 1</li>
-								<li>Item 1</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- tabs -->
-				<div class="tabs tabs_rounded mb-5">
-					<button class="tabs__item">Standard Pixel</button>
-					<button class="tabs__item is-active">Embeded Pixel</button>
-				</div>
-				<!-- title -->
-				<div class="title title_6 title_thin title_gray mb-20">Help text goes here</div>
-				<div class="title title_4 mb-10">Pixel Code</div>
-				<!-- field -->
-				<div class="field">
-					<div class="field__in">
-						<textarea class="textarea"></textarea>
-					</div>
-				</div>
-			</div>
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_pt-25 bb">
-				<!-- cad-row -->
-				<div class="cad-row">
-					<div class="col-50">
-						<!-- title -->
-						<div class="title title_4 mb-10">Pixel Name<div class="title__number">2.</div></div>
-						<!-- field -->
-						<div class="field">
-							<div class="field__in">
-								<input class="input" type="text" value="">
-							</div>
-						</div>
-					</div>
-					<div class="col-50 ta-right">
-						<!-- link-icon -->
-						<a class="link-icon" href="#">
-							<svg class="icon icon-close">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-							</svg>
-							<span>Close</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_p-25-40 bb">
-				<button class="button button_md button_white">
-					<svg class="icon icon-plus">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use>
+<!-- modal-backdrop -->
+<div class="modal-backdrop fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"
+></div>
+<!-- modal -->
+<div modal-render="{{$isRendered}}" tabindex="-1" role="dialog" class="modal fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)"
+	style="display: block;">
+	<div class="modal-dialog" ng-class="size ? 'modal-' + size : ''">
+		<div class="modal-content" modal-transclude>
+			<!-- popup -->
+			<div class="popup">
+				<button class="popup__close">
+					<svg class="icon icon-close">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
 					</svg>
-					ADD ANOTHER PIXEL
 				</button>
-			</div>
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_p-25-40 ta-right">
-				<button class="button button_gray">CANCEL</button>
-				<button class="button">APPLY</button>
+				<div class="popup__title">
+					<!-- title -->
+					<div class="title title_3 title_white">Map Pixels: Create New</div>
+				</div>
+				<div class="popup__in">
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_pt-25 bb">
+						<!-- cad-row -->
+						<div class="cad-row mb-40">
+							<div class="col-50">
+								<!-- title -->
+								<div class="title title_4 mb-10">Pixel Name<div class="title__number">1.</div></div>
+								<!-- field -->
+								<div class="field">
+									<div class="field__in">
+										<input class="input" type="text" value="">
+									</div>
+								</div>
+							</div>
+							<div class="col-50">
+								<!-- title -->
+								<div class="title title_4 mb-10">Pixel Provider</div>
+								<!-- select -->
+								<div class="select js-select">
+									<div class="select__head">
+										<div class="select__value">Turn</div>
+										<svg class="icon icon-arrow-down">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+										</svg>
+									</div>
+									<ul class="select__list">
+										<li>Item 1</li>
+										<li>Item 1</li>
+										<li>Item 1</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- tabs -->
+						<div class="tabs tabs_rounded mb-5">
+							<button class="tabs__item">Standard Pixel</button>
+							<button class="tabs__item is-active">Embeded Pixel</button>
+						</div>
+						<!-- title -->
+						<div class="title title_6 title_thin title_gray mb-20">Help text goes here</div>
+						<div class="title title_4 mb-10">Pixel Code</div>
+						<!-- field -->
+						<div class="field">
+							<div class="field__in">
+								<textarea class="textarea"></textarea>
+							</div>
+						</div>
+					</div>
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_pt-25 bb">
+						<!-- cad-row -->
+						<div class="cad-row">
+							<div class="col-50">
+								<!-- title -->
+								<div class="title title_4 mb-10">Pixel Name<div class="title__number">2.</div></div>
+								<!-- field -->
+								<div class="field">
+									<div class="field__in">
+										<input class="input" type="text" value="">
+									</div>
+								</div>
+							</div>
+							<div class="col-50 ta-right">
+								<!-- link-icon -->
+								<a class="link-icon" href="#">
+									<svg class="icon icon-close">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+									</svg>
+									<span>Close</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_p-25-40 bb">
+						<button class="button button_md button_white">
+							<svg class="icon icon-plus">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use>
+							</svg>
+							ADD ANOTHER PIXEL
+						</button>
+					</div>
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_p-25-40 ta-right">
+						<button class="button button_gray">CANCEL</button>
+						<button class="button">APPLY</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

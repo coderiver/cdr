@@ -442,56 +442,71 @@
 		</div>
 	</div>
 </div>
-<!-- popup -->
-<div class="popup">
-	<div class="popup__wrap">
-		<button class="popup__close">
-			<svg class="icon icon-close">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-			</svg>
-		</button>
-		<div class="popup__title">
-			<!-- title -->
-			<div class="title title_3 title_white">Map Specific URLs</div>
-		</div>
-		<div class="popup__in">
-			<!-- cad-panel -->
-			<div class="cad-panel bb">
-				<!-- title -->
-				<div class="title title_4 mb-10">Enter one URL per line</div>
-				<!-- wrap-selected -->
-				<div class="wrap-selected">
-					<!-- selected -->
-					<div class="selected">
-						<button class="selected__close">
-							<svg class="icon icon-close">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-							</svg>
-						</button>
-						<div class="selected__title">http://31engine.com/weblogUpdates/1.cgi</div>
+<!-- modal-backdrop -->
+<div class="modal-backdrop fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"
+></div>
+<!-- modal -->
+<div modal-render="{{$isRendered}}" tabindex="-1" role="dialog" class="modal fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)"
+	style="display: block;">
+	<div class="modal-dialog" ng-class="size ? 'modal-' + size : ''">
+		<div class="modal-content" modal-transclude>
+			<!-- popup -->
+			<div class="popup">
+				<button class="popup__close">
+					<svg class="icon icon-close">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+					</svg>
+				</button>
+				<div class="popup__title">
+					<!-- title -->
+					<div class="title title_3 title_white">Map Specific URLs</div>
+				</div>
+				<div class="popup__in">
+					<!-- cad-panel -->
+					<div class="cad-panel bb">
+						<!-- title -->
+						<div class="title title_4 mb-10">Enter one URL per line</div>
+						<!-- wrap-selected -->
+						<div class="wrap-selected">
+							<!-- selected -->
+							<div class="selected">
+								<button class="selected__close">
+									<svg class="icon icon-close">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+									</svg>
+								</button>
+								<div class="selected__title">http://31engine.com/weblogUpdates/1.cgi</div>
+							</div>
+							<div class="selected">
+								<button class="selected__close">
+									<svg class="icon icon-close">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+									</svg>
+								</button>
+								<div class="selected__title">http://www.bmw.com/com/en/newvehicles/4series/weblogUpdates/1.cgi</div>
+							</div>
+							<div class="selected">
+								<button class="selected__close">
+									<svg class="icon icon-close">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+									</svg>
+								</button>
+								<div class="selected__title">http://www.potterybarn.com/products/porter-collectors-desk/?catalogId=91&cm_src=AutoRelen/newvehicles/4series/weblogUpdates/1.cgi</div>
+							</div>
+						</div>
 					</div>
-					<div class="selected">
-						<button class="selected__close">
-							<svg class="icon icon-close">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-							</svg>
-						</button>
-						<div class="selected__title">http://www.bmw.com/com/en/newvehicles/4series/weblogUpdates/1.cgi</div>
-					</div>
-					<div class="selected">
-						<button class="selected__close">
-							<svg class="icon icon-close">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-							</svg>
-						</button>
-						<div class="selected__title">http://www.potterybarn.com/products/porter-collectors-desk/?catalogId=91&cm_src=AutoRelen/newvehicles/4series/weblogUpdates/1.cgi</div>
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_p-25-40 ta-right">
+						<button class="button button_gray">CANCEL</button>
+						<button class="button">APPLY</button>
 					</div>
 				</div>
-			</div>
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_p-25-40 ta-right">
-				<button class="button button_gray">CANCEL</button>
-				<button class="button">APPLY</button>
 			</div>
 		</div>
 	</div>

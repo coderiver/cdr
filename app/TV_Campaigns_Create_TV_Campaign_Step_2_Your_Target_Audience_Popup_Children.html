@@ -428,83 +428,108 @@
 		</div>
 	</div>
 </div>
-<!-- popup -->
-<div class="popup popup_md">
-	<div class="popup__wrap">
-		<button class="popup__close">
-			<svg class="icon icon-close">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-			</svg>
-		</button>
-		<div class="popup__title">
-				<!-- title -->
-				<div class="title title_3 title_white">Children</div>
-		</div>
-		<div class="popup__in">
-			<!-- cad-panel -->
-			<div class="cad-panel bb">
-				<!-- switcher -->
-				<div class="switcher switcher_checkbox switcher_group switcher_cols">
-					<label class="switcher__item">
-						<input class="switcher__input" type="checkbox" checked="">
-						<span class="switcher__el">
-							<span class="switcher__content">Children Present</span>
-							<svg class="icon icon-tick">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-							</svg>
-						</span>
-					</label>
-					<label class="switcher__item">
-						<input class="switcher__input" type="checkbox" checked="">
-						<span class="switcher__el">
-							<span class="switcher__content">Teens</span>
-							<svg class="icon icon-tick">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-							</svg>
-						</span>
-					</label>
-					<label class="switcher__item">
-						<input class="switcher__input" type="checkbox">
-						<span class="switcher__el">
-							<span class="switcher__content">Kids Under 3</span>
-							<svg class="icon icon-tick">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-							</svg>
-						</span>
-					</label>
-					<label class="switcher__item">
-						<input class="switcher__input" type="checkbox">
-						<span class="switcher__el">
-							<span class="switcher__content">Kids Under 6</span>
-							<svg class="icon icon-tick">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-							</svg>
-						</span>
-					</label>
-					<label class="switcher__item">
-						<input class="switcher__input" type="checkbox">
-						<span class="switcher__el">
-							<span class="switcher__content">Kids Under 12</span>
-							<svg class="icon icon-tick">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-							</svg>
-						</span>
-					</label>
-					<label class="switcher__item">
-						<input class="switcher__input" type="checkbox">
-						<span class="switcher__el">
-							<span class="switcher__content">Kids Under 18</span>
-							<svg class="icon icon-tick">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-							</svg>
-						</span>
-					</label>
+<!-- modal-backdrop -->
+<div class="modal-backdrop fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"
+></div>
+<!-- modal -->
+<div modal-render="{{$isRendered}}" tabindex="-1" role="dialog" class="modal fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)"
+	style="display: block;">
+	<div class="modal-dialog modal-sm" ng-class="size ? 'modal-' + size : ''">
+		<div class="modal-content" modal-transclude>
+			<!-- popup -->
+			<div class="popup">
+				<button class="popup__close">
+					<svg class="icon icon-close">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+					</svg>
+				</button>
+				<div class="popup__title">
+						<!-- title -->
+						<div class="title title_3 title_white">Children</div>
 				</div>
-			</div>
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_p-25-40 ta-right">
-				<button class="button button_width_md button_gray">CANCEL</button>
-				<button class="button button_width_md">APPLY</button>
+				<div class="popup__in">
+					<!-- cad-panel -->
+					<div class="cad-panel bb">
+						<!-- cad-row -->
+						<div class="cad-row">
+							<div class="col-50">
+								<!-- switcher -->
+								<div class="switcher switcher_checkbox switcher_group">
+									<label class="switcher__item">
+										<input class="switcher__input" type="checkbox" checked="">
+										<span class="switcher__el">
+											<span class="switcher__content">Children Present</span>
+											<svg class="icon icon-tick">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+											</svg>
+										</span>
+									</label>
+									<label class="switcher__item">
+										<input class="switcher__input" type="checkbox" checked="">
+										<span class="switcher__el">
+											<span class="switcher__content">Teens</span>
+											<svg class="icon icon-tick">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+											</svg>
+										</span>
+									</label>
+									<label class="switcher__item">
+										<input class="switcher__input" type="checkbox">
+										<span class="switcher__el">
+											<span class="switcher__content">Kids Under 3</span>
+											<svg class="icon icon-tick">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+											</svg>
+										</span>
+									</label>
+									<label class="switcher__item">
+										<input class="switcher__input" type="checkbox">
+										<span class="switcher__el">
+											<span class="switcher__content">Kids Under 6</span>
+											<svg class="icon icon-tick">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+											</svg>
+										</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-50">
+								<!-- switcher -->
+								<div class="switcher switcher_checkbox switcher_group">
+									<label class="switcher__item">
+										<input class="switcher__input" type="checkbox">
+										<span class="switcher__el">
+											<span class="switcher__content">Kids Under 12</span>
+											<svg class="icon icon-tick">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+											</svg>
+										</span>
+									</label>
+									<label class="switcher__item">
+										<input class="switcher__input" type="checkbox">
+										<span class="switcher__el">
+											<span class="switcher__content">Kids Under 18</span>
+											<svg class="icon icon-tick">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+											</svg>
+										</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_p-25-40 ta-right">
+						<button class="button button_width_md button_gray">CANCEL</button>
+						<button class="button button_width_md">APPLY</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

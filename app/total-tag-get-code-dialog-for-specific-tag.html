@@ -442,62 +442,77 @@
 		</div>
 	</div>
 </div>
-<!-- popup -->
-<div class="popup">
-	<div class="popup__wrap">
-		<button class="popup__close">
-			<svg class="icon icon-close">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-			</svg>
-		</button>
-		<div class="popup__title">
-			<!-- title -->
-			<div class="title title_3 title_white">Audi A3: Get Code</div>
-		</div>
-		<div class="popup__in">
-			<!-- cad-panel -->
-			<div class="cad-panel bb">
-				<!-- cad-row -->
-				<div class="cad-row mb-25">
-					<div class="col-45">
-						<!-- title -->
-						<div class="title title_4 mb-10">Deployment Type</div>
-						<!-- wrap-help -->
-						<div class="wrap-help">
-							<!-- help -->
-							<div class="help">
-								<svg class="icon icon-info">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
-								</svg>
-							</div>
-							<!-- select -->
-							<div class="select js-select">
-								<div class="select__head">
-									<div class="select__value">Standart &lt;script&gt; tag</div>
-									<svg class="icon icon-arrow-down">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
-									</svg>
+<!-- modal-backdrop -->
+<div class="modal-backdrop fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"
+></div>
+<!-- modal -->
+<div modal-render="{{$isRendered}}" tabindex="-1" role="dialog" class="modal fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)"
+	style="display: block;">
+	<div class="modal-dialog" ng-class="size ? 'modal-' + size : ''">
+		<div class="modal-content" modal-transclude>
+			<!-- popup -->
+			<div class="popup">
+				<button class="popup__close">
+					<svg class="icon icon-close">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+					</svg>
+				</button>
+				<div class="popup__title">
+					<!-- title -->
+					<div class="title title_3 title_white">Audi A3: Get Code</div>
+				</div>
+				<div class="popup__in">
+					<!-- cad-panel -->
+					<div class="cad-panel bb">
+						<!-- cad-row -->
+						<div class="cad-row mb-25">
+							<div class="col-45">
+								<!-- title -->
+								<div class="title title_4 mb-10">Deployment Type</div>
+								<!-- wrap-help -->
+								<div class="wrap-help">
+									<!-- help -->
+									<div class="help">
+										<svg class="icon icon-info">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+										</svg>
+									</div>
+									<!-- select -->
+									<div class="select js-select">
+										<div class="select__head">
+											<div class="select__value">Standart &lt;script&gt; tag</div>
+											<svg class="icon icon-arrow-down">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+											</svg>
+										</div>
+										<ul class="select__list">
+											<li>Item 1</li>
+											<li>Item 1</li>
+											<li>Item 1</li>
+										</ul>
+									</div>
 								</div>
-								<ul class="select__list">
-									<li>Item 1</li>
-									<li>Item 1</li>
-									<li>Item 1</li>
-								</ul>
 							</div>
 						</div>
+						<!-- title -->
+						<div class="title title_4 mb-10">Tag Code</div>
+						<!-- field -->
+						<div class="field">
+							<textarea class="textarea" style="height: 120px;">&lt;input class="c_search_box c_ml c_search_psb_box false" tabindex="30" type="search" name="query" placeholder="&lt;input title="class="c_search_go c_search_psb_go" tabindex="30" type="button" style="background:url(https://a.gfx.ms/h/command6.png) -143px 0px;" value=""&gt;</textarea>
+						</div>
+					</div>
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_p-25-40 ta-right">
+						<button class="button button_gray">CLOSE</button>
+						<button class="button js-notify-show">copy code</button>
 					</div>
 				</div>
-				<!-- title -->
-				<div class="title title_4 mb-10">Tag Code</div>
-				<!-- field -->
-				<div class="field">
-					<textarea class="textarea" style="height: 120px;">&lt;input class="c_search_box c_ml c_search_psb_box false" tabindex="30" type="search" name="query" placeholder="&lt;input title="class="c_search_go c_search_psb_go" tabindex="30" type="button" style="background:url(https://a.gfx.ms/h/command6.png) -143px 0px;" value=""&gt;</textarea>
-				</div>
-			</div>
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_p-25-40 ta-right">
-				<button class="button button_gray">CLOSE</button>
-				<button class="button js-notify-show">copy code</button>
 			</div>
 		</div>
 	</div>

@@ -442,95 +442,110 @@
 		</div>
 	</div>
 </div>
-<!-- popup -->
-<div class="popup">
-	<div class="popup__wrap">
-		<button class="popup__close">
-			<svg class="icon icon-close">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-			</svg>
-		</button>
-		<div class="popup__title">
-			<!-- title -->
-			<div class="title title_3 title_white">Create URL pattern</div>
-		</div>
-		<div class="popup__in">
-			<!-- cad-panel -->
-			<div class="cad-panel bb">
-				<!-- cad-row -->
-				<div class="cad-row mb-20">
-					<div class="col-45">
-						<!-- title -->
-						<div class="title title_5"><div class="title__number mt-10">1.</div></div>
-						<!-- select -->
-						<div class="select js-select">
-							<div class="select__head">
-								<div class="select__value">Starts with</div>
-								<svg class="icon icon-arrow-down">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
-								</svg>
-							</div>
-							<ul class="select__list">
-								<li>Item 1</li>
-								<li>Item 1</li>
-								<li>Item 1</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-55">
-						<!-- field -->
-						<div class="field">
-							<div class="field__inner">
-								<input class="input" type="text" placeholder="Enter value">
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- cad-row -->
-				<div class="cad-row mb-20">
-					<div class="col-45">
-						<!-- title -->
-						<div class="title title_5"><div class="title__number mt-10">2.</div></div>
-						<!-- select -->
-						<div class="select js-select">
-							<div class="select__head">
-								<div class="select__value">Starts with</div>
-								<svg class="icon icon-arrow-down">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
-								</svg>
-							</div>
-							<ul class="select__list">
-								<li>Item 1</li>
-								<li>Item 1</li>
-								<li>Item 1</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-55">
-						<!-- field -->
-						<div class="field">
-							<div class="field__inner">
-								<input class="input" type="text" placeholder="Enter value">
-							</div>
-							<button class="field__del">
-								<svg class="icon icon-close">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-								</svg>
-							</button>
-						</div>
-					</div>
-				</div>
-				<button class="button button_md button_white mb-70">
-					<svg class="icon icon-plus">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use>
+<!-- modal-backdrop -->
+<div class="modal-backdrop fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"
+></div>
+<!-- modal -->
+<div modal-render="{{$isRendered}}" tabindex="-1" role="dialog" class="modal fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)"
+	style="display: block;">
+	<div class="modal-dialog" ng-class="size ? 'modal-' + size : ''">
+		<div class="modal-content" modal-transclude>
+			<!-- popup -->
+			<div class="popup">
+				<button class="popup__close">
+					<svg class="icon icon-close">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
 					</svg>
-					ADD ANOTHER RULE
 				</button>
-			</div>
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_p-25-40 ta-right">
-				<button class="button button_gray">cancel</button>
-				<button class="button js-notify-show">apply</button>
+				<div class="popup__title">
+					<!-- title -->
+					<div class="title title_3 title_white">Create URL pattern</div>
+				</div>
+				<div class="popup__in">
+					<!-- cad-panel -->
+					<div class="cad-panel bb">
+						<!-- cad-row -->
+						<div class="cad-row mb-20">
+							<div class="col-45">
+								<!-- title -->
+								<div class="title title_5"><div class="title__number mt-10">1.</div></div>
+								<!-- select -->
+								<div class="select js-select">
+									<div class="select__head">
+										<div class="select__value">Starts with</div>
+										<svg class="icon icon-arrow-down">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+										</svg>
+									</div>
+									<ul class="select__list">
+										<li>Item 1</li>
+										<li>Item 1</li>
+										<li>Item 1</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-55">
+								<!-- field -->
+								<div class="field">
+									<div class="field__inner">
+										<input class="input" type="text" placeholder="Enter value">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- cad-row -->
+						<div class="cad-row mb-20">
+							<div class="col-45">
+								<!-- title -->
+								<div class="title title_5"><div class="title__number mt-10">2.</div></div>
+								<!-- select -->
+								<div class="select js-select">
+									<div class="select__head">
+										<div class="select__value">Starts with</div>
+										<svg class="icon icon-arrow-down">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+										</svg>
+									</div>
+									<ul class="select__list">
+										<li>Item 1</li>
+										<li>Item 1</li>
+										<li>Item 1</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-55">
+								<!-- field -->
+								<div class="field">
+									<div class="field__inner">
+										<input class="input" type="text" placeholder="Enter value">
+									</div>
+									<button class="field__del">
+										<svg class="icon icon-close">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<button class="button button_md button_white mb-70">
+							<svg class="icon icon-plus">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use>
+							</svg>
+							ADD ANOTHER RULE
+						</button>
+					</div>
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_p-25-40 ta-right">
+						<button class="button button_gray">cancel</button>
+						<button class="button js-notify-show">apply</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

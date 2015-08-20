@@ -425,313 +425,328 @@
 		</div>
 	</div>
 </div>
-<!-- popup -->
-<div class="popup">
-	<div class="popup__wrap">
-		<button class="popup__close">
-			<svg class="icon icon-close">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-			</svg>
-		</button>
-		<div class="popup__title">
-			<!-- title -->
-			<div class="title title_3 title_white">Baseplan: TV_campaign_baseplan_2334v2.csv</div>
-		</div>
-		<div class="popup__in">
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_p-40-30">
-				<!-- cad-row -->
-				<div class="cad-row mb-30">
-					<div class="col-40">
-						<!-- title -->
-						<div class="title title_2 mb-25">TV Base Plan</div>
-						<!-- data -->
-						<div class="data mb-20">
-							<div class="data__label">Total Impressions</div>
-							<div class="data__value data__value_big">879,009</div>
-						</div>
-						<!-- data -->
-						<div class="data mb-20">
-							<div class="data__label">Average CPM</div>
-							<div class="data__value data__value_big">$5.60</div>
-						</div>
-					</div>
-					<div class="col-60">
-						<!-- cad-row -->
-						<div class="cad-row">
-							<div class="col-50">
-								<!-- gender -->
-								<div class="gender mb-20">
-									<svg class="icon icon-male">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-male"></use>
-									</svg>
-								</div>
-								<!-- ages -->
-								<div class="ages">
-									<div class="ages__item">18-24</div>
-									<div class="ages__item">25-34</div>
-									<div class="ages__item">35-44</div>
-									<div class="ages__item">45-54</div>
-									<div class="ages__item">55-64</div>
-								</div>
-							</div>
-							<div class="col-50">
-								<!-- gender -->
-								<div class="gender mb-20">
-									<svg class="icon icon-female">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-female"></use>
-									</svg>
-								</div>
-								<!-- ages -->
-								<div class="ages">
-									<div class="ages__item">18-24</div>
-									<div class="ages__item">25-34</div>
-									<div class="ages__item">35-44</div>
-									<div class="ages__item">45-54</div>
-									<div class="ages__item">55-64</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- title -->
-			<div class="title title_2 mb-25 ml-30 mr-30">Daypart Summary</div>
-			<!-- cab-table -->
-			<table class="cab-table cab-table_transparent_p-30 mb-30">
-				<thead>
-					<tr>
-						<th class="cab-table__w-50 ">Daypart</th>
-						<th class="cab-table__w-25 ta-right">% Impressions</th>
-						<th class="cab-table__w-25 ta-right">Impressions Number</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<!-- title -->
-							<div class="title title_6">Overnight 2:00 - 6:00 (ON)</div>
-						</td>
-						<td class="ta-right">12%</td>
-						<td class="ta-right">3,789</td>
-					</tr>
-					<tr>
-						<td>
-							<!-- title -->
-							<div class="title title_6">Early Morning 6:00 - 9:00 (EM)</div>
-						</td>
-						<td class="ta-right">9%</td>
-						<td class="ta-right">1,789</td>
-					</tr>
-					<tr>
-						<td>
-							<!-- title -->
-							<div class="title title_6">Daytime 9:00 - 16:00 (DT)</div>
-						</td>
-						<td class="ta-right">21%</td>
-						<td class="ta-right">2,789</td>
-					</tr>
-					<tr>
-						<td>
-							<!-- title -->
-							<div class="title title_6">Early Fringe 16:00 - 20:00 (EF)</div>
-						</td>
-						<td class="ta-right">28%</td>
-						<td class="ta-right">1,289</td>
-					</tr>
-					<tr>
-						<td>
-							<!-- title -->
-							<div class="title title_6">Prime 20:00 - 24:00 (PRI)</div>
-						</td>
-						<td class="ta-right">11%</td>
-						<td class="ta-right">389</td>
-					</tr>
-					<tr>
-						<td>
-							<!-- title -->
-							<div class="title title_6">Late Fringe 0:00 - 2:00 (LF)</div>
-						</td>
-						<td class="ta-right">10%</td>
-						<td class="ta-right">835</td>
-					</tr>
-				</tbody>
-			</table>
-			<!-- cad-row -->
-			<div class="cad-row mb-20 ml-20 mr-20">
-				<div class="col-60">
+<!-- modal-backdrop -->
+<div class="modal-backdrop fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"
+></div>
+<!-- modal -->
+<div modal-render="{{$isRendered}}" tabindex="-1" role="dialog" class="modal fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)"
+	style="display: block;">
+	<div class="modal-dialog" ng-class="size ? 'modal-' + size : ''">
+		<div class="modal-content" modal-transclude>
+			<!-- popup -->
+			<div class="popup">
+				<button class="popup__close">
+					<svg class="icon icon-close">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+					</svg>
+				</button>
+				<div class="popup__title">
 					<!-- title -->
-					<div class="title title_2">Networks Overview</div>
+					<div class="title title_3 title_white">Baseplan: TV_campaign_baseplan_2334v2.csv</div>
 				</div>
-				<div class="col-40">
-					<!-- cad-pager -->
-					<div class="cad-pager cad-pager_nav float-right">
-						<button class="cad-pager__prev button button_md button_white">
-							<svg class="icon icon-arrow-left">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
-							</svg>
-						</button>
-						<div class="cad-pager__list">
-							<button class="cad-pager__button is-active">1</button>
-							<button class="cad-pager__button">3</button>
+				<div class="popup__in">
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_p-40-30">
+						<!-- cad-row -->
+						<div class="cad-row mb-30">
+							<div class="col-40">
+								<!-- title -->
+								<div class="title title_2 mb-25">TV Base Plan</div>
+								<!-- data -->
+								<div class="data mb-20">
+									<div class="data__label">Total Impressions</div>
+									<div class="data__value data__value_big">879,009</div>
+								</div>
+								<!-- data -->
+								<div class="data mb-20">
+									<div class="data__label">Average CPM</div>
+									<div class="data__value data__value_big">$5.60</div>
+								</div>
+							</div>
+							<div class="col-60">
+								<!-- cad-row -->
+								<div class="cad-row">
+									<div class="col-50">
+										<!-- gender -->
+										<div class="gender mb-20">
+											<svg class="icon icon-male">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-male"></use>
+											</svg>
+										</div>
+										<!-- ages -->
+										<div class="ages">
+											<div class="ages__item">18-24</div>
+											<div class="ages__item">25-34</div>
+											<div class="ages__item">35-44</div>
+											<div class="ages__item">45-54</div>
+											<div class="ages__item">55-64</div>
+										</div>
+									</div>
+									<div class="col-50">
+										<!-- gender -->
+										<div class="gender mb-20">
+											<svg class="icon icon-female">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-female"></use>
+											</svg>
+										</div>
+										<!-- ages -->
+										<div class="ages">
+											<div class="ages__item">18-24</div>
+											<div class="ages__item">25-34</div>
+											<div class="ages__item">35-44</div>
+											<div class="ages__item">45-54</div>
+											<div class="ages__item">55-64</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<button class="cad-pager__next button button_md button_white">
-							<svg class="icon icon-arrow-right">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use>
-							</svg>
-						</button>
+					</div>
+					<!-- title -->
+					<div class="title title_2 mb-25 ml-30 mr-30">Daypart Summary</div>
+					<!-- cab-table -->
+					<table class="cab-table cab-table_transparent_p-30 mb-30">
+						<thead>
+							<tr>
+								<th class="cab-table__w-50 ">Daypart</th>
+								<th class="cab-table__w-25 ta-right">% Impressions</th>
+								<th class="cab-table__w-25 ta-right">Impressions Number</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Overnight 2:00 - 6:00 (ON)</div>
+								</td>
+								<td class="ta-right">12%</td>
+								<td class="ta-right">3,789</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Early Morning 6:00 - 9:00 (EM)</div>
+								</td>
+								<td class="ta-right">9%</td>
+								<td class="ta-right">1,789</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Daytime 9:00 - 16:00 (DT)</div>
+								</td>
+								<td class="ta-right">21%</td>
+								<td class="ta-right">2,789</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Early Fringe 16:00 - 20:00 (EF)</div>
+								</td>
+								<td class="ta-right">28%</td>
+								<td class="ta-right">1,289</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Prime 20:00 - 24:00 (PRI)</div>
+								</td>
+								<td class="ta-right">11%</td>
+								<td class="ta-right">389</td>
+							</tr>
+							<tr>
+								<td>
+									<!-- title -->
+									<div class="title title_6">Late Fringe 0:00 - 2:00 (LF)</div>
+								</td>
+								<td class="ta-right">10%</td>
+								<td class="ta-right">835</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- cad-row -->
+					<div class="cad-row mb-20 ml-20 mr-20">
+						<div class="col-60">
+							<!-- title -->
+							<div class="title title_2">Networks Overview</div>
+						</div>
+						<div class="col-40">
+							<!-- cad-pager -->
+							<div class="cad-pager cad-pager_nav float-right">
+								<button class="cad-pager__prev button button_md button_white">
+									<svg class="icon icon-arrow-left">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use>
+									</svg>
+								</button>
+								<div class="cad-pager__list">
+									<button class="cad-pager__button is-active">1</button>
+									<button class="cad-pager__button">3</button>
+								</div>
+								<button class="cad-pager__next button button_md button_white">
+									<svg class="icon icon-arrow-right">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- scroll -->
+					<div class="scroll">
+						<!-- cab-table -->
+						<table class="cab-table cab-table_transparent_p-30 mb-30" style="width: 924px;">
+							<thead>
+								<tr>
+									<th class="cab-table__w-9">Segment</th>
+									<th class="cab-table__w-12 ta-right">Programatic</th>
+									<th class="cab-table__w-10">Network</th>
+									<th class="cab-table__w-16">Network Name</th>
+									<th class="cab-table__w-10 ta-right">Daypart ID</th>
+									<th class="cab-table__w-22">Daypart Name</th>
+									<th class="cab-table__w-11 ta-right">Impressions</th>
+									<th class="ta-right">CMP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<!-- title -->
+										<div class="title title_6">Sgmt01</div>
+									</td>
+									<td class="ta-right">Yes</td>
+									<td>Cable</td>
+									<td>DESTINATION AMERICA</td>
+									<td class="ta-right">22</td>
+									<td>Overnight 2:00 - 6:00 (ON)</td>
+									<td class="ta-right">3,789</td>
+									<td class="ta-right">$8.45</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- title -->
+										<div class="title title_6">Sgmt02</div>
+									</td>
+									<td class="ta-right">Yes</td>
+									<td>Cable</td>
+									<td>DESTINATION AMERICA</td>
+									<td class="ta-right">22</td>
+									<td>Early Morning 6:00 - 9:00 (EM)</td>
+									<td class="ta-right">1,789</td>
+									<td class="ta-right">$8.45</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- title -->
+										<div class="title title_6">Sgmt03</div>
+									</td>
+									<td class="ta-right">Yes</td>
+									<td>Cable</td>
+									<td>DESTINATION AMERICA</td>
+									<td class="ta-right">22</td>
+									<td>Daytime 9:00 - 16:00 (DT)</td>
+									<td class="ta-right">2,789</td>
+									<td class="ta-right">$8.45</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- title -->
+										<div class="title title_6">Sgmt04</div>
+									</td>
+									<td class="ta-right">Yes</td>
+									<td>Cable</td>
+									<td>Discovery Channel</td>
+									<td class="ta-right">22</td>
+									<td>Early Fringe 16:00 - 20:00 (EF)</td>
+									<td class="ta-right">1,289</td>
+									<td class="ta-right">$8.45</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- title -->
+										<div class="title title_6">Sgmt05</div>
+									</td>
+									<td class="ta-right">Yes</td>
+									<td>Cable</td>
+									<td>Discovery Channel</td>
+									<td class="ta-right">22</td>
+									<td>Prime 20:00 - 24:00 (PRI)</td>
+									<td class="ta-right">389</td>
+									<td class="ta-right">$8.45</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- title -->
+										<div class="title title_6">Sgmt06</div>
+									</td>
+									<td class="ta-right">Yes</td>
+									<td>Cable</td>
+									<td>MSNBC</td>
+									<td class="ta-right">22</td>
+									<td>Late Fringe 0:00 - 2:00 (LF)</td>
+									<td class="ta-right">835</td>
+									<td class="ta-right">$8.45</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- title -->
+										<div class="title title_6">Sgmt07</div>
+									</td>
+									<td class="ta-right">Yes</td>
+									<td>Cable</td>
+									<td>DESTINATION AMERICA</td>
+									<td class="ta-right">22</td>
+									<td>Overnight 2:00 - 6:00 (ON)</td>
+									<td class="ta-right">3,789</td>
+									<td class="ta-right">$8.45</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- title -->
+										<div class="title title_6">Sgmt08</div>
+									</td>
+									<td class="ta-right">Yes</td>
+									<td>Cable</td>
+									<td>Discovery Channel</td>
+									<td class="ta-right">22</td>
+									<td>Early Morning 6:00 - 9:00 (EM)</td>
+									<td class="ta-right">1,789</td>
+									<td class="ta-right">$8.45</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- title -->
+										<div class="title title_6">Sgmt09</div>
+									</td>
+									<td class="ta-right">Yes</td>
+									<td>Cable</td>
+									<td>Discovery Channel</td>
+									<td class="ta-right">22</td>
+									<td>Daytime 9:00 - 16:00 (DT)</td>
+									<td class="ta-right">2,789</td>
+									<td class="ta-right">$8.45</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- title -->
+										<div class="title title_6">Sgmt10</div>
+									</td>
+									<td class="ta-right">Yes</td>
+									<td>Cable</td>
+									<td>MSNBC</td>
+									<td class="ta-right">22</td>
+									<td>Early Fringe 16:00 - 20:00 (EF)</td>
+									<td class="ta-right">1,289</td>
+									<td class="ta-right">$8.45</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
-			</div>
-			<!-- scroll -->
-			<div class="scroll">
-				<!-- cab-table -->
-				<table class="cab-table cab-table_transparent_p-30 mb-30" style="width: 924px;">
-					<thead>
-						<tr>
-							<th class="cab-table__w-9">Segment</th>
-							<th class="cab-table__w-12 ta-right">Programatic</th>
-							<th class="cab-table__w-10">Network</th>
-							<th class="cab-table__w-16">Network Name</th>
-							<th class="cab-table__w-10 ta-right">Daypart ID</th>
-							<th class="cab-table__w-22">Daypart Name</th>
-							<th class="cab-table__w-11 ta-right">Impressions</th>
-							<th class="ta-right">CMP</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								<!-- title -->
-								<div class="title title_6">Sgmt01</div>
-							</td>
-							<td class="ta-right">Yes</td>
-							<td>Cable</td>
-							<td>DESTINATION AMERICA</td>
-							<td class="ta-right">22</td>
-							<td>Overnight 2:00 - 6:00 (ON)</td>
-							<td class="ta-right">3,789</td>
-							<td class="ta-right">$8.45</td>
-						</tr>
-						<tr>
-							<td>
-								<!-- title -->
-								<div class="title title_6">Sgmt02</div>
-							</td>
-							<td class="ta-right">Yes</td>
-							<td>Cable</td>
-							<td>DESTINATION AMERICA</td>
-							<td class="ta-right">22</td>
-							<td>Early Morning 6:00 - 9:00 (EM)</td>
-							<td class="ta-right">1,789</td>
-							<td class="ta-right">$8.45</td>
-						</tr>
-						<tr>
-							<td>
-								<!-- title -->
-								<div class="title title_6">Sgmt03</div>
-							</td>
-							<td class="ta-right">Yes</td>
-							<td>Cable</td>
-							<td>DESTINATION AMERICA</td>
-							<td class="ta-right">22</td>
-							<td>Daytime 9:00 - 16:00 (DT)</td>
-							<td class="ta-right">2,789</td>
-							<td class="ta-right">$8.45</td>
-						</tr>
-						<tr>
-							<td>
-								<!-- title -->
-								<div class="title title_6">Sgmt04</div>
-							</td>
-							<td class="ta-right">Yes</td>
-							<td>Cable</td>
-							<td>Discovery Channel</td>
-							<td class="ta-right">22</td>
-							<td>Early Fringe 16:00 - 20:00 (EF)</td>
-							<td class="ta-right">1,289</td>
-							<td class="ta-right">$8.45</td>
-						</tr>
-						<tr>
-							<td>
-								<!-- title -->
-								<div class="title title_6">Sgmt05</div>
-							</td>
-							<td class="ta-right">Yes</td>
-							<td>Cable</td>
-							<td>Discovery Channel</td>
-							<td class="ta-right">22</td>
-							<td>Prime 20:00 - 24:00 (PRI)</td>
-							<td class="ta-right">389</td>
-							<td class="ta-right">$8.45</td>
-						</tr>
-						<tr>
-							<td>
-								<!-- title -->
-								<div class="title title_6">Sgmt06</div>
-							</td>
-							<td class="ta-right">Yes</td>
-							<td>Cable</td>
-							<td>MSNBC</td>
-							<td class="ta-right">22</td>
-							<td>Late Fringe 0:00 - 2:00 (LF)</td>
-							<td class="ta-right">835</td>
-							<td class="ta-right">$8.45</td>
-						</tr>
-						<tr>
-							<td>
-								<!-- title -->
-								<div class="title title_6">Sgmt07</div>
-							</td>
-							<td class="ta-right">Yes</td>
-							<td>Cable</td>
-							<td>DESTINATION AMERICA</td>
-							<td class="ta-right">22</td>
-							<td>Overnight 2:00 - 6:00 (ON)</td>
-							<td class="ta-right">3,789</td>
-							<td class="ta-right">$8.45</td>
-						</tr>
-						<tr>
-							<td>
-								<!-- title -->
-								<div class="title title_6">Sgmt08</div>
-							</td>
-							<td class="ta-right">Yes</td>
-							<td>Cable</td>
-							<td>Discovery Channel</td>
-							<td class="ta-right">22</td>
-							<td>Early Morning 6:00 - 9:00 (EM)</td>
-							<td class="ta-right">1,789</td>
-							<td class="ta-right">$8.45</td>
-						</tr>
-						<tr>
-							<td>
-								<!-- title -->
-								<div class="title title_6">Sgmt09</div>
-							</td>
-							<td class="ta-right">Yes</td>
-							<td>Cable</td>
-							<td>Discovery Channel</td>
-							<td class="ta-right">22</td>
-							<td>Daytime 9:00 - 16:00 (DT)</td>
-							<td class="ta-right">2,789</td>
-							<td class="ta-right">$8.45</td>
-						</tr>
-						<tr>
-							<td>
-								<!-- title -->
-								<div class="title title_6">Sgmt10</div>
-							</td>
-							<td class="ta-right">Yes</td>
-							<td>Cable</td>
-							<td>MSNBC</td>
-							<td class="ta-right">22</td>
-							<td>Early Fringe 16:00 - 20:00 (EF)</td>
-							<td class="ta-right">1,289</td>
-							<td class="ta-right">$8.45</td>
-						</tr>
-					</tbody>
-				</table>
 			</div>
 		</div>
 	</div>

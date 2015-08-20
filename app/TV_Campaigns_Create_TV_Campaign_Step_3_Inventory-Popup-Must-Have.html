@@ -567,332 +567,347 @@
 		</div>
 	</div>
 </div>
-<!-- popup -->
-<div class="popup popup_big">
-	<div class="popup__wrap">
-		<button class="popup__close">
-			<svg class="icon icon-close">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-			</svg>
-		</button>
-		<div class="popup__title">
-			<!-- title -->
-			<div class="title title_3 title_white display-inline">Must Have Networks</div>
-		</div>
-		<div class="popup__in">
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_p-25-40 bb">
-				<!-- cad-row -->
-				<div class="cad-row">
-					<div class="col-50">
-						<!-- widget -->
-						<div class="widget">
-							<div class="widget__head">
-								<!-- field -->
-								<div class="field field_search_round js-search">
-									<label class="field__in">
-										<input class="input" type="text" placeholder="Search">
-										<svg class="icon icon-search">
-											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
-										</svg>
-									</label>
-									<button class="field__reset">
-										<svg class="icon icon-close">
-											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-										</svg>
-									</button>
+<!-- modal-backdrop -->
+<div class="modal-backdrop fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"
+></div>
+<!-- modal -->
+<div modal-render="{{$isRendered}}" tabindex="-1" role="dialog" class="modal fade in"
+	modal-animation-class="fade"
+	modal-in-class="in"
+	ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)"
+	style="display: block;">
+	<div class="modal-dialog modal-lg" ng-class="size ? 'modal-' + size : ''">
+		<div class="modal-content" modal-transclude>
+			<!-- popup -->
+			<div class="popup">
+				<button class="popup__close">
+					<svg class="icon icon-close">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+					</svg>
+				</button>
+				<div class="popup__title">
+					<!-- title -->
+					<div class="title title_3 title_white display-inline">Must Have Networks</div>
+				</div>
+				<div class="popup__in">
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_p-25-40 bb">
+						<!-- cad-row -->
+						<div class="cad-row">
+							<div class="col-50">
+								<!-- widget -->
+								<div class="widget">
+									<div class="widget__head">
+										<!-- field -->
+										<div class="field field_search_round js-search">
+											<label class="field__in">
+												<input class="input" type="text" placeholder="Search">
+												<svg class="icon icon-search">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+												</svg>
+											</label>
+											<button class="field__reset">
+												<svg class="icon icon-close">
+													<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="widget__body">
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">A&amp;E</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Adult Swim</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">AMC</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">American Heroes Channel</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row is-active">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Animal Planet</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Unnamed (Horizontal Line)</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row is-active">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Anime Network</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row is-active">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Aspire</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">A&amp;E</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Adult Swim</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">AMC</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">American Heroes Channel</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Animal Planet</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Unnamed (Horizontal Line)</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Anime Network</a>
+												</div>
+											</div>
+										</div>
+										<div class="widget__row">
+											<div class="widget__right">
+												<div class="widget__right-in">
+													<svg class="icon icon-tick">
+														<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="widget__left">
+												<!-- title -->
+												<div class="title title_6">
+													<a class="title__link" href="#">Aspire</a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="widget__body">
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+							<div class="col-50">
+								<!-- title -->
+								<div class="title title_4 ml-15">Selected URLs:</div>
+								<!-- wrap-selected -->
+								<div class="wrap-selected wrap-selected_no_border">
+									<!-- selected -->
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
 											</svg>
-										</div>
+										</button>
+										<div class="selected__title">Animal Planet</div>
 									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">A&amp;E</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
 											</svg>
-										</div>
+										</button>
+										<div class="selected__title">Anime Network</div>
 									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">Adult Swim</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
 											</svg>
-										</div>
+										</button>
+										<div class="selected__title">ASX TV</div>
 									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">AMC</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
+									<div class="selected selected_big">
+										<button class="selected__close">
+											<svg class="icon icon-close">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
 											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">American Heroes Channel</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row is-active">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">Animal Planet</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">Unnamed (Horizontal Line)</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row is-active">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">Anime Network</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row is-active">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">Aspire</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">A&amp;E</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">Adult Swim</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">AMC</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">American Heroes Channel</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">Animal Planet</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">Unnamed (Horizontal Line)</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">Anime Network</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget__row">
-									<div class="widget__right">
-										<div class="widget__right-in">
-											<svg class="icon icon-tick">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="widget__left">
-										<!-- title -->
-										<div class="title title_6">
-											<a class="title__link" href="#">Aspire</a>
-										</div>
+										</button>
+										<div class="selected__title">Aspire</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-50">
-						<!-- title -->
-						<div class="title title_4 ml-15">Selected URLs:</div>
-						<!-- wrap-selected -->
-						<div class="wrap-selected wrap-selected_no_border">
-							<!-- selected -->
-							<div class="selected selected_big">
-								<button class="selected__close">
-									<svg class="icon icon-close">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-									</svg>
-								</button>
-								<div class="selected__title">Animal Planet</div>
-							</div>
-							<div class="selected selected_big">
-								<button class="selected__close">
-									<svg class="icon icon-close">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-									</svg>
-								</button>
-								<div class="selected__title">Anime Network</div>
-							</div>
-							<div class="selected selected_big">
-								<button class="selected__close">
-									<svg class="icon icon-close">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-									</svg>
-								</button>
-								<div class="selected__title">ASX TV</div>
-							</div>
-							<div class="selected selected_big">
-								<button class="selected__close">
-									<svg class="icon icon-close">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-									</svg>
-								</button>
-								<div class="selected__title">Aspire</div>
-							</div>
-						</div>
+					<!-- cad-panel -->
+					<div class="cad-panel cad-panel_p-25-40 ta-right">
+						<button class="button button_gray">CANCEL</button>
+						<button class="button">APPLY</button>
 					</div>
 				</div>
-			</div>
-			<!-- cad-panel -->
-			<div class="cad-panel cad-panel_p-25-40 ta-right">
-				<button class="button button_gray">CANCEL</button>
-				<button class="button">APPLY</button>
 			</div>
 		</div>
 	</div>
