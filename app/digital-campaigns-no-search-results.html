@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" media="all" href="css/screen.min.css">
+	<script>
+		(function() {
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "img/icons.svg", true);
+			ajax.send();
+			ajax.onload = function(e) {
+				var div = document.createElement("div");
+				div.innerHTML = ajax.responseText;
+				div.className += "svg-sprite";
+				document.body.insertBefore(div, document.body.childNodes[0]);
+			};
+		})();
+	</script>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper wrapper_head js-wrapper">
+	<!-- wrap-header -->
+	<div class="wrap-header">
+		<!-- header -->
+		<header class="header js-header">
+			<!-- center -->
+			<div class="center">
+				<div class="header__left">
+					<div class="header__cell">
+						<button class="header__button-menu js-menu-button">
+							<svg class="icon icon-menu">
+								<use xlink:href="#icon-menu"/>
+							</svg>
+						</button>
+						<div class="header__chapter">
+							<div class="header__chapter-title">Campaigns</div>
+							<!-- dropdown -->
+							<div class="dropdown">
+								<button class="header__chapter-add js-dropdown">
+									<svg class="icon icon-plus">
+										<use xlink:href="#icon-plus"/>
+									</svg>
+								</button>
+								<!-- cad-dropdown-menu -->
+								<ul class="cad-dropdown-menu">
+									<li><a href="#">Digital Campaign</a></li>
+									<li><a href="#">TV Campaignlia</a></li>
+								</ul>
+							</div>
+						</div>
+						<nav class="header__nav">
+							<a class="is-active" href="#">Digital</a>
+							<a href="#">TV</a>
+						</nav>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__cell">
+						<div class="header__search js-header-search">
+							<!-- field -->
+							<div class="field field_search_round js-search">
+								<label class="field__in">
+									<input class="input" type="text" placeholder="Search">
+									<svg class="icon icon-search">
+										<use xlink:href="#icon-search"/>
+									</svg>
+								</label>
+								<button class="field__reset">
+									<svg class="icon icon-close">
+										<use xlink:href="#icon-close"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<a class="header__notify" href="#">
+							<div class="header__notify-in">
+								<div class="header__notify-counter">2</div>
+								<svg class="icon icon-upload">
+									<use xlink:href="#icon-upload"/>
+								</svg>
+							</div>
+						</a>
+						<div class="header__user">
+							<!-- dropdown -->
+							<div class="dropdown dropdown_white">
+								<div class="dropdown__head js-dropdown">
+									<div class="dropdown__title">John</div>
+									<svg class="icon icon-arrow-down">
+										<use xlink:href="#icon-arrow-down"/>
+									</svg>
+								</div>
+								<!-- cad-dropdown-menu -->
+								<ul class="cad-dropdown-menu cad-dropdown-menu_right">
+									<li><a href="#">Profile Settings</a></li>
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+									<li><a href="#">Log Out</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- head -->
+		<div class="head head_p-12">
+			<!-- center -->
+			<div class="center">
+				<!-- cad-row -->
+				<div class="cad-row">
+					<div class="col-60">
+						<!-- dropdown -->
+						<div class="dropdown mt-3 mr-30">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">All advertisers</div>
+								<svg class="icon icon-arrow-down">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<!-- cad-dropdown-menu -->
+							<ul class="cad-dropdown-menu">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+								<li><a href="#">Item 3</a></li>
+							</ul>
+						</div>
+						<!-- dropdown -->
+						<div class="dropdown mt-3 mr-30">
+							<div class="dropdown__head js-dropdown">
+								<div class="dropdown__title">All start dates</div>
+								<svg class="icon icon-arrow-down">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<!-- cad-dropdown-menu -->
+							<ul class="cad-dropdown-menu">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+								<li><a href="#">Item 3</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-40 ta-right">
+						<!-- tabs -->
+						<div class="tabs tabs_simple">
+							<button class="tabs__item is-active">All</button>
+							<button class="tabs__item">Imported</button>
+							<button class="tabs__item">Draft</button>
+							<button class="tabs__item">Live</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- cad-container -->
+	<div class="cad-container">
+		<!-- center -->
+		<div class="center">
+			<!-- cad-row -->
+			<div class="cad-row">
+				<div class="col-25">
+					<!-- title -->
+					<div class="title title_6 text-upper mb-15">Imported Opportunities</div>
+					<!-- item -->
+					<div class="item item_no_foot mb-20">
+						<div class="item__in">
+							<div class="item__head">
+								<a class="item__title" href="#">Xbox GTA5 inbox dv 34-567</a>
+								<div class="item__title-sub">Microsoft</div>
+								<!-- tags -->
+								<div class="tags">
+									<a class="tags__item" href="#">Advertising</a>
+									<a class="tags__item" href="#">Display</a>
+								</div>
+							</div>
+							<div class="item__info">
+								<div class="item__label">Platforms</div>
+								<div class="item__data">TheTradeDesk, 
+									<button class="more">
+										<svg class="icon icon-dots">
+											<use xlink:href="#icon-dots"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="item__info">
+								<div class="item__label">Start Date</div>
+								<div class="item__data">June 12, 2015</div>
+							</div>
+						</div>			
+					</div>
+				</div>
+				<div class="col-25">
+					<!-- title -->
+					<div class="title title_6 text-upper mb-15">Imported Opportunities</div>
+					<!-- item -->
+					<div class="item item_empty mb-20">
+						<div class="item__circle">
+							<svg class="icon icon-no-result-search ml-5">
+								<use xlink:href="#icon-no-result-search"/>
+							</svg>
+						</div>			
+					</div>
+				</div>
+				<div class="col-50">
+					<!-- title -->
+					<div class="title title_6 text-upper mb-15">live Campaigns</div>
+					<!-- campaign -->
+					<div class="campaign campaign_empty mb-20">
+						<!-- no-result -->
+						<div class="no-result no-result_campaign">
+							<div class="no-result__circle">
+								<svg class="icon icon-no-result-search ml-5">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no-result-search"></use>
+								</svg>
+							</div>
+							<!-- title -->
+							<div class="title title_default_color title_thin mb-10">No Results</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu js-menu">
+	<div class="menu__head bb">
+		<a class="menu__logo" href="#"></a>
+		<button class="menu__close js-menu-close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"/>
+			</svg>
+		</button>
+	</div>
+	<div class="menu__body">
+		<div class="menu__nav">
+			<a href="#">CAMPAIGNS</a>
+			<a href="#">TOTALTAG</a>
+			<a href="#">REPORTS</a>
+		</div>
+		<div class="menu__links">
+			<a class="is-active" href="#">Advertisers</a>
+			<a href="#">User Management</a>
+		</div>
+	</div>
+</div>
+<!-- js -->
+<script src="js/jquery.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
