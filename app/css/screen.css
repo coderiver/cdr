@@ -3415,6 +3415,8 @@ th {
       vertical-align: middle;
       width: 0;
       height: 100%; }
+    .selected .selected__close + .selected__title {
+      padding-right: 0; }
     .selected .selected__close .icon {
       width: 9px;
       height: 8px;
@@ -3429,7 +3431,7 @@ th {
     line-height: 12px;
     font-size: 12px; }
   .selected .selected__title {
-    padding: 7px 0;
+    padding: 7px 15px 7px 0;
     font-size: 14px;
     word-break: break-all;
     overflow: hidden; }
