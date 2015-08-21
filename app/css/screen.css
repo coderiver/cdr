@@ -3900,6 +3900,53 @@ th {
     .calendar .table-condensed tbody .in-range:last-child:before {
       width: 31px;
       border-radius: 0 13px 13px 0; }
+    .calendar .table-condensed tbody .in-range + .available:not(.in-range):hover:before {
+      width: 31px;
+      border-radius: 0 13px 13px 0;
+      margin-left: -18px; }
+    .calendar .table-condensed tbody .in-range.available:not(.off) + .off {
+      position: relative; }
+      .calendar .table-condensed tbody .in-range.available:not(.off) + .off:after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 26px;
+        height: 26px;
+        margin: -13px 0 0 -48px;
+        box-shadow: 2px 0 0 0 #fff, 4px 0 0 0 #fff, 6px 0 0 0 #fff, 8px 0 0 0 #fff, 10px 0 0 0 #fff, 12px 0 0 0 #fff, 14px 0 0 0 #fff;
+        border-radius: 50%;
+        z-index: -1; }
+    .calendar .table-condensed tbody .off.in-range.available + .in-range.available:not(.off):before {
+      width: 31px;
+      margin-left: -13px;
+      border-radius: 13px 0 0 13px; }
+    .calendar .table-condensed tbody .active.start-date.available:before {
+      z-index: -1; }
+    .calendar .table-condensed tbody .active.start-date.available:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      right: 0;
+      height: 26px;
+      margin-top: -13px;
+      background: #eef8fa;
+      z-index: -2; }
+    .calendar .table-condensed tbody .active.end-date.available.today:after {
+      display: none; }
+    .calendar .table-condensed tbody .active.end-date.available:before {
+      z-index: -1; }
+    .calendar .table-condensed tbody .active.end-date.available:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      left: 0;
+      height: 26px;
+      margin-top: -13px;
+      background: #eef8fa;
+      z-index: -2; }
     .calendar .table-condensed tbody .start-date:before {
       border-radius: 50%; }
     .calendar .table-condensed tbody .end-date:before {
@@ -3932,7 +3979,7 @@ th {
         height: 26px;
         margin: -13px 0 0 -13px;
         border-radius: 50%;
-        z-index: -1; }
+        z-index: -2; }
   .calendar .fa:before {
     display: none; }
 
