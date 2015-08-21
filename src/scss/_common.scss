@@ -4481,25 +4481,54 @@ th {
 				color: #999;
 			}
 			.available:hover {
-				background: $bg-blue;
+				&:before {
+					background: $bg-blue;
+				}
 			}
 			.in-range {
-				background: $bg-blue;
-				border-radius: 0;
+				&:before {
+					width: 36px;
+					margin-left: -18px;
+					background: $bg-blue;
+					border-radius: 0;
+				}
+				&:first-child {
+					&:before {
+						width: 31px;
+						margin-left: -13px;
+						border-radius: 13px 0 0 13px;
+					}
+				}
+				&:last-child {
+					&:before {
+						width: 31px;
+						border-radius: 0 13px 13px 0;
+					}
+				}
 			}
 			.start-date {
-				border-radius: 4px 0 0 4px;
+				&:before {
+					border-radius: 50%;
+				}
 			}
 			.end-date {
-				border-radius: 0 4px 4px 0;
+				&:before {
+					width: 26px;
+					margin-left: -13px;
+					border-radius: 50%;
+				}
 			}
 			.start-date.end-date {
-				border-radius: 4px;
+				&:before {
+					border-radius: 50%;
+				}
 			}
 			.active, 
 			.active:hover {
-				background: $blue;
 				color: #fff;
+				&:before {
+					background: $blue;
+				}
 			}
 		}
 		th {
@@ -4511,9 +4540,21 @@ th {
 			vertical-align: middle;
 		}
 		td {
+			position: relative;
 			padding: 5px;
 			font-size: 16px;
 			cursor: pointer;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 26px;
+				height: 26px;
+				margin: -13px 0 0 -13px;
+				border-radius: 50%;
+				z-index: -1;
+			}
 		}
 	}
 	.fa {
@@ -4525,12 +4566,12 @@ th {
 .ranges {
 	position: relative;
 	float: left;
-	min-height: 320px;
+	min-height: 339px;
 	padding: 20px 20px 65px;
 	>ul {
 		position: relative;
 		width: 190px;
-		margin: -15px -20px;
+		margin: -15px -20px 0;
 		z-index: 4;
 		li {
 			position: relative;
@@ -4556,7 +4597,7 @@ th {
 		position: absolute;
 		left: 20px;
 		right: 20px;
-		bottom: 15px;
+		bottom: 20px;
 		button {
 			float: right;
 			width: 70px;

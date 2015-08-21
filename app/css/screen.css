@@ -3886,20 +3886,32 @@ th {
       background: #fff; }
     .calendar .table-condensed tbody .disabled, .calendar .table-condensed tbody option.disabled {
       color: #999; }
-    .calendar .table-condensed tbody .available:hover {
+    .calendar .table-condensed tbody .available:hover:before {
       background: #eef8fa; }
-    .calendar .table-condensed tbody .in-range {
+    .calendar .table-condensed tbody .in-range:before {
+      width: 36px;
+      margin-left: -18px;
       background: #eef8fa;
       border-radius: 0; }
-    .calendar .table-condensed tbody .start-date {
-      border-radius: 4px 0 0 4px; }
-    .calendar .table-condensed tbody .end-date {
-      border-radius: 0 4px 4px 0; }
-    .calendar .table-condensed tbody .start-date.end-date {
-      border-radius: 4px; }
+    .calendar .table-condensed tbody .in-range:first-child:before {
+      width: 31px;
+      margin-left: -13px;
+      border-radius: 13px 0 0 13px; }
+    .calendar .table-condensed tbody .in-range:last-child:before {
+      width: 31px;
+      border-radius: 0 13px 13px 0; }
+    .calendar .table-condensed tbody .start-date:before {
+      border-radius: 50%; }
+    .calendar .table-condensed tbody .end-date:before {
+      width: 26px;
+      margin-left: -13px;
+      border-radius: 50%; }
+    .calendar .table-condensed tbody .start-date.end-date:before {
+      border-radius: 50%; }
     .calendar .table-condensed tbody .active, .calendar .table-condensed tbody .active:hover {
-      background: #55bbcc;
       color: #fff; }
+      .calendar .table-condensed tbody .active:before, .calendar .table-condensed tbody .active:hover:before {
+        background: #55bbcc; }
     .calendar .table-condensed th {
       color: #a4a4a4; }
     .calendar .table-condensed th, .calendar .table-condensed td {
@@ -3907,21 +3919,32 @@ th {
       text-align: center;
       vertical-align: middle; }
     .calendar .table-condensed td {
+      position: relative;
       padding: 5px;
       font-size: 16px;
       cursor: pointer; }
+      .calendar .table-condensed td:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 26px;
+        height: 26px;
+        margin: -13px 0 0 -13px;
+        border-radius: 50%;
+        z-index: -1; }
   .calendar .fa:before {
     display: none; }
 
 .ranges {
   position: relative;
   float: left;
-  min-height: 320px;
+  min-height: 339px;
   padding: 20px 20px 65px; }
   .ranges > ul {
     position: relative;
     width: 190px;
-    margin: -15px -20px;
+    margin: -15px -20px 0;
     z-index: 4; }
     .ranges > ul li {
       position: relative;
@@ -3946,7 +3969,7 @@ th {
     position: absolute;
     left: 20px;
     right: 20px;
-    bottom: 15px; }
+    bottom: 20px; }
     .ranges .range_inputs button {
       float: right;
       width: 70px; }
