@@ -3959,6 +3959,28 @@ th {
       color: #fff; }
       .calendar .table-condensed tbody .active:before, .calendar .table-condensed tbody .active:hover:before {
         background: #55bbcc; }
+    .calendar .table-condensed tbody .today, .calendar .table-condensed tbody .today:hover, .calendar .table-condensed tbody .today:active {
+      color: #5ABBCB; }
+      .calendar .table-condensed tbody .today.start-date, .calendar .table-condensed tbody .today:hover.start-date, .calendar .table-condensed tbody .today:active.start-date {
+        color: #fff; }
+      .calendar .table-condensed tbody .today.end-date, .calendar .table-condensed tbody .today:hover.end-date, .calendar .table-condensed tbody .today:active.end-date {
+        color: #fff; }
+        .calendar .table-condensed tbody .today.end-date:after, .calendar .table-condensed tbody .today:hover.end-date:after, .calendar .table-condensed tbody .today:active.end-date:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 50%;
+          left: 0;
+          right: 0;
+          height: 26px;
+          margin-top: -13px;
+          background: #eef8fa;
+          z-index: -2;
+          display: block !important; }
+      .calendar .table-condensed tbody .today.active.start-date.active.end-date.available, .calendar .table-condensed tbody .today:hover.active.start-date.active.end-date.available, .calendar .table-condensed tbody .today:active.active.start-date.active.end-date.available {
+        color: #5ABBCB; }
+        .calendar .table-condensed tbody .today.active.start-date.active.end-date.available:before, .calendar .table-condensed tbody .today:hover.active.start-date.active.end-date.available:before, .calendar .table-condensed tbody .today:active.active.start-date.active.end-date.available:before {
+          display: none; }
     .calendar .table-condensed th {
       color: #a4a4a4; }
     .calendar .table-condensed th, .calendar .table-condensed td {
