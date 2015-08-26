@@ -2420,6 +2420,8 @@ th {
     height: 55px;
     margin: 2px 15px 0 0;
     fill: #cccccc; }
+  .inform.ta-right {
+    float: right; }
 
 .display-table {
   display: table; }
